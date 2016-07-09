@@ -19,14 +19,23 @@ from rest_framework import routers
 
 from activities.views import ActivityViewSet
 from bills.views import BillViewSet, BillDetailViewSet
+from clients.views import ClientViewSet
 from orders.views import OrderViewSet, OrderDetailViewSet
+from products.views import ProductViewSet
+from projects.views import ProjectViewSet
+from suppliers.views import SupplierViewSet
 
 router = routers.DefaultRouter()
 router.register(r'activities', ActivityViewSet)
 router.register(r'bills', BillViewSet)
 router.register(r'bill_detail', BillDetailViewSet)
+router.register(r'clients', ClientViewSet)
+router.register(r'order_detail', OrderDetailViewSet)
 router.register(r'orders', OrderViewSet)
 router.register(r'order_detail', OrderDetailViewSet)
+router.register(r'products', ProductViewSet)
+router.register(r'projects', ProjectViewSet)
+router.register(r'suppliers', SupplierViewSet)
 
 
 urlpatterns = [
