@@ -17,7 +17,17 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework import routers
 
+from activities.views import ActivityViewSet
+from bills.views import BillViewSet, BillDetailViewSet
+from orders.views import OrderViewSet, OrderDetailViewSet
+
 router = routers.DefaultRouter()
+router.register(r'activities', ActivityViewSet)
+router.register(r'bills', BillViewSet)
+router.register(r'bill_detail', BillDetailViewSet)
+router.register(r'orders', OrderViewSet)
+router.register(r'order_detail', OrderDetailViewSet)
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),

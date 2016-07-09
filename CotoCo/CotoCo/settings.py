@@ -99,6 +99,10 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',)
+}
+
 LANGUAGE_CODE = 'es-MX'
 
 TIME_ZONE = 'America/Costa_Rica'

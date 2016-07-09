@@ -9,7 +9,7 @@ from django.db import models
 class Client(models.Model):
 
     client_name = models.CharField(max_length=255, verbose_name='Nombre')
-    client_phone = models.DecimalField(max_digits=0, decimal_places=0, verbose_name='Número de Teléfono')
+    client_phone = models.DecimalField(max_digits=11, decimal_places=0, verbose_name='Número de Teléfono')
     client_address = models.CharField(max_length=255, verbose_name='Dirección')
     client_email = models.EmailField(blank=True, verbose_name='Email')
 
