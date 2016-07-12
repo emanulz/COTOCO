@@ -1,0 +1,37 @@
+{
+  "name": "CotoCo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "browserify -t babelify lib/app.js > ../static/js/app.js"
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery.js",
+    "materialize": "./node_modules/materialize-css/bin/materialize.js",
+    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "browserify-shim": "^3.8.12",
+    "jquery": "^3.1.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "materialize": "materialize",
+    "bootstrap": "bootstrap"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "materialize-css": "^0.97.6"
+  }
+}
