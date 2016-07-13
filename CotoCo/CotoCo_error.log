@@ -11,3 +11,30 @@
 [Mon Jul 11 20:34:57 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
 [Mon Jul 11 20:38:46 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
 [Mon Jul 11 20:39:08 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 08:59:36 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts/fontawesome-webfont.woff, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 08:59:36 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts/fontawesome-webfont.ttf, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 08:59:40 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts/fontawesome-webfont.woff, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 08:59:40 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts/fontawesome-webfont.ttf, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 09:01:18 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 09:01:18 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 09:01:20 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 09:01:20 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 09:01:24 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 09:01:59 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 09:01:59 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts/fontawesome-webfont.woff, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 09:01:59 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts/fontawesome-webfont.ttf, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 09:02:01 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 09:02:01 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts/fontawesome-webfont.woff, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 09:02:01 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts/fontawesome-webfont.ttf, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 09:02:21 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 09:02:21 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts/fontawesome-webfont.woff, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 09:02:21 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/fonts/fontawesome-webfont.ttf, referer: http://localhost:8080/static/css/app.css
+[Wed Jul 13 09:03:34 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 09:04:44 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 09:05:11 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 09:06:04 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 09:06:07 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 10:15:09 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 10:15:15 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 10:16:24 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map
+[Wed Jul 13 10:16:51 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.css.map

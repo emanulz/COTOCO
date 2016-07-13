@@ -8,17 +8,15 @@
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js",
-    "materialize": "./node_modules/materialize-css/bin/materialize.js",
-    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js"
+    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js",
+    "metismenu": "./lib/sbAdmin/bower_components/metisMenu/dist/metisMenu.min.js",
+    "sbadmin": "./lib/sbAdmin/dist/js/sb-admin-2.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babelify": "^7.3.0",
-    "browserify": "^13.0.1",
-    "browserify-shim": "^3.8.12",
-    "jquery": "^3.1.0"
+
   },
   "browserify": {
     "transform": [
@@ -27,11 +25,15 @@
   },
   "browserify-shim": {
     "jquery": "$",
-    "materialize": "materialize",
-    "bootstrap": "bootstrap"
+    "bootstrap": "bootstrap",
+    "metismenu": "metismenu",
+    "sbadmin": "sbadmin"
   },
   "devDependencies": {
     "bootstrap": "^3.3.6",
-    "materialize-css": "^0.97.6"
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "browserify-shim": "^3.8.12",
+    "jquery": "^1.12.4"
   }
 }
