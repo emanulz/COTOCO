@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "browserify -t babelify lib/app.js > ../static/js/app.js"
+    "build": "browserify -t babelify lib/app.js | uglifyjs > ../static/js/app.js"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js",
@@ -15,9 +15,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "browserify": {
     "transform": [
       "browserify-shim"
@@ -30,10 +28,11 @@
     "sbadmin": "sbadmin"
   },
   "devDependencies": {
-    "bootstrap": "^3.3.6",
     "babelify": "^7.3.0",
+    "bootstrap": "^3.3.6",
     "browserify": "^13.0.1",
     "browserify-shim": "^3.8.12",
-    "jquery": "^1.12.4"
+    "jquery": "^1.12.4",
+    "uglify-js": "^2.7.0"
   }
 }

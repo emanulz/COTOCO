@@ -2,952 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="572ecc81-0645-4d09-a746-eb4f70192eea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/images/sort_asc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/images/sort_asc_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/images/sort_both.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/images/sort_desc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/images/sort_desc_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/foundation/images/sort_asc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/foundation/images/sort_asc_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/foundation/images/sort_both.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/foundation/images/sort_desc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/foundation/images/sort_desc_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/images/Sorting icons.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/images/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/images/sort_asc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/images/sort_asc_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/images/sort_both.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/images/sort_desc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/images/sort_desc_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/image/hs-2004-27-a-large-web.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/navigate/arrow-down.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/navigate/arrow-left.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/navigate/arrow-right.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/navigate/arrow-up.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/test/image.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/viz/exemplary/area0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/viz/exemplary/bar0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/viz/exemplary/line0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/viz/exemplary/stacked_bar0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap-social/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap-social/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap-social/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap-social/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap-social/bootstrap-social.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap-social/bootstrap-social.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap-social/bootstrap-social.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap-social/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/grunt/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/grunt/bs-commonjs-generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/grunt/bs-glyphicons-data-generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/grunt/bs-lessdoc-parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/grunt/bs-raw-files-generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/grunt/configBridge.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/grunt/sauce_browsers.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/.jscsrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/js/transition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/.csscomb.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/.csslintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/alerts.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/badges.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/bootstrap.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/breadcrumbs.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/button-groups.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/buttons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/carousel.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/close.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/code.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/component-animations.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/dropdowns.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/forms.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/glyphicons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/grid.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/input-groups.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/jumbotron.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/labels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/list-group.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/media.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/alerts.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/background-variant.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/border-radius.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/buttons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/center-block.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/clearfix.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/forms.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/gradients.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/grid-framework.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/grid.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/hide-text.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/image.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/labels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/list-group.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/nav-divider.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/nav-vertical-align.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/opacity.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/pagination.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/panels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/progress-bar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/reset-filter.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/reset-text.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/resize.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/responsive-visibility.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/size.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/tab-focus.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/table-row.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/text-emphasis.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/text-overflow.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/mixins/vendor-prefixes.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/modals.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/navbar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/navs.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/normalize.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/pager.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/pagination.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/panels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/popovers.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/print.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/progress-bars.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/responsive-embed.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/responsive-utilities.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/scaffolding.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/tables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/theme.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/thumbnails.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/tooltip.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/type.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/utilities.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/less/wells.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/nuget/MyGet.ps1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/nuget/bootstrap.less.nuspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/nuget/bootstrap.nuspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/package.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/average().js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/column().title().js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/columns().order().js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnAddDataAndDisplay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnAddTr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnColumnIndexToVisible.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnDataUpdate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnDisplayRow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnDisplayStart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnFakeRowspan.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnFilterAll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnFilterClear.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnFilterOnReturn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnFindCellRowIndexes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnFindCellRowNodes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnGetAdjacentTr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnGetColumnData.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnGetColumnIndex.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnGetHiddenNodes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnGetTd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnGetTds.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnLengthChange.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnMultiFilter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnPagingInfo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnProcessingIndicator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnReloadAjax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnSetFilteringDelay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnSortNeutral.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnStandingRedraw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/fnVisibleToColumnIndex.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/page.jumpToData().js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/api/sum().js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/features/alphabetSearch/dataTables.alphabetSearch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/features/alphabetSearch/dataTables.alphabetSearch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/features/alphabetSearch/dataTables.alphabetSearch.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/features/lengthLinks/dataTables.lengthLinks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/features/lengthLinks/dataTables.lengthLinks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/features/lengthLinks/dataTables.lengthLinks.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/features/searchHighlight/dataTables.searchHighlight.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/features/searchHighlight/dataTables.searchHighlight.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/features/searchHighlight/dataTables.searchHighlight.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/filtering/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/filtering/row-based/TableTools.ShowSelectedOnly.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/filtering/row-based/range_dates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/filtering/row-based/range_numbers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/filtering/type-based/accent-neutralise.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/filtering/type-based/html.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/filtering/type-based/phoneNumber.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Afrikaans.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Albanian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Arabic.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Azerbaijan.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Bangla.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Belarusian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Bulgarian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Catalan.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Chinese-traditional.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Chinese.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Croatian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Czech.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Danish.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Dutch.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/English.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Estonian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Filipino.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Finnish.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/French.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Galician.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Georgian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/German.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Greek.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Gujarati.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Hebrew.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Hindi.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Hungarian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Icelandic.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Indonesian-Alternative.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Indonesian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Irish.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Italian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Japanese.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Korean.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Latvian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Lithuanian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Macedonian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Malay.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Norwegian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Persian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Polish.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Portuguese-Brasil.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Portuguese.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Romanian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Russian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Serbian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Slovak.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Slovenian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Spanish.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Swahili.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Swedish.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Tamil.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Thai.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Turkish.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Ukranian.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Urdu.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Uzbek.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/Vietnamese.lang" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/i18n/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/1/dataTables.bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/1/dataTables.bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/2/dataTables.bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/2/dataTables.bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/2/dataTables.bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/2/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/bootstrap/3/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/font-awesome/bootstrap.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/font-awesome/dataTables.fontAwesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/font-awesome/datatables.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/font-awesome/foundation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/foundation/dataTables.foundation.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/foundation/dataTables.foundation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/foundation/dataTables.foundation.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/foundation/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/jqueryui/dataTables.jqueryui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/jqueryui/dataTables.jqueryui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/jqueryui/dataTables.jqueryui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/jqueryui/dataTables.jqueryui.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/integration/jqueryui/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/make.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/pagination/ellipses.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/pagination/extjs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/pagination/four_button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/pagination/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/pagination/input.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/pagination/jPaginator/dataTables.jPaginator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/pagination/scrolling.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/pagination/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/alt-string.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/anti-the.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/chinese-string.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/currency.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/custom-data-source/dom-checkbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/custom-data-source/dom-select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/custom-data-source/dom-text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/date-dd-MMM-yyyy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/date-de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/date-eu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/date-euro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/date-uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/datetime-moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/datetime-us.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/enum.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/file-size.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/formatted-numbers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/ip-address.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/monthYear.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/natural.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/num-html.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/numeric-comma.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/percent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/persian.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/scientific.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/signed-num.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/stringMonthYear.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/time.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/title-numeric.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/title-string.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/sorting/turkish-string.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/type-detection/currency.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/type-detection/date-uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/type-detection/file-size.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/type-detection/formatted-num.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/type-detection/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/type-detection/ip-address.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/type-detection/num-html.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-plugins/type-detection/numeric-comma.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/License.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/css/responsive.bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/css/responsive.dataTables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/css/responsive.foundation.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/css/responsive.jqueryui.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/docs/api/responsive.index().xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/docs/api/responsive.rebuild().xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/docs/api/responsive.recalc().xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/docs/option/responsive.breakpoints.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/docs/option/responsive.details.renderer.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/docs/option/responsive.details.target.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/docs/option/responsive.details.type.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/docs/option/responsive.details.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/docs/option/responsive.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/child-rows/column-control.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/child-rows/custom-renderer.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/child-rows/disable-child-rows.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/child-rows/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/child-rows/right-column.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/child-rows/whole-row-control.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/display-control/auto.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/display-control/classes.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/display-control/complexHeader.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/display-control/fixedHeader.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/display-control/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/display-control/init-classes.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/initialisation/ajax.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/initialisation/className.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/initialisation/default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/initialisation/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/initialisation/new.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/initialisation/option.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/styling/bootstrap.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/styling/compact.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/styling/foundation.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/styling/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/styling/jqueryui.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/examples/styling/scrolling.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/js/dataTables.responsive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables-responsive/make.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/Contributing.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/css/dataTables.bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/css/dataTables.bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/css/dataTables.foundation.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/css/dataTables.foundation.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/css/dataTables.jqueryui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/css/dataTables.jqueryui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/css/jquery.dataTables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/css/jquery.dataTables.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/css/jquery.dataTables_themeroller.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/js/dataTables.bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/js/dataTables.bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/js/dataTables.foundation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/js/dataTables.foundation.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/js/dataTables.jqueryui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/js/dataTables.jqueryui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/js/jquery.dataTables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/js/jquery.dataTables.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/datatables/media/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot.tooltip/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot.tooltip/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot.tooltip/js/excanvas.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot.tooltip/js/jquery.flot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot.tooltip/js/jquery.flot.tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot.tooltip/js/jquery.flot.tooltip.source.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/API.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/FAQ.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/NEWS.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/PLUGINS.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/component.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/ajax/data-eu-gdp-growth-1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/ajax/data-eu-gdp-growth-2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/ajax/data-eu-gdp-growth-3.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/ajax/data-eu-gdp-growth-4.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/ajax/data-eu-gdp-growth-5.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/ajax/data-eu-gdp-growth.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/ajax/data-japan-gdp-growth.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/ajax/data-usa-gdp-growth.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/ajax/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/annotating/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-interacting/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-multiple/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/date.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/africa" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/antarctica" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/asia" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/australasia" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/backward" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/etcetera" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/europe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/factory" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/iso3166.tab" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/leapseconds" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/northamerica" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/pacificnew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/solar87" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/solar88" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/solar89" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/southamerica" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/systemv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/yearistype.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time-zones/tz/zone.tab" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/axes-time/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/basic-options/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/basic-usage/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/canvas/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/categories/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/examples.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/image/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/interacting/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/navigate/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/percentiles/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/realtime/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/resize/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/selection/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/series-errorbars/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/series-pie/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/series-toggle/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/series-types/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/shared/jquery-ui/jquery-ui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/stacking/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/symbols/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/threshold/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/tracking/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/visitors/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/examples/zooming/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/excanvas.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/excanvas.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/flot.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.colorhelpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.canvas.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.categories.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.crosshair.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.errorbars.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.fillbetween.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.navigate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.pie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.resize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.selection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.stack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.symbol.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.threshold.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.flot.time.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/flot/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/bordered-pulled.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/extras.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/fixed-width.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/larger.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/list.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/rotated-flipped.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/spinning.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/stacked.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_extras.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_fixed-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_larger.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_spinning.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_stacked.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/font-awesome/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/holder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/src/augment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/src/holder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/src/ondomready.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/src/polyfills.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/test/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/holderjs/test/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/MIT-LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/dist/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/dist/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/dist/jquery.min.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/ajax/jsonp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/ajax/load.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/ajax/parseJSON.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/ajax/parseXML.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/ajax/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/ajax/var/nonce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/ajax/var/rquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/ajax/xhr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/attributes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/attributes/attr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/attributes/classes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/attributes/prop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/attributes/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/attributes/val.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/callbacks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/core/access.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/core/init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/core/parseHTML.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/core/ready.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/core/var/rsingleTag.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css/addGetHookIf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css/curCSS.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css/defaultDisplay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css/hiddenVisibleSelectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css/swap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css/var/cssExpand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css/var/getStyles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css/var/isHidden.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css/var/rmargin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/css/var/rnumnonpx.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/data/Data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/data/accepts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/data/var/data_priv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/data/var/data_user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/deferred.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/deprecated.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/dimensions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/effects.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/effects/Tween.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/effects/animatedSelector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/event/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/event/alias.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/event/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/exports/amd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/exports/global.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/intro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/manipulation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/manipulation/_evalUrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/manipulation/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/manipulation/var/rcheckableType.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/offset.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/outro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/queue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/queue/delay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/selector-native.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/selector-sizzle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/selector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/serialize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/sizzle/dist/sizzle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/sizzle/dist/sizzle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/sizzle/dist/sizzle.min.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/traversing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/traversing/findFilter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/traversing/var/rneedsContext.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/arr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/class2type.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/concat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/hasOwn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/indexOf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/pnum.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/push.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/rnotwhite.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/slice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/strundefined.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/var/toString.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/jquery/src/wrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/dist/metisMenu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/dist/metisMenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/dist/metisMenu.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/dist/metisMenu.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/src/metisMenu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/metisMenu/src/metisMenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/mocha/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/mocha/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/mocha/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/mocha/Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/mocha/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/mocha/media/logo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/mocha/mocha.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/mocha/mocha.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/bower.travis.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/_template.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/area-as-line.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/area.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/bar-colors.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/bar-no-axes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/bar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/days.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/decimal-custom-hover.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/diagonal-xlabels-bar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/diagonal-xlabels.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/donut-colors.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/donut-formatter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/donut.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/dst.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/events.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/goals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/lib/example.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/lib/example.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/months-no-smooth.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/negative.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/no-grid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/non-continuous.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/non-date.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/quarters.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/resize.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/stacked_bars.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/timestamps.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/updating.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/weeks.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/examples/years.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/less/morris.core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/lib/morris.area.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/lib/morris.bar.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/lib/morris.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/lib/morris.donut.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/lib/morris.grid.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/lib/morris.hover.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/lib/morris.line.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/morris.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/morris.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/morris.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/area/area_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/bar/bar_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/bar/colours.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/commas_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/donut/donut_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/grid/auto_grid_lines_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/grid/set_data_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/grid/y_label_format_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/hover_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/label_series_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/line/line_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/pad_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/lib/parse_time_spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/specs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/support/placeholder.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/viz/examples.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/viz/run.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/viz/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/morrisjs/spec/viz/visual_specs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/raphael/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/raphael/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/raphael/dev/amdDev.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/raphael/dev/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/raphael/dev/require.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/raphael/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/raphael/raphael-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/raphael/raphael.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/dist/css/sb-admin-2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/dist/css/timeline.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/dist/js/sb-admin-2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/js/flot-data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/js/morris-data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/less/sb-admin-2.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/blank.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/flot.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/forms.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/grid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/icons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/morris.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/notifications.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/panels-wells.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/tables.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/pages/typography.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/lib/icons/icons.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/lib/icons/icons.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/dist/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/dist/jquery.slim.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/dist/jquery.slim.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/dist/jquery.slim.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/.eslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/core/DOMEval.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/core/ready-no-deferred.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/core/readyException.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/core/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/var/getStyles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/var/isHiddenWithinTree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/data/Data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/data/var/dataPriv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/data/var/dataUser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/deferred/exceptionHook.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/event/focusin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/event/trigger.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/selector-native.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/ObjectFunctionString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/arr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/fnToString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/getProto.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/material-design-icons/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/material-design-icons/Material-Design-Icons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/material-design-icons/Material-Design-Icons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/material-design-icons/Material-Design-Icons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/material-design-icons/Material-Design-Icons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/material-design-icons/Material-Design-Icons.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/material-design-icons/icons.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.woff2" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/node_modules/bootstrap.css" afterPath="$PROJECT_DIR$/app/lib/sbAdmin/bower_components/bootstrap/dist/css/bootstrap.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/lib/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/templates/app/app.html/app.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CotoCo.log" afterPath="$PROJECT_DIR$/CotoCo.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CotoCo_error.log" afterPath="$PROJECT_DIR$/CotoCo_error.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/app.jade" afterPath="$PROJECT_DIR$/app/lib/app.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/app.js" afterPath="$PROJECT_DIR$/app/lib/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/app.styl" afterPath="$PROJECT_DIR$/app/lib/app.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/nav/body.html" afterPath="$PROJECT_DIR$/app/lib/nav/body.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/nav/nav.html" afterPath="$PROJECT_DIR$/app/lib/nav/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/AUTHORS.txt" afterPath="$PROJECT_DIR$/app/node_modules/jquery/AUTHORS.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/dist/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/dist/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/dist/jquery.min.map" afterPath="$PROJECT_DIR$/app/node_modules/jquery/dist/jquery.min.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/external/sizzle/dist/sizzle.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/external/sizzle/dist/sizzle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/external/sizzle/dist/sizzle.min.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/external/sizzle/dist/sizzle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/external/sizzle/dist/sizzle.min.map" afterPath="$PROJECT_DIR$/app/node_modules/jquery/external/sizzle/dist/sizzle.min.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/package.json" afterPath="$PROJECT_DIR$/app/node_modules/jquery/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/jsonp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/load.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/parseXML.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/var/location.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/var/location.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/var/nonce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/var/rquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/ajax/xhr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes/attr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes/classes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes/prop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/attributes/val.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/callbacks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/core.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/core/access.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/core/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/core/parseHTML.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/core/ready.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/core/var/rsingleTag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/css/addGetHookIf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/adjustCSS.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/css/adjustCSS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/css/curCSS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/css/hiddenVisibleSelectors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/showHide.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/css/showHide.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/css/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/var/cssExpand.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/css/var/cssExpand.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/css/var/rmargin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/css/var/rnumnonpx.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/css/var/swap.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/css/var/swap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/data.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/data/var/acceptData.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/data/var/acceptData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/deferred.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/deprecated.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/dimensions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/effects.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/effects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/effects/Tween.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/effects/animatedSelector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/event.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/event.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/event/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/event/alias.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/event/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/exports/amd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/exports/global.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/_evalUrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/buildFragment.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/buildFragment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/getAll.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/getAll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/setGlobalEval.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/setGlobalEval.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/var/rcheckableType.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/var/rcheckableType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/var/rscriptType.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/var/rscriptType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/var/rtagName.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/var/rtagName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/wrapMap.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/manipulation/wrapMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/offset.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/offset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/queue.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/queue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/queue/delay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/selector-sizzle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/selector.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/selector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/serialize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/traversing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/traversing/findFilter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/traversing/var/dir.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/traversing/var/dir.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/traversing/var/rneedsContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/traversing/var/siblings.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/traversing/var/siblings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/class2type.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/concat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/document.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/document.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/documentElement.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/documentElement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/hasOwn.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/hasOwn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/indexOf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/pnum.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/pnum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/push.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/push.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/rcssNum.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/rcssNum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/rnotwhite.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/rnotwhite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/slice.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/slice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/support.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/var/toString.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/node_modules/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/app/node_modules/jquery/src/wrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/package.json" afterPath="$PROJECT_DIR$/app/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/app.css" afterPath="$PROJECT_DIR$/static/css/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/app.js" afterPath="$PROJECT_DIR$/static/js/app.js" />
@@ -964,7 +28,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -990,12 +53,10 @@
       <file leaf-file-name="body.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/nav/body.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            <state relative-caret-position="45">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="41" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1004,8 +65,8 @@
       <file leaf-file-name="app.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/lib/app.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1014,24 +75,18 @@
       <file leaf-file-name="nav.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/nav/nav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#4;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#6;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="3795">
+              <caret line="253" column="82" selection-start-line="253" selection-start-column="82" selection-end-line="253" selection-end-column="82" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/app/app.html">
+      <file leaf-file-name="app.styl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/lib/app.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1040,14 +95,9 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-              <folding>
-                <marker date="1468426462000" expanded="true" signature="0:904" ph="{&quot;name&quot;: &quot;CotoCo&quot;...}" />
-                <marker date="1468426462000" expanded="true" signature="189:450" ph="{&quot;jquery&quot;: &quot;./node_modules/jquery/dist/jquery.js&quot;...}" />
-                <marker date="1468426462000" expanded="true" signature="625:734" ph="{&quot;jquery&quot;: &quot;$&quot;...}" />
-                <marker date="1468426462000" expanded="true" signature="757:902" ph="{&quot;bootstrap&quot;: &quot;^3.3.6&quot;...}" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1055,21 +105,11 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
               <folding>
                 <element signature="e#0#45#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.styl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/app.styl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1135,14 +175,14 @@
         <option value="$PROJECT_DIR$/app/lib/material-icons/material-icons.css" />
         <option value="$PROJECT_DIR$/app/lib/icons/icons.css" />
         <option value="$PROJECT_DIR$/templates/app/app.html" />
-        <option value="$PROJECT_DIR$/static/css/app.css" />
-        <option value="$PROJECT_DIR$/templates/app/base.html" />
-        <option value="$PROJECT_DIR$/app/lib/nav/nav.html" />
         <option value="$PROJECT_DIR$/app/lib/app.js" />
-        <option value="$PROJECT_DIR$/app/package.json" />
+        <option value="$PROJECT_DIR$/templates/app/base.html" />
         <option value="$PROJECT_DIR$/app/lib/app.styl" />
+        <option value="$PROJECT_DIR$/static/css/app.css" />
+        <option value="$PROJECT_DIR$/app/package.json" />
         <option value="$PROJECT_DIR$/app/lib/nav/body.html" />
         <option value="$PROJECT_DIR$/app/lib/app.jade" />
+        <option value="$PROJECT_DIR$/app/lib/nav/nav.html" />
       </list>
     </option>
   </component>
@@ -1153,8 +193,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="25" />
-    <option name="y" value="35" />
+    <option name="x" value="36" />
+    <option name="y" value="23" />
     <option name="width" value="1787" />
     <option name="height" value="925" />
   </component>
@@ -1202,6 +242,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1276,7 +317,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1289,6 +329,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1402,12 +443,15 @@
       <workItem from="1468253525413" duration="974000" />
       <workItem from="1468259652848" duration="1110000" />
       <workItem from="1468267798928" duration="17653000" />
-      <workItem from="1468420876870" duration="4664000" />
+      <workItem from="1468420876870" duration="7953000" />
+      <workItem from="1468459831999" duration="1079000" />
+      <workItem from="1468510241717" duration="740000" />
+      <workItem from="1468511001503" duration="517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27135000" />
+    <option name="totallyTimeSpent" value="32760000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1419,27 +463,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="25" y="35" width="1787" height="925" extended-state="0" />
-    <editor active="true" />
+    <frame x="36" y="23" width="1787" height="925" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19988675" sideWeight="0.49411765" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20157658" sideWeight="0.51237494" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893157" sideWeight="0.4623486" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34453782" sideWeight="0.47077408" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25855714" sideWeight="0.5058824" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20157658" sideWeight="0.48762506" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893157" sideWeight="0.4623486" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.49394417" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2004802" sideWeight="0.48762506" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1458,13 +502,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/orders/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="117" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bills/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1656,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CotoCo.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1677,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/app/landing.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1692,13 +715,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/material-icons/material-icons.css" />
-    <entry file="file://$PROJECT_DIR$/app/lib/icons/icons.css">
+    <entry file="file://$PROJECT_DIR$/app/lib/icons/icons.css" />
+    <entry file="file://$PROJECT_DIR$/app/node_modules/jquery.js" />
+    <entry file="file://$PROJECT_DIR$/app/node_modules/bootstrap.css" />
+    <entry file="file://$PROJECT_DIR$/app/lib/nav/nav.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/npm-debug.log" />
     <entry file="file://$PROJECT_DIR$/templates/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1706,93 +733,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/node_modules/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/app/app.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/node_modules/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="2283" column="0" selection-start-line="2283" selection-start-column="0" selection-end-line="2283" selection-end-column="0" />
+        <state relative-caret-position="-1050">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/app.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/nav/nav.css">
+    <entry file="file://$PROJECT_DIR$/static/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-5630">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/npm-debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <marker date="1468426462000" expanded="true" signature="0:904" ph="{&quot;name&quot;: &quot;CotoCo&quot;...}" />
-            <marker date="1468426462000" expanded="true" signature="189:450" ph="{&quot;jquery&quot;: &quot;./node_modules/jquery/dist/jquery.js&quot;...}" />
-            <marker date="1468426462000" expanded="true" signature="625:734" ph="{&quot;jquery&quot;: &quot;$&quot;...}" />
-            <marker date="1468426462000" expanded="true" signature="757:902" ph="{&quot;bootstrap&quot;: &quot;^3.3.6&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/app/app.html/app.html" />
     <entry file="file://$PROJECT_DIR$/app/lib/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
             <element signature="e#0#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/app.styl">
+    <entry file="file://$PROJECT_DIR$/app/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/nav/body.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1804,24 +789,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/app.css" />
+    <entry file="file://$PROJECT_DIR$/app/lib/nav/body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="41" />
+          <folding>
+            <element signature="n#div#2;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/nav/nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#4;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#li#6;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="3795">
+          <caret line="253" column="82" selection-start-line="253" selection-start-column="82" selection-end-line="253" selection-end-column="82" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/app.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
