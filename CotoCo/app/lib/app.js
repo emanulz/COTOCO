@@ -3,17 +3,16 @@
  */
 
 var $ = require('jquery');
+var page = require('page');
 
 require('bootstrap');
 require('metismenu');
 require('sbadmin');
 
+require('./order/');
+require('./order/new/');
+require('./home/');
 
-$( document ).ready(function(){
- 
-    // Initialize collapse button
-    //$(".button-collapse").sideNav();
-    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-    //$('.collapsible').collapsible();
-    
-});
+
+page()
+

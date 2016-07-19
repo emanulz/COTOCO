@@ -4,7 +4,13 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "browserify -t babelify lib/app.js | uglifyjs > ../static/js/app.js"
+    "js": "gulp js",
+    "js:watch": "watch 'npm run js'",
+    "styl": "gulp styl",
+    "styl:watch": "watch 'npm run styl'",
+    "jade": "jade -o ../templates/app/ lib/app.jade",
+    "jade:watch": "watch 'npm run jade'"
+
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js",
@@ -32,7 +38,19 @@
     "bootstrap": "^3.3.6",
     "browserify": "^13.0.1",
     "browserify-shim": "^3.8.12",
+    "gulp": "^3.9.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-stylus": "^2.5.0",
+    "gulp-uglify": "^1.5.4",
+    "jade": "^1.11.0",
+    "jadeify": "^4.6.0",
     "jquery": "^1.12.4",
-    "uglify-js": "^2.7.0"
+    "nib": "^1.1.0",
+    "page": "^1.7.1",
+    "uglify-js": "^2.7.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watch": "^0.19.1"
   }
 }
