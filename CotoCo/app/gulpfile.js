@@ -22,7 +22,7 @@ gulp.task('js', function () {
         .bundle()
         .pipe(source('app.js'))//archivo de destino
         .pipe(buffer())
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('../static/js/')); // en donde va a estar el destino
 
 });

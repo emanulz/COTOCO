@@ -11068,3 +11068,34 @@ table.dataTable thead .sorting:after {
 .no-padding-left {
   padding-left: 0px;
 }
+
+.inner-addon {
+  position: relative;
+}
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.inner-addon .fa {
+  position: absolute;
+  padding: 10px;
+}
+
+.left-addon .glyphicon {
+  left: 10px;
+}
+
+.right-addon .glyphicon {
+  right: 10px;
+}
+
+.left-addon input {
+  padding-left: 30px;
+}
+
+.right-addon input {
+  padding-right: 30px;
+}

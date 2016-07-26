@@ -1,45 +1,85 @@
 
 .main-page-cont
-    H3 Nueva orden de compra
-    form
-        //primera fila
-        .form-group.row
+    H3 Nueva orden de compra:
 
-            .col-lg-1.col-md-2
-                span Fecha:
-            .col-sm-3.no-padding-left
-                input.form-control(type='date',)
+    .col-md-3.no-padding-left
+        form
+            //fecha y proveedor
+            .form-group.row
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Fecha:
+                    .col-xs-12
+                        input.form-control(type='date',)
 
-            .col-lg-1.col-md-2.no-padding-left
-                span Proveedor:
-            .col-sm-3.no-padding-left
-                select.form-control
-                    option 1
-                    option 2
-                    option 3
-        //segunda fila
-        .form-group.row
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Proveedor:
+                    .col-xs-12
+                        select.form-control
+                            option 1
+                            option 2
+                            option 3
+            //proyecto y actividad
+            .form-group.row
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Proyecto:
+                    .col-xs-12
+                        select.form-control
+                            option 1
+                            option 2
+                            option 3
 
-            .col-lg-1.col-md-2
-                span Proyecto:
-            .col-sm-3.no-padding-left
-                select.form-control
-                    option 1
-                    option 2
-                    option 3
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Actividad:
+                    .col-xs-12
+                        select.form-control
+                            option 1
+                            option 2
+                            option 3
 
-            .col-lg-1.col-md-2.no-padding-left
-                span Actividad:
-            .col-sm-3.no-padding-left
-                select.form-control
-                    option 1
-                    option 2
-                    option 3
-        //tercea fila
-        .form-group.row
+            //producto y buscar
+            .form-group.row
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Producuto:
+                    .col-xs-12.inner-addon.right-addon
+                        i.glyphicon.glyphicon-barcode
+                        input.form-control.order_product_code(type='text')
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Buscar:
+                    .col-xs-12.inner-addon.right-addon
+                        i.glyphicon.glyphicon-search
+                        input.form-control(type='text')
 
-            .col-lg-1.col-md-2
-                span Total:
-            .col-sm-3.no-padding-left
-                input.form-control(type='text')
+
+
+    .col-md-9.no-padding-left
+        form
+            //tabla
+            .form-group.row(style='padding-right:15px;margin-top:20px;')
+                .col-xs-12
+                    table.table.table-bordered
+                        thead: tr
+                            th Códi
+                            th Desc
+                            th Cant
+                            th Unid
+                            th P.Un
+                            th Subt
+                            th Obse
+                        tbody.table-body
+
+
+            //confirmar y guardar
+            .form-group.row(style='padding-right:15px;')
+                .col-xs-12.no-padding-left
+                    button(type='button', style='width:13%; ').form-control.btn.btn-default.pull-right Confirmar
+                .col-xs-12.no-padding-left
+                    button(type='button', style='width:13%; ').form-control.btn.btn-default.pull-right Guardar
+
+
 
