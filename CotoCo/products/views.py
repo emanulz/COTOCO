@@ -15,13 +15,13 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ('product_code', 'product_description', 'product_avg_price', 'product_min_price',)
+        fields = ('product_code', 'product_description', 'product_price', 'product_avg_price', 'product_min_price',)
 
 
 class ProductViewSet(viewsets.ModelViewSet):
 
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
-    lookup_field = 'id'
+    lookup_field = 'product_code'
     filter_class = ProductFilter
     # filter_fields = ('id','client','nombrecliente','cashier','date','time','totolkilogramos','cantidadarticulos',)
