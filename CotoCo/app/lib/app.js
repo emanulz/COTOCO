@@ -9,6 +9,7 @@ require('bootstrap');
 require('metismenu');
 require('sbadmin');
 require('select2');
+require('PriceFormat');
 
 
 require('./order/');

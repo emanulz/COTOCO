@@ -12282,3 +12282,37 @@ table.dataTable thead .sorting:after {
 .right-addon input {
   padding-right: 30px;
 }
+
+.BTN_NO {
+  width: 20%;
+}
+
+.Btn_Save {
+  margin-top: 15px;
+}
+
+.table_row {
+  padding-right: 15px;
+}
+
+.unclickable {
+  pointer-events: none;
+}
+
+@media (min-width: 1200px) {
+  .BTN_NO {
+    width: 15%;
+  }
+}
+
+@media (min-width: 992px) {
+  .product_table_row {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .BTN_NO {
+    width: 25%;
+  }
+}

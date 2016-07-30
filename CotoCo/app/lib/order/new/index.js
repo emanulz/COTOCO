@@ -4,11 +4,19 @@ var page = require('page');
 
 var template = require('./template.jade');
 
-var new_order_array=[];
+//GLOBAL SELECTORS
 
+
+//GLOBAL VARS
+var new_order_array=[];
+var total = 0;
+var subtotal = 0;
+var iv_amount = 0 ;
+
+//PAGE NAVIGATION
 page('/order/new',new_order);
 
-
+//FUNCTIONS
 function new_order() {
 
     $.ajaxSetup({
@@ -85,13 +93,176 @@ function date_to_today(date_field_class) {
     $(date_field_class).val(today);
 }
 
+function is_code_on_array(array , code){
+
+    var control = -1;
+
+    $.each(array, function(i) {
+
+        if (array[i][0]==code){
+            control = i;
+            return false;
+        }
+    });
+
+    return control;
+}
+
+function add_product(){
+
+    let codeString = $('.order_product_code').val();
+    let products=JSON.parse(localStorage.Products);
+
+    var code = codeString.split('*')[0];
+    var qty = codeString.split('*')[1];
+
+    if( qty === undefined){
+        qty=1;
+    }
+
+    var is_on_array = is_code_on_array(new_order_array,code);
+
+    if(is_on_array === -1){
+        //filter product by code
+        products = $.grep(products, function(element){
+            return element.product_code == code;
+        });
+
+        if (products.length){
+            var subt = products[0].product_price*qty;
+            add_new_row(products[0].product_code,products[0].product_description,qty, 'unidad',products[0].product_price ,subt )
+        }
+        else{
+            //FALTA mensaje de que no existe el producto
+            alert('NO EXISTE EL PRODUCTO')
+        }
+    }//if
+
+    else{
+
+        new_order_array = row_update(is_on_array, code, qty, new_order_array, 0, 1);
+        update_totals();
+
+    }//else
+
+
+}
+
+function add_new_row(code, desc, qty, unit, uprice, subt ){
+
+    let Btn_Confirm = $('.Btn_Confirm');
+
+    new_order_array.push([code, qty, parseFloat(uprice), subt]);
+
+    var new_row=`<tr class="${code}"><td>${code}</td><td>${desc}</td><td style="padding:0; width:13%"><input type="number" style="width:100%;
+            border:0px" class="form-control ${code}_product_qty no_qty"/></td><td>${unit}</td><td style="padding:0; width:13%"><input type="number" 
+            style="width:100%;border:0px" class="form-control ${code}_product_uprice no_uprice"/></td><td class="${code}_product_subt price" >${subt.toFixed(2)}</td><td style="padding:0; width:10%" 
+            class="inner-addon"><i class="fa fa-paste add_note"></i><i style="margin-left:34px" class="fa fa-minus remove_row"></i></td></tr>`;
+
+    $('.table-body').append(new_row);
+
+    $(`.${code}_product_qty`).val(qty);
+    $(`.${code}_product_uprice`).val(uprice);
+
+    Btn_Confirm.show();
+
+    update_totals();
+
+
+}
+
+function row_update(row, code, qty, array, new_price, ctrl){
+
+    var actual_qty = 0;
+    var actual_uprice = 0;
+    var new_qty = 0;
+    var new_subt = 0;
+
+
+    if (ctrl == 1){//means add already existing product on table
+
+        actual_qty = array[row][1];
+        actual_uprice = array[row][2];
+
+        new_qty = parseFloat(actual_qty) + parseFloat(qty);
+
+        new_subt = actual_uprice*new_qty;
+
+    }
+
+    if(ctrl == 2){//means update qty
+
+        actual_uprice = array[row][2];
+
+        new_qty = parseFloat(qty);
+
+        new_subt = actual_uprice*new_qty;
+
+    }
+
+    if(ctrl == 3){//means update price
+
+        actual_uprice = new_price;
+
+        new_qty = array[row][1];
+
+        new_subt = actual_uprice*new_qty;
+
+    }
+    //calculate values
+
+
+    //update values
+
+    $(`.${code}_product_qty`).val(new_qty);
+    $(`.${code}_product_subt`).text(new_subt.toFixed(2));
+
+    array[row][1] = new_qty;
+    array[row][2] = actual_uprice ;
+    array[row][3] = new_subt;
+
+
+    return array;
+
+}
+
+function update_totals() {
+
+    subtotal=0;
+
+    $.each(new_order_array, function(i) {
+        subtotal = subtotal+new_order_array[i][3]
+    });
+
+    total=subtotal+iv_amount;
+
+    $('.No_Sub_Total').text(subtotal.toFixed(2));
+    $('.Iv').text(iv_amount.toFixed(2));
+    $('.No_Total').text(subtotal.toFixed(2));
+
+    $('.price').priceFormat({
+        prefix: '₡ ',
+        centsSeparator: ',',
+        thousandsSeparator: '.'
+    });
+}
+
+// MAIN AND DOC READY
 function main_new_order () {
-    //selectors
+
+    //Selectors
+    var html = $('html');
+
     var code = $('.order_product_code');
     var search = $('.new_order_search');
     var supplier = $('.new_order_supplier');
     var project = $('.new_order_project');
     var activity = $('.new_order_activity');
+
+    var Btn_Confirm = $('.Btn_Confirm');
+    var Btn_Edit = $('.Btn_Edit');
+    var Btn_Save = $('.Btn_Save');
+
 
     //Browser Events
 
@@ -106,11 +277,90 @@ function main_new_order () {
         }
     });
 
-    search.on('select2:select', function (evt) {
-        evt.preventDefault();
+    search.on('select2:select', function (event) {
+        event.preventDefault();
         code.val(search.val());
         code.focus();
     });
+
+    html.on('click','.remove_row', function () {
+
+        event.preventDefault();
+        var row=$(this).closest("tr");
+        var rowIndex = row.index();
+
+        new_order_array.splice( rowIndex,1 );
+
+        $(this).parent().parent().remove();
+
+        update_totals();
+
+        if (new_order_array.length==0){
+             Btn_Confirm.hide();
+        }
+
+    });
+
+    html.on('change','.no_qty', function () {
+
+        event.preventDefault();
+        let row = $(this).closest("tr");
+        let rowIndex = row.index();
+
+        let code = new_order_array[rowIndex][0];
+        let qty = $(`.${code}_product_qty`).val();
+        let uprice = new_order_array[rowIndex][2];
+
+        row_update(rowIndex, code, qty, new_order_array, uprice, 2);
+
+        update_totals();
+
+    });
+
+    html.on('change','.no_uprice', function () {
+
+        event.preventDefault();
+        let row = $(this).closest("tr");
+        let rowIndex = row.index();
+
+        let code = new_order_array[rowIndex][0];
+        let qty = new_order_array[rowIndex][1];
+        let uprice = $(`.${code}_product_uprice`).val();
+
+        row_update(rowIndex, code, qty, new_order_array, uprice, 3);
+
+        update_totals();
+
+    });
+
+    //Button Events
+    Btn_Confirm.on('click', function(event){
+        console.log('BTN CLICK');
+        event.preventDefault();
+
+        $('.main-page-cont').find(':input').prop('disabled', true);
+        $('.remove_row').addClass('unclickable');
+        $('.add_note').addClass('unclickable');
+
+
+
+        Btn_Confirm.hide();
+        Btn_Edit.show().prop('disabled', false);
+        Btn_Save.show().prop('disabled', false);
+    });
+
+    Btn_Edit.on('click', function(event){
+        event.preventDefault();
+
+        $('.remove_row').removeClass('unclickable');
+        $('.add_note').removeClass('unclickable');
+        $('.main-page-cont').find(':input').prop('disabled', false);
+
+        Btn_Confirm.show();
+        Btn_Edit.hide();
+        Btn_Save.hide();
+    });
+
 
     //Init Items
 
@@ -147,90 +397,12 @@ function main_new_order () {
         language: "es"
     });
 
-
+    //Hide Buttons
+    Btn_Confirm.hide();
+    Btn_Edit.hide();
+    Btn_Save.hide();
 }
 
 $(document).on('ready', function(){
 
-});
-
-function add_product(){
-
-    let codeString = $('.order_product_code').val();
-    let products=JSON.parse(localStorage.Products);
-
-    var code = codeString.split('*')[0];
-    var qty = codeString.split('*')[1];
-
-    if( qty === undefined){
-        qty=1;
-    }
-
-    //filter product by code
-    products = $.grep(products, function(element){
-        return element.product_code == code;
-    });
-
-    if (products.length){
-        var subt = products[0].product_price*qty;
-        add_new_row(products[0].product_code,products[0].product_description,qty, 'unidad',products[0].product_price ,subt )
-    }
-    else{
-        alert('NO EXISTE EL PRODUCTO')
-    }
-
-}
-
-function add_new_row(code, desc, qty, unit, uprice, subt ){
-
-    var new_row=`<tr class="${code}"><td>${code}</td><td>${desc}</td><td style="padding:0; width:13%"><input type="number" style="width:100%;
-            border:0px" class="form-control ${code}_product_qty"/></td><td>${unit}</td><td style="padding:0; width:13%"><input type="number" 
-            style="width:100%;border:0px" class="form-control ${code}_product_uprice"/></td><td>${subt}</td><td style="padding:0; width:10%" 
-            class="inner-addon"><i class="fa fa-paste add_note"></i><i style="margin-left:34px" class="fa fa-minus revove_row"></i></td></tr>`;
-
-    $('.table-body').append(new_row);
-
-    $(`.${code}_product_qty`).val(qty);
-    $(`.${code}_product_uprice`).val(uprice);
-
-}
-
-
-$('html').on('click','.revove_row', function () {
-
-    event.preventDefault();
-    var row=$(this).closest("tr");
-    var rowIndex = row.index();
-    //
-    // var totalsubquitar= matrixventa[rowIndex][4];
-    // var totalivquitar= matrixventa[rowIndex][5];
-    // var totalquitar = matrixventa[rowIndex][6];
-    // var cantidadquitar=matrixventa[rowIndex][3];
-    //
-    // totalkg=totalkg-cantidadquitar;
-    // totalart=totalart-1;
-    // totalventa=Math.round((totalventa-totalquitar) * 1000) / 1000;
-    // totaliv=Math.round((totaliv-totalivquitar) * 1000) / 1000;
-    // subtotal=Math.round((subtotal-totalsubquitar) * 1000) / 1000;
-    // preciosindesc=totalventa;
-    // ivsindesc=totaliv;
-    //
-    // $('.totalventa').html(totalventa.toFixed(2));
-    // $('.totaliv').html(totaliv.toFixed(2));
-    // $('.subtotal').html(subtotal.toFixed(2));
-    // $('.totalart').html(totalart);
-    // $('.totalkg').html(totalkg+' Kg');
-    //
-    // $('.precio').priceFormat({
-    //     prefix: '₡ ',
-    //     centsSeparator: ',',
-    //     thousandsSeparator: '.'
-    // });
-    //
-    // matrixventa.splice( rowIndex,1 );
-    // //console.log(matrixventa);
-    $(this).parent().parent().remove();
-    // if (matrixventa.length==0){
-    //     $("#BtnConfirmar").prop("disabled",true);
-    // }
 });
