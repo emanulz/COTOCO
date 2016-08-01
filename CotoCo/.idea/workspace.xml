@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="572ecc81-0645-4d09-a746-eb4f70192eea" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/orders/order.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CotoCo.log" afterPath="$PROJECT_DIR$/CotoCo.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CotoCo/settings.py" afterPath="$PROJECT_DIR$/CotoCo/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CotoCo/urls.py" afterPath="$PROJECT_DIR$/CotoCo/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CotoCo_error.log" afterPath="$PROJECT_DIR$/CotoCo_error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/app.js" afterPath="$PROJECT_DIR$/app/lib/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/order/new/index.js" afterPath="$PROJECT_DIR$/app/lib/order/new/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/order/new/index.styl" afterPath="$PROJECT_DIR$/app/lib/order/new/index.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/order/new/template.jade" afterPath="$PROJECT_DIR$/app/lib/order/new/template.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/package.json" afterPath="$PROJECT_DIR$/app/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/app.css" afterPath="$PROJECT_DIR$/static/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/admin.py" afterPath="$PROJECT_DIR$/orders/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/models.py" afterPath="$PROJECT_DIR$/orders/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/views.py" afterPath="$PROJECT_DIR$/orders/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/models.py" afterPath="$PROJECT_DIR$/products/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/app.js" afterPath="$PROJECT_DIR$/static/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/base.html" afterPath="$PROJECT_DIR$/templates/app/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../venvcoto/pip-selfcheck.json" afterPath="$PROJECT_DIR$/../venvcoto/pip-selfcheck.json" />
     </list>
     <ignored path="CotoCo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,69 +38,7 @@
     <favorites_list name="CotoCo" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/lib/order/new/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="224" column="17" selection-start-line="224" selection-start-column="17" selection-end-line="224" selection-end-column="17" />
-              <folding>
-                <element signature="n#!!block;n#new_order#0" expanded="false" />
-                <element signature="e#315#825#0" expanded="false" />
-                <element signature="n#!!block;n#products_to_memory#0" expanded="false" />
-                <element signature="n#!!block;n#add_from_API_to_select#0" expanded="false" />
-                <element signature="n#!!block;n#date_to_today#0" expanded="false" />
-                <element signature="n#!!block;n#is_code_on_array#0" expanded="false" />
-                <element signature="n#!!block;n#add_product#0" expanded="false" />
-                <element signature="e#2866#3370#0" expanded="false" />
-                <element signature="n#!!block;n#add_new_row#0" expanded="false" />
-                <element signature="n#!!block;n#update_totals#0" expanded="false" />
-                <element signature="e#6688#6781#0" expanded="false" />
-                <element signature="e#6832#7150#0" expanded="false" />
-                <element signature="e#8051#8420#0" expanded="false" />
-                <element signature="e#8464#8756#0" expanded="false" />
-                <element signature="e#8798#8941#0" expanded="false" />
-                <element signature="e#8966#9110#0" expanded="false" />
-                <element signature="e#9134#9278#0" expanded="false" />
-                <element signature="e#9303#9447#0" expanded="false" />
-                <element signature="e#9573#9577#0" expanded="false" />
-                <marker date="1469842991000" expanded="true" signature="3720:4314" ph="..." />
-                <marker date="1469842991000" expanded="true" signature="3764:3784" ph="..." />
-                <marker date="1469842991000" expanded="true" signature="3785:3903" ph="..." />
-                <marker date="1469842991000" expanded="true" signature="3814:3848" ph="..." />
-                <marker date="1469842991000" expanded="true" signature="3931:3951" ph="..." />
-                <marker date="1469842991000" expanded="true" signature="3952:4076" ph="..." />
-                <marker date="1469842991000" expanded="true" signature="3973:4071" ph="..." />
-                <marker date="1469842991000" expanded="true" signature="3994:4015" ph="..." />
-                <marker date="1469842991000" expanded="true" signature="4151:4171" ph="..." />
-                <marker date="1469842991000" expanded="true" signature="4172:4309" ph="..." />
-                <marker date="1469842991000" expanded="true" signature="4252:4268" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/order/new/template.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.styl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/order/new/index.styl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="38" column="12" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -115,7 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/activities/filters.py" />
         <option value="$PROJECT_DIR$/bills/views.py" />
         <option value="$PROJECT_DIR$/bills/filters.py" />
         <option value="$PROJECT_DIR$/orders/views.py" />
@@ -156,8 +97,6 @@
         <option value="$PROJECT_DIR$/static/js/app.js" />
         <option value="$PROJECT_DIR$/app/lib/app.styl" />
         <option value="$PROJECT_DIR$/templates/app/landing.html" />
-        <option value="$PROJECT_DIR$/templates/app/base.html" />
-        <option value="$PROJECT_DIR$/products/models.py" />
         <option value="$PROJECT_DIR$/products/admin.py" />
         <option value="$PROJECT_DIR$/products/filters.py" />
         <option value="$PROJECT_DIR$/products/views.py" />
@@ -165,7 +104,10 @@
         <option value="$PROJECT_DIR$/app/package.json" />
         <option value="$PROJECT_DIR$/app/lib/app.js" />
         <option value="$PROJECT_DIR$/app/lib/order/new/template.jade" />
+        <option value="$PROJECT_DIR$/templates/app/base.html" />
         <option value="$PROJECT_DIR$/app/lib/order/new/index.js" />
+        <option value="$PROJECT_DIR$/products/models.py" />
+        <option value="$PROJECT_DIR$/orders/models.py" />
       </list>
     </option>
   </component>
@@ -225,8 +167,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -242,60 +184,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CotoCo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CotoCo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CotoCo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CotoCo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CotoCo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CotoCo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CotoCo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PriceFormat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -333,28 +221,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
-    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
-    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" value="" />
-      <option name="executablePath" />
-      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -371,19 +238,6 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
       <method />
     </configuration>
     <configuration default="false" name="CotoCo" type="Python.DjangoServer" factoryName="Django server">
@@ -439,12 +293,13 @@
       <workItem from="1469652067920" duration="10407000" />
       <workItem from="1469717511566" duration="608000" />
       <workItem from="1469719022117" duration="2112000" />
-      <workItem from="1469810265802" duration="16037000" />
+      <workItem from="1469810265802" duration="16564000" />
+      <workItem from="1469892078782" duration="3798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103721000" />
+    <option name="totallyTimeSpent" value="108046000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -457,7 +312,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="21" y="23" width="1746" height="980" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20695652" sideWeight="0.49411765" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -465,7 +320,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884398" sideWeight="0.4623486" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2578829" sideWeight="0.47077408" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22072072" sideWeight="0.47077408" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25855714" sideWeight="0.5058824" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21436588" sideWeight="0.48762506" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -512,25 +367,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/clients/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clients/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clients/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -676,13 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/nav/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="250" column="47" selection-start-line="250" selection-start-column="47" selection-end-line="250" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -697,24 +531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/app.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -753,18 +573,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/products/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/app.styl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,62 +591,102 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/order/new/index.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/order/new/template.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
+        <state relative-caret-position="795">
           <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/app.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/app/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/nav/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3750">
+          <caret line="250" column="47" selection-start-line="250" selection-start-column="47" selection-end-line="250" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/order/new/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="224" column="17" selection-start-line="224" selection-start-column="17" selection-end-line="224" selection-end-column="17" />
+        <state relative-caret-position="930">
+          <caret line="250" column="25" selection-start-line="250" selection-start-column="25" selection-end-line="250" selection-end-column="25" />
           <folding>
-            <element signature="n#!!block;n#new_order#0" expanded="false" />
-            <element signature="e#315#825#0" expanded="false" />
             <element signature="n#!!block;n#products_to_memory#0" expanded="false" />
             <element signature="n#!!block;n#add_from_API_to_select#0" expanded="false" />
             <element signature="n#!!block;n#date_to_today#0" expanded="false" />
             <element signature="n#!!block;n#is_code_on_array#0" expanded="false" />
             <element signature="n#!!block;n#add_product#0" expanded="false" />
-            <element signature="e#2866#3370#0" expanded="false" />
+            <element signature="e#2891#3395#0" expanded="false" />
             <element signature="n#!!block;n#add_new_row#0" expanded="false" />
+            <element signature="n#!!block;n#row_update#0" expanded="false" />
             <element signature="n#!!block;n#update_totals#0" expanded="false" />
-            <element signature="e#6688#6781#0" expanded="false" />
-            <element signature="e#6832#7150#0" expanded="false" />
-            <element signature="e#8051#8420#0" expanded="false" />
-            <element signature="e#8464#8756#0" expanded="false" />
-            <element signature="e#8798#8941#0" expanded="false" />
-            <element signature="e#8966#9110#0" expanded="false" />
-            <element signature="e#9134#9278#0" expanded="false" />
-            <element signature="e#9303#9447#0" expanded="false" />
-            <element signature="e#9573#9577#0" expanded="false" />
-            <marker date="1469842991000" expanded="true" signature="3720:4314" ph="..." />
-            <marker date="1469842991000" expanded="true" signature="3764:3784" ph="..." />
-            <marker date="1469842991000" expanded="true" signature="3785:3903" ph="..." />
-            <marker date="1469842991000" expanded="true" signature="3814:3848" ph="..." />
-            <marker date="1469842991000" expanded="true" signature="3931:3951" ph="..." />
-            <marker date="1469842991000" expanded="true" signature="3952:4076" ph="..." />
-            <marker date="1469842991000" expanded="true" signature="3973:4071" ph="..." />
-            <marker date="1469842991000" expanded="true" signature="3994:4015" ph="..." />
-            <marker date="1469842991000" expanded="true" signature="4151:4171" ph="..." />
-            <marker date="1469842991000" expanded="true" signature="4172:4309" ph="..." />
-            <marker date="1469842991000" expanded="true" signature="4252:4268" ph="..." />
+            <element signature="n#!!block;n#save_new_order#0" expanded="false" />
+            <element signature="n#!!block;n#save_detail#0" expanded="false" />
+            <element signature="e#8735#8828#0" expanded="false" />
+            <element signature="e#8879#9197#0" expanded="false" />
+            <element signature="e#10098#10467#0" expanded="false" />
+            <element signature="e#10511#10803#0" expanded="false" />
+            <element signature="e#10955#11098#0" expanded="false" />
+            <element signature="e#11123#11267#0" expanded="false" />
+            <element signature="e#11291#11435#0" expanded="false" />
+            <element signature="e#11460#11604#0" expanded="false" />
+            <marker date="1469894380000" expanded="true" signature="3745:4339" ph="..." />
+            <marker date="1469894380000" expanded="true" signature="3789:3809" ph="..." />
+            <marker date="1469894380000" expanded="true" signature="3810:3928" ph="..." />
+            <marker date="1469894380000" expanded="true" signature="3839:3873" ph="..." />
+            <marker date="1469894380000" expanded="true" signature="3956:3976" ph="..." />
+            <marker date="1469894380000" expanded="true" signature="3977:4101" ph="..." />
+            <marker date="1469894380000" expanded="true" signature="3998:4096" ph="..." />
+            <marker date="1469894380000" expanded="true" signature="4019:4040" ph="..." />
+            <marker date="1469894380000" expanded="true" signature="4176:4196" ph="..." />
+            <marker date="1469894380000" expanded="true" signature="4197:4334" ph="..." />
+            <marker date="1469894380000" expanded="true" signature="4277:4293" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orders/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/order/new/index.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="38" column="12" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

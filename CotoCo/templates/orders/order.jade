@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+    head
+        title = order.id
+
+        link(rel="stylesheet" href="/static/css/app.css")
+
+    body
+
+        .col-xs-6
+            span Orden # {{order.id}}
+        .col-xs-6
+            span Fecha : {{order.order_date}}
+        .col-xs-6
+            span Proyecto # {{order.order_project.id}} - {{order.order_project.project_name}}
+        .col-xs-6
+            span Fecha Entraga : {{order.order_date}}
+        .col-xs-6
+            span Actividad : {{order.order_activity.activity_name}}
+        .col-xs-12
+            form
+                //tabla
+                .form-group.row.table_row.product_table_row
+                    .col-xs-12(style="font-size:12px")
+                        table.table.table-bordered.NO_table
+                            thead: tr
+                                th Código
+                                th Descripción
+                                th Cantidad
+                                th Unidad
+                                th P.Unitario
+                                th Subtotal
+                                th Observaciones
+                            tbody.table-body
+                                {% for detail in details %}
+                                tr
+                                    td {{detail.order_detail_product.product_code}}
+                                    td {{detail.order_detail_product.product_description}}
+                                    td {{detail.order_detail_amount}}
+                                    td unidad
+                                    td ₡ {{detail.order_detail_price}}
+                                    td ₡ {{detail.order_detail_total}}
+                                    td -
+
+                                {% endfor %}

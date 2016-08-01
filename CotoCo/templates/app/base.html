@@ -10,6 +10,7 @@
 </head>
 <body>
         <div id="wrapper">
+            {% csrf_token %}
             {% block content %}
             {% endblock content %}
         </div>

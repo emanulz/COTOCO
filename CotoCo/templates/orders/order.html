@@ -1,0 +1,23 @@
+doctype html
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Orden #{{ order.id}} PDF</title>
+    <link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+
+
+<h1>{{ order.id}}</h1>
+
+{% for detail in details %}
+<h2>
+  <a href="#">
+    {{ detail.order_detail_product}} - {{ detail.order_detail_price}}
+  </a>
+</h2>
+{% endfor %}
+
+
+</body>
+</html>

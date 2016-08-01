@@ -1,13 +1,51 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django.contrib.auth.decorators import login_required
+from django.template.loader import get_template
+from django.template import RequestContext
+from django.http import HttpResponse
+from django.conf import settings
 from django.shortcuts import render
+
 from rest_framework import serializers, viewsets
 from .models import Order, OrderDetail
 from .filters import OrderFilter, OrderDetailFilter
+from products.models import Product
+
+from weasyprint import HTML, CSS
+
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Create your views here.
 
+
+def orderpdf2(request, pk):
+
+    order = Order.objects.get(pk=pk)
+    details = order.order_product_list.all()
+    return render(request, '../templates/orders/order.jade', {'details': details, 'order': order})
+
+
+def order2pdf(request, pk):
+
+    html_template = get_template('../templates/orders/order.jade')
+    order = Order.objects.get(pk=pk)
+    details = order.order_product_list.all()
+
+    rendered_html = html_template.render(RequestContext(request, {'details': details, 'order': order}))
+
+    # pdf_file = HTML(string=rendered_html).write_pdf(stylesheets=[CSS(settings.STATIC_ROOT + 'css/app.css')])
+
+    http_response = HttpResponse(content_type='application/pdf')
+
+    HTML(string=rendered_html, base_url=request.build_absolute_uri()).write_pdf(http_response)
+
+    http_response['Content-Disposition'] = 'filename="New_Order.pdf"'
+
+    return http_response
 
 # API
 

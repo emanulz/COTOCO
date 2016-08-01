@@ -355,6 +355,7 @@ var template = require('./template.jade');
 
 //GLOBAL VARS
 var new_order_array = [];
+var new_order_detail = [];
 var total = 0;
 var subtotal = 0;
 var iv_amount = 0;
@@ -579,6 +580,61 @@ function update_totals() {
     });
 }
 
+function save_new_order() {
+
+    save_detail();
+
+    $.ajax({
+        method: "POST",
+        url: "/api/orders/",
+        async: false,
+
+        data: JSON.stringify({
+            "order_date": $('.new_order_date').val(),
+            "order_supplier": $('.new_order_supplier').val(),
+            "order_project": $('.new_order_project').val(),
+            "order_activity": $('.new_order_activity').val(),
+            "order_product_list": new_order_detail,
+            "order_total": total
+
+        }), //JSON object
+        contentType: "application/json; charset=utf-8",
+        dataType: "json"
+    }).fail(function (data) {
+        console.log(data.responseText);
+        alert("Hubo un problema al crear la venta, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+    }).success(function (data) {
+        alert('Orden guardada con exitoooo');
+    }); //ajax
+}
+
+function save_detail() {
+
+    $.each(new_order_array, function (i) {
+        $.ajax({
+            method: "POST",
+            url: "/api/order_detail/",
+            async: false,
+
+            data: JSON.stringify({
+                "order_detail_product": new_order_array[i][0],
+                "order_detail_price": new_order_array[i][2],
+                "order_detail_amount": new_order_array[i][1],
+                "order_detail_total": new_order_array[i][3]
+
+            }), //JSON object
+            contentType: "application/json; charset=utf-8",
+            dataType: "json"
+        }).fail(function (data) {
+            console.log(data.responseText);
+            alert("Hubo un problema al crear la venta, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+        }).success(function (data) {
+            console.log(data.id);
+            new_order_detail.push(data.id);
+        }); //ajax
+    });
+}
+
 // MAIN AND DOC READY
 function main_new_order() {
 
@@ -594,6 +650,12 @@ function main_new_order() {
     var Btn_Confirm = $('.Btn_Confirm');
     var Btn_Edit = $('.Btn_Edit');
     var Btn_Save = $('.Btn_Save');
+
+    new_order_array = [];
+    new_order_detail = [];
+    total = 0;
+    subtotal = 0;
+    iv_amount = 0;
 
     //Browser Events
 
@@ -685,6 +747,12 @@ function main_new_order() {
         Btn_Confirm.show();
         Btn_Edit.hide();
         Btn_Save.hide();
+    });
+
+    Btn_Save.on('click', function (event) {
+        event.preventDefault();
+
+        save_new_order();
     });
 
     //Init Items
