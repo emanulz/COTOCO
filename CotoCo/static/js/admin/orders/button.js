@@ -12,7 +12,19 @@ $( document ).ready(function($){
 
         window.open(`/orderpdf/${id}/`)
 
-    })
+    });
+
+    $('html').on('click','.editBtn', function () {
+
+        var id=$(this).closest('tr')[0].cells[1].outerText;
+
+        console.log(`El id de salida es ${id}`);
+
+        localStorage.order_to_edit=JSON.stringify({id:id});
+
+
+    });
+
 
 });
 

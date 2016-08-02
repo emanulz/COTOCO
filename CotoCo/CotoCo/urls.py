@@ -49,7 +49,7 @@ urlpatterns = [
     url(r'orderpdf2/(?P<pk>\d+)/$', 'orders.views.orderpdf2', name='orderpdf2'),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^', LandingView.as_view()),
+    url(r'^', 'frontend.views.LandingView'),
 ]
 
 if settings.DEBUG:

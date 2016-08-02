@@ -4,8 +4,6 @@ var page = require('page');
 
 var template = require('./template.jade');
 
-//GLOBAL SELECTORS
-
 
 //GLOBAL VARS
 var new_order_array=[];
@@ -15,7 +13,7 @@ var subtotal = 0;
 var iv_amount = 0 ;
 
 //PAGE NAVIGATION
-page('/order/new',new_order);
+page('/admin/orders/order/create/',new_order);
 
 //FUNCTIONS
 function new_order() {
@@ -34,7 +32,7 @@ function new_order() {
         }
     });//ajax setup
 
-    $('#page-wrapper').html(template());
+    $('#page-content-wrapper').html(template());
 
     localStorage.Products=null;
 
@@ -47,6 +45,9 @@ function new_order() {
     add_from_API_to_select('activities', 'id','activity_name', '.new_order_activity');
 
     products_to_memory();
+
+    $('li.active').removeClass('active');
+    $('.new_order_li').addClass('active');
 
     main_new_order();
 
@@ -311,6 +312,8 @@ function save_detail(){
 
 // MAIN AND DOC READY
 function main_new_order () {
+
+
 
     //Selectors
     var html = $('html');
