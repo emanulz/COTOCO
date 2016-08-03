@@ -2,14 +2,14 @@
 1 verbose cli [ '/usr/local/bin/node',
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'run',
-1 verbose cli   'jade:watch' ]
+1 verbose cli   'styl:watch' ]
 2 info using npm@3.3.12
 3 info using node@v5.3.0
 4 verbose stack Error: ENOENT: no such file or directory, open '/Users/emanuelziga/GITHUB/COTOCO/CotoCo/package.json'
 4 verbose stack     at Error (native)
 5 verbose cwd /Users/emanuelziga/GITHUB/COTOCO/CotoCo
 6 error Darwin 15.5.0
-7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "jade:watch"
+7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "styl:watch"
 8 error node v5.3.0
 9 error npm  v3.3.12
 10 error path /Users/emanuelziga/GITHUB/COTOCO/CotoCo/package.json

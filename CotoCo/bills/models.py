@@ -4,13 +4,15 @@ from __future__ import unicode_literals
 from django.db import models
 from products.models import Product
 from suppliers.models import Supplier
+from orders.models import Order
 
 
 class Bill(models.Model):
 
     bill_date = models.DateField(verbose_name='Fecha')
     bill_supplier = models.ForeignKey(Supplier, verbose_name='Proveedor')
-    bill_product_list = models.ManyToManyField('BillDetail', verbose_name='Lista de productos')
+    bill_order = models.ForeignKey(Order, verbose_name='Orden de compra', default=1)
+    bill_detail_list = models.ManyToManyField('BillDetail', verbose_name='Lista de detalles')
     bill_total = models.DecimalField(max_digits=7, decimal_places=2, verbose_name='Precio Total')
 
     def __unicode__(self):

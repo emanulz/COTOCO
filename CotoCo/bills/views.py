@@ -16,7 +16,7 @@ class BillSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Bill
-        fields = ('id', 'bill_date', 'bill_supplier', 'bill_product_list', 'bill_total',)
+        fields = ('id', 'bill_date', 'bill_supplier', 'bill_order', 'bill_detail_list', 'bill_total',)
 
 
 class BillViewSet(viewsets.ModelViewSet):

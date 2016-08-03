@@ -49,13 +49,12 @@ function edit_order() {
 
     $('li.active').removeClass('active');
     $('.edit_order_li').addClass('active');
-    $('.order_header').text( 'Editar orden de compra:');
 
     let id = JSON.parse(localStorage.order_to_edit);
 
     order_id=id.id;
 
-    console.log(`El id de entrada es ${id.id}`);
+    $('.order_header').text( `Editar orden de compra # ${order_id}`);
 
     main_edit_order();
 
@@ -287,11 +286,14 @@ function save_new_order(){
         })
         .success(function(data){
             alert('Orden editada con exitoooo');
+            window.location.replace("/admin/orders/order/");
         });//ajax
 
 }
 
 function save_detail(){
+
+    new_order_detail=[];
 
     $.each(new_order_array, function(i) {
         $.ajax({

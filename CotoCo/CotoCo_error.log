@@ -14094,3 +14094,1599 @@
 [Mon Aug 01 20:42:59 2016] [error] 
 [Mon Aug 01 20:51:01 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
 [Mon Aug 01 21:53:04 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 08:44:13 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/CotoCo/CotoCo/urls.py:48: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got orders.views.order2pdf). Pass the callable instead.
+[Tue Aug 02 08:44:13 2016] [error]   url(r'orderpdf/(?P<pk>\\d+)/$', 'orders.views.order2pdf', name='order2pdf'),
+[Tue Aug 02 08:44:13 2016] [error] 
+[Tue Aug 02 08:44:13 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/CotoCo/CotoCo/urls.py:49: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got orders.views.orderpdf2). Pass the callable instead.
+[Tue Aug 02 08:44:13 2016] [error]   url(r'orderpdf2/(?P<pk>\\d+)/$', 'orders.views.orderpdf2', name='orderpdf2'),
+[Tue Aug 02 08:44:13 2016] [error] 
+[Tue Aug 02 08:44:13 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/CotoCo/CotoCo/urls.py:52: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got frontend.views.LandingView). Pass the callable instead.
+[Tue Aug 02 08:44:13 2016] [error]   url(r'^', 'frontend.views.LandingView'),
+[Tue Aug 02 08:44:13 2016] [error] 
+[Tue Aug 02 08:44:13 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/venvcoto/lib/python2.7/site-packages/django/template/engine.py:123: RemovedInDjango110Warning: pyjade.ext.django.Loader inherits from django.template.loader.BaseLoader instead of django.template.loaders.base.Loader. 
+[Tue Aug 02 08:44:13 2016] [error]   loader = self.find_template_loader(template_loader)
+[Tue Aug 02 08:44:13 2016] [error] 
+[Tue Aug 02 08:55:55 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/CotoCo/CotoCo/urls.py:48: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got orders.views.order2pdf). Pass the callable instead.
+[Tue Aug 02 08:55:55 2016] [error]   url(r'orderpdf/(?P<pk>\\d+)/$', 'orders.views.order2pdf', name='order2pdf'),
+[Tue Aug 02 08:55:55 2016] [error] 
+[Tue Aug 02 08:55:55 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/CotoCo/CotoCo/urls.py:49: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got orders.views.orderpdf2). Pass the callable instead.
+[Tue Aug 02 08:55:55 2016] [error]   url(r'orderpdf2/(?P<pk>\\d+)/$', 'orders.views.orderpdf2', name='orderpdf2'),
+[Tue Aug 02 08:55:55 2016] [error] 
+[Tue Aug 02 08:55:55 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/CotoCo/CotoCo/urls.py:52: RemovedInDjango110Warning: Support for string view arguments to url() is deprecated and will be removed in Django 1.10 (got frontend.views.LandingView). Pass the callable instead.
+[Tue Aug 02 08:55:55 2016] [error]   url(r'^', 'frontend.views.LandingView'),
+[Tue Aug 02 08:55:55 2016] [error] 
+[Tue Aug 02 08:55:55 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/venvcoto/lib/python2.7/site-packages/django/template/engine.py:123: RemovedInDjango110Warning: pyjade.ext.django.Loader inherits from django.template.loader.BaseLoader instead of django.template.loaders.base.Loader. 
+[Tue Aug 02 08:55:55 2016] [error]   loader = self.find_template_loader(template_loader)
+[Tue Aug 02 08:55:55 2016] [error] 
+[Tue Aug 02 09:09:30 2016] [error] Not Found: /admin/orders/order/create/change/
+[Tue Aug 02 09:17:33 2016] [error] Not Found: /admin/orders/order/create/change/
+[Tue Aug 02 09:42:28 2016] [error] Not Found: /admin/orders/order/create/change/
+[Tue Aug 02 09:59:16 2016] [error] Not Found: /admin/orders/order/create/change/
+[Tue Aug 02 10:09:34 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/CotoCo/orders/views.py:38: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+[Tue Aug 02 10:09:34 2016] [error]   rendered_html = html_template.render(RequestContext(request, {'details': details, 'order': order}))
+[Tue Aug 02 10:09:34 2016] [error] 
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 11:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `user-select: none` at 14:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-user-select: none` at 15:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `text-overflow: ellipsis` at 23:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 38:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `user-select: none` at 41:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-user-select: none` at 42:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `text-overflow: ellipsis` at 49:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-appearance: none` at 66:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `user-select: none` at 93:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-user-select: none` at 94:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 98:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-appearance: none` at 129:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `filter: alpha(opacity=0)` at 151:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `clip: rect(0 0 0 0)` at 156:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 177:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: default` at 218:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: text` at 234:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 256:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: default` at 267:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 276:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: default` at 309:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: none` at 336:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-appearance: textfield` at 337:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `overflow-y: auto` at 342:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: default` at 396:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #fff 50%, #eee 100%)` at 406:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -o-linear-gradient(top, #fff 50%, #eee 100%)` at 407:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)` at 410:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 423:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #eee 50%, #ccc 100%)` at 444:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -o-linear-gradient(top, #eee 50%, #ccc 100%)` at 445:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC', GradientType=0)` at 448:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #fff 0%, #eee 50%)` at 496:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -o-linear-gradient(top, #fff 0%, #eee 50%)` at 497:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)` at 500:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #eee 50%, #fff 100%)` at 507:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -o-linear-gradient(top, #eee 50%, #fff 100%)` at 508:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFFFFFFF', GradientType=0)` at 511:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: text` at 518:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: default` at 540:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 549:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: none` at 596:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `overflow-y: auto` at 614:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: default` at 631:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 647:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 648:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 663:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 664:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field::-webkit-input-placeholder', Unknown pseudo-element: -webkit-input-placeholder
+[Tue Aug 02 10:09:34 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field:-moz-placeholder', The pseudo-class :-moz-placeholder is unknown
+[Tue Aug 02 10:09:34 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field::-moz-placeholder', Unknown pseudo-element: -moz-placeholder
+[Tue Aug 02 10:09:34 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field:-ms-input-placeholder', The pseudo-class :-ms-input-placeholder is unknown
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 700:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 757:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 758:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 759:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 760:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 761:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 762:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 763:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 786:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: none` at 798:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: none` at 799:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 804:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 818:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 819:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `overflow-x: hidden` at 821:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `overflow-y: auto` at 831:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-sizing: border-box` at 877:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-moz-box-sizing: border-box` at 878:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `text-overflow: ellipsis` at 887:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: default` at 902:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 919:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 1088:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 1089:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 1108:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 1109:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 1128:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 1129:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-text-size-adjust: 100%` at 1194:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-ms-text-size-adjust: 100%` at 1195:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-sizing: content-box` at 1302:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-moz-box-sizing: content-box` at 1303:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-appearance: button` at 1342:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 1343:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: default` at 1348:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Invalid or unsupported selector 'button::-moz-focus-inner,
+[Tue Aug 02 10:09:34 2016] [error] input::-moz-focus-inner', Unknown pseudo-element: -moz-focus-inner
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-sizing: border-box` at 1363:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-moz-box-sizing: border-box` at 1364:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Invalid or unsupported selector 'input[type=number]::-webkit-inner-spin-button,
+[Tue Aug 02 10:09:34 2016] [error] input[type=number]::-webkit-outer-spin-button', Unknown pseudo-element: -webkit-inner-spin-button
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-sizing: content-box` at 1375:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-moz-box-sizing: content-box` at 1376:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-appearance: textfield` at 1378:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-appearance: none` at 1383:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `text-shadow: none` at 1422:5, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: none` at 1424:5, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: none` at 1425:5, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-font-smoothing: antialiased` at 1519:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-moz-osx-font-smoothing: grayscale` at 1520:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-sizing: border-box` at 2573:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-moz-box-sizing: border-box` at 2574:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-sizing: border-box` at 2580:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-moz-box-sizing: border-box` at 2581:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-tap-highlight-color: rgba(0,0,0,0)` at 2587:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 2620:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `outline-offset: -2px` at 2621:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-transition: all .2s ease-in-out` at 2655:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-o-transition: all .2s ease-in-out` at 2656:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `transition: all .2s ease-in-out` at 2657:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 2693:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: help` at 3050:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25)` at 3141:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 -1px 0 rgba(0,0,0,.25)` at 3142:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: none` at 3149:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: none` at 3150:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `word-break: break-all` at 3160:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `overflow-y: scroll` at 3178:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `overflow-x: auto` at 4374:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-sizing: border-box` at 4456:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-moz-box-sizing: border-box` at 4457:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `margin-top: 1px\\9` at 4464:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 4486:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `outline-offset: -2px` at 4487:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4510:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4511:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 4512:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 4513:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 4514:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 4520:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 4521:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Invalid or unsupported selector '.form-control::-moz-placeholder', Unknown pseudo-element: -moz-placeholder
+[Tue Aug 02 10:09:34 2016] [error] Invalid or unsupported selector '.form-control:-ms-input-placeholder', The pseudo-class :-ms-input-placeholder is unknown
+[Tue Aug 02 10:09:34 2016] [error] Invalid or unsupported selector '.form-control::-webkit-input-placeholder', Unknown pseudo-element: -webkit-input-placeholder
+[Tue Aug 02 10:09:34 2016] [error] Invalid or unsupported selector '.form-control::-ms-expand', Unknown pseudo-element: -ms-expand
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 4551:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-appearance: none` at 4559:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 4611:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `margin-top: 4px\\9` at 4619:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 4636:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 4651:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 4658:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 4665:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `pointer-events: none` at 4787:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4821:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4822:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 4827:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 4828:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4856:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4857:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 4862:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 4863:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4891:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4892:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 4897:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 4898:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-ms-touch-action: manipulation` at 5042:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `touch-action: manipulation` at 5043:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 5044:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-user-select: none` at 5045:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-moz-user-select: none` at 5046:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-ms-user-select: none` at 5047:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `user-select: none` at 5048:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 5061:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `outline-offset: -2px` at 5062:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5076:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5077:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 5083:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `filter: alpha(opacity=65)` at 5084:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: none` at 5085:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: none` at 5086:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `pointer-events: none` at 5092:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: none` at 5497:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: none` at 5498:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-transition: opacity .15s linear` at 5564:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-o-transition: opacity .15s linear` at 5565:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `transition: opacity .15s linear` at 5566:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-transition-timing-function: ease` at 5593:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-o-transition-timing-function: ease` at 5594:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `transition-timing-function: ease` at 5595:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-transition-duration: .35s` at 5596:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-o-transition-duration: .35s` at 5597:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `transition-duration: .35s` at 5598:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-transition-property: height,visibility` at 5599:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-o-transition-property: height,visibility` at 5600:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `transition-property: height,visibility` at 5601:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `border-top: 4px solid\\9` at 5611:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-background-clip: padding-box` at 5639:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 5644:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 5645:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 5695:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)` at 5698:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `border-bottom: 4px solid\\9` at 5747:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5870:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5871:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: none` at 5875:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: none` at 5876:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `pointer-events: none` at 5974:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 6193:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: default` at 6239:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `overflow-x: visible` at 6420:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-overflow-scrolling: touch` at 6421:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1)` at 6423:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 0 rgba(255,255,255,.1)` at 6424:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `overflow-y: auto` at 6428:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1)` at 6644:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1)` at 6645:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: default` at 7110:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 7122:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 7206:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 7227:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: pointer` at 7327:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-transition: border .2s ease-in-out` at 7408:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-o-transition: border .2s ease-in-out` at 7409:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `transition: border .2s ease-in-out` at 7410:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1)` at 7560:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 1px 2px rgba(0,0,0,.1)` at 7561:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15)` at 7573:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `box-shadow: inset 0 -1px 0 rgba(0,0,0,.15)` at 7574:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-transition: width .6s ease` at 7575:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-o-transition: width .6s ease` at 7576:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `transition: width .6s ease` at 7577:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7582:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7583:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-background-size: 40px 40px` at 7585:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-webkit-animation: progress-bar-stripes 2s linear infinite` at 7591:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `-o-animation: progress-bar-stripes 2s linear infinite` at 7592:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `animation: progress-bar-stripes 2s linear infinite` at 7593:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7601:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7602:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7611:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7612:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7621:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7622:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7631:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7632:3, invalid value.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `zoom: 1` at 7647:3, unknown property.
+[Tue Aug 02 10:09:34 2016] [error] Ignored `cursor: not-allowed` at 7750:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05)` at 7944:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `box-shadow: 0 1px 1px rgba(0,0,0,.05)` at 7945:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05)` at 8388:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.05)` at 8389:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `text-shadow: 0 1px 0 #fff` at 8413:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `filter: alpha(opacity=20)` at 8414:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `cursor: pointer` at 8422:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `filter: alpha(opacity=50)` at 8423:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-appearance: none` at 8428:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `cursor: pointer` at 8430:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-overflow-scrolling: touch` at 8448:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-transition: -webkit-transform .3s ease-out` at 8453:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-o-transition: -o-transform .3s ease-out` at 8454:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `transition: transform .3s ease-out` at 8455:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-transform: translate(0,-25%)` at 8456:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-ms-transform: translate(0,-25%)` at 8457:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-o-transform: translate(0,-25%)` at 8458:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-transform: translate(0,0)` at 8463:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-ms-transform: translate(0,0)` at 8464:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-o-transform: translate(0,0)` at 8465:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `overflow-x: hidden` at 8470:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `overflow-y: auto` at 8471:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-background-clip: padding-box` at 8483:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5)` at 8489:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `box-shadow: 0 3px 9px rgba(0,0,0,.5)` at 8490:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `filter: alpha(opacity=0)` at 8504:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `filter: alpha(opacity=50)` at 8509:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `text-align: start` at 8591:3, invalid value.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `text-shadow: none` at 8593:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `word-break: normal` at 8596:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `filter: alpha(opacity=0)` at 8600:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `line-break: auto` at 8602:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `filter: alpha(opacity=90)` at 8606:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `text-align: start` at 8725:3, invalid value.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `text-shadow: none` at 8727:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `word-break: normal` at 8730:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-background-clip: padding-box` at 8735:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2)` at 8740:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `box-shadow: 0 5px 10px rgba(0,0,0,.2)` at 8741:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `line-break: auto` at 8742:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-webkit-transition: .6s ease-in-out left` at 8874:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `-o-transition: .6s ease-in-out left` at 8875:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `transition: .6s ease-in-out left` at 8876:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `text-shadow: 0 1px 2px rgba(0,0,0,.6)` at 8965:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `filter: alpha(opacity=50)` at 8967:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%)` at 8972:3, invalid value.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%)` at 8973:3, invalid value.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)))` at 8974:3, invalid value.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1)` at 8976:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%)` at 8983:3, invalid value.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%)` at 8984:3, invalid value.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)))` at 8985:3, invalid value.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1)` at 8987:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `filter: alpha(opacity=90)` at 8995:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `cursor: pointer` at 9057:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `background-color: #000\\9` at 9058:3, invalid value.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `text-shadow: 0 1px 2px rgba(0,0,0,.6)` at 9081:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `text-shadow: none` at 9085:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `text-shadow: none` at 9204:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `pointer-events: none` at 9487:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Ignored `pointer-events: none` at 9524:3, unknown property.
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 1505:1, unknown at-rule in stylesheet context: @font-face
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 2834:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 3032:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 3188:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 3194:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 3200:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 3491:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 3712:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 3933:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 4377:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 4562:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 4926:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 5006:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 5018:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 5025:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 5757:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6264:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6286:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6345:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6371:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6405:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6411:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6431:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6463:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6478:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6493:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6507:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6542:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6577:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6593:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6620:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6648:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6709:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6719:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6766:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6774:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6857:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 6975:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 7382:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 7524:1, unknown at-rule in stylesheet context: @-webkit-keyframes
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 7534:1, unknown at-rule in stylesheet context: @-o-keyframes
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 7544:1, unknown at-rule in stylesheet context: @keyframes
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 8559:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 8575:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 8884:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9088:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9217:1, unknown at-rule in stylesheet context: @-ms-viewport
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9243:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9262:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9268:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9274:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9280:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9299:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9305:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9311:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9317:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9336:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9342:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9348:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9354:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9373:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9379:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9385:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9391:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9397:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9403:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9409:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9527:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9533:8, expected a media type, got (
+[Tue Aug 02 10:09:35 2016] [error] Parse error at 9543:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 11:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `user-select: none` at 14:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-user-select: none` at 15:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-overflow: ellipsis` at 23:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 38:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `user-select: none` at 41:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-user-select: none` at 42:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-overflow: ellipsis` at 49:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-appearance: none` at 66:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `user-select: none` at 93:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-user-select: none` at 94:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 98:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-appearance: none` at 129:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: alpha(opacity=0)` at 151:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `clip: rect(0 0 0 0)` at 156:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 177:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: default` at 218:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: text` at 234:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 256:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: default` at 267:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 276:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: default` at 309:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: none` at 336:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-appearance: textfield` at 337:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `overflow-y: auto` at 342:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: default` at 396:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #fff 50%, #eee 100%)` at 406:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -o-linear-gradient(top, #fff 50%, #eee 100%)` at 407:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)` at 410:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 423:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #eee 50%, #ccc 100%)` at 444:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -o-linear-gradient(top, #eee 50%, #ccc 100%)` at 445:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC', GradientType=0)` at 448:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #fff 0%, #eee 50%)` at 496:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -o-linear-gradient(top, #fff 0%, #eee 50%)` at 497:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)` at 500:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #eee 50%, #fff 100%)` at 507:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -o-linear-gradient(top, #eee 50%, #fff 100%)` at 508:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFFFFFFF', GradientType=0)` at 511:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: text` at 518:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: default` at 540:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 549:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: none` at 596:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `overflow-y: auto` at 614:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: default` at 631:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 647:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 648:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 663:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 664:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field::-webkit-input-placeholder', Unknown pseudo-element: -webkit-input-placeholder
+[Tue Aug 02 10:09:36 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field:-moz-placeholder', The pseudo-class :-moz-placeholder is unknown
+[Tue Aug 02 10:09:36 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field::-moz-placeholder', Unknown pseudo-element: -moz-placeholder
+[Tue Aug 02 10:09:36 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field:-ms-input-placeholder', The pseudo-class :-ms-input-placeholder is unknown
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 700:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 757:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 758:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 759:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 760:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 761:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 762:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 763:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 786:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: none` at 798:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: none` at 799:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 804:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 818:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 819:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `overflow-x: hidden` at 821:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `overflow-y: auto` at 831:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-sizing: border-box` at 877:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-moz-box-sizing: border-box` at 878:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-overflow: ellipsis` at 887:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: default` at 902:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 919:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 1088:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 1089:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 1108:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 1109:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 1128:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 1129:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-text-size-adjust: 100%` at 1194:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-ms-text-size-adjust: 100%` at 1195:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-sizing: content-box` at 1302:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-moz-box-sizing: content-box` at 1303:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-appearance: button` at 1342:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 1343:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: default` at 1348:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Invalid or unsupported selector 'button::-moz-focus-inner,
+[Tue Aug 02 10:09:36 2016] [error] input::-moz-focus-inner', Unknown pseudo-element: -moz-focus-inner
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-sizing: border-box` at 1363:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-moz-box-sizing: border-box` at 1364:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Invalid or unsupported selector 'input[type=number]::-webkit-inner-spin-button,
+[Tue Aug 02 10:09:36 2016] [error] input[type=number]::-webkit-outer-spin-button', Unknown pseudo-element: -webkit-inner-spin-button
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-sizing: content-box` at 1375:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-moz-box-sizing: content-box` at 1376:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-appearance: textfield` at 1378:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-appearance: none` at 1383:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-shadow: none` at 1422:5, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: none` at 1424:5, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: none` at 1425:5, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-font-smoothing: antialiased` at 1519:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-moz-osx-font-smoothing: grayscale` at 1520:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-sizing: border-box` at 2573:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-moz-box-sizing: border-box` at 2574:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-sizing: border-box` at 2580:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-moz-box-sizing: border-box` at 2581:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-tap-highlight-color: rgba(0,0,0,0)` at 2587:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 2620:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `outline-offset: -2px` at 2621:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transition: all .2s ease-in-out` at 2655:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transition: all .2s ease-in-out` at 2656:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition: all .2s ease-in-out` at 2657:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 2693:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: help` at 3050:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25)` at 3141:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 -1px 0 rgba(0,0,0,.25)` at 3142:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: none` at 3149:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: none` at 3150:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `word-break: break-all` at 3160:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `overflow-y: scroll` at 3178:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `overflow-x: auto` at 4374:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-sizing: border-box` at 4456:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-moz-box-sizing: border-box` at 4457:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `margin-top: 1px\\9` at 4464:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 4486:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `outline-offset: -2px` at 4487:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4510:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4511:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 4512:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 4513:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 4514:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 4520:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 4521:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Invalid or unsupported selector '.form-control::-moz-placeholder', Unknown pseudo-element: -moz-placeholder
+[Tue Aug 02 10:09:36 2016] [error] Invalid or unsupported selector '.form-control:-ms-input-placeholder', The pseudo-class :-ms-input-placeholder is unknown
+[Tue Aug 02 10:09:36 2016] [error] Invalid or unsupported selector '.form-control::-webkit-input-placeholder', Unknown pseudo-element: -webkit-input-placeholder
+[Tue Aug 02 10:09:36 2016] [error] Invalid or unsupported selector '.form-control::-ms-expand', Unknown pseudo-element: -ms-expand
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 4551:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-appearance: none` at 4559:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 4611:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `margin-top: 4px\\9` at 4619:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 4636:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 4651:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 4658:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 4665:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `pointer-events: none` at 4787:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4821:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4822:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 4827:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 4828:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4856:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4857:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 4862:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 4863:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4891:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4892:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 4897:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 4898:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-ms-touch-action: manipulation` at 5042:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `touch-action: manipulation` at 5043:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 5044:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-user-select: none` at 5045:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-moz-user-select: none` at 5046:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-ms-user-select: none` at 5047:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `user-select: none` at 5048:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 5061:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `outline-offset: -2px` at 5062:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5076:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5077:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 5083:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: alpha(opacity=65)` at 5084:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: none` at 5085:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: none` at 5086:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `pointer-events: none` at 5092:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: none` at 5497:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: none` at 5498:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transition: opacity .15s linear` at 5564:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transition: opacity .15s linear` at 5565:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition: opacity .15s linear` at 5566:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transition-timing-function: ease` at 5593:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transition-timing-function: ease` at 5594:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition-timing-function: ease` at 5595:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transition-duration: .35s` at 5596:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transition-duration: .35s` at 5597:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition-duration: .35s` at 5598:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transition-property: height,visibility` at 5599:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transition-property: height,visibility` at 5600:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition-property: height,visibility` at 5601:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `border-top: 4px solid\\9` at 5611:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-background-clip: padding-box` at 5639:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 5644:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 5645:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 5695:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)` at 5698:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `border-bottom: 4px solid\\9` at 5747:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5870:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5871:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: none` at 5875:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: none` at 5876:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `pointer-events: none` at 5974:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 6193:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: default` at 6239:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `overflow-x: visible` at 6420:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-overflow-scrolling: touch` at 6421:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1)` at 6423:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 0 rgba(255,255,255,.1)` at 6424:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `overflow-y: auto` at 6428:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1)` at 6644:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1)` at 6645:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: default` at 7110:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 7122:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 7206:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 7227:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 7327:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transition: border .2s ease-in-out` at 7408:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transition: border .2s ease-in-out` at 7409:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition: border .2s ease-in-out` at 7410:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1)` at 7560:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 2px rgba(0,0,0,.1)` at 7561:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15)` at 7573:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 -1px 0 rgba(0,0,0,.15)` at 7574:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transition: width .6s ease` at 7575:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transition: width .6s ease` at 7576:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition: width .6s ease` at 7577:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7582:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7583:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-background-size: 40px 40px` at 7585:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-animation: progress-bar-stripes 2s linear infinite` at 7591:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-animation: progress-bar-stripes 2s linear infinite` at 7592:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `animation: progress-bar-stripes 2s linear infinite` at 7593:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7601:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7602:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7611:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7612:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7621:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7622:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7631:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7632:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `zoom: 1` at 7647:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: not-allowed` at 7750:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05)` at 7944:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: 0 1px 1px rgba(0,0,0,.05)` at 7945:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05)` at 8388:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.05)` at 8389:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-shadow: 0 1px 0 #fff` at 8413:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: alpha(opacity=20)` at 8414:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 8422:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: alpha(opacity=50)` at 8423:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-appearance: none` at 8428:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 8430:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-overflow-scrolling: touch` at 8448:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transition: -webkit-transform .3s ease-out` at 8453:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transition: -o-transform .3s ease-out` at 8454:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition: transform .3s ease-out` at 8455:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transform: translate(0,-25%)` at 8456:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-ms-transform: translate(0,-25%)` at 8457:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transform: translate(0,-25%)` at 8458:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transform: translate(0,0)` at 8463:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-ms-transform: translate(0,0)` at 8464:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transform: translate(0,0)` at 8465:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `overflow-x: hidden` at 8470:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `overflow-y: auto` at 8471:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-background-clip: padding-box` at 8483:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5)` at 8489:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: 0 3px 9px rgba(0,0,0,.5)` at 8490:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: alpha(opacity=0)` at 8504:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: alpha(opacity=50)` at 8509:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-align: start` at 8591:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-shadow: none` at 8593:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `word-break: normal` at 8596:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: alpha(opacity=0)` at 8600:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `line-break: auto` at 8602:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: alpha(opacity=90)` at 8606:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-align: start` at 8725:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-shadow: none` at 8727:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `word-break: normal` at 8730:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-background-clip: padding-box` at 8735:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2)` at 8740:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `box-shadow: 0 5px 10px rgba(0,0,0,.2)` at 8741:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `line-break: auto` at 8742:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-webkit-transition: .6s ease-in-out left` at 8874:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `-o-transition: .6s ease-in-out left` at 8875:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `transition: .6s ease-in-out left` at 8876:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-shadow: 0 1px 2px rgba(0,0,0,.6)` at 8965:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: alpha(opacity=50)` at 8967:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%)` at 8972:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%)` at 8973:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)))` at 8974:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1)` at 8976:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%)` at 8983:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%)` at 8984:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)))` at 8985:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1)` at 8987:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `filter: alpha(opacity=90)` at 8995:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `cursor: pointer` at 9057:3, the property does not apply for the print media.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `background-color: #000\\9` at 9058:3, invalid value.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-shadow: 0 1px 2px rgba(0,0,0,.6)` at 9081:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-shadow: none` at 9085:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `text-shadow: none` at 9204:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `pointer-events: none` at 9487:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Ignored `pointer-events: none` at 9524:3, unknown property.
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 1505:1, unknown at-rule in stylesheet context: @font-face
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 2834:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 3032:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 3188:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 3194:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 3200:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 3491:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 3712:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 3933:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 4377:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 4562:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 4926:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 5006:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 5018:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 5025:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 5757:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6264:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6286:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6345:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6371:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6405:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6411:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6431:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6463:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6478:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6493:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6507:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6542:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6577:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6593:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6620:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6648:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6709:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6719:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6766:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6774:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6857:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 6975:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 7382:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 7524:1, unknown at-rule in stylesheet context: @-webkit-keyframes
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 7534:1, unknown at-rule in stylesheet context: @-o-keyframes
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 7544:1, unknown at-rule in stylesheet context: @keyframes
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 8559:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 8575:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 8884:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9088:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9217:1, unknown at-rule in stylesheet context: @-ms-viewport
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9243:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9262:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9268:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9274:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9280:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9299:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9305:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9311:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9317:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9336:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9342:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9348:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9354:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9373:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9379:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9385:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9391:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9397:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9403:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9409:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9527:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9533:8, expected a media type, got (
+[Tue Aug 02 10:09:36 2016] [error] Parse error at 9543:8, expected a media type, got (
+[Tue Aug 02 10:09:37 2016] [error] [client ::1] mod_wsgi (pid=1522): Exception occurred processing WSGI script '/Users/emanuelziga/GITHUB/COTOCO/CotoCo/CotoCo/wsgi.py'.
+[Tue Aug 02 10:09:37 2016] [error] [client ::1] IOError: failed to write data
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 11:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `user-select: none` at 14:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-user-select: none` at 15:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-overflow: ellipsis` at 23:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 38:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `user-select: none` at 41:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-user-select: none` at 42:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-overflow: ellipsis` at 49:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-appearance: none` at 66:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `user-select: none` at 93:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-user-select: none` at 94:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 98:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-appearance: none` at 129:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: alpha(opacity=0)` at 151:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `clip: rect(0 0 0 0)` at 156:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 177:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: default` at 218:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: text` at 234:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 256:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: default` at 267:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 276:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: default` at 309:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: none` at 336:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-appearance: textfield` at 337:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `overflow-y: auto` at 342:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: default` at 396:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #fff 50%, #eee 100%)` at 406:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -o-linear-gradient(top, #fff 50%, #eee 100%)` at 407:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)` at 410:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 423:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #eee 50%, #ccc 100%)` at 444:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -o-linear-gradient(top, #eee 50%, #ccc 100%)` at 445:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC', GradientType=0)` at 448:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #fff 0%, #eee 50%)` at 496:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -o-linear-gradient(top, #fff 0%, #eee 50%)` at 497:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)` at 500:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #eee 50%, #fff 100%)` at 507:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -o-linear-gradient(top, #eee 50%, #fff 100%)` at 508:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFFFFFFF', GradientType=0)` at 511:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: text` at 518:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: default` at 540:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 549:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: none` at 596:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `overflow-y: auto` at 614:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: default` at 631:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 647:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 648:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 663:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 664:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field::-webkit-input-placeholder', Unknown pseudo-element: -webkit-input-placeholder
+[Tue Aug 02 10:10:16 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field:-moz-placeholder', The pseudo-class :-moz-placeholder is unknown
+[Tue Aug 02 10:10:16 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field::-moz-placeholder', Unknown pseudo-element: -moz-placeholder
+[Tue Aug 02 10:10:16 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field:-ms-input-placeholder', The pseudo-class :-ms-input-placeholder is unknown
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 700:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 757:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 758:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 759:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 760:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 761:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 762:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 763:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 786:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: none` at 798:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: none` at 799:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 804:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 818:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 819:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `overflow-x: hidden` at 821:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `overflow-y: auto` at 831:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-sizing: border-box` at 877:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-moz-box-sizing: border-box` at 878:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-overflow: ellipsis` at 887:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: default` at 902:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 919:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 1088:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 1089:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 1108:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 1109:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 1128:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 1129:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-text-size-adjust: 100%` at 1194:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-ms-text-size-adjust: 100%` at 1195:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-sizing: content-box` at 1302:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-moz-box-sizing: content-box` at 1303:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-appearance: button` at 1342:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 1343:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: default` at 1348:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Invalid or unsupported selector 'button::-moz-focus-inner,
+[Tue Aug 02 10:10:16 2016] [error] input::-moz-focus-inner', Unknown pseudo-element: -moz-focus-inner
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-sizing: border-box` at 1363:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-moz-box-sizing: border-box` at 1364:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Invalid or unsupported selector 'input[type=number]::-webkit-inner-spin-button,
+[Tue Aug 02 10:10:16 2016] [error] input[type=number]::-webkit-outer-spin-button', Unknown pseudo-element: -webkit-inner-spin-button
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-sizing: content-box` at 1375:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-moz-box-sizing: content-box` at 1376:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-appearance: textfield` at 1378:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-appearance: none` at 1383:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-shadow: none` at 1422:5, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: none` at 1424:5, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: none` at 1425:5, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-font-smoothing: antialiased` at 1519:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-moz-osx-font-smoothing: grayscale` at 1520:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-sizing: border-box` at 2573:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-moz-box-sizing: border-box` at 2574:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-sizing: border-box` at 2580:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-moz-box-sizing: border-box` at 2581:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-tap-highlight-color: rgba(0,0,0,0)` at 2587:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 2620:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `outline-offset: -2px` at 2621:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transition: all .2s ease-in-out` at 2655:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transition: all .2s ease-in-out` at 2656:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition: all .2s ease-in-out` at 2657:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 2693:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: help` at 3050:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25)` at 3141:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 -1px 0 rgba(0,0,0,.25)` at 3142:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: none` at 3149:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: none` at 3150:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `word-break: break-all` at 3160:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `overflow-y: scroll` at 3178:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `overflow-x: auto` at 4374:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-sizing: border-box` at 4456:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-moz-box-sizing: border-box` at 4457:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `margin-top: 1px\\9` at 4464:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 4486:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `outline-offset: -2px` at 4487:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4510:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4511:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 4512:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 4513:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 4514:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 4520:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 4521:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Invalid or unsupported selector '.form-control::-moz-placeholder', Unknown pseudo-element: -moz-placeholder
+[Tue Aug 02 10:10:16 2016] [error] Invalid or unsupported selector '.form-control:-ms-input-placeholder', The pseudo-class :-ms-input-placeholder is unknown
+[Tue Aug 02 10:10:16 2016] [error] Invalid or unsupported selector '.form-control::-webkit-input-placeholder', Unknown pseudo-element: -webkit-input-placeholder
+[Tue Aug 02 10:10:16 2016] [error] Invalid or unsupported selector '.form-control::-ms-expand', Unknown pseudo-element: -ms-expand
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 4551:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-appearance: none` at 4559:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 4611:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `margin-top: 4px\\9` at 4619:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 4636:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 4651:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 4658:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 4665:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `pointer-events: none` at 4787:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4821:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4822:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 4827:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 4828:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4856:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4857:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 4862:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 4863:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4891:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4892:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 4897:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 4898:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-ms-touch-action: manipulation` at 5042:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `touch-action: manipulation` at 5043:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 5044:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-user-select: none` at 5045:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-moz-user-select: none` at 5046:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-ms-user-select: none` at 5047:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `user-select: none` at 5048:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 5061:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `outline-offset: -2px` at 5062:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5076:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5077:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 5083:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: alpha(opacity=65)` at 5084:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: none` at 5085:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: none` at 5086:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `pointer-events: none` at 5092:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: none` at 5497:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: none` at 5498:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transition: opacity .15s linear` at 5564:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transition: opacity .15s linear` at 5565:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition: opacity .15s linear` at 5566:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transition-timing-function: ease` at 5593:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transition-timing-function: ease` at 5594:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition-timing-function: ease` at 5595:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transition-duration: .35s` at 5596:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transition-duration: .35s` at 5597:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition-duration: .35s` at 5598:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transition-property: height,visibility` at 5599:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transition-property: height,visibility` at 5600:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition-property: height,visibility` at 5601:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `border-top: 4px solid\\9` at 5611:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-background-clip: padding-box` at 5639:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 5644:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 5645:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 5695:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)` at 5698:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `border-bottom: 4px solid\\9` at 5747:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5870:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5871:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: none` at 5875:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: none` at 5876:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `pointer-events: none` at 5974:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 6193:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: default` at 6239:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `overflow-x: visible` at 6420:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-overflow-scrolling: touch` at 6421:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1)` at 6423:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 0 rgba(255,255,255,.1)` at 6424:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `overflow-y: auto` at 6428:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1)` at 6644:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1)` at 6645:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: default` at 7110:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 7122:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 7206:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 7227:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 7327:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transition: border .2s ease-in-out` at 7408:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transition: border .2s ease-in-out` at 7409:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition: border .2s ease-in-out` at 7410:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1)` at 7560:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 2px rgba(0,0,0,.1)` at 7561:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15)` at 7573:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 -1px 0 rgba(0,0,0,.15)` at 7574:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transition: width .6s ease` at 7575:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transition: width .6s ease` at 7576:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition: width .6s ease` at 7577:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7582:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7583:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-background-size: 40px 40px` at 7585:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-animation: progress-bar-stripes 2s linear infinite` at 7591:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-animation: progress-bar-stripes 2s linear infinite` at 7592:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `animation: progress-bar-stripes 2s linear infinite` at 7593:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7601:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7602:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7611:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7612:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7621:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7622:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7631:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7632:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `zoom: 1` at 7647:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: not-allowed` at 7750:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05)` at 7944:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: 0 1px 1px rgba(0,0,0,.05)` at 7945:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05)` at 8388:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.05)` at 8389:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-shadow: 0 1px 0 #fff` at 8413:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: alpha(opacity=20)` at 8414:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 8422:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: alpha(opacity=50)` at 8423:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-appearance: none` at 8428:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 8430:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-overflow-scrolling: touch` at 8448:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transition: -webkit-transform .3s ease-out` at 8453:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transition: -o-transform .3s ease-out` at 8454:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition: transform .3s ease-out` at 8455:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transform: translate(0,-25%)` at 8456:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-ms-transform: translate(0,-25%)` at 8457:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transform: translate(0,-25%)` at 8458:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transform: translate(0,0)` at 8463:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-ms-transform: translate(0,0)` at 8464:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transform: translate(0,0)` at 8465:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `overflow-x: hidden` at 8470:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `overflow-y: auto` at 8471:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-background-clip: padding-box` at 8483:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5)` at 8489:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: 0 3px 9px rgba(0,0,0,.5)` at 8490:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: alpha(opacity=0)` at 8504:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: alpha(opacity=50)` at 8509:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-align: start` at 8591:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-shadow: none` at 8593:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `word-break: normal` at 8596:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: alpha(opacity=0)` at 8600:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `line-break: auto` at 8602:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: alpha(opacity=90)` at 8606:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-align: start` at 8725:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-shadow: none` at 8727:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `word-break: normal` at 8730:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-background-clip: padding-box` at 8735:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2)` at 8740:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `box-shadow: 0 5px 10px rgba(0,0,0,.2)` at 8741:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `line-break: auto` at 8742:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-webkit-transition: .6s ease-in-out left` at 8874:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `-o-transition: .6s ease-in-out left` at 8875:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `transition: .6s ease-in-out left` at 8876:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-shadow: 0 1px 2px rgba(0,0,0,.6)` at 8965:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: alpha(opacity=50)` at 8967:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%)` at 8972:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%)` at 8973:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)))` at 8974:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1)` at 8976:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%)` at 8983:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%)` at 8984:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)))` at 8985:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1)` at 8987:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `filter: alpha(opacity=90)` at 8995:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `cursor: pointer` at 9057:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `background-color: #000\\9` at 9058:3, invalid value.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-shadow: 0 1px 2px rgba(0,0,0,.6)` at 9081:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-shadow: none` at 9085:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `text-shadow: none` at 9204:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `pointer-events: none` at 9487:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Ignored `pointer-events: none` at 9524:3, unknown property.
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 1505:1, unknown at-rule in stylesheet context: @font-face
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 2834:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 3032:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 3188:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 3194:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 3200:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 3491:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 3712:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 3933:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 4377:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 4562:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 4926:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 5006:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 5018:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 5025:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 5757:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6264:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6286:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6345:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6371:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6405:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6411:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6431:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6463:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6478:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6493:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6507:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6542:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6577:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6593:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6620:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6648:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6709:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6719:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6766:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6774:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6857:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 6975:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 7382:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 7524:1, unknown at-rule in stylesheet context: @-webkit-keyframes
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 7534:1, unknown at-rule in stylesheet context: @-o-keyframes
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 7544:1, unknown at-rule in stylesheet context: @keyframes
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 8559:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 8575:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 8884:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9088:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9217:1, unknown at-rule in stylesheet context: @-ms-viewport
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9243:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9262:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9268:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9274:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9280:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9299:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9305:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9311:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9317:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9336:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9342:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9348:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9354:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9373:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9379:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9385:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9391:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9397:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9403:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9409:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9527:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9533:8, expected a media type, got (
+[Tue Aug 02 10:10:16 2016] [error] Parse error at 9543:8, expected a media type, got (
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 11:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `user-select: none` at 14:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-user-select: none` at 15:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `text-overflow: ellipsis` at 23:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 38:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `user-select: none` at 41:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-user-select: none` at 42:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `text-overflow: ellipsis` at 49:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-appearance: none` at 66:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `user-select: none` at 93:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-user-select: none` at 94:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 98:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-appearance: none` at 129:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `filter: alpha(opacity=0)` at 151:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `clip: rect(0 0 0 0)` at 156:3, invalid value.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 177:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: default` at 218:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: text` at 234:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 256:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: default` at 267:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 276:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: default` at 309:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `box-shadow: none` at 336:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-appearance: textfield` at 337:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `overflow-y: auto` at 342:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: default` at 396:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #fff 50%, #eee 100%)` at 406:3, invalid value.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `background-image: -o-linear-gradient(top, #fff 50%, #eee 100%)` at 407:3, invalid value.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)` at 410:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 423:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #eee 50%, #ccc 100%)` at 444:3, invalid value.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `background-image: -o-linear-gradient(top, #eee 50%, #ccc 100%)` at 445:3, invalid value.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC', GradientType=0)` at 448:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #fff 0%, #eee 50%)` at 496:3, invalid value.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `background-image: -o-linear-gradient(top, #fff 0%, #eee 50%)` at 497:3, invalid value.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)` at 500:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `background-image: -webkit-linear-gradient(top, #eee 50%, #fff 100%)` at 507:3, invalid value.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `background-image: -o-linear-gradient(top, #eee 50%, #fff 100%)` at 508:3, invalid value.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFFFFFFF', GradientType=0)` at 511:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: text` at 518:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: default` at 540:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 549:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `box-shadow: none` at 596:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `overflow-y: auto` at 614:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: default` at 631:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 647:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 648:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 663:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 664:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field::-webkit-input-placeholder', Unknown pseudo-element: -webkit-input-placeholder
+[Tue Aug 02 10:10:17 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field:-moz-placeholder', The pseudo-class :-moz-placeholder is unknown
+[Tue Aug 02 10:10:17 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field::-moz-placeholder', Unknown pseudo-element: -moz-placeholder
+[Tue Aug 02 10:10:17 2016] [error] Invalid or unsupported selector '.select2-container--bootstrap .select2-search__field:-ms-input-placeholder', The pseudo-class :-ms-input-placeholder is unknown
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: not-allowed` at 700:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 757:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 758:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 759:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 760:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 761:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 762:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 763:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 786:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-shadow: none` at 798:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `box-shadow: none` at 799:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: not-allowed` at 804:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 818:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 819:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `overflow-x: hidden` at 821:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `overflow-y: auto` at 831:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-sizing: border-box` at 877:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-moz-box-sizing: border-box` at 878:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `text-overflow: ellipsis` at 887:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: default` at 902:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 919:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 1088:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 1089:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 1108:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 1109:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 1128:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 1129:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-text-size-adjust: 100%` at 1194:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-ms-text-size-adjust: 100%` at 1195:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-sizing: content-box` at 1302:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-moz-box-sizing: content-box` at 1303:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-appearance: button` at 1342:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 1343:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: default` at 1348:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:17 2016] [error] Invalid or unsupported selector 'button::-moz-focus-inner,
+[Tue Aug 02 10:10:17 2016] [error] input::-moz-focus-inner', Unknown pseudo-element: -moz-focus-inner
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-sizing: border-box` at 1363:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-moz-box-sizing: border-box` at 1364:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Invalid or unsupported selector 'input[type=number]::-webkit-inner-spin-button,
+[Tue Aug 02 10:10:17 2016] [error] input[type=number]::-webkit-outer-spin-button', Unknown pseudo-element: -webkit-inner-spin-button
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-sizing: content-box` at 1375:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-moz-box-sizing: content-box` at 1376:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-appearance: textfield` at 1378:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-appearance: none` at 1383:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `text-shadow: none` at 1422:5, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-shadow: none` at 1424:5, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `box-shadow: none` at 1425:5, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-font-smoothing: antialiased` at 1519:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-moz-osx-font-smoothing: grayscale` at 1520:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-sizing: border-box` at 2573:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-moz-box-sizing: border-box` at 2574:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-box-sizing: border-box` at 2580:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-moz-box-sizing: border-box` at 2581:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-tap-highlight-color: rgba(0,0,0,0)` at 2587:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 2620:3, invalid value.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `outline-offset: -2px` at 2621:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-webkit-transition: all .2s ease-in-out` at 2655:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `-o-transition: all .2s ease-in-out` at 2656:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `transition: all .2s ease-in-out` at 2657:3, unknown property.
+[Tue Aug 02 10:10:17 2016] [error] Ignored `cursor: pointer` at 2693:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: help` at 3050:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25)` at 3141:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 -1px 0 rgba(0,0,0,.25)` at 3142:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: none` at 3149:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: none` at 3150:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `word-break: break-all` at 3160:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `overflow-y: scroll` at 3178:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `overflow-x: auto` at 4374:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-sizing: border-box` at 4456:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-moz-box-sizing: border-box` at 4457:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `margin-top: 1px\\9` at 4464:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 4486:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `outline-offset: -2px` at 4487:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4510:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4511:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s` at 4512:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 4513:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s` at 4514:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 4520:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)` at 4521:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Invalid or unsupported selector '.form-control::-moz-placeholder', Unknown pseudo-element: -moz-placeholder
+[Tue Aug 02 10:10:18 2016] [error] Invalid or unsupported selector '.form-control:-ms-input-placeholder', The pseudo-class :-ms-input-placeholder is unknown
+[Tue Aug 02 10:10:18 2016] [error] Invalid or unsupported selector '.form-control::-webkit-input-placeholder', Unknown pseudo-element: -webkit-input-placeholder
+[Tue Aug 02 10:10:18 2016] [error] Invalid or unsupported selector '.form-control::-ms-expand', Unknown pseudo-element: -ms-expand
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: not-allowed` at 4551:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-appearance: none` at 4559:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: pointer` at 4611:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `margin-top: 4px\\9` at 4619:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: pointer` at 4636:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: not-allowed` at 4651:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: not-allowed` at 4658:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: not-allowed` at 4665:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `pointer-events: none` at 4787:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4821:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4822:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 4827:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168` at 4828:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4856:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4857:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 4862:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b` at 4863:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4891:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075)` at 4892:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 4897:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483` at 4898:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-ms-touch-action: manipulation` at 5042:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `touch-action: manipulation` at 5043:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: pointer` at 5044:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-user-select: none` at 5045:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-moz-user-select: none` at 5046:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-ms-user-select: none` at 5047:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `user-select: none` at 5048:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `outline: 5px auto -webkit-focus-ring-color` at 5061:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `outline-offset: -2px` at 5062:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5076:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5077:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: not-allowed` at 5083:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: alpha(opacity=65)` at 5084:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: none` at 5085:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: none` at 5086:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `pointer-events: none` at 5092:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: none` at 5497:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: none` at 5498:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-transition: opacity .15s linear` at 5564:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-transition: opacity .15s linear` at 5565:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `transition: opacity .15s linear` at 5566:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-transition-timing-function: ease` at 5593:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-transition-timing-function: ease` at 5594:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `transition-timing-function: ease` at 5595:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-transition-duration: .35s` at 5596:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-transition-duration: .35s` at 5597:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `transition-duration: .35s` at 5598:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-transition-property: height,visibility` at 5599:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-transition-property: height,visibility` at 5600:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `transition-property: height,visibility` at 5601:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `border-top: 4px solid\\9` at 5611:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-background-clip: padding-box` at 5639:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 5644:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: 0 6px 12px rgba(0,0,0,.175)` at 5645:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: not-allowed` at 5695:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)` at 5698:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `border-bottom: 4px solid\\9` at 5747:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5870:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 3px 5px rgba(0,0,0,.125)` at 5871:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: none` at 5875:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: none` at 5876:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `pointer-events: none` at 5974:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: not-allowed` at 6193:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: default` at 6239:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `overflow-x: visible` at 6420:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-overflow-scrolling: touch` at 6421:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1)` at 6423:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 0 rgba(255,255,255,.1)` at 6424:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `overflow-y: auto` at 6428:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1)` at 6644:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1)` at 6645:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: default` at 7110:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: not-allowed` at 7122:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: not-allowed` at 7206:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: pointer` at 7227:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: pointer` at 7327:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-transition: border .2s ease-in-out` at 7408:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-transition: border .2s ease-in-out` at 7409:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `transition: border .2s ease-in-out` at 7410:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1)` at 7560:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 2px rgba(0,0,0,.1)` at 7561:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15)` at 7573:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 -1px 0 rgba(0,0,0,.15)` at 7574:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-transition: width .6s ease` at 7575:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-transition: width .6s ease` at 7576:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `transition: width .6s ease` at 7577:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7582:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7583:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-background-size: 40px 40px` at 7585:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-animation: progress-bar-stripes 2s linear infinite` at 7591:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-animation: progress-bar-stripes 2s linear infinite` at 7592:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `animation: progress-bar-stripes 2s linear infinite` at 7593:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7601:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7602:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7611:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7612:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7621:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7622:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7631:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)` at 7632:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `zoom: 1` at 7647:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: not-allowed` at 7750:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05)` at 7944:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: 0 1px 1px rgba(0,0,0,.05)` at 7945:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05)` at 8388:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: inset 0 1px 1px rgba(0,0,0,.05)` at 8389:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `text-shadow: 0 1px 0 #fff` at 8413:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: alpha(opacity=20)` at 8414:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: pointer` at 8422:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: alpha(opacity=50)` at 8423:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-appearance: none` at 8428:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: pointer` at 8430:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-overflow-scrolling: touch` at 8448:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-transition: -webkit-transform .3s ease-out` at 8453:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-transition: -o-transform .3s ease-out` at 8454:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `transition: transform .3s ease-out` at 8455:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-transform: translate(0,-25%)` at 8456:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-ms-transform: translate(0,-25%)` at 8457:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-transform: translate(0,-25%)` at 8458:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-transform: translate(0,0)` at 8463:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-ms-transform: translate(0,0)` at 8464:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-transform: translate(0,0)` at 8465:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `overflow-x: hidden` at 8470:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `overflow-y: auto` at 8471:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-background-clip: padding-box` at 8483:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5)` at 8489:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: 0 3px 9px rgba(0,0,0,.5)` at 8490:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: alpha(opacity=0)` at 8504:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: alpha(opacity=50)` at 8509:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `text-align: start` at 8591:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `text-shadow: none` at 8593:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `word-break: normal` at 8596:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: alpha(opacity=0)` at 8600:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `line-break: auto` at 8602:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: alpha(opacity=90)` at 8606:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `text-align: start` at 8725:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `text-shadow: none` at 8727:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `word-break: normal` at 8730:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-background-clip: padding-box` at 8735:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2)` at 8740:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `box-shadow: 0 5px 10px rgba(0,0,0,.2)` at 8741:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `line-break: auto` at 8742:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-webkit-transition: .6s ease-in-out left` at 8874:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `-o-transition: .6s ease-in-out left` at 8875:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `transition: .6s ease-in-out left` at 8876:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `text-shadow: 0 1px 2px rgba(0,0,0,.6)` at 8965:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: alpha(opacity=50)` at 8967:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%)` at 8972:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%)` at 8973:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)))` at 8974:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1)` at 8976:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%)` at 8983:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%)` at 8984:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)))` at 8985:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1)` at 8987:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `filter: alpha(opacity=90)` at 8995:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `cursor: pointer` at 9057:3, the property does not apply for the print media.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `background-color: #000\\9` at 9058:3, invalid value.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `text-shadow: 0 1px 2px rgba(0,0,0,.6)` at 9081:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `text-shadow: none` at 9085:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `text-shadow: none` at 9204:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `pointer-events: none` at 9487:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Ignored `pointer-events: none` at 9524:3, unknown property.
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 1505:1, unknown at-rule in stylesheet context: @font-face
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 2834:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 3032:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 3188:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 3194:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 3200:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 3491:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 3712:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 3933:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 4377:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 4562:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 4926:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 5006:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 5018:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 5025:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 5757:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6264:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6286:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6345:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6371:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6405:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6411:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6431:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6463:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6478:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6493:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6507:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6542:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6577:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6593:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6620:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6648:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6709:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6719:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6766:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6774:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6857:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 6975:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 7382:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 7524:1, unknown at-rule in stylesheet context: @-webkit-keyframes
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 7534:1, unknown at-rule in stylesheet context: @-o-keyframes
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 7544:1, unknown at-rule in stylesheet context: @keyframes
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 8559:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 8575:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 8884:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9088:8, expected a media type, got IDENT, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9217:1, unknown at-rule in stylesheet context: @-ms-viewport
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9243:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9262:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9268:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9274:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9280:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9299:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9305:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9311:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9317:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9336:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9342:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9348:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9354:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9373:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9379:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9385:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9391:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9397:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9403:8, expected a media type, got (, IDENT, (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9409:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9527:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9533:8, expected a media type, got (
+[Tue Aug 02 10:10:18 2016] [error] Parse error at 9543:8, expected a media type, got (
+[Tue Aug 02 11:11:48 2016] [error] Not Found: /admin/bills/bill/create/change/
+[Tue Aug 02 11:11:52 2016] [error] Not Found: /admin/bills/bill/create/change/
+[Tue Aug 02 16:33:26 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:33:30 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:37:19 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:38:47 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:41:09 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:48:35 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:48:40 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:49:39 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:52:31 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:52:33 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:52:41 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:53:21 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 16:55:16 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:00:22 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:00:23 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:02:37 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:04:53 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:05:36 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:07:23 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:07:27 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:07:29 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:07:44 2016] [error] Not Found: /admin/bills/bill/create/change/
+[Tue Aug 02 17:07:54 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:09:08 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:10:13 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:11:58 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:12:39 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:13:28 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:13:37 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:14:58 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:15:04 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:17:00 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:17:07 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:21:06 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:29:18 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/venvcoto/lib/python2.7/site-packages/django/template/engine.py:123: RemovedInDjango110Warning: pyjade.ext.django.Loader inherits from django.template.loader.BaseLoader instead of django.template.loaders.base.Loader. 
+[Tue Aug 02 17:29:18 2016] [error]   loader = self.find_template_loader(template_loader)
+[Tue Aug 02 17:29:18 2016] [error] 
+[Tue Aug 02 17:31:41 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 17:48:36 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/venvcoto/lib/python2.7/site-packages/django/template/engine.py:123: RemovedInDjango110Warning: pyjade.ext.django.Loader inherits from django.template.loader.BaseLoader instead of django.template.loaders.base.Loader. 
+[Tue Aug 02 17:48:36 2016] [error]   loader = self.find_template_loader(template_loader)
+[Tue Aug 02 17:48:36 2016] [error] 
+[Tue Aug 02 17:58:35 2016] [error] Not Found: /admin/bills/bill/create/change/
+[Tue Aug 02 17:59:27 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:00:15 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:00:39 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:01:35 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:02:39 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:02:44 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:02:45 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:08:12 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:08:16 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:08:23 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:09:30 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:10:37 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:10:46 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:11:23 2016] [error] Not Found: /admin/bills/bill/create/change/
+[Tue Aug 02 18:11:25 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:12:14 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:12:20 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:14:10 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:15:18 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:15:25 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:27:02 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/venvcoto/lib/python2.7/site-packages/django/template/engine.py:123: RemovedInDjango110Warning: pyjade.ext.django.Loader inherits from django.template.loader.BaseLoader instead of django.template.loaders.base.Loader. 
+[Tue Aug 02 18:27:02 2016] [error]   loader = self.find_template_loader(template_loader)
+[Tue Aug 02 18:27:02 2016] [error] 
+[Tue Aug 02 18:30:13 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/venvcoto/lib/python2.7/site-packages/django/template/engine.py:123: RemovedInDjango110Warning: pyjade.ext.django.Loader inherits from django.template.loader.BaseLoader instead of django.template.loaders.base.Loader. 
+[Tue Aug 02 18:30:13 2016] [error]   loader = self.find_template_loader(template_loader)
+[Tue Aug 02 18:30:13 2016] [error] 
+[Tue Aug 02 18:30:17 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:31:11 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 18:40:21 2016] [error] Not Found: /admin/bills/bill/edit/change/
+[Tue Aug 02 18:41:01 2016] [error] Not Found: /admin/bills/bill/edit/change/
+[Tue Aug 02 19:05:59 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 19:07:13 2016] [error] [client ::1] File does not exist: /Users/emanuelziga/GITHUB/COTOCO/CotoCo/static/css/bootstrap.min.css.map
+[Tue Aug 02 19:26:41 2016] [error] /Users/emanuelziga/GITHUB/COTOCO/venvcoto/lib/python2.7/site-packages/django/template/engine.py:123: RemovedInDjango110Warning: pyjade.ext.django.Loader inherits from django.template.loader.BaseLoader instead of django.template.loaders.base.Loader. 
+[Tue Aug 02 19:26:41 2016] [error]   loader = self.find_template_loader(template_loader)
+[Tue Aug 02 19:26:41 2016] [error] 

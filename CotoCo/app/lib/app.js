@@ -10,11 +10,10 @@ require('select2');
 require('PriceFormat');
 
 
-require('./order/');
 require('./order/new/');
 require('./order/edit/');
-require('./home/');
-
+require('./bill/new/');
+require('./bill/edit/');
 
 page();
 

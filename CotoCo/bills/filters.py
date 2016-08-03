@@ -12,7 +12,7 @@ class BillFilter(django_filters.FilterSet):
 
     class Meta:
         model = Bill
-        fields = ('id', 'bill_date', 'bill_supplier', 'bill_product_list', 'bill_total', 'bill_min_date',
+        fields = ('id', 'bill_date', 'bill_supplier', 'bill_order', 'bill_detail_list', 'bill_total', 'bill_min_date',
                   'bill_max_date')
 
 

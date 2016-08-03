@@ -276,6 +276,7 @@ function save_new_order(){
         })
         .success(function(data){
             alert('Orden guardada con exitoooo');
+            window.location.replace("/admin/orders/order/");
         });//ajax
 
 }

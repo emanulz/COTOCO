@@ -81,7 +81,7 @@
         <div id="page-content-wrapper">
             <div id="content" class="{% block coltype %}colM{% endblock %}">
                 {% block pretitle %}{% endblock %}
-                {% block content_title %}{% if title %}<h4>Ordenes de Compra</h4>{% endif %}{% endblock %}
+                {% block content_title %}{% if title %}<h3 class="page_title">{{ title }}</h3>{% endif %}{% endblock %}
                 {% block content %}
                 {% block object-tools %}{% endblock %}
                 {{ content }}

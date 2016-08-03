@@ -22,10 +22,11 @@ from frontend.views import LandingView
 from activities.views import ActivityViewSet
 from bills.views import BillViewSet, BillDetailViewSet
 from clients.views import ClientViewSet
-from orders.views import OrderViewSet, OrderDetailViewSet
+from orders.views import OrderViewSet, OrderDetailViewSet, order2pdf, orderpdf2
 from products.views import ProductViewSet
 from projects.views import ProjectViewSet
 from suppliers.views import SupplierViewSet
+from frontend.views import LandingView
 
 from django.conf import settings
 from django.contrib.staticfiles import views
@@ -45,11 +46,11 @@ router.register(r'suppliers', SupplierViewSet)
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'orderpdf/(?P<pk>\d+)/$', 'orders.views.order2pdf', name='order2pdf'),
-    url(r'orderpdf2/(?P<pk>\d+)/$', 'orders.views.orderpdf2', name='orderpdf2'),
+    url(r'orderpdf/(?P<pk>\d+)/$', order2pdf, name='order2pdf'),
+    url(r'orderpdf2/(?P<pk>\d+)/$', orderpdf2, name='orderpdf2'),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^', 'frontend.views.LandingView'),
+    url(r'^', LandingView),
 ]
 
 if settings.DEBUG:
