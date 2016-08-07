@@ -1,0 +1,79 @@
+.main-page-cont(style="padding-left:40px;")
+
+    .col-xs-12.no-padding-left
+        form
+            .form-group.row
+                .col-xs-6
+                    H3.order_header Reporte por Orden de Compra:
+                //.col-xs-6
+                //    ul.object-tools: li: a(href="/admin/bills/bill/").returnlink Volver
+
+    .col-md-7.no-padding-left(style="margin-top:20px")
+        form
+            //fecha y proveedor
+            .form-group.row
+                .col-xs-6.col.no-padding-left
+                    .col-xs-12
+                        span Fecha:
+                    .col-xs-12
+                        input.form-control.by_order_date(type='date',)
+
+                .col-xs-6.col.no-padding-left
+                    .col-xs-12
+                        span Proyecto:
+                    .col-xs-12
+                        select.form-control.by_order_project
+                            option
+
+            //proyecto y actividad
+            .form-group.row
+                .col-xs-6.no-padding-left
+                    .col-xs-12
+                        span Proveedor:
+                    .col-xs-12
+                        select.form-control.by_order_supplier
+                            option
+
+                .col-xs-6.no-padding-left
+                    .col-xs-12
+                        span Orden de Compra:
+                    .col-xs-12
+                        select.form-control.by_order_order
+                            option
+            .form-group.row
+                .col-xs-6.no-padding-left
+                    .col-xs-10
+                        button(type='button', class='Btn_Confirm').form-control.btn.btn-default Generar
+                        button(type='button', class='Btn_Print').form-control.btn.btn-default Imprimir
+
+    .col-md-5.no-padding-left(style="margin-top:20px")
+        form
+        .form-group.row.table_row
+            .col-xs-12
+                span Totales:
+                table.table.table-bordered
+                    tbody
+                        tr: th Total orden:
+                            td(class='No_Sub_Total price') 0
+                        tr: th Total Facturas:
+                            td(class='No_Sub_Iv price') 0
+                        tr: th Diferencia:
+                            td(class='No_Total price') 0
+
+    .col-md-12.no-padding-left
+        form
+            //tabla
+            .form-group.row.table_row.product_table_row
+                .col-xs-12
+                    table.table.table-bordered.NO_table
+                        thead: tr.table-head
+                            th Códi
+                            th Desc
+                            th Cant
+                            th P.Orde
+
+
+                        tbody.table-body
+
+
+

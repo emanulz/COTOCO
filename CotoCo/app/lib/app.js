@@ -14,6 +14,7 @@ require('./order/new/');
 require('./order/edit/');
 require('./bill/new/');
 require('./bill/edit/');
+require('./report/by_order/');
 
 page();
 

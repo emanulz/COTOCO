@@ -20,6 +20,7 @@ page('/admin/orders/order/edit/', edit_order);
 function edit_order() {
 
     $.ajaxSetup({
+
         beforeSend: function(xhr, settings) {
             if(settings.type == "POST"){
                 xhr.setRequestHeader("X-CSRFToken", $('[name="csrfmiddlewaretoken"]').val());
@@ -529,7 +530,7 @@ function main_edit_order () {
     Btn_Edit.hide();
     Btn_Save.hide();
 
-    $('.new_order_supplier').val('1');
+    //$('.new_order_supplier').val('1');
 }
 
 $(document).on('ready', function(){

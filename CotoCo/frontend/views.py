@@ -13,3 +13,5 @@ def LandingView(request):
 class AppView(TemplateView):
 
     template_name = 'app/app.html'
+
+

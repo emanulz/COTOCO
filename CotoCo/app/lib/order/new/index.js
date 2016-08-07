@@ -314,8 +314,6 @@ function save_detail(){
 // MAIN AND DOC READY
 function main_new_order () {
 
-
-
     //Selectors
     var html = $('html');
 
