@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="572ecc81-0645-4d09-a746-eb4f70192eea" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../prueba/Actividades a completar Avanzando.xlsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py" afterPath="$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py" />
     </list>
     <ignored path="CotoCo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,8 +111,20 @@
       <file leaf-file-name="wsgy-ubuntu.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+              <folding>
+                <element signature="e#222#231#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settingsU.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CotoCo/settingsU.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1155">
+              <caret line="77" column="63" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -149,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/products/admin.py" />
         <option value="$PROJECT_DIR$/products/filters.py" />
         <option value="$PROJECT_DIR$/products/views.py" />
         <option value="$PROJECT_DIR$/templates/app/base.html" />
@@ -200,6 +210,7 @@
         <option value="$PROJECT_DIR$/app/lib/report/by_order/index.js" />
         <option value="$PROJECT_DIR$/frontend/views.py" />
         <option value="$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py" />
+        <option value="$PROJECT_DIR$/CotoCo/settingsU.py" />
       </list>
     </option>
   </component>
@@ -326,19 +337,19 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CotoCo" />
+      <recent name="$PROJECT_DIR$/templates/admin/bills" />
+      <recent name="$PROJECT_DIR$/templates/admin" />
+      <recent name="$PROJECT_DIR$/templates/admin/products" />
+      <recent name="$PROJECT_DIR$/static/css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/lib/util" />
       <recent name="$PROJECT_DIR$/templates/admin/products" />
       <recent name="$PROJECT_DIR$/app/lib/PriceFormat" />
       <recent name="$PROJECT_DIR$/app/node_modules" />
       <recent name="$PROJECT_DIR$/static/css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/admin/bills" />
-      <recent name="$PROJECT_DIR$/templates/admin" />
-      <recent name="$PROJECT_DIR$/templates/admin/products" />
-      <recent name="$PROJECT_DIR$/static/css" />
-      <recent name="$PROJECT_DIR$/static/js" />
     </key>
   </component>
   <component name="RunManager">
@@ -720,13 +731,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/js/sidebar_menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/products/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1111,11 +1115,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CotoCo/settingsU.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="77" column="63" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <element signature="e#222#231#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

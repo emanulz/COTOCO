@@ -14,9 +14,9 @@ import sys
 sys.path.append('/var/www/COTOCO/CotoCo/CotoCo')
 
 # add the virtualenv site-packages path to the sys.path
-sys.path.append('/Users/emanuelziga/GITHUB/COTOCO/venvcoto/lib/python2.7/site-packages')
+sys.path.append('/var/www/COTOCO/venvcotoU/lib/python2.7/site-packages')
 
-os.environ["DJANGO_SETTINGS_MODULE"] = "CotoCo.settings"
+os.environ["DJANGO_SETTINGS_MODULE"] = "CotoCo.settingsU"
 
 from django.core.wsgi import get_wsgi_application
 
