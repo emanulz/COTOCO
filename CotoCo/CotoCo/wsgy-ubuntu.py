@@ -11,12 +11,12 @@ import os
 import sys
 
 # add the hellodjango project path into the sys.path
-sys.path.append('/var/www/COTOCO/CotoCo/CotoCo')
+sys.path.append('/home/ubuntu/COTOCO/CotoCo/CotoCo')
 
 # add the virtualenv site-packages path to the sys.path
-sys.path.append('/var/www/COTOCO/venvcotoU/lib/python2.7/site-packages')
+sys.path.append('/home/ubuntu/COTOCO/venv/lib/python2.7/site-packages')
 
-os.environ["DJANGO_SETTINGS_MODULE"] = "CotoCo.settingsU"
+os.environ["DJANGO_SETTINGS_MODULE"] = "CotoCo.settings"
 
 from django.core.wsgi import get_wsgi_application
 

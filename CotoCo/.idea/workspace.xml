@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="572ecc81-0645-4d09-a746-eb4f70192eea" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CotoCo/settingsU.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py" afterPath="$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py" />
     </list>
     <ignored path="CotoCo.iws" />
@@ -111,21 +113,11 @@
       <file leaf-file-name="wsgy-ubuntu.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            <state relative-caret-position="90">
+              <caret line="6" column="54" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="60" />
               <folding>
                 <element signature="e#222#231#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settingsU.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CotoCo/settingsU.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="77" column="63" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -209,8 +201,8 @@
         <option value="$PROJECT_DIR$/app/lib/report/by_order/template.jade" />
         <option value="$PROJECT_DIR$/app/lib/report/by_order/index.js" />
         <option value="$PROJECT_DIR$/frontend/views.py" />
-        <option value="$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py" />
         <option value="$PROJECT_DIR$/CotoCo/settingsU.py" />
+        <option value="$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py" />
       </list>
     </option>
   </component>
@@ -1125,8 +1117,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        <state relative-caret-position="90">
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="60" />
           <folding>
             <element signature="e#222#231#0" expanded="true" />
           </folding>
