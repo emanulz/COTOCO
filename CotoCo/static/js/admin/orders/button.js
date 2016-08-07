@@ -6,7 +6,7 @@
 
 $( document ).ready(function($){
 
-    $('html').on('click','.pdfBtn', function () {
+    $('html').on('click','.pdfBtn', function (event) {
         event.preventDefault();
         var id=$(this).closest('tr')[0].cells[1].outerText;
 
