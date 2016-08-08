@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="572ecc81-0645-4d09-a746-eb4f70192eea" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/orderpdf.css" afterPath="$PROJECT_DIR$/static/css/orderpdf.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/orders/order.jade" afterPath="$PROJECT_DIR$/templates/orders/order.jade" />
     </list>
     <ignored path="CotoCo.iws" />
@@ -62,8 +63,8 @@
       <file leaf-file-name="order.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/orders/order.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="615">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -72,8 +73,8 @@
       <file leaf-file-name="orderpdf.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/orderpdf.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="37" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="37" />
+            <state relative-caret-position="60">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -186,9 +187,9 @@
         <option value="$PROJECT_DIR$/CotoCo/settingsU.py" />
         <option value="$PROJECT_DIR$/CotoCo/wsgy-ubuntu.py" />
         <option value="$PROJECT_DIR$/static/js/admin/orders/button.js" />
-        <option value="$PROJECT_DIR$/static/css/orderpdf.css" />
         <option value="$PROJECT_DIR$/static/css/bootstrapMod.css" />
         <option value="$PROJECT_DIR$/orders/views.py" />
+        <option value="$PROJECT_DIR$/static/css/orderpdf.css" />
         <option value="$PROJECT_DIR$/templates/orders/order.jade" />
       </list>
     </option>
@@ -1216,14 +1217,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/orderpdf.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/bootstrapMod.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -1248,10 +1241,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/orderpdf.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/orders/order.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="615">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
