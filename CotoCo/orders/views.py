@@ -41,8 +41,7 @@ def order2pdf(request, pk):
 
     http_response = HttpResponse(content_type='application/pdf')
 
-    HTML(string=rendered_html, base_url=request.build_absolute_uri()).write_pdf(http_response, stylesheets=[CSS(
-        string='body { font-family: serif !important; background-color:red }')])
+    HTML(string=rendered_html, base_url=request.build_absolute_uri()).write_pdf(http_response)
 
     http_response['Content-Disposition'] = 'filename="New_Order.pdf"'
 
