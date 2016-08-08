@@ -15,7 +15,7 @@ class ClientSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Client
-        fields = ('id', 'client_name', 'client_phone', 'client_address', 'client_email',)
+        fields = ('id', 'client_name', 'client_phone', 'client_id', 'client_address', 'client_email',)
 
 
 class ClientViewSet(viewsets.ModelViewSet):

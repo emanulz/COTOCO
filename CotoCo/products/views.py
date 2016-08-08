@@ -3,8 +3,8 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from rest_framework import serializers, viewsets
-from .models import Product
-from .filters import ProductFilter
+from .models import Product, ProductDepartment
+from .filters import ProductFilter, ProductDepartmentFilter
 
 # Create your views here.
 
@@ -15,7 +15,8 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ('product_code', 'product_description', 'product_price', 'product_avg_price', 'product_min_price',)
+        fields = ('product_code', 'product_description', 'product_department', 'product_price', 'product_unit',
+                  'product_usetaxes', 'product_taxes')
 
 
 class ProductViewSet(viewsets.ModelViewSet):
@@ -24,4 +25,20 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     lookup_field = 'product_code'
     filter_class = ProductFilter
+    # filter_fields = ('id','client','nombrecliente','cashier','date','time','totolkilogramos','cantidadarticulos',)
+
+
+class ProductDepartmentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ProductDepartment
+        fields = ('id', 'productdepartment_name',)
+
+
+class ProductDepartmentViewSet(viewsets.ModelViewSet):
+
+    serializer_class = ProductDepartmentSerializer
+    queryset = ProductDepartment.objects.all()
+    lookup_field = 'id'
+    filter_class = ProductDepartmentFilter
     # filter_fields = ('id','client','nombrecliente','cashier','date','time','totolkilogramos','cantidadarticulos',)

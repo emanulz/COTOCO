@@ -8,7 +8,7 @@ from .models import Client
 
 @admin.register(Client)
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ('id', 'client_name', 'client_phone', 'client_address', 'client_email',)
-    search_fields = ('id', 'client_name', 'client_phone', 'client_address', 'client_email',)
+    list_display = ('id', 'client_name', 'client_phone', 'client_id', 'client_address', 'client_email',)
+    search_fields = ('id', 'client_name', 'client_phone', 'client_id', 'client_address', 'client_email',)
 #   filter_horizontal = ('bill_product_list',)
 

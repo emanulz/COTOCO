@@ -10,4 +10,4 @@ from .models import Project
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('id', 'project_name', 'project_description',)
     search_fields = ('id', 'project_name', 'project_description',)
-#   filter_horizontal = ('bill_product_list',)
+    filter_horizontal = ('project_activity',)

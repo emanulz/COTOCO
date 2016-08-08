@@ -23,7 +23,7 @@ from activities.views import ActivityViewSet
 from bills.views import BillViewSet, BillDetailViewSet
 from clients.views import ClientViewSet
 from orders.views import OrderViewSet, OrderDetailViewSet, order2pdf, orderpdf2
-from products.views import ProductViewSet
+from products.views import ProductViewSet, ProductDepartmentViewSet
 from projects.views import ProjectViewSet
 from suppliers.views import SupplierViewSet
 from frontend.views import LandingView
@@ -40,6 +40,7 @@ router.register(r'order_detail', OrderDetailViewSet)
 router.register(r'orders', OrderViewSet)
 router.register(r'order_detail', OrderDetailViewSet)
 router.register(r'products', ProductViewSet)
+router.register(r'product_departments', ProductDepartmentViewSet)
 router.register(r'projects', ProjectViewSet)
 router.register(r'suppliers', SupplierViewSet)
 

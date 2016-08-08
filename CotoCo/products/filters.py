@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 import django_filters
-from .models import Product
+from .models import Product, ProductDepartment
 
 
 class ProductFilter(django_filters.FilterSet):
@@ -12,4 +12,15 @@ class ProductFilter(django_filters.FilterSet):
 
     class Meta:
         model = Product
-        fields = ('product_code', 'product_description', 'product_price', 'product_avg_price', 'product_min_price',)
+        fields = ('product_code', 'product_description', 'product_department', 'product_price', 'product_unit',
+                    'product_usetaxes', 'product_taxes')
+
+
+class ProductDepartmentFilter(django_filters.FilterSet):
+    # min_date = django_filters.DateFilter(name='date', lookup_type='gte')
+    # max_date = django_filters.DateFilter(name='date', lookup_type='lte')
+    # product_code=django_filters.CharFilter(lookup_type='icontains')
+
+    class Meta:
+        model = ProductDepartment
+        fields = ('id', 'productdepartment_name',)
