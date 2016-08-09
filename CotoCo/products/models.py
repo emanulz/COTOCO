@@ -9,12 +9,14 @@ from django.db import models
 
 class Product(models.Model):
 
-    product_code = models.IntegerField(primary_key=True, verbose_name='Código', unique=True, default=0)
+    product_code = models.CharField(primary_key=True, max_length=7, verbose_name='Código', unique=True, default=0)
+    product_department = models.ForeignKey('ProductDepartment', null=True, verbose_name='Familia', default='')
+    product_subdepartment = models.ForeignKey('ProductSubDepartment', null=True, verbose_name='Sub-Familia', default='')
+    product_consecutive = models.DecimalField(default=0, max_digits=3, decimal_places=0, verbose_name='Consecutivo')
     product_description = models.CharField(max_length=255, verbose_name='Descripción del producto', default='')
-    product_department = models.ForeignKey('ProductDepartment', null=True, verbose_name='Departamento', default='')
     product_price = models.DecimalField(default=0, max_digits=10, decimal_places=2,
                                         verbose_name='Precio ₡')
-    product_unit = models.CharField(default='', max_length=255, verbose_name='Unidad')
+    product_unit = models.CharField(default='Unidad', max_length=255, verbose_name='Unidad')
     product_usetaxes = models.BooleanField(default=False, verbose_name='Usa Impuestos?')
     product_taxes = models.DecimalField(default=0, max_digits=5, decimal_places=2, verbose_name='Impuestos %')
 
@@ -29,12 +31,30 @@ class Product(models.Model):
 
 class ProductDepartment(models.Model):
 
-    productdepartment_name = models.CharField(max_length=255, verbose_name='Nombre del Departamento', unique=True)
+    productdepartment_name = models.CharField(max_length=255, verbose_name='Nombre de la Familia', unique=True)
+    productdepartment_code = models.CharField(max_length=2, unique=True, verbose_name='Identificador de Familia')
+
 
     def __unicode__(self):
         return '%s' % self.productdepartment_name
 
     class Meta:
-        verbose_name = 'Departamento'
-        verbose_name_plural = 'Departamentos'
+        verbose_name = 'Familia'
+        verbose_name_plural = 'Familias'
+        ordering = ['productdepartment_code']
+
+
+class ProductSubDepartment(models.Model):
+
+    productsubdepartment_name = models.CharField(max_length=255, verbose_name='Nombre de la Sub-Familia', unique=True)
+    productsubdepartment_department = models.ForeignKey('ProductDepartment', verbose_name='Familia')
+    productsubdepartment_code = models.CharField(max_length=2, verbose_name='Identificador de Sub-Familia')
+
+
+    def __unicode__(self):
+        return '%s' % self.productsubdepartment_name
+
+    class Meta:
+        verbose_name = 'Sub-Familia'
+        verbose_name_plural = 'Sub-Familias'
         ordering = ['id']

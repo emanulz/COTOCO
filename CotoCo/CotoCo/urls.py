@@ -17,19 +17,19 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework import routers
 
-from frontend.views import LandingView
-
 from activities.views import ActivityViewSet
 from bills.views import BillViewSet, BillDetailViewSet
 from clients.views import ClientViewSet
 from orders.views import OrderViewSet, OrderDetailViewSet, order2pdf, orderpdf2
-from products.views import ProductViewSet, ProductDepartmentViewSet
+from products.views import ProductViewSet, ProductDepartmentViewSet, ProductSubDepartmentViewSet
 from projects.views import ProjectViewSet
 from suppliers.views import SupplierViewSet
 from frontend.views import LandingView
 
 from django.conf import settings
 from django.contrib.staticfiles import views
+
+# todo reconfig urls for API plural
 
 router = routers.DefaultRouter()
 router.register(r'activities', ActivityViewSet)
@@ -41,6 +41,7 @@ router.register(r'orders', OrderViewSet)
 router.register(r'order_detail', OrderDetailViewSet)
 router.register(r'products', ProductViewSet)
 router.register(r'product_departments', ProductDepartmentViewSet)
+router.register(r'product_sub_departments', ProductSubDepartmentViewSet)
 router.register(r'projects', ProjectViewSet)
 router.register(r'suppliers', SupplierViewSet)
 
