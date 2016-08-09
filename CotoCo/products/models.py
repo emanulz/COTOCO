@@ -34,7 +34,6 @@ class ProductDepartment(models.Model):
     productdepartment_name = models.CharField(max_length=255, verbose_name='Nombre de la Familia', unique=True)
     productdepartment_code = models.CharField(max_length=2, unique=True, verbose_name='Identificador de Familia')
 
-
     def __unicode__(self):
         return '%s' % self.productdepartment_name
 
@@ -46,10 +45,9 @@ class ProductDepartment(models.Model):
 
 class ProductSubDepartment(models.Model):
 
-    productsubdepartment_name = models.CharField(max_length=255, verbose_name='Nombre de la Sub-Familia', unique=True)
     productsubdepartment_department = models.ForeignKey('ProductDepartment', verbose_name='Familia')
+    productsubdepartment_name = models.CharField(max_length=255, verbose_name='Nombre de la Sub-Familia', unique=True)
     productsubdepartment_code = models.CharField(max_length=2, verbose_name='Identificador de Sub-Familia')
-
 
     def __unicode__(self):
         return '%s' % self.productsubdepartment_name
