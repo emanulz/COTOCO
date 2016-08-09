@@ -31,6 +31,8 @@
     var div_taxes = $('.field-product_taxes');
 
     var btn_save = $("[name='_save']");
+    var btn_continue = $("[name='_continue']");
+    var btn_another = $("[name='_addanother']");
 
     var code = $('#id_product_code');
 
@@ -40,14 +42,24 @@
 
     var currentUrl = $(location).attr('href');
 
-    var old_code = code.val();
-
-
+        
 //SELECTORS END
 
     code.prop('disabled', true);
 
     btn_save.on('click', function () {
+
+        code.prop('disabled', false);
+
+    });
+
+    btn_continue.on('click', function () {
+
+        code.prop('disabled', false);
+
+    });
+
+    btn_another.on('click', function () {
 
         code.prop('disabled', false);
 

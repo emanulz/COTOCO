@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="572ecc81-0645-4d09-a746-eb4f70192eea" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CotoCo.log" afterPath="$PROJECT_DIR$/CotoCo.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CotoCo_error.log" afterPath="$PROJECT_DIR$/CotoCo_error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/admin.py" afterPath="$PROJECT_DIR$/products/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/models.py" afterPath="$PROJECT_DIR$/products/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/admin/products/admin_product.js" afterPath="$PROJECT_DIR$/static/js/admin/products/admin_product.js" />
     </list>
     <ignored path="CotoCo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,157 +29,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/products/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/filters.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="e#24#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="e#25#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_product.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin_product.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/admin/products/admin_product.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+            <state relative-caret-position="391">
+              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
               <folding>
-                <element signature="e#1574#2201#0" expanded="false" />
-                <element signature="e#2256#2347#0" expanded="false" />
-                <element signature="e#2390#2481#0" expanded="false" />
-                <element signature="e#2568#2603#0" expanded="false" />
-                <element signature="e#2636#2798#0" expanded="false" />
-                <element signature="e#2956#3896#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nav_template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/nav/nav_template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-              <folding>
-                <element signature="e#24#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="change_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admin/bills/change_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="83" column="144" selection-start-line="83" selection-start-column="139" selection-end-line="83" selection-end-column="144" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="order.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/orders/order.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="44" column="66" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/order/new/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="32" column="19" selection-start-line="20" selection-start-column="4" selection-end-line="32" selection-end-column="19" />
-              <folding>
-                <marker date="1470237454000" expanded="true" signature="3836:4430" ph="..." />
-                <marker date="1470237454000" expanded="false" signature="3880:3900" ph="..." />
-                <marker date="1470237454000" expanded="true" signature="3901:4019" ph="..." />
-                <marker date="1470237454000" expanded="false" signature="3930:3964" ph="..." />
-                <marker date="1470237454000" expanded="false" signature="4047:4067" ph="..." />
-                <marker date="1470237454000" expanded="true" signature="4068:4192" ph="..." />
-                <marker date="1470237454000" expanded="true" signature="4089:4187" ph="..." />
-                <marker date="1470237454000" expanded="false" signature="4110:4131" ph="..." />
-                <marker date="1470237454000" expanded="false" signature="4267:4287" ph="..." />
-                <marker date="1470237454000" expanded="true" signature="4288:4425" ph="..." />
-                <marker date="1470237454000" expanded="true" signature="4368:4384" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/order/edit/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="282" column="6" selection-start-line="266" selection-start-column="4" selection-end-line="282" selection-end-column="6" />
-              <folding>
-                <element signature="n#!!block;n#edit_order#0" expanded="false" />
-                <element signature="n#!!block;n#products_to_memory#0" expanded="false" />
-                <element signature="n#!!block;n#add_from_API_to_select#0" expanded="false" />
-                <element signature="n#!!block;n#date_to_today#0" expanded="false" />
-                <element signature="n#!!block;n#is_code_on_array#0" expanded="false" />
-                <element signature="n#!!block;n#add_product#0" expanded="false" />
-                <element signature="n#!!block;n#add_new_row#0" expanded="false" />
-                <element signature="n#!!block;n#row_update#0" expanded="false" />
-                <element signature="n#!!block;n#update_totals#0" expanded="false" />
-                <element signature="n#!!block;n#save_detail#0" expanded="false" />
-                <element signature="n#!!block;n#load_order#0" expanded="false" />
-                <element signature="n#!!block;n#add_loaded_to_table#0" expanded="false" />
-                <element signature="n#!!block;n#main_edit_order#0" expanded="false" />
-                <element signature="e#11468#11837#0" expanded="false" />
-                <element signature="e#11881#12173#0" expanded="false" />
-                <element signature="e#12217#12283#0" expanded="false" />
-                <element signature="e#12325#12468#0" expanded="false" />
-                <element signature="e#12493#12637#0" expanded="false" />
-                <element signature="e#12661#12805#0" expanded="false" />
-                <marker date="1470243065000" expanded="true" signature="4054:4648" ph="..." />
-                <marker date="1470243065000" expanded="true" signature="4098:4118" ph="..." />
-                <marker date="1470243065000" expanded="true" signature="4119:4237" ph="..." />
-                <marker date="1470243065000" expanded="true" signature="4148:4182" ph="..." />
-                <marker date="1470243065000" expanded="true" signature="4265:4285" ph="..." />
-                <marker date="1470243065000" expanded="true" signature="4286:4410" ph="..." />
-                <marker date="1470243065000" expanded="true" signature="4307:4405" ph="..." />
-                <marker date="1470243065000" expanded="true" signature="4328:4349" ph="..." />
-                <marker date="1470243065000" expanded="true" signature="4485:4505" ph="..." />
-                <marker date="1470243065000" expanded="true" signature="4506:4643" ph="..." />
-                <marker date="1470243065000" expanded="true" signature="4586:4602" ph="..." />
+                <element signature="e#1830#2457#0" expanded="false" />
+                <element signature="e#2512#2603#0" expanded="false" />
+                <element signature="e#2646#2737#0" expanded="false" />
+                <element signature="e#2824#2859#0" expanded="false" />
+                <element signature="e#2892#3054#0" expanded="false" />
+                <element signature="e#3212#4152#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -255,10 +113,10 @@
         <option value="$PROJECT_DIR$/CotoCo/urls.py" />
         <option value="$PROJECT_DIR$/products/views.py" />
         <option value="$PROJECT_DIR$/products/filters.py" />
-        <option value="$PROJECT_DIR$/static/js/admin/products/admin_product.js" />
         <option value="$PROJECT_DIR$/templates/nav/nav_template.html" />
         <option value="$PROJECT_DIR$/products/models.py" />
         <option value="$PROJECT_DIR$/products/admin.py" />
+        <option value="$PROJECT_DIR$/static/js/admin/products/admin_product.js" />
       </list>
     </option>
   </component>
@@ -347,7 +205,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,11 +219,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nav" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CotoCo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CotoCo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CotoCo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CotoCo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1123,18 +1029,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/bills/change_list.html">
+    <entry file="file://$PROJECT_DIR$/products/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="83" column="144" selection-start-line="83" selection-start-column="139" selection-end-line="83" selection-end-column="144" />
+        <state relative-caret-position="241">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/orders/order.jade">
+    <entry file="file://$PROJECT_DIR$/products/filters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="44" column="66" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="66" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/nav/nav_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -1149,13 +1075,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/products/filters.py">
+    <entry file="file://$PROJECT_DIR$/templates/admin/bills/change_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="445">
+          <caret line="83" column="144" selection-start-line="83" selection-start-column="139" selection-end-line="83" selection-end-column="144" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/orders/order.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="44" column="66" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1220,42 +1152,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/admin/products/admin_product.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+        <state relative-caret-position="391">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
           <folding>
-            <element signature="e#1574#2201#0" expanded="false" />
-            <element signature="e#2256#2347#0" expanded="false" />
-            <element signature="e#2390#2481#0" expanded="false" />
-            <element signature="e#2568#2603#0" expanded="false" />
-            <element signature="e#2636#2798#0" expanded="false" />
-            <element signature="e#2956#3896#0" expanded="false" />
+            <element signature="e#1830#2457#0" expanded="false" />
+            <element signature="e#2512#2603#0" expanded="false" />
+            <element signature="e#2646#2737#0" expanded="false" />
+            <element signature="e#2824#2859#0" expanded="false" />
+            <element signature="e#2892#3054#0" expanded="false" />
+            <element signature="e#3212#4152#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/nav/nav_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
