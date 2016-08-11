@@ -14,7 +14,7 @@ import sys
 sys.path.append('/home/emanuelziga/github/COTOCO/CotoCo/CotoCo')
 
 # add the virtualenv site-packages path to the sys.path
-sys.path.append('/home/emanuelziga/cotovenv/lib/python2.7/site-packages')
+sys.path.append('/home/emanuelziga/github/venv/cotovenv/lib/python2.7/site-packages')
 
 os.environ["DJANGO_SETTINGS_MODULE"] = "CotoCo.settings"
 
