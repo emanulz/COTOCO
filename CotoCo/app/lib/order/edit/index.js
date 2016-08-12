@@ -159,18 +159,26 @@ function add_product(){
 
 }
 
-function add_new_row(code, desc, qty, unit, uprice, subt ){
+function add_new_row(code, desc, qty, unit, uprice, subt,i ){
 
     let Btn_Confirm = $('.Btn_Confirm');
 
-    new_order_array.push([code, qty, parseFloat(uprice), subt]);
+    new_order_array.push([code, qty, parseFloat(uprice), subt, desc, unit]);
 
     var new_row=`<tr class="${code}"><td>${code}</td><td>${desc}</td><td style="padding:0; width:13%"><input type="number" style="width:100%;
             border:0px" class="form-control ${code}_product_qty no_qty"/></td><td>${unit}</td><td style="padding:0; width:13%"><input type="number" 
             style="width:100%;border:0px" class="form-control ${code}_product_uprice no_uprice"/></td><td class="${code}_product_subt price" >${subt.toFixed(2)}</td><td style="padding:0; width:10%" 
             class="inner-addon"><i class="fa fa-paste add_note"></i><i style="margin-left:34px" class="fa fa-minus remove_row"></i></td></tr>`;
 
-    $('.table-body').append(new_row);
+    if (i == 0){
+
+        $('.table-body').prepend(new_row);
+
+    }
+    else{
+        $('.table-body').append(new_row);
+
+    }
 
     $(`.${code}_product_qty`).val(qty);
     $(`.${code}_product_uprice`).val(uprice);
@@ -259,7 +267,7 @@ function update_totals() {
 }
 
 function save_new_order(){
-
+//todo verify not null
     save_detail();
 
     //borra detalles
@@ -282,6 +290,7 @@ function save_new_order(){
         dataType:"json"
     })
         .fail(function(data){
+            new_order_detail=[];
             console.log(data.responseText);
             alert("Hubo un problema al editar la orden, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
         })
@@ -304,6 +313,8 @@ function save_detail(){
 
             data: JSON.stringify({
                 "order_detail_product": new_order_array[i][0],
+                "order_detail_description": new_order_array[i][4],
+                 "order_detail_unit": new_order_array[i][5],
                 "order_detail_price": new_order_array[i][2],
                 "order_detail_amount": new_order_array[i][1],
                 "order_detail_total": new_order_array[i][3]
@@ -334,13 +345,10 @@ function load_order(id) {
         $('.new_order_project ').val(data.order_project).trigger("change");
         $('.new_order_activity').val(data.order_activity).trigger("change");
 
-        console.log(data);
-
         last_order_detail=data.order_product_list;
 
 
     }).success(function (){
-
         add_loaded_to_table();
     });
 
@@ -350,14 +358,13 @@ function load_order(id) {
 
 function add_loaded_to_table(){
 
-    console.log(last_order_detail);
+//todo fix insert order cause by get async
 
     $.each(last_order_detail, function (i) {
 
-        $.get(`/api/order_detail/${last_order_detail[i]}/`, function (data) {
-
-            add_new_row(parseFloat(data.order_detail_product), 'desc', parseFloat(data.order_detail_amount), 'uni', parseFloat(data.order_detail_price), parseFloat(data.order_detail_total) )
-
+        $.get(`/api/order_detail/${last_order_detail[i]}/`,false)
+        .success(function (data) {
+            add_new_row(data.order_detail_product, data.order_detail_description, parseFloat(data.order_detail_amount), data.order_detail_unit, parseFloat(data.order_detail_price), parseFloat(data.order_detail_total),i )
         });
 
     });
@@ -457,7 +464,7 @@ function main_edit_order () {
 
     //Button Events
     Btn_Confirm.on('click', function(event){
-        console.log('BTN CLICK');
+
         event.preventDefault();
 
         $('.main-page-cont').find(':input').prop('disabled', true);
@@ -524,6 +531,8 @@ function main_edit_order () {
         allowClear: true,
         language: "es"
     });
+
+
 
     //Hide Buttons
     Btn_Confirm.hide();

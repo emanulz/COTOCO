@@ -132,7 +132,7 @@ function add_product(){
 
         if (products.length){
             var subt = products[0].product_price*qty;
-            add_new_row(products[0].product_code,products[0].product_description,qty, 'unidad',products[0].product_price ,subt )
+            add_new_row(products[0].product_code,products[0].product_description,qty, products[0].product_unit,products[0].product_price ,subt )
         }
         else{
             //FALTA mensaje de que no existe el producto
@@ -154,7 +154,7 @@ function add_new_row(code, desc, qty, unit, uprice, subt ){
 
     let Btn_Confirm = $('.Btn_Confirm');
 
-    new_order_array.push([code, qty, parseFloat(uprice), subt]);
+    new_order_array.push([code, qty, parseFloat(uprice), subt, desc, unit]);
 
     var new_row=`<tr class="${code}"><td>${code}</td><td>${desc}</td><td style="padding:0; width:13%"><input type="number" style="width:100%;
             border:0px" class="form-control ${code}_product_qty no_qty"/></td><td>${unit}</td><td style="padding:0; width:13%"><input type="number" 
@@ -271,17 +271,21 @@ function save_new_order(){
         dataType:"json"
     })
         .fail(function(data){
+            new_order_detail=[];
             console.log(data.responseText);
             alert("Hubo un problema al crear la venta, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
         })
         .success(function(data){
             alert('Orden guardada con exitoooo');
+            window.open(`/orderpdf/${data.id}/`);
             window.location.replace("/admin/orders/order/");
         });//ajax
 
 }
 
 function save_detail(){
+
+    new_order_detail=[];
 
     $.each(new_order_array, function(i) {
         $.ajax({
@@ -291,6 +295,8 @@ function save_detail(){
 
             data: JSON.stringify({
                 "order_detail_product": new_order_array[i][0],
+                "order_detail_description": new_order_array[i][4],
+                "order_detail_unit": new_order_array[i][5],
                 "order_detail_price": new_order_array[i][2],
                 "order_detail_amount": new_order_array[i][1],
                 "order_detail_total": new_order_array[i][3]

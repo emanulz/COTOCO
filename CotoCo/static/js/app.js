@@ -1175,18 +1175,23 @@ function add_product() {
         } //else
 }
 
-function add_new_row(code, desc, qty, unit, uprice, subt) {
+function add_new_row(code, desc, qty, unit, uprice, subt, i) {
 
     let Btn_Confirm = $('.Btn_Confirm');
 
-    new_order_array.push([code, qty, parseFloat(uprice), subt]);
+    new_order_array.push([code, qty, parseFloat(uprice), subt, desc, unit]);
 
     var new_row = `<tr class="${ code }"><td>${ code }</td><td>${ desc }</td><td style="padding:0; width:13%"><input type="number" style="width:100%;
             border:0px" class="form-control ${ code }_product_qty no_qty"/></td><td>${ unit }</td><td style="padding:0; width:13%"><input type="number" 
             style="width:100%;border:0px" class="form-control ${ code }_product_uprice no_uprice"/></td><td class="${ code }_product_subt price" >${ subt.toFixed(2) }</td><td style="padding:0; width:10%" 
             class="inner-addon"><i class="fa fa-paste add_note"></i><i style="margin-left:34px" class="fa fa-minus remove_row"></i></td></tr>`;
 
-    $('.table-body').append(new_row);
+    if (i == 0) {
+
+        $('.table-body').prepend(new_row);
+    } else {
+        $('.table-body').append(new_row);
+    }
 
     $(`.${ code }_product_qty`).val(qty);
     $(`.${ code }_product_uprice`).val(uprice);
@@ -1269,7 +1274,7 @@ function update_totals() {
 }
 
 function save_new_order() {
-
+    //todo verify not null
     save_detail();
 
     //borra detalles
@@ -1291,6 +1296,7 @@ function save_new_order() {
         contentType: "application/json; charset=utf-8",
         dataType: "json"
     }).fail(function (data) {
+        new_order_detail = [];
         console.log(data.responseText);
         alert("Hubo un problema al editar la orden, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
     }).success(function (data) {
@@ -1311,6 +1317,8 @@ function save_detail() {
 
             data: JSON.stringify({
                 "order_detail_product": new_order_array[i][0],
+                "order_detail_description": new_order_array[i][4],
+                "order_detail_unit": new_order_array[i][5],
                 "order_detail_price": new_order_array[i][2],
                 "order_detail_amount": new_order_array[i][1],
                 "order_detail_total": new_order_array[i][3]
@@ -1337,24 +1345,20 @@ function load_order(id) {
         $('.new_order_project ').val(data.order_project).trigger("change");
         $('.new_order_activity').val(data.order_activity).trigger("change");
 
-        console.log(data);
-
         last_order_detail = data.order_product_list;
     }).success(function () {
-
         add_loaded_to_table();
     });
 }
 
 function add_loaded_to_table() {
 
-    console.log(last_order_detail);
+    //todo fix insert order cause by get async
 
     $.each(last_order_detail, function (i) {
 
-        $.get(`/api/order_detail/${ last_order_detail[i] }/`, function (data) {
-
-            add_new_row(parseFloat(data.order_detail_product), 'desc', parseFloat(data.order_detail_amount), 'uni', parseFloat(data.order_detail_price), parseFloat(data.order_detail_total));
+        $.get(`/api/order_detail/${ last_order_detail[i] }/`, false).success(function (data) {
+            add_new_row(data.order_detail_product, data.order_detail_description, parseFloat(data.order_detail_amount), data.order_detail_unit, parseFloat(data.order_detail_price), parseFloat(data.order_detail_total), i);
         });
     });
 }
@@ -1449,7 +1453,7 @@ function main_edit_order() {
 
     //Button Events
     Btn_Confirm.on('click', function (event) {
-        console.log('BTN CLICK');
+
         event.preventDefault();
 
         $('.main-page-cont').find(':input').prop('disabled', true);
@@ -1654,7 +1658,7 @@ function add_product() {
 
         if (products.length) {
             var subt = products[0].product_price * qty;
-            add_new_row(products[0].product_code, products[0].product_description, qty, 'unidad', products[0].product_price, subt);
+            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit, products[0].product_price, subt);
         } else {
             //FALTA mensaje de que no existe el producto
             alert('NO EXISTE EL PRODUCTO');
@@ -1672,7 +1676,7 @@ function add_new_row(code, desc, qty, unit, uprice, subt) {
 
     let Btn_Confirm = $('.Btn_Confirm');
 
-    new_order_array.push([code, qty, parseFloat(uprice), subt]);
+    new_order_array.push([code, qty, parseFloat(uprice), subt, desc, unit]);
 
     var new_row = `<tr class="${ code }"><td>${ code }</td><td>${ desc }</td><td style="padding:0; width:13%"><input type="number" style="width:100%;
             border:0px" class="form-control ${ code }_product_qty no_qty"/></td><td>${ unit }</td><td style="padding:0; width:13%"><input type="number" 
@@ -1782,15 +1786,19 @@ function save_new_order() {
         contentType: "application/json; charset=utf-8",
         dataType: "json"
     }).fail(function (data) {
+        new_order_detail = [];
         console.log(data.responseText);
         alert("Hubo un problema al crear la venta, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
     }).success(function (data) {
         alert('Orden guardada con exitoooo');
+        window.open(`/orderpdf/${ data.id }/`);
         window.location.replace("/admin/orders/order/");
     }); //ajax
 }
 
 function save_detail() {
+
+    new_order_detail = [];
 
     $.each(new_order_array, function (i) {
         $.ajax({
@@ -1800,6 +1808,8 @@ function save_detail() {
 
             data: JSON.stringify({
                 "order_detail_product": new_order_array[i][0],
+                "order_detail_description": new_order_array[i][4],
+                "order_detail_unit": new_order_array[i][5],
                 "order_detail_price": new_order_array[i][2],
                 "order_detail_amount": new_order_array[i][1],
                 "order_detail_total": new_order_array[i][3]
@@ -1988,7 +1998,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<div style=\"padding-top:20px;padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Nueva Orden de Compra:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-3 no-padding-left\"><form><!--fecha y proveedor--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Fecha:</span></div><div class=\"col-xs-12\"><input type=\"date\" class=\"form-control new_order_date\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Proveedor:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_supplier\"><option></option></select></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Proyecto:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_project\"><option></option></select></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Actividad:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_activity\"><option></option></select></div></div></div><!--producto y buscar--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Producuto:</span></div><div class=\"col-xs-12 inner-addon right-addon\"><i class=\"glyphicon glyphicon-barcode\"></i><input type=\"text\" class=\"form-control order_product_code\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Buscar:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_search\"><option></option></select></div></div></div><div class=\"form-group row table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered\"><tbody><tr><th>Sub-Total:<td class=\"No_Sub_Total price\">0</td></th></tr><tr><th>IV:<td class=\"No_Sub_Iv price\">0</td></th></tr><tr><th>Total:<td class=\"No_Total price\">0</td></th></tr></tbody></table></div></div></form></div><div class=\"col-md-9 no-padding-left\"><form><!--tabla--><div class=\"form-group row table_row product_table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered NO_table\"><thead><tr><th>Códi</th><th>Desc</th><th>Cant</th><th>Unid</th><th>P.Un</th><th>Subt</th><th>Obse</th></tr></thead><tbody class=\"table-body\"></tbody></table></div></div><!--confirmar y guardar--><div style=\"padding-right:15px;\" class=\"form-group row\"><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Confirm form-control btn btn-default pull-right\">Confirmar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Edit form-control btn btn-default pull-right\">Editar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Save form-control btn btn-default pull-right\">Guardar</button></div></div></form></div></div>");;return buf.join("");
+buf.push("<div style=\"padding-top:20px;padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Nueva Orden de Compra:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-3 no-padding-left\"><form><!--fecha y proveedor--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Fecha:</span></div><div class=\"col-xs-12\"><input type=\"date\" class=\"form-control new_order_date\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Proveedor:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_supplier\"><option></option></select></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Proyecto:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_project\"><option></option></select></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Actividad:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_activity\"><option></option></select></div></div></div><!--producto y buscar--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Producuto:</span></div><div class=\"col-xs-12 inner-addon right-addon\"><i class=\"glyphicon glyphicon-barcode\"></i><input type=\"text\" class=\"form-control order_product_code\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Buscar:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_search\"><option></option></select></div></div></div><div class=\"form-group row table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered\"><tbody><tr><th>Sub-Total:<td class=\"No_Sub_Total price\">0</td></th></tr><tr><th>IV:<td class=\"No_Sub_Iv price\">0</td></th></tr><tr><th>Total:<td class=\"No_Total price\">0</td></th></tr></tbody></table></div></div></form></div><div class=\"col-md-9 no-padding-left\"><form><!--tabla--><div class=\"form-group row table_row product_table_row\"><div class=\"col-xs-12\"><table id=\"tableProducts\" class=\"table table-bordered NO_table tablesorter\"><thead><tr><th>Códi</th><th>Desc</th><th>Cant</th><th>Unid</th><th>P.Un</th><th>Subt</th><th>Obse</th></tr></thead><tbody class=\"table-body\"></tbody></table></div></div><!--confirmar y guardar--><div style=\"padding-right:15px;\" class=\"form-group row\"><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Confirm form-control btn btn-default pull-right\">Confirmar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Edit form-control btn btn-default pull-right\">Editar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Save form-control btn btn-default pull-right\">Guardar</button></div></div></form></div></div>");;return buf.join("");
 };
 },{"jade/runtime":13}],8:[function(require,module,exports){
 var $ = require('jquery');

@@ -34,6 +34,6 @@ class OrderAdmin(admin.ModelAdmin):
 
 @admin.register(OrderDetail)
 class OrderDetailAdmin(admin.ModelAdmin):
-    list_display = ('id', 'order_detail_product', 'order_detail_price', 'order_detail_amount', 'order_detail_total',)
+    list_display = ('id', 'order_detail_product', 'order_detail_description', 'order_detail_price', 'order_detail_amount', 'order_detail_total',)
     search_fields = ('id', 'order_detail_product', 'order_detail_price', 'order_detail_amount', 'order_detail_total',)
 #   filter_horizontal = ('',)
