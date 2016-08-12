@@ -8,6 +8,7 @@ var page = require('page');
 require('bootstrap');
 require('select2');
 require('PriceFormat');
+require('alertify');
 
 
 require('./order/new/');

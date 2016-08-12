@@ -15,7 +15,8 @@
     "jquery": "./node_modules/jquery/dist/jquery.js",
     "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js",
     "select2":"./node_modules/select2/dist/js/select2.min.js",
-    "PriceFormat":"./lib/util/PriceFormat/PriceFormat.js"
+    "PriceFormat":"./lib/util/PriceFormat/PriceFormat.js",
+    "alertify":"./lib/util/alertifyjs/alertify.min.js"
   },
   "keywords": [],
   "author": "",
@@ -30,7 +31,8 @@
     "jquery": "$",
     "bootstrap": "bootstrap",
     "select2": "select2",
-    "PriceFormat":"PriceFormat"
+    "PriceFormat":"PriceFormat",
+    "alertify":"alertify"
   },
   "devDependencies": {
     "babelify": "^7.3.0",
