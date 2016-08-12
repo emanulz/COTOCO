@@ -9,7 +9,7 @@ from django.db import models
 
 class Product(models.Model):
 
-    product_code = models.CharField(primary_key=True, max_length=7, verbose_name='Código', unique=True, default=0)
+    product_code = models.CharField( max_length=7, verbose_name='Código', unique=True, default=0)
     product_department = models.ForeignKey('ProductDepartment', null=True, verbose_name='Familia', default='')
     product_subdepartment = models.ForeignKey('ProductSubDepartment', null=True, verbose_name='Sub-Familia', default='')
     product_consecutive = models.DecimalField(default=0, max_digits=3, decimal_places=0, verbose_name='Consecutivo')

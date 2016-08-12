@@ -33,7 +33,8 @@ class Order(models.Model):
 
 class OrderDetail(models.Model):
 
-    order_detail_product = models.ForeignKey(Product, verbose_name='Producto')
+    order_detail_product = models.ForeignKey(Product, verbose_name='Id Producto')
+    order_detail_product_code = models.CharField(max_length=255, verbose_name='Código', default='')
     order_detail_description = models.CharField(max_length=255, verbose_name='Descripción', default='')
     order_detail_amount = models.DecimalField(max_digits=7, decimal_places=2, verbose_name='Cantidad')
     order_detail_unit = models.CharField(max_length=255, verbose_name='Unidad', default='')

@@ -71,7 +71,7 @@ class OrderDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = OrderDetail
-        fields = ('id', 'order_detail_product', 'order_detail_description','order_detail_unit', 'order_detail_price', 'order_detail_amount', 'order_detail_total',)
+        fields = ('id', 'order_detail_product', 'order_detail_product_code', 'order_detail_description','order_detail_unit', 'order_detail_price', 'order_detail_amount', 'order_detail_total',)
 
 
 class OrderDetailViewSet(viewsets.ModelViewSet):

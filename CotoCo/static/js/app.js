@@ -1175,11 +1175,11 @@ function add_product() {
         } //else
 }
 
-function add_new_row(code, desc, qty, unit, uprice, subt, i) {
+function add_new_row(code, desc, qty, unit, uprice, subt, i, id) {
 
     let Btn_Confirm = $('.Btn_Confirm');
 
-    new_order_array.push([code, qty, parseFloat(uprice), subt, desc, unit]);
+    new_order_array.push([code, qty, parseFloat(uprice), subt, desc, unit, id]);
 
     var new_row = `<tr class="${ code }"><td>${ code }</td><td>${ desc }</td><td style="padding:0; width:13%"><input type="number" style="width:100%;
             border:0px" class="form-control ${ code }_product_qty no_qty"/></td><td>${ unit }</td><td style="padding:0; width:13%"><input type="number" 
@@ -1316,7 +1316,8 @@ function save_detail() {
             async: false,
 
             data: JSON.stringify({
-                "order_detail_product": new_order_array[i][0],
+                "order_detail_product": new_order_array[i][6],
+                "order_detail_product_code": new_order_array[i][0],
                 "order_detail_description": new_order_array[i][4],
                 "order_detail_unit": new_order_array[i][5],
                 "order_detail_price": new_order_array[i][2],
@@ -1358,7 +1359,7 @@ function add_loaded_to_table() {
     $.each(last_order_detail, function (i) {
 
         $.get(`/api/order_detail/${ last_order_detail[i] }/`, false).success(function (data) {
-            add_new_row(data.order_detail_product, data.order_detail_description, parseFloat(data.order_detail_amount), data.order_detail_unit, parseFloat(data.order_detail_price), parseFloat(data.order_detail_total), i);
+            add_new_row(data.order_detail_product_code, data.order_detail_description, parseFloat(data.order_detail_amount), data.order_detail_unit, parseFloat(data.order_detail_price), parseFloat(data.order_detail_total), i, data.order_detail_product);
         });
     });
 }
@@ -1658,7 +1659,9 @@ function add_product() {
 
         if (products.length) {
             var subt = products[0].product_price * qty;
-            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit, products[0].product_price, subt);
+            console.log(products);
+            console.log(products[0].id);
+            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit, products[0].product_price, subt, products[0].id);
         } else {
             //FALTA mensaje de que no existe el producto
             alert('NO EXISTE EL PRODUCTO');
@@ -1672,11 +1675,12 @@ function add_product() {
         } //else
 }
 
-function add_new_row(code, desc, qty, unit, uprice, subt) {
+function add_new_row(code, desc, qty, unit, uprice, subt, id) {
 
+    console.log(`$el id es ${ id }`);
     let Btn_Confirm = $('.Btn_Confirm');
 
-    new_order_array.push([code, qty, parseFloat(uprice), subt, desc, unit]);
+    new_order_array.push([code, qty, parseFloat(uprice), subt, desc, unit, id]);
 
     var new_row = `<tr class="${ code }"><td>${ code }</td><td>${ desc }</td><td style="padding:0; width:13%"><input type="number" style="width:100%;
             border:0px" class="form-control ${ code }_product_qty no_qty"/></td><td>${ unit }</td><td style="padding:0; width:13%"><input type="number" 
@@ -1807,7 +1811,8 @@ function save_detail() {
             async: false,
 
             data: JSON.stringify({
-                "order_detail_product": new_order_array[i][0],
+                "order_detail_product": new_order_array[i][6],
+                "order_detail_product_code": new_order_array[i][0],
                 "order_detail_description": new_order_array[i][4],
                 "order_detail_unit": new_order_array[i][5],
                 "order_detail_price": new_order_array[i][2],
