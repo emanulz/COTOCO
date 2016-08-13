@@ -3,25 +3,32 @@ html(lang="en")
     head
         title = order.id
 
+        link(rel="stylesheet" href="/static/css/reset.css")
+
         link(rel="stylesheet" href="/static/css/bootstrapMod.css")
         link(rel="stylesheet" href="/static/css/orderpdf.css")
 
-    body(style="font-family:sans-serif;")
-
-
-        .col-xs-12
-            h4(style="text-aling:center;text-transform:uppercase;font-size:14px"): b -----------------------Orden de compra de Producto -----------------------
-        .col-xs-6
-            h5 <b>Orden de compra #</b> {{order.id}}
-            h5 <b>Proyecto #</b> {{order.order_project.id}} - {{order.order_project.project_name}}
-            h5 <b>Actividad:</b> {{order.order_activity.activity_name}}
-
-        .col-xs-6
-            h5 <b>Fecha:</b> {{order.order_date}}
-            h5 <b>Fecha Entraga:</b> {{order.order_date}}
+    body(style="font-family:helvetica;")
 
         .col-xs-12
-            form
+            hr(style="border-top: 1px solid #ccc;")
+            img(src= "/media/img/coto.png" style="width:300px;height:auto;margin-bottom:0px;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            h4(style="text-align: center; vertical-align: middle;font-size:13px") ORDEN DE COMPRA DE PRODUCTOS
+            hr(style="border-top: 1px solid #ccc;")
+        .col-xs-6
+            h6 <b>Orden de compra #</b> {{order.id}}
+            h6 <b>Proyecto #</b> {{order.order_project.id}} - {{order.order_project.project_name}}
+            h6 <b>Actividad:</b> {{order.order_activity.activity_name}}
+
+        .col-xs-6
+            h6 <b>Fecha :</b> &nbsp {{order.order_date}}
+            h6 <b>Entraga:</b> {{order.order_date}}
+
+        .col-xs-12
+            form.producttable
                 //tabla
                 .form-group.row
                     .col-xs-12(style="font-size:11px")
@@ -37,15 +44,34 @@ html(lang="en")
                             tbody
                                 {% for detail in details %}
                                 tr
-                                    td {{detail.order_detail_product.product_code}}
+                                    td(style="width:9%") {{detail.order_detail_product.product_code}}
                                     td {{detail.order_detail_product.product_description}}
-                                    td {{detail.order_detail_amount}}
-                                    td unidad
-                                    td ₡ {{detail.order_detail_price}}
-                                    td ₡ {{detail.order_detail_total}}
+                                    td(style="width:9%") {{detail.order_detail_amount}}
+                                    td(style="width:5%") {{detail.order_detail_unit}}
+                                    td(style="width:14%") ₡ {{detail.order_detail_price}}
+                                    td(style="width:16%") ₡ {{detail.order_detail_total}}
                                     td -
                                 {% endfor %}
+
         .col-xs-12
-            .pull-right
-                h4(style='font-size:14px;'): b Total: ₡{{order.order_total}}
+            .col-xs-4.wopadding.pull-left
+                hr(style="border-top: 1px solid #000;")
+                span(style="font-weight: bold") Firma Responsable
+
+            .col-xs-5.wopadding.pull-right
+                .col-xs-12.wopadding.pull-right
+                    span SubTotal:
+                    span.pull-right ₡0
+                .col-xs-12.wopadding.pull-right
+                    span Descuento:
+                    span.pull-right ₡0
+                .col-xs-12.wopadding.pull-right
+                    span IV:
+                    span.pull-right ₡0
+
+                .col-xs-12.wopadding.pull-right
+                    hr(style="border-top: 1px solid #ccc;")
+                    span.spanbold Total:
+                    span.spanbold.pull-right(style='margin-right:0px;') ₡{{order.order_total}}
+                    hr(style="border-top: 1px solid #ccc;")
 

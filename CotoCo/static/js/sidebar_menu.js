@@ -53,7 +53,6 @@
 
              $('#menu ul:visible').slideUp('normal');
              checkIfActive.parent().slideDown();
-             console.log(checkIfActive.is('li'));
 
          }
       }

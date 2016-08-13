@@ -255,6 +255,7 @@ th {
   .table th {
     background-color: black !important;
     color: white !important;
+    font-weight: normal !important;
   }
   .table-bordered th,
   .table-bordered td {

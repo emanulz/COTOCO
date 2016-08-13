@@ -132,8 +132,7 @@ function add_product(){
 
         if (products.length){
             var subt = products[0].product_price*qty;
-            console.log(products);
-            console.log(products[0].id);
+
             add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit, products[0].product_price , subt, products[0].id)
         }
         else{
@@ -154,7 +153,6 @@ function add_product(){
 
 function add_new_row(code, desc, qty, unit, uprice, subt, id ){
 
-    console.log(`$el id es ${id}`);
     let Btn_Confirm = $('.Btn_Confirm');
 
     new_order_array.push([code, qty, parseFloat(uprice), subt, desc, unit, id]);
@@ -314,10 +312,47 @@ function save_detail(){
                 alert("Hubo un problema al crear la venta, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
             })
             .success(function(data){
-                console.log(data.id);
                 new_order_detail.push(data.id);
             });//ajax
     });
+
+}
+
+function check_data_filled(){
+
+    //SELECTORS
+    var date = $('.new_order_date');
+    var supplier = $('.new_order_supplier');
+    var project = $('.new_order_project');
+    var activity = $('.new_order_activity');
+    var bool = false;
+
+
+    if(!date.val()){
+        bool = false;
+        return bool
+    }
+
+
+    if(!supplier.val()){
+        bool = false;
+        alertify.alert('Debe Elegir un proveedor');
+        return bool
+    }
+    if(!project.val()){
+        bool = false;
+        alertify.alert('Debe Elegir un Proyecto');
+        return bool
+    }
+    if(!activity.val()){
+        bool = false;
+        alertify.alert('Debe Elegir una Actividad');
+        return bool
+    }
+    else{
+        bool = true;
+        return bool;
+    }
 
 }
 
@@ -414,7 +449,7 @@ function main_new_order () {
 
     //Button Events
     Btn_Confirm.on('click', function(event){
-        console.log('BTN CLICK');
+
         event.preventDefault();
 
         $('.main-page-cont').find(':input').prop('disabled', true);
@@ -441,9 +476,17 @@ function main_new_order () {
     });
 
     Btn_Save.on('click', function(event){
+
         event.preventDefault();
 
-        save_new_order();
+        var bool;
+
+        bool = check_data_filled();
+
+        if (bool == true){
+            save_new_order();
+        }
+
     });
 
 

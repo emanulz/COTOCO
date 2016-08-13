@@ -1,7 +1,36 @@
-.table thead{background-color : black !important; color : white !important; }
-.body{
-    font-family: sans-serif !important;
-    font-size: 12px !important;
+.table thead{
+    background-color : black ;
+    color : white;
+    font-weight: normal;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.table tbody tr td{
+    padding: 4px;
+}
+
+.table thead tr th{
+    padding: 4px;
 }
 
 
+.body{
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.producttable{
+    padding-top: 10px;
+}
+
+.spanbold{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.wopadding{
+    padding: 0;
+    margin : 2px;
+    font-size: 12px;
+}
