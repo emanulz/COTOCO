@@ -25,6 +25,7 @@ from products.views import ProductViewSet, ProductDepartmentViewSet, ProductSubD
 from projects.views import ProjectViewSet
 from suppliers.views import SupplierViewSet
 from frontend.views import LandingView
+from reports.views import ordersbyproject, billsbyproject
 
 from django.conf import settings
 from django.contrib.staticfiles import views
@@ -50,6 +51,8 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'orderpdf/(?P<pk>\d+)/$', order2pdf, name='order2pdf'),
     url(r'orderpdf2/(?P<pk>\d+)/$', orderpdf2, name='orderpdf2'),
+    url(r'reports/ordersbyproject/(?P<project>\d+)/$', ordersbyproject, name='byproject'),
+    url(r'reports/billsbyproject/(?P<project>\d+)/$', billsbyproject, name='byproject'),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^', LandingView),

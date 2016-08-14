@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'products.apps.ProductsConfig',
     'projects.apps.ProjectsConfig',
     'suppliers.apps.SuppliersConfig',
+    'reports.apps.ReportsConfig',
 
 )
 

@@ -15,7 +15,7 @@ class BillAdmin(admin.ModelAdmin):
     buttonEdit.short_description = ''
     buttonEdit.allow_tags = True
 
-    list_display = ('id', 'bill_date', 'bill_supplier', 'bill_order', 'bill_total', 'buttonEdit')
+    list_display = ('id', 'bill_date', 'bill_supplier', 'bill_order', 'bill_subtotal', 'bill_iv', 'bill_total', 'buttonEdit')
     search_fields = ('id', 'bill_date', 'bill_supplier',)
     filter_horizontal = ('bill_detail_list',)
 
@@ -25,6 +25,8 @@ class BillAdmin(admin.ModelAdmin):
 
 @admin.register(BillDetail)
 class BillDetailAdmin(admin.ModelAdmin):
-    list_display = ('id', 'bill_detail_product', 'bill_detail_price', 'bill_detail_amount', 'bill_detail_total',)
-    search_fields = ('id', 'bill_detail_product', 'bill_detail_price', 'bill_detail_amount', 'bill_detail_total',)
+    list_display = ('id', 'bill_detail_product', 'bill_detail_product_code', 'bill_detail_description', 'bill_detail_amount',
+                  'bill_detail_unit', 'bill_detail_discount', 'bill_detail_iv',  'bill_detail_price',  'bill_detail_total',)
+    search_fields = ('id', 'bill_detail_product', 'bill_detail_product_code', 'bill_detail_description', 'bill_detail_amount',
+                  'bill_detail_unit', 'bill_detail_discount', 'bill_detail_iv',  'bill_detail_price',  'bill_detail_total',)
 #   filter_horizontal = ('',)

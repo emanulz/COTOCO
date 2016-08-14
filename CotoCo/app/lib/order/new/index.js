@@ -136,7 +136,8 @@ function add_product(){
                 iv=products[0].product_taxes;
             }
 
-            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit, products[0].product_price , subt, products[0].id, 0, iv); //las 0 is disc
+            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit,
+                        products[0].product_price , subt, products[0].id, 0, iv); //last 0 is disc
         }
         else{
             //FALTA mensaje de que no existe el producto

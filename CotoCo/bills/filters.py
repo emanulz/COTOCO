@@ -12,8 +12,8 @@ class BillFilter(django_filters.FilterSet):
 
     class Meta:
         model = Bill
-        fields = ('id', 'bill_date', 'bill_supplier', 'bill_order', 'bill_detail_list', 'bill_total', 'bill_min_date',
-                  'bill_max_date')
+        fields = ('id', 'bill_date', 'bill_supplier', 'bill_order', 'bill_detail_list', 'bill_subtotal', 'bill_iv',
+                  'bill_total', 'bill_min_date', 'bill_max_date')
 
 
 class BillDetailFilter(django_filters.FilterSet):
@@ -23,4 +23,5 @@ class BillDetailFilter(django_filters.FilterSet):
 
     class Meta:
         model = BillDetail
-        fields = ('id', 'bill_detail_product', 'bill_detail_price', 'bill_detail_amount', 'bill_detail_total',)
+        fields = ('id', 'bill_detail_product', 'bill_detail_product_code', 'bill_detail_description', 'bill_detail_amount',
+                  'bill_detail_unit', 'bill_detail_discount', 'bill_detail_iv',  'bill_detail_price',  'bill_detail_total',)

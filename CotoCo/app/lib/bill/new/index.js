@@ -159,8 +159,18 @@ function add_product(){
         });
 
         if (products.length){
+
             var subt = products[0].product_price*qty;
-            add_new_row(products[0].product_code,products[0].product_description,qty, 'unidad',products[0].product_price ,subt )
+            var iv=0;
+
+            if( products[0].product_usetaxes){
+                iv=products[0].product_taxes;
+            }
+
+            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit,
+                        products[0].product_price , subt, products[0].id, 0, iv); //last 0 is disc
+
+
         }
         else{
             //FALTA mensaje de que no existe el producto
@@ -178,16 +188,27 @@ function add_product(){
 
 }
 
-function add_new_row(code, desc, qty, unit, uprice, subt ){
+function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv ){
 
     let Btn_Confirm = $('.Btn_Confirm');
 
-    new_bill_array.push([code, qty, parseFloat(uprice), subt]);
+    new_bill_array.push([code, qty, parseFloat(uprice), subt, desc, unit, id, disc, iv]);
 
-    var new_row=`<tr class="${code}"><td>${code}</td><td>${desc}</td><td style="padding:0; width:13%"><input type="number" style="width:100%;
-            border:0px" class="form-control ${code}_product_qty no_qty"/></td><td>${unit}</td><td style="padding:0; width:13%"><input type="number" 
-            style="width:100%;border:0px" class="form-control ${code}_product_uprice no_uprice"/></td><td class="${code}_product_subt price" >${subt.toFixed(2)}</td><td style="padding:0; width:10%" 
-            class="inner-addon"><i class="fa fa-paste add_note"></i><i style="margin-left:34px" class="fa fa-minus remove_row"></i></td></tr>`;
+    var new_row=`<tr class="${code}">
+            <td>${code}</td>
+            <td>${desc}</td>
+            <td style="padding:0; width:8%"><input type="number" style="width:100%;border:0px" 
+            class="form-control ${code}_product_qty no_qty"/></td>
+            <td style="width:6%">${unit}</td>
+            <td style="padding:0; width:17%"><input type="number" style="width:100%;border:0px" 
+            class="form-control ${code}_product_uprice no_uprice"/></td>
+            <td style="padding:0; width:7%"><input value="${disc}" type="number" style="width:100%;border:0px" 
+            class="form-control ${code}_product_disc no_disc"/></td>
+            <td class="${code}_product_iv" >${iv}%</td>
+            <td class="${code}_product_subt price" >${subt.toFixed(2)}</td>
+            <td style="text-align: center; padding:0; width:5%" class="inner-addon">
+            <i class="fa fa-minus remove_row"></i></td>
+            </tr>`;
 
     $('.table-body').append(new_row);
 
@@ -201,32 +222,35 @@ function add_new_row(code, desc, qty, unit, uprice, subt ){
 
 }
 
-function row_update(row, code, qty, array, new_price, ctrl){
+function row_update(row, code, qty, array, new_price, ctrl, disc){
 
     var actual_qty = 0;
     var actual_uprice = 0;
     var new_qty = 0;
     var new_subt = 0;
+    var new_disc = 0;
 
 
     if (ctrl == 1){//means add already existing product on table
 
         actual_qty = array[row][1];
         actual_uprice = array[row][2];
+        new_disc =  array[row][7];
 
         new_qty = parseFloat(actual_qty) + parseFloat(qty);
 
-        new_subt = actual_uprice*new_qty;
+        new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
 
     }
 
     if(ctrl == 2){//means update qty
 
         actual_uprice = array[row][2];
+        new_disc =  array[row][7];
 
         new_qty = parseFloat(qty);
 
-        new_subt = actual_uprice*new_qty;
+        new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
 
     }
 
@@ -236,8 +260,21 @@ function row_update(row, code, qty, array, new_price, ctrl){
 
         new_qty = array[row][1];
 
-        new_subt = actual_uprice*new_qty;
+        new_disc =  array[row][7];
 
+        new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
+
+    }
+
+    if(ctrl == 4){//means update discount
+
+        actual_uprice = array[row][2];
+
+        new_qty = array[row][1];
+
+        new_disc =  disc;
+
+        new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
     }
     //calculate values
 
@@ -250,6 +287,7 @@ function row_update(row, code, qty, array, new_price, ctrl){
     array[row][1] = new_qty;
     array[row][2] = actual_uprice ;
     array[row][3] = new_subt;
+    array[row][7] = new_disc;
 
 
     return array;
@@ -259,16 +297,25 @@ function row_update(row, code, qty, array, new_price, ctrl){
 function update_totals() {
 
     subtotal=0;
+    iv_amount= 0;
 
     $.each(new_bill_array, function(i) {
-        subtotal = subtotal+new_bill_array[i][3]
+
+        subtotal = subtotal+new_bill_array[i][3];//new_order_array[i][3] is the subt amount.
+        iv_amount=iv_amount+(new_bill_array[i][3]*(new_bill_array[i][8]/100));//new_order_array[i][8] is the IV
+
+
     });
 
-    total=subtotal+iv_amount;
+    total = subtotal+iv_amount;
 
-    $('.No_Sub_Total').text(subtotal.toFixed(2));
-    $('.Iv').text(iv_amount.toFixed(2));
-    $('.No_Total').text(subtotal.toFixed(2));
+    iv_amount = parseFloat(iv_amount).toFixed(2);
+    subtotal = parseFloat(subtotal).toFixed(2);
+    total = total.toFixed(2);
+
+    $('.No_Sub_Total').text(subtotal);
+    $('.No_Sub_Iv').text(iv_amount);
+    $('.No_Total').text(total);
 
     $('.price').priceFormat({
         prefix: '₡ ',
@@ -282,7 +329,7 @@ function save_new_bill(){
     save_detail();
 
     $.ajax({
-        method: "POST",
+        method: "PUT",
         url: "/api/bills/",
         async: false,
 
@@ -291,6 +338,8 @@ function save_new_bill(){
             "bill_supplier": $('.new_bill_supplier').val(),
             "bill_order": $('.new_bill_order').val(),
             "bill_detail_list": new_bill_detail,
+            "bill_subtotal": subtotal,
+            "bill_iv": iv_amount,
             "bill_total": total
 
         }),//JSON object
@@ -319,10 +368,16 @@ function save_detail(){
             async: false,
 
             data: JSON.stringify({
-                "bill_detail_product": new_bill_array[i][0],
+
+                "bill_detail_product": new_bill_array[i][6],
+                "bill_detail_product_code": new_bill_array[i][0],
+                "bill_detail_description": new_bill_array[i][4],
+                "bill_detail_unit": new_bill_array[i][5],
                 "bill_detail_price": new_bill_array[i][2],
                 "bill_detail_amount": new_bill_array[i][1],
-                "bill_detail_total": new_bill_array[i][3]
+                "bill_detail_discount": new_bill_array[i][7],
+                "bill_detail_iv": new_bill_array[i][8],
+                "bill_detail_total": parseFloat(new_bill_array[i][3]).toFixed(2)
 
             }),//JSON object
             contentType:"application/json; charset=utf-8",
@@ -337,6 +392,39 @@ function save_detail(){
                 new_bill_detail.push(data.id);
             });//ajax
     });
+
+}
+
+function check_data_filled(){
+
+    //SELECTORS
+    var date = $('.new_bill_date');
+    var supplier = $('.new_bill_supplier');
+    var order = $('.new_bill_order');
+
+    var bool = false;
+
+
+    if(!date.val()){
+        bool = false;
+        return bool
+    }
+
+
+    if(!supplier.val()){
+        bool = false;
+        alertify.alert('Debe Elegir un Proveedor');
+        return bool
+    }
+    if(!order.val()){
+        bool = false;
+        alertify.alert('Debe Elegir una Orden de Compra');
+        return bool
+    }
+    else{
+        bool = true;
+        return bool;
+    }
 
 }
 
@@ -414,6 +502,23 @@ function main_new_bill () {
 
     });
 
+    html.on('change','.no_disc', function () {
+
+        event.preventDefault();
+        let row = $(this).closest("tr");
+        let rowIndex = row.index();
+
+        let code = new_bill_array[rowIndex][0];
+        let qty = new_bill_array[rowIndex][1];
+        let uprice = new_bill_array[rowIndex][2];
+        let disc = $(`.${code}_product_disc`).val();
+
+        row_update(rowIndex, code, qty, new_bill_array, uprice, 4, disc);
+
+        update_totals();
+
+    });
+
     html.on('change','.no_uprice', function () {
 
         event.preventDefault();
@@ -438,18 +543,25 @@ function main_new_bill () {
 
     //Button Events
     Btn_Confirm.on('click', function(event){
-        console.log('BTN CLICK');
+
         event.preventDefault();
 
-        $('.main-page-cont').find(':input').prop('disabled', true);
-        $('.remove_row').addClass('unclickable');
-        $('.add_note').addClass('unclickable');
+        var bool;
+
+        bool = check_data_filled();
+
+        if (bool == true){
+
+            $('.main-page-cont').find(':input').prop('disabled', true);
+            $('.remove_row').addClass('unclickable');
+            $('.add_note').addClass('unclickable');
 
 
+            Btn_Confirm.hide();
+            Btn_Edit.show().prop('disabled', false);
+            Btn_Save.show().prop('disabled', false);
 
-        Btn_Confirm.hide();
-        Btn_Edit.show().prop('disabled', false);
-        Btn_Save.show().prop('disabled', false);
+        }
     });
 
     Btn_Edit.on('click', function(event){

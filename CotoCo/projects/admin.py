@@ -8,6 +8,6 @@ from .models import Project
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('id', 'project_name', 'project_description',)
+    list_display = ('id', 'project_name', 'project_description', 'project_active')
     search_fields = ('id', 'project_name', 'project_description',)
     filter_horizontal = ('project_activity',)

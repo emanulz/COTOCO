@@ -15,7 +15,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ('id', 'project_name', 'project_description',)
+        fields = ('id', 'project_name', 'project_description', 'project_activity', 'project_active')
 
 
 class ProjectViewSet(viewsets.ModelViewSet):

@@ -296,8 +296,8 @@ function save_new_order(){
     save_detail();
 
     $.ajax({
-        method: "POST",
-        url: "/api/orders/",
+        method: "PUT",
+        url: `/api/orders/${order_id}/`,
         async: false,
 
         data: JSON.stringify({
