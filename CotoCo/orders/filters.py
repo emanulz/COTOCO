@@ -13,7 +13,7 @@ class OrderFilter(django_filters.FilterSet):
     class Meta:
         model = Order
         fields = ('id', 'order_date', 'order_supplier', 'order_project', 'order_activity', 'order_product_list',
-                  'order_total', 'order_min_date', 'order_max_date')
+                  'order_subtotal', 'order_iv', 'order_total', 'order_min_date', 'order_max_date')
 
 
 class OrderDetailFilter(django_filters.FilterSet):
@@ -23,4 +23,6 @@ class OrderDetailFilter(django_filters.FilterSet):
 
     class Meta:
         model = OrderDetail
-        fields = ('id', 'order_detail_product', 'order_detail_product_code', 'order_detail_description', 'order_detail_unit', 'order_detail_price', 'order_detail_amount', 'order_detail_total',)
+        fields = ('id', 'order_detail_product', 'order_detail_product_code', 'order_detail_description',
+                  'order_detail_unit', 'order_detail_price', 'order_detail_amount', 'order_detail_discount',
+                  'order_detail_iv', 'order_detail_total',)

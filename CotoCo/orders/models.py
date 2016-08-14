@@ -20,6 +20,8 @@ class Order(models.Model):
     order_project = models.ForeignKey(Project, verbose_name='Proyecto')
     order_activity = models.ForeignKey(Activity, verbose_name='Actividad')
     order_product_list = models.ManyToManyField('OrderDetail', verbose_name='Lista de Detalles')
+    order_subtotal = models.DecimalField(max_digits=11, decimal_places=2, verbose_name='Subtotal', default=0)
+    order_iv = models.DecimalField(max_digits=11, decimal_places=2, verbose_name='IV Total', default=0)
     order_total = models.DecimalField(max_digits=11, decimal_places=2, verbose_name='Precio Total')
 
     def __unicode__(self):
@@ -38,6 +40,8 @@ class OrderDetail(models.Model):
     order_detail_description = models.CharField(max_length=255, verbose_name='Descripción', default='')
     order_detail_amount = models.DecimalField(max_digits=7, decimal_places=2, verbose_name='Cantidad')
     order_detail_unit = models.CharField(max_length=255, verbose_name='Unidad', default='')
+    order_detail_discount = models.DecimalField(max_digits=4, decimal_places=2, verbose_name='Descuento %', default=0)
+    order_detail_iv = models.DecimalField(max_digits=4, decimal_places=2, verbose_name='IV %', default=0)
     order_detail_price = models.DecimalField(max_digits=11, decimal_places=2, verbose_name='Precio unitario')
     order_detail_total = models.DecimalField(max_digits=11, decimal_places=2, verbose_name='Precio Total')
 

@@ -10614,7 +10614,7 @@ button.close {
 }
 
 .inner-addon .fa {
-  position: absolute;
+  position: relative;
   padding: 10px;
 }
 

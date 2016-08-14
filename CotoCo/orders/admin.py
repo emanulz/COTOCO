@@ -22,8 +22,8 @@ class OrderAdmin(admin.ModelAdmin):
     buttonEdit.short_description = ''
     buttonEdit.allow_tags = True
 
-    list_display = ('id', 'order_date', 'order_supplier', 'order_project', 'order_activity', 'order_total', 'buttonPdf'
-                    , 'buttonEdit')
+    list_display = ('id', 'order_date', 'order_supplier', 'order_project', 'order_activity', 'order_subtotal',
+                    'order_iv', 'order_total', 'buttonPdf', 'buttonEdit')
     search_fields = ('id', 'order_date', 'order_supplier', 'order_project', 'order_activity')
     filter_horizontal = ('order_product_list',)
 

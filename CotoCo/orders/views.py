@@ -5,13 +5,11 @@ from django.contrib.auth.decorators import login_required
 from django.template.loader import get_template
 from django.template import RequestContext
 from django.http import HttpResponse
-from django.conf import settings
 from django.shortcuts import render
 
 from rest_framework import serializers, viewsets
 from .models import Order, OrderDetail
 from .filters import OrderFilter, OrderDetailFilter
-from products.models import Product
 
 from weasyprint import HTML, CSS
 
@@ -55,7 +53,7 @@ class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
         fields = ('id', 'order_date', 'order_supplier', 'order_project', 'order_activity', 'order_product_list',
-                  'order_total',)
+                  'order_subtotal', 'order_iv', 'order_total',)
 
 
 class OrderViewSet(viewsets.ModelViewSet):
@@ -71,7 +69,9 @@ class OrderDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = OrderDetail
-        fields = ('id', 'order_detail_product', 'order_detail_product_code', 'order_detail_description','order_detail_unit', 'order_detail_price', 'order_detail_amount', 'order_detail_total',)
+        fields = ('id', 'order_detail_product', 'order_detail_product_code', 'order_detail_description',
+                  'order_detail_unit', 'order_detail_price', 'order_detail_amount', 'order_detail_discount',
+                  'order_detail_iv', 'order_detail_total',)
 
 
 class OrderDetailViewSet(viewsets.ModelViewSet):
