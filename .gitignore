@@ -198,6 +198,7 @@ dist/
 build/
 eggs/
 parts/
+.idea/
 var/
 sdist/
 develop-eggs/
