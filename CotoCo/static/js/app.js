@@ -932,7 +932,7 @@ function save_new_bill() {
     save_detail();
 
     $.ajax({
-        method: "PUT",
+        method: "POST",
         url: "/api/bills/",
         async: false,
 

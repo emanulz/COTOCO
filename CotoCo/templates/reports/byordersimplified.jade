@@ -1,0 +1,151 @@
+doctype html
+html(lang="en")
+    head
+
+        {% load humanize %}
+
+        link(rel="stylesheet" href="/static/css/reset.css")
+
+        link(rel="stylesheet" href="/static/css/bootstrapMod.css")
+        link(rel="stylesheet" href="/static/css/orderpdf.css")
+
+
+    body(style="font-family:helvetica;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            img(src= "/media/img/coto.png" style="width:300px;height:auto;margin-bottom:0px;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+            h4(style="text-align: center; vertical-align: middle;font-size:13px") REPORTE DETALLADO POR ORDEN DE COMPRA
+            hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+
+        .col-xs-12.wopadding
+            .col-xs-6
+                h6 <b>Orden de compra #</b> {{order.id}}
+                h6 <b>Proyecto #</b> {{order.order_project.id}} - {{order.order_project.project_name}}
+                h6 <b>Actividad:</b> {{order.order_activity.activity_name}}
+                h6 <b>Fecha :</b> &nbsp {{order.order_date | date:"SHORT_DATE_FORMAT"}}
+                h6 <b>Entraga:</b> {{order.order_date | date:"SHORT_DATE_FORMAT"}}
+
+            .col-xs-4
+                span: b Totales:
+                table.table.table-bordered
+                    tbody
+                        tr: th: b Total orden:
+                            td ₡ {{order.order_total | floatformat:"2"|intcomma}}
+                        tr: th: b Total Facturas:
+                            td ₡ {{totalbill | floatformat:"2"|intcomma}}
+                        tr: th: b Diferencia:
+                            td ₡ {{difference | floatformat:"2"|intcomma}}
+
+        .col-xs-12.wopadding
+            .col-xs-6
+
+                .col-xs-12.wopadding
+                    form.producttable
+                        //tabla
+                        .form-group.row
+                            .col-xs-12(style="font-size:11px")
+                                table.table.table-bordered
+                                    thead: tr
+                                        th Código
+                                        th Descripción
+                                        th Cant
+                                        th P.Unitario
+                                        th Desc
+                                        th Subtotal
+                                        //th Observaciones
+                                    tbody
+                                    {% for detail in detail %}
+                                    tr
+                                        td {{detail.order_detail_product_code}}
+                                        td {{detail.order_detail_description}}
+                                        td {{detail.order_detail_amount}}
+                                        td ₡ {{detail.order_detail_price | floatformat:"2"|intcomma}}
+                                        td {{detail.order_detail_discount}}
+                                        td ₡ {{detail.order_detail_total | floatformat:"2"|intcomma}}
+                                    // td -
+                                    {% endfor %}
+
+
+
+            .col-xs-6
+
+                .col-xs-12.wopadding
+                    form.producttable
+                        //tabla
+                        .form-group.row
+                            .col-xs-12(style="font-size:11px")
+                                table.table.table-bordered
+                                    thead: tr
+                                        th Fact #
+                                        th Código
+                                        th Descripción
+                                        th Cant
+                                        th P.Unitario
+                                        th Desc
+                                        th Subtotal
+                                        //th Observaciones
+                                    tbody
+
+                                        {% for detail in bdetails|dictsort:"bill_detail_product_code"  %}
+
+                                        tr
+                                            td {{detail.bill_set.all.0.id}}
+                                            td {{detail.bill_detail_product_code}}
+                                            td {{detail.bill_detail_description}}
+                                            td {{detail.bill_detail_amount}}
+                                            td ₡ {{detail.bill_detail_price | floatformat:"2"|intcomma}}
+                                            td {{detail.bill_detail_discount}}
+                                            td ₡ {{detail.bill_detail_total | floatformat:"2"|intcomma}}
+
+
+                                        {% endfor %}
+
+        .col-xs-12.wopadding
+            .col-xs-6
+
+                .col-xs-8.wopadding.pull-right
+
+                    .col-xs-12.wopadding.pull-right
+                        hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+                        span.spanbold Totales Orden:
+                        hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+
+                    .col-xs-12.wopadding.pull-right
+                        span SubTotal:
+                        span.pull-right ₡ {{order.order_subtotal | floatformat:"2"|intcomma}}
+
+                    .col-xs-12.wopadding.pull-right
+                        span IV:
+                        span.pull-right ₡ {{order.order_iv | floatformat:"2"|intcomma}}
+
+                    .col-xs-12.wopadding.pull-right
+                        hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+                        span.spanbold Total:
+                        span.spanbold.pull-right(style='margin-right:0px;') ₡ {{order.order_total | floatformat:"2"|intcomma}}
+                        hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+            .col-xs-6
+
+                .col-xs-8.wopadding.pull-right
+
+                    .col-xs-12.wopadding.pull-right
+                        hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+                        span.spanbold Totales Facturas:
+                        hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+
+                    .col-xs-12.wopadding.pull-right
+                        span SubTotal:
+                        span.pull-right ₡ {{subtotalbill | floatformat:"2"|intcomma}}
+
+                    .col-xs-12.wopadding.pull-right
+                        span IV:
+                        span.pull-right ₡ {{ivbill | floatformat:"2"|intcomma}}
+
+                    .col-xs-12.wopadding.pull-right
+                        hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+                        span.spanbold Total:
+                        span.spanbold.pull-right(style='margin-right:0px;') ₡ {{totalbill | floatformat:"2"|intcomma}}
+                        hr(style="border-top: 1px solid #ccc; margin:4px 0;")

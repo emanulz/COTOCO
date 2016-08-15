@@ -26,7 +26,6 @@ def ordersbyproject(request, project):
     return render(request, '../templates/reports/ordersbyproject.jade', {'orders': orders, 'subtotal':subtotal, 'iv':iv,
                                                                    'total':total})
 
-
 def billsbyproject(request, project):
 
     bills = Bill.objects.filter(bill_order__order_project=project)
@@ -42,4 +41,39 @@ def billsbyproject(request, project):
 
     # details = orders.order_product_list.all()
     return render(request, '../templates/reports/billsbyproject.jade', {'bills': bills, 'subtotal': subtotal, 'iv': iv,
-                                                                   'total': total})
+                                                               'total': total})
+
+def byorder(request, order):
+
+
+    order = Order.objects.get(pk=order)
+
+    bills = Bill.objects.filter(bill_order=order)
+
+    orderdetail = order.order_product_list.all().order_by('order_detail_product_code')
+
+    bill_details = []
+
+    ivbill = 0
+    subtotalbill=0
+    totalbill = 0
+
+    for bill in bills:
+
+        billdetails = bill.bill_detail_list.all()
+        totalbill = totalbill+bill.bill_total
+        ivbill = ivbill + bill.bill_iv
+        subtotalbill = subtotalbill + bill.bill_subtotal
+
+
+        for billdetail in billdetails:
+
+            bill_details.append(billdetail)
+
+    difference = totalbill - order.order_total
+
+
+    return render(request, '../templates/reports/byordersimplified.jade', {'order':order, 'bills': bills,
+                                                                           'detail': orderdetail, 'bdetails':bill_details,
+                                                                           'ivbill':ivbill, 'subtotalbill':subtotalbill,
+                                                                           'totalbill':totalbill, 'difference':difference})
