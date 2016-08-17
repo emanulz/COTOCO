@@ -16,7 +16,7 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = ('id', 'product_code', 'product_consecutive', 'product_description', 'product_department', 'product_price', 'product_unit',
-                  'product_usetaxes', 'product_taxes')
+                  'product_usetaxes', 'product_taxes', 'product_discount')
 
 
 class ProductViewSet(viewsets.ModelViewSet):

@@ -19,6 +19,7 @@ class Product(models.Model):
     product_unit = models.CharField(default='Unidad', max_length=255, verbose_name='Unidad')
     product_usetaxes = models.BooleanField(default=False, verbose_name='Usa Impuestos?')
     product_taxes = models.DecimalField(default=0, max_digits=5, decimal_places=2, verbose_name='Impuestos %')
+    product_discount = models.DecimalField(default=0, max_digits=5, decimal_places=2, verbose_name='Descuento %')
 
     def __unicode__(self):
         return '%s' % self.product_description

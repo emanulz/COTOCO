@@ -129,7 +129,7 @@ function add_product(){
         });
 
         if (products.length){
-            var subt = products[0].product_price*qty;
+            var subt = (products[0].product_price*qty)*((100-products[0].product_discount)/100);
             var iv=0;
 
             if( products[0].product_usetaxes){
@@ -137,7 +137,7 @@ function add_product(){
             }
 
             add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit,
-                        products[0].product_price , subt, products[0].id, 0, iv); //last 0 is disc
+                        products[0].product_price , subt, products[0].id, products[0].product_discount, iv); //last 0 is disc
         }
         else{
             //FALTA mensaje de que no existe el producto

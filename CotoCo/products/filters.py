@@ -13,7 +13,7 @@ class ProductFilter(django_filters.FilterSet):
     class Meta:
         model = Product
         fields = ('id', 'product_code', 'product_consecutive', 'product_description', 'product_department', 'product_price',
-                  'product_unit', 'product_usetaxes', 'product_taxes')
+                  'product_unit', 'product_usetaxes', 'product_taxes', 'product_discount')
 
 
 class ProductDepartmentFilter(django_filters.FilterSet):
