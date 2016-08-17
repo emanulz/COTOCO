@@ -146,7 +146,13 @@
                     }).success(function () {
 
                     formated = ('000' + consecutive).substr(-3);
-                    code_field.val(`${department}${subdepartment}${formated}`);
+                    console.log(department);
+                    if(department=='0'){
+                        code_field.val(`${subdepartment}${formated}`);
+                    }
+                    else{
+                        code_field.val(`${department}${subdepartment}${formated}`);
+                    }
 
                 });
             });

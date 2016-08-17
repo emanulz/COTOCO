@@ -40,7 +40,7 @@ html(lang="en")
                                 th Código
                                 th Descripción
                                 th Cantidad
-                                th Unidad
+                                //th Unidad
                                 th P.Unitario
                                 th Descuento
                                 th Subtotal
@@ -51,7 +51,7 @@ html(lang="en")
                                     td(style="width:9%") {{detail.order_detail_product.product_code}}
                                     td {{detail.order_detail_product.product_description}}
                                     td(style="width:9%") {{detail.order_detail_amount}}
-                                    td(style="width:5%") {{detail.order_detail_unit}}
+                                    //td(style="width:5%") {{detail.order_detail_unit}}
                                     td(style="width:14%") ₡ {{detail.order_detail_price | floatformat:"2"|intcomma}}
                                     td(style="width:6%") {{detail.order_detail_discount}}%
                                     td(style="width:16%") ₡ {{detail.order_detail_total | floatformat:"2"|intcomma}}
