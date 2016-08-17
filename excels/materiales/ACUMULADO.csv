@@ -1,0 +1,230 @@
+1001;1001;1;Arena fina;15486.73;Metro3;t;13;1;1;0
+1002;1002;2;"Cedazo zaranda 8x8x1/2""";1734.51;Metro;t;13;1;1;0
+1003;1003;3;Cuartilla;13805.31;metro3;t;13;1;1;0
+1004;1004;4;Cuartilla;13805.31;metro3;t;13;1;1;0
+2001;2001;1;Saco cemento 50k;5831.86;unidad;t;13;1;2;0
+2002;2002;2;Intaco Mortero repello grueso;4004.42;unidad;t;13;1;2;0
+3002;3002;2;Block 20x20x40;646;Unidad;t;13;1;3;0
+3003;3003;3;"Cuneta de 14""";5308.85;unidad;t;13;1;3;0
+3004;3004;4;Pc bloque entrepiso estereofon 15;2646;unidad;t;13;1;3;0
+3005;3005;4;Block 15x20x40;515.7;Unidad;t;13;1;3;0
+3006;3006;5;Pc viguetas entrapiso 1511;7159.29;unidad;t;13;1;3;0
+3007;3007;6;"Tubo de concreto de 12""";6761.06;unidad;t;13;1;3;0
+4001;4001;1;Alambre negro #16 x kilo;557.52;Kilo;t;13;1;4;10
+4002;4002;2;Angular 50x50x3.00;8672.57;Unidad;t;13;1;4;0
+4003;4003;3;"Angular 50x50x3.00 (2""x2""x1/8)";7415.93;Unidad;t;13;1;4;7
+4004;4004;4;"Bar clavo de acero 3.5x50 (2"")";0;Kilo;t;13;1;4;0
+4005;4005;5;Cable aluminio #2;558;Kilo;t;13;1;4;0
+4006;4006;6;"Clavo acero 2""";30.97;Unidad;t;13;1;4;0
+4007;4007;7;"Clavos corrientes de 2.1/2""";716.81;Kilo;t;13;1;4;0
+4008;4008;8;Gaza para varilla especial;1234.51;unidad;t;13;1;4;0
+4009;4009;9;"Gaza sin fin acero 25mm 1""";508.85;unidad;t;13;1;4;0
+4010;4010;10;"Gaza sin fin acero 31mm 1 1/4""";508.85;unidad;t;13;1;4;0
+4011;4011;11;Grinding disco p/metal 230mm 9x3/32;2482.3;unidad;t;13;1;4;0
+4012;4012;12;Hierro Techo c-28 0.30x0.81x3.66;4999;unidad;t;13;1;4;0
+4013;4013;13;Hilco soldadura 6013 de 1/8;4079.65;unidad;t;13;1;4;0
+4014;4014;14;Hilco soldadura 6013 de 1/8;4230.09;unidad;t;13;1;4;0
+4015;4015;15;Lamina de hierro negro 3,17x1,22x2,44x1/8;33194.69;unidad;t;13;1;4;0
+4016;4016;16;Maya electr. 2.20x6m(4.88)mm(25.92);16676.99;unidad;t;13;1;4;0
+4017;4017;17;Maya electr. 2.35x5m(4.11)mm(19.75);10615.04;unidad;t;13;1;4;0
+4018;4018;18;Mejia clavo de acero 50mm2.7x2'';12.39;unidad;t;13;1;4;0
+4019;4019;19;Metabo disco 230x1.9x22.2 recto;2946.9;unidad;t;13;1;4;0
+4020;4020;20;Perfiles Garva 50x70x1.20x5;6181.42;unidad;t;13;1;4;0
+4021;4021;21;Tornillo Techo 1/4x2;46.9;unidad;t;13;1;4;0
+4022;4022;22;Tornillo Techo broca 1/4x2;36.28;unidad;t;13;1;4;0
+4023;4023;23;Varilla #4 lisa 1/2;3480;unidad;t;13;1;4;0
+4024;4024;24;Varilla corrug grado 40 3x6 #3 3/8'';1285;unidad;t;0;1;4;0
+4025;4025;25;Varilla corrug grado 40 4x6 #4 1/2'';2575;unidad;t;13;1;4;0
+4026;4026;26;Varilla corrug grado 40 4x6 #4 1/2'';2575;unidad;t;13;1;4;0
+4027;4027;27;Varilla corrug grado 40 4x6 #4 1/2'';2620;unidad;t;13;1;4;0
+4028;4028;28;Varilla corrug grado 40 4x6 #4 1/2'';2515;unidad;t;13;1;4;0
+4029;4029;29;Varilla lisa c/cobre1.80 5/8'';9296.45;unidad;t;13;1;4;0
+4030;4030;30;Hierro Techo metal lock blanco #240,53x512mm;3060;unidad;t;0;1;4;0
+4031;4031;31;MC tubo estructural galvanizado cuad 72x72x1,50;9051.96;unidad;t;13;1;4;0
+4032;4032;32;"Angular HN 25x25x3,00mm (1""x1""x1/8"")";3336.28;unidad;t;13;1;4;0
+4033;4033;33;"Platina HN 12x3mmx6 metros (1/2""x1/8"")";2123.89;unidad;t;13;1;4;0
+4034;4034;34;Tubo ind cuadrado galv #18 25x25x1,20 (1x1);3393.81;unidad;t;13;1;4;0
+4035;4035;35;Tornillo carroceria CT 3/8x4;199.12;unidad;t;13;1;4;5
+4036;4036;36;Arandela plana 3/8;11.5;unidad;t;13;1;4;5
+4037;4037;37;"Platina HN 50x4,76mmx6 metros (2""x3/16"")";6000;unidad;t;13;1;4;5
+4038;4038;38;"EMT union de 10 mm 1/2""";199.12;unidad;t;13;1;4;10
+4039;4039;39;"EMT tubo estruc galv cuad 72x72x1,50 (3""x3""x1,50)";12079.65;unidad;t;13;1;4;7
+4040;4040;40;"MC tubo estructural galvanizado cuad 100x100x1,50 (4""x4""x1,50)";16659.29;Unidad;t;13;1;4;7
+5001;5001;1;Alfajilla 2x3x4v;3045.45;Unidad;t;13;1;5;0
+5002;5002;2;Cuerda albanil azul;0;rollo;t;13;1;5;0
+5003;5003;3;Cuerda albanil nacional blanca;0;rollo;t;13;1;5;0
+5004;5004;4;Reglas de 1x3x4v;1768.18;unidad;t;13;1;5;0
+5005;5005;5;Reglas de 1x3x4v;1795.45;unidad;t;13;1;5;0
+5006;5006;6;Tabla de Formaleta 1x12x3v;1754.55;unidad;t;13;1;5;0
+5007;5007;7;Tabla de Formaleta 1x12x4v;4022.73;unidad;t;13;1;5;0
+8001;8001;1;"Adaptador hembra poliducto 1/2""";500;Unidad;t;13;1;8;0
+8002;8002;2;"Adaptador hembra poliducto 3/4""";600;Unidad;t;13;1;8;0
+8003;8003;3;"Adaptador macho 12mm poliducto eco 1/2""";300;Unidad;t;13;1;8;0
+8004;8004;4;Cinta teflon 3/4x10m;1203;Unidad;t;13;1;8;0
+8005;8005;5;"Cpvc adaptador macho 12mm 1/2""";455.75;Unidad;t;13;1;8;0
+8006;8006;6;"Cpvc tapon hembra cts12mm 1/2""";433.63;Unidad;t;13;1;8;0
+8007;8007;7;"Cpvc codo 90 cts 12mm 1/2""";278.75;Unidad;t;13;1;8;0
+8008;8008;8;"Cpvc tapon hembra cts 12mm 1/2""";433.63;Unidad;t;13;1;8;0
+8009;8009;9;"Cpvc tapon hembra cts 12mm 1/2"" liso";110.62;Unidad;t;13;1;8;0
+8010;8010;10;"Cpvc Te 12mm 1/2""";0;Unidad;t;13;1;8;0
+8011;8011;11;"Cpvc tubo 12mm 1/2""x6m";6880.53;unidad;t;13;1;8;0
+8012;8012;12;Cpvc union 12mm 1/2'';243.36;unidad;t;13;1;8;0
+8013;8013;13;Emt conector de 50mm 2'' de presion;1933.63;unidad;t;13;1;8;0
+8014;8014;14;Emt curva de 12mm 1/2'';1043.91;unidad;t;13;1;8;0
+8015;8015;15;Emt tuvo de 12mm1/2''x3mts;1752.21;unidad;t;13;1;8;0
+8016;8016;16;Emt tuvo de 50mm2''x3mts;13626.32;unidad;t;13;1;8;0
+8017;8017;17;Emt union de 12mm 1/2''de presion;446.9;unidad;t;13;1;8;0
+8018;8018;18;Espander pisher nylon;22.12;unidad;t;13;1;8;0
+8019;8019;19;Hg niple 1/2x3;278.76;unidad;t;13;1;8;0
+8020;8020;20;Lanco cemento pvc 1/4G;9256.64;unidad;t;13;1;8;0
+8021;8021;21;Lanco cemento pvc PINTA;5150.44;unidad;t;13;1;8;0
+8022;8022;22;Llave bola pvc 12mm 1/2'' #154-1;398.23;unidad;t;13;1;8;0
+8023;8023;23;Manguera Poliducto;14170;Metro  ;t;13;1;8;0
+8024;8024;24;"PP llave chorro 1/2"" #v79-110d";4371.68;unidad;t;13;1;8;0
+8025;8025;25;Pvc adaptador hembra 40 12mm 1/2'';172.57;unidad;t;13;1;8;0
+8026;8026;26;"Pvc adaptador macho 18mm 1/2""";0;unidad;t;13;1;8;0
+8027;8027;27;"Pvc adaptador macho 18mm 3/4""";163.72;unidad;t;13;1;8;0
+8028;8028;28;Pvc adaptador macho 40 12mm 1/2'';84.07;unidad;t;13;1;8;0
+8029;8029;29;"Pvc codo 90 12mm 1/2""";172.57;unidad;t;13;1;8;0
+8030;8030;30;"Pvc codo 90 18mm 3/4""";203.54;unidad;t;13;1;8;0
+8031;8031;31;"Pvc codo 90 56mm 1 1/2""";500;unidad;t;13;1;8;0
+8032;8032;32;"Pvc codo 90 DWV 100mm 4""";4389.38;unidad;t;13;1;8;0
+8033;8033;33;"Pvc codo 90 DWV 100mm 4""";3415.93;unidad;t;13;1;8;0
+8034;8034;34;"Pvc codo 90 DWV 38mm 1 1/2""";500;unidad;t;13;1;8;0
+8035;8035;35;"Pvc codo 90 DWV 50mm 2""";615.04;unidad;t;13;1;8;0
+8036;8036;36;Pvc DWV tapon hembra 100mm 4'';429.2;unidad;t;13;1;8;0
+8037;8037;37;Pvc pegam solv 950ml 1/4;9349.66;unidad;t;13;1;8;0
+8038;8038;38;"Pvc reduccion 18x12mm 3/4""x1/2''";123.89;unidad;t;13;1;8;0
+8039;8039;39;Pvc reduccion dwv 100x50mm 4x2;3190.27;unidad;t;13;1;8;0
+8040;8040;40;Pvc reduccion dwv 50x38mm 2x 1 1/2;920.35;unidad;t;13;1;8;0
+8041;8041;41;Pvc tapon hembra 12mm1/2'' liso;132.74;unidad;t;13;1;8;0
+8042;8042;42;Pvc tapon hembra 12mm1/2'' ROSCA;110.52;unidad;t;13;1;8;0
+8043;8043;43;Pvc tapon hembra 18mm3/4'';154.87;unidad;t;13;1;8;0
+8044;8044;44;"Pvc te 12mm 1/2""";119.47;unidad;t;13;1;8;0
+8045;8045;45;"Pvc te 12mm 1/2""";119.47;unidad;t;13;1;8;0
+8046;8046;46;"Pvc te DWV 100mm 4""";5668.14;unidad;t;13;1;8;0
+8047;8047;47;"Pvc te DWV 38mm 1 1/2""";645.02;unidad;t;13;1;8;0
+8048;8048;48;"Pvc te DWV 50mm 2""";1013.27;unidad;t;13;1;8;0
+8049;8049;49;"Pvc tubo 100mm 4""x6m";11115.04;unidad;t;13;1;8;0
+8050;8050;50;"Pvc tubo 100mm 4""x6m";11349.56;unidad;t;13;1;8;0
+8051;8051;51;Pvc tubo 38mm 1 1/2''x6m;5150.44;unidad;t;13;1;8;0
+8052;8052;52;"Pvc tubo 50mm 2""x6";5172.57;unidad;t;13;1;8;0
+8053;8053;53;"Pvc tubo 50mm 2""x6";10168.14;unidad;t;13;1;8;0
+8054;8054;54;"Pvc tubo 52mm 2 1/2""x5";15172.57;unidad;t;13;1;8;0
+8055;8055;55;Pvc tubo 62mm 2 1/2''x6m;15172.57;unidad;t;13;1;8;0
+8056;8056;56;"Pvc tubo presion 12mm 1/2""x6mts";2889.38;unidad;t;13;1;8;0
+8057;8057;57;"Pvc tubo presion 12mm 1/2""x6mts";3500;unidad;t;13;1;8;0
+8058;8058;58;Pvc tubo presion 18mm3/4''x6m;6035.4;unidad;t;13;1;8;0
+8059;8059;59;Rotoplas tanq para agua 2500;159920.35;unidad;t;13;1;8;0
+8060;8060;60;Pvc union lisA 12mm 1/2'' ;80.53;unidad;t;13;1;8;10
+8061;8061;61;"Union polietileno 12mm 1/2""";215;unidad;t;13;1;8;0
+8062;8062;62;Duretan sellador de poliuretano blanco;4331.86;unidad;t;13;1;8;0
+8063;8063;63;"Tubo presion SCH40 18mm3/4""x6m BL CAM/CEM";6035;unidad;t;13;1;8;0
+8064;8064;64;Tubo abasto connectores metalico 1/2x1/2x55cm largo;2176.99;unidad;t;13;1;8;0
+8065;8065;65;Lanco cemento pvc Wet Dry 4 onz;2132.74;unidad;t;13;1;8;0
+8066;8066;66;Desague lavamanos push con rebalse BL-1065;11252.21;Unidad;t;13;1;8;5
+8067;8067;67;"Pvc Te SCH40 18MM 3/4"" BL CAM/CEM";221.24;Unidad;t;13;1;8;10
+8068;8068;68;"Pvc codo SCH40 18MM 3/4"" BL CAM/CEM";203.54;Unidad;t;13;1;8;10
+8069;8069;69;"Gaza sin fin acero inox 8508 25MM 1""";508.85;Unidad;t;13;1;8;5
+8070;8070;70;Inasa desague lavamanos push metal;7623.89;Unidad;t;13;1;8;10
+8071;8071;71;"SF008-3 adaptador hule p/sifon 1 1/2"" BL CAM/CEM";584.07;Unidad;t;13;1;8;5
+8072;8072;72;"PVC codo 45 SCH40 38MM 1 1/2"" BL CAM/CEM";1070.8;Unidad;t;13;1;8;10
+8073;8073;73;"Pvc union lisa SCH40 100 mm 4""BL CAM/CEM";4176.99;Unidad;t;13;1;8;10
+8074;8074;74;"PVC codo 90 DWV S32,5 38MM 11/2"" GR CAM/CEM";500;Unidad;t;13;1;8;10
+8075;8075;75;"PVC adaptador hembra SCH40 12MM 1/2"" BL CAM/CEM";172.57;Unidad;t;13;1;8;10
+8076;8076;76;"EMT caja cuadrada 4x4x21/8 (1/2"", 3/4"")";1203.54;Unidad;t;13;1;8;10
+8077;8077;77;Tapa cuadrada 4x4 C/KO1/2 TP 478UL;256.64;Unidad;t;13;1;8;5
+8078;8078;78;Brass Craft llave control 1/2x1/2 escuadra 03301C;3942.48;Unidad;t;13;1;8;5
+8079;8079;79;"Pvc codo 90 SCH40 12MM 1/2"" BL CAM/CEM";119.47;Unidad;t;13;1;8;0
+8080;8080;80;"Pvc codo 45 SCH40 12MM 1/2"" BL CAM/CEM";185.84;Unidad;t;13;1;8;10
+8081;8081;81;"Pvc adaptador macho SCH40 12MM 1/2"" BL CAM/CEM";84.07;Unidad;t;13;1;8;10
+8082;8082;82;"HG union sencilla 12MM 1/2""";305.31;Unidad;t;13;1;8;10
+8083;8083;83;"Pvc codo 90 SCH40 50MM 2""BL CAM/CEM";1402.65;Unidad;t;13;1;8;10
+8084;8084;84;3M cinta adhesiva doble cara 3/4 x metro;1619.47;Unidad;t;13;1;8;5
+8085;8085;85;Eagle cinta adhesiva 25MM X 10 mts #66159 doble cara;4654.87;Unidad;t;13;1;8;5
+8086;8086;86;Eagle cinta adhesiva 15MM X 10 mts #66158 doble cara;2924.78;Unidad;t;13;1;8;5
+8087;8087;87;"Amanco PVC tubo SDR17 50MM 2""X6m BL CAM/CEM";18486.73;Unidad;t;13;1;8;10
+8088;8088;88;"Pvc tubo presion SCH40 12MM 1/2""X6m BL CAM/CEM";24500;Unidad;t;13;1;8;10
+11001;11001;1;Cable aluminio #4;1488.5;Metro;t;13;1;11;0
+11002;11002;2;Cable neutral 3x4;805;Metro;t;13;1;11;0
+11003;11003;3;Cable thhn #6 metro verde;1075.22;Metro;t;13;1;11;0
+11004;11004;4;Ch breaker 1p/20a ch 120;6473.45;Unidad;t;13;1;11;0
+11005;11005;5;Ch breaker 2p/40a ch 240;18615.04;Unidad;t;13;1;11;0
+11006;11006;6;Ch tablero designation tp-a em1627-15;861977.88;Unidad;t;13;1;11;0
+11007;11007;7;Emt conector de 12mm 1/2 pesado;230.09;unidad;t;13;1;11;0
+11008;11008;8;Emt cunduleta botagua 50mm 2'';4017.7;unidad;t;13;1;11;0
+11009;11009;9;Pvc curva conduit tipo a 12mm 1/2'';2800.89;unidad;t;13;1;11;0
+11010;11010;10;Pvc curva conduit tipo a 12mm 1/2'';393.81;unidad;t;13;1;11;0
+11011;11011;11;Pvc curva conduit tipo a 18mm 3/4'';477.88;unidad;t;13;1;11;0
+11012;11012;12;Pvc curva conduit tipo a 25mm 1'';584.07;unidad;t;13;1;11;0
+11013;11013;13;Pvc curva conduit tipo a 50mm 2''x5m;0;unidad;t;13;1;11;0
+11014;11014;14;"Pvc conector macho conduit tipo A 25mm 1""UL GR";438.05;unidad;t;13;1;11;0
+11015;11015;15;Pvc tubo conduit tipo a 12mm 1/2''x3m;1486.73;unidad;t;13;1;11;0
+11016;11016;16;Pvc tubo conduit tipo a 18mm 3/4''x3m;1482.3;unidad;t;13;1;11;0
+11017;11017;17;Pvc tubo conduit tipo a 25mm 1''x3m;3168.14;unidad;t;13;1;11;0
+11018;11018;18;Pvc union conduit tipo a 12mm 1/2'';92.92;unidad;t;13;1;11;10
+11019;11019;19;Pvc union conduit tipo a 18mm 3/4'';128.32;unidad;t;13;1;11;0
+11020;11020;20;Pvc union conduit tipo a 25mm 1'';203.54;unidad;t;13;1;11;0
+11021;11021;21;Tania Centro Carga 6f;23400;unidad;t;13;1;11;0
+11022;11022;22;Tubo ind rectangular 25x50x1.20;4004.42;unidad;t;13;1;11;0
+11023;11023;23;Cable THHN #12 metro azul conducen caja;181.42;Metro;t;13;1;11;0
+11024;11024;24;Cable THHN #12 metro rojo conducen caja;181.42;Metro;t;13;1;11;5
+11025;11025;25;Cable THHN #12 metro verde conducen caja;181.42;Metro;t;13;1;11;5
+11026;11026;26;Cable THHN #12 metro blanco conducen caja;181.42;Metro;t;13;1;11;5
+11027;11027;27;Tl bombi LED 6W 3000 K A19-LED/6W/3;3580.5;unidad;t;13;1;11;0
+11028;11028;28;Socket fijo de porcelana NTP 4150 E27;455.75;unidad;t;13;1;11;0
+11029;11029;29;Fermetal socket de porcelana SOC-13;139.82;unidad;t;13;1;11;0
+11030;11030;30;"Trupper broca paleta 3/4""";796.46;unidad;t;13;1;11;0
+11031;11031;31;Cable TGP 3 lineas #12;1022.12;metro;t;13;1;11;0
+11032;11032;32;Eagle enchufe polar p/ext 15A 125V NTP 2867;973.45;unidad;t;13;1;11;7
+11033;11033;33;"Gaza EMT sencilla de 12MM 1/2""";34.51;unidad;t;13;1;4;10
+11034;11034;34;TL bombi LED 3000D A19-LED/10W;4386.5;unidad;t;13;1;4;5
+11035;11035;35;BV bombi espiral 20W T2 luz blanca E33017;4185;unidad;f;0;1;4;5
+11036;11036;36;DW2223 cubo magnetico hexa 3/8 x 2-9/16;1464.6;unidad;t;13;1;4;5
+11037;11037;37;"EMT (UL) tubo de 12MM 1/2""x 3mts UL";1765.49;unidad;t;13;1;4;10
+11038;11038;38;"PVC tubo conduit tipo A 12MM 1/2""X 3M UL GR CAM/CEM";995.58;unidad;t;13;1;4;10
+11039;11039;39;3M tape electrico super 33 negro 3/4x 20MTS;2915.93;unidad;t;13;1;4;10
+11040;11040;40;Square D breaker enchufar 1P/20A QO120;7446.9;unidad;t;13;1;4;10
+11041;11041;41;Square D breaker enchufar 2P/20A QO220;15517.7;unidad;t;13;1;4;10
+11042;11042;42;Eagle base para fotocelda con soporte 6889;2902.65;unidad;t;13;1;4;5
+11043;11043;43;Eagle fotocelda LUMNIA 110/220V 1000W NTP 6890;6606.19;unidad;t;13;1;4;5
+11044;11044;44;SD centro carga empotrable 3H 70A QOL 2F;18800.88;unidad;t;13;1;4;10
+11045;11045;45;Spander fisher nylon original S-7 EMP 100;13.27;unidad;t;13;1;4;5
+11046;11046;46;Tornillo metal CAB-CIL SPH 8X1 1/2;16.92;unidad;t;13;1;4;5
+11047;11047;47;EMT (UL) conector de 12MM 1/2 pesado UL;230.09;unidad;t;13;1;4;5
+11048;11048;48;Tubo abastro conectores metalicos 1/2x1/2x55cm largo;2176.99;unidad;t;13;1;4;5
+11049;11049;49;Manguera de LED 50mts 7761LED-3000K;159898.23;unidad;t;13;1;4;5
+11050;11050;50;Accesorio conector para 7761 CONECT7761;6938.05;unidad;t;13;1;4;5
+11051;11051;51;Eagle toma polarizado p/ext NTP222;1017.7;unidad;t;13;1;4;5
+11052;11052;52;AC-77873 control abanico-timer WESTING HOUSE;15734.51;unidad;t;13;1;4;5
+11053;11053;53;Timer digital TE102;22141.59;unidad;t;13;1;4;0
+11054;11054;54;DW1224Z broca cobalto 3/8 HSS SPLIT;5690.27;unidad;t;13;1;4;5
+11055;11055;55;"DW broca SDS PLUS 1/2""X12""";6336.28;unidad;t;13;1;4;5
+11056;11056;56;UTP cable red negro CAT 5E P/EXTERIOR C/GELxmt;809.73;unidad;t;13;1;4;10
+11057;11057;57;Cordon cable TSJ 2x14xmetro;513.27;unidad;t;13;1;4;5
+11058;11058;58;Cable aluminio XHHW-2 #4 AWG;384.96;unidad;t;13;1;4;10
+11059;11059;59;EMT tapa rectangular c/hueco metal;128.32;unidad;t;13;1;4;5
+11060;11060;60;Tornillo metal CAB-CIL SPH 10X1 1/2;23.76;unidad;t;13;1;4;5
+11061;11061;61;Espander fisher nylon originals S-8;45.13;unidad;t;13;1;4;10
+11062;11062;62;Conector comprension #7 4/0-3/0 A 4/0-3/0;2327.43;unidad;t;13;1;4;5
+11063;11063;63;Conector comprension #2 1/0-3 2/0-2 A 2-5 1-6;685.84;unidad;t;13;1;4;5
+11064;11064;64;Grapa con clavo acero de 8MM x unidad;11.5;unidad;t;13;1;4;5
+11065;11065;65;Pvc curva conduit tipo A 12MM 1/2 UL GR CAM/CEM;447.57;unidad;t;13;1;4;10
+11066;11066;66;"EMT conector CMTSJ25 de 1""";398.23;Unidad;t;13;1;4;5
+13001;13001;1;Lanco masilla gris para concreto 1/4;4730.09;galon;t;13;1;13;5
+13002;13002;2;TG pasta gypsum galon (masilla);3876.11;galon;t;13;1;13;10
+14001;14001;1;Aguarras fino;1575.22;Galon;t;13;1;14;0
+14002;14002;2;Anticor 5000 rustop rojo;6814.16;Galon;t;13;1;14;0
+14003;14003;3;"Cintar para pintar azul 2""";5548.67;Unidad;t;13;1;14;0
+14004;14004;4;Fadeli lija pligo agua #80;460.35;Unidad;t;13;1;14;0
+14005;14005;5;Pintura spray negro mate;2367.26;Unidad;t;13;1;14;5
+14006;14006;6;Thinner corriente litro;1876.11;Unidad;t;13;1;14;5
+14007;14007;7;Corrostop 9000-700-14 negro cuarto;6402.65;Unidad;t;13;1;14;10
+15001;15001;1;Cinta de precaucion;6880.53;Metro;t;13;1;15;0
+15002;15002;2;Plastic negro x KILO 2m;1730;kilo;t;13;1;15;0
+15003;15003;3;Plastic negro x KILO 3m dob ancho (1mx1,10kg aprox) const;3240;kilo;t;13;1;15;0
+15004;15004;4;saran negro-verde 60% 4M ancho;1625;Metro;t;13;1;15;0
+15005;15005;5;Saran negro-verde 80% 4M ancho;2065;Metro;t;13;1;15;0
+15006;15006;6;Cadena plastica negra 10MM 3/8 X metro;1070.8;Metro;t;13;1;15;5
+15007;15007;7;Lamina Prisma ACS de 3/4 #13MR (1,22X1,44);20115.04;Unidad;t;13;1;15;5
+15008;15008;8;Polyacril ;0;Unidad;t;13;1;15;0
