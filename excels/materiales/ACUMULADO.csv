@@ -1,7 +1,6 @@
 1001;1001;1;Arena fina;15486.73;Metro3;t;13;1;1;0
 1002;1002;2;"Cedazo zaranda 8x8x1/2""";1734.51;Metro;t;13;1;1;0
 1003;1003;3;Cuartilla;13805.31;metro3;t;13;1;1;0
-1004;1004;4;Cuartilla;13805.31;metro3;t;13;1;1;0
 2001;2001;1;Saco cemento 50k;5831.86;unidad;t;13;1;2;0
 2002;2002;2;Intaco Mortero repello grueso;4004.42;unidad;t;13;1;2;0
 3002;3002;2;Block 20x20x40;646;Unidad;t;13;1;3;0
@@ -177,40 +176,40 @@
 11030;11030;30;"Trupper broca paleta 3/4""";796.46;unidad;t;13;1;11;0
 11031;11031;31;Cable TGP 3 lineas #12;1022.12;metro;t;13;1;11;0
 11032;11032;32;Eagle enchufe polar p/ext 15A 125V NTP 2867;973.45;unidad;t;13;1;11;7
-11033;11033;33;"Gaza EMT sencilla de 12MM 1/2""";34.51;unidad;t;13;1;4;10
-11034;11034;34;TL bombi LED 3000D A19-LED/10W;4386.5;unidad;t;13;1;4;5
-11035;11035;35;BV bombi espiral 20W T2 luz blanca E33017;4185;unidad;f;0;1;4;5
-11036;11036;36;DW2223 cubo magnetico hexa 3/8 x 2-9/16;1464.6;unidad;t;13;1;4;5
-11037;11037;37;"EMT (UL) tubo de 12MM 1/2""x 3mts UL";1765.49;unidad;t;13;1;4;10
-11038;11038;38;"PVC tubo conduit tipo A 12MM 1/2""X 3M UL GR CAM/CEM";995.58;unidad;t;13;1;4;10
-11039;11039;39;3M tape electrico super 33 negro 3/4x 20MTS;2915.93;unidad;t;13;1;4;10
-11040;11040;40;Square D breaker enchufar 1P/20A QO120;7446.9;unidad;t;13;1;4;10
-11041;11041;41;Square D breaker enchufar 2P/20A QO220;15517.7;unidad;t;13;1;4;10
-11042;11042;42;Eagle base para fotocelda con soporte 6889;2902.65;unidad;t;13;1;4;5
-11043;11043;43;Eagle fotocelda LUMNIA 110/220V 1000W NTP 6890;6606.19;unidad;t;13;1;4;5
-11044;11044;44;SD centro carga empotrable 3H 70A QOL 2F;18800.88;unidad;t;13;1;4;10
-11045;11045;45;Spander fisher nylon original S-7 EMP 100;13.27;unidad;t;13;1;4;5
-11046;11046;46;Tornillo metal CAB-CIL SPH 8X1 1/2;16.92;unidad;t;13;1;4;5
-11047;11047;47;EMT (UL) conector de 12MM 1/2 pesado UL;230.09;unidad;t;13;1;4;5
-11048;11048;48;Tubo abastro conectores metalicos 1/2x1/2x55cm largo;2176.99;unidad;t;13;1;4;5
-11049;11049;49;Manguera de LED 50mts 7761LED-3000K;159898.23;unidad;t;13;1;4;5
-11050;11050;50;Accesorio conector para 7761 CONECT7761;6938.05;unidad;t;13;1;4;5
-11051;11051;51;Eagle toma polarizado p/ext NTP222;1017.7;unidad;t;13;1;4;5
-11052;11052;52;AC-77873 control abanico-timer WESTING HOUSE;15734.51;unidad;t;13;1;4;5
-11053;11053;53;Timer digital TE102;22141.59;unidad;t;13;1;4;0
-11054;11054;54;DW1224Z broca cobalto 3/8 HSS SPLIT;5690.27;unidad;t;13;1;4;5
-11055;11055;55;"DW broca SDS PLUS 1/2""X12""";6336.28;unidad;t;13;1;4;5
-11056;11056;56;UTP cable red negro CAT 5E P/EXTERIOR C/GELxmt;809.73;unidad;t;13;1;4;10
-11057;11057;57;Cordon cable TSJ 2x14xmetro;513.27;unidad;t;13;1;4;5
-11058;11058;58;Cable aluminio XHHW-2 #4 AWG;384.96;unidad;t;13;1;4;10
-11059;11059;59;EMT tapa rectangular c/hueco metal;128.32;unidad;t;13;1;4;5
-11060;11060;60;Tornillo metal CAB-CIL SPH 10X1 1/2;23.76;unidad;t;13;1;4;5
-11061;11061;61;Espander fisher nylon originals S-8;45.13;unidad;t;13;1;4;10
-11062;11062;62;Conector comprension #7 4/0-3/0 A 4/0-3/0;2327.43;unidad;t;13;1;4;5
-11063;11063;63;Conector comprension #2 1/0-3 2/0-2 A 2-5 1-6;685.84;unidad;t;13;1;4;5
-11064;11064;64;Grapa con clavo acero de 8MM x unidad;11.5;unidad;t;13;1;4;5
-11065;11065;65;Pvc curva conduit tipo A 12MM 1/2 UL GR CAM/CEM;447.57;unidad;t;13;1;4;10
-11066;11066;66;"EMT conector CMTSJ25 de 1""";398.23;Unidad;t;13;1;4;5
+11033;11033;33;"Gaza EMT sencilla de 12MM 1/2""";34.51;unidad;t;13;1;11;10
+11034;11034;34;TL bombi LED 3000D A19-LED/10W;4386.5;unidad;t;13;1;11;5
+11035;11035;35;BV bombi espiral 20W T2 luz blanca E33017;4185;unidad;f;0;1;11;5
+11036;11036;36;DW2223 cubo magnetico hexa 3/8 x 2-9/16;1464.6;unidad;t;13;1;11;5
+11037;11037;37;"EMT (UL) tubo de 12MM 1/2""x 3mts UL";1765.49;unidad;t;13;1;11;10
+11038;11038;38;"PVC tubo conduit tipo A 12MM 1/2""X 3M UL GR CAM/CEM";995.58;unidad;t;13;1;11;10
+11039;11039;39;3M tape electrico super 33 negro 3/4x 20MTS;2915.93;unidad;t;13;1;11;10
+11040;11040;40;Square D breaker enchufar 1P/20A QO120;7446.9;unidad;t;13;1;11;10
+11041;11041;41;Square D breaker enchufar 2P/20A QO220;15517.7;unidad;t;13;1;11;10
+11042;11042;42;Eagle base para fotocelda con soporte 6889;2902.65;unidad;t;13;1;11;5
+11043;11043;43;Eagle fotocelda LUMNIA 110/220V 1000W NTP 6890;6606.19;unidad;t;13;1;11;5
+11044;11044;44;SD centro carga empotrable 3H 70A QOL 2F;18800.88;unidad;t;13;1;11;10
+11045;11045;45;Spander fisher nylon original S-7 EMP 100;13.27;unidad;t;13;1;11;5
+11046;11046;46;Tornillo metal CAB-CIL SPH 8X1 1/2;16.92;unidad;t;13;1;11;5
+11047;11047;47;EMT (UL) conector de 12MM 1/2 pesado UL;230.09;unidad;t;13;1;11;5
+11048;11048;48;Tubo abastro conectores metalicos 1/2x1/2x55cm largo;2176.99;unidad;t;13;1;11;5
+11049;11049;49;Manguera de LED 50mts 7761LED-3000K;159898.23;unidad;t;13;1;11;5
+11050;11050;50;Accesorio conector para 7761 CONECT7761;6938.05;unidad;t;13;1;11;5
+11051;11051;51;Eagle toma polarizado p/ext NTP222;1017.7;unidad;t;13;1;11;5
+11052;11052;52;AC-77873 control abanico-timer WESTING HOUSE;15734.51;unidad;t;13;1;11;5
+11053;11053;53;Timer digital TE102;22141.59;unidad;t;13;1;11;0
+11054;11054;54;DW1224Z broca cobalto 3/8 HSS SPLIT;5690.27;unidad;t;13;1;11;5
+11055;11055;55;"DW broca SDS PLUS 1/2""X12""";6336.28;unidad;t;13;1;11;5
+11056;11056;56;UTP cable red negro CAT 5E P/EXTERIOR C/GELxmt;809.73;unidad;t;13;1;11;10
+11057;11057;57;Cordon cable TSJ 2x14xmetro;513.27;unidad;t;13;1;11;5
+11058;11058;58;Cable aluminio XHHW-2 #4 AWG;384.96;unidad;t;13;1;11;10
+11059;11059;59;EMT tapa rectangular c/hueco metal;128.32;unidad;t;13;1;11;5
+11060;11060;60;Tornillo metal CAB-CIL SPH 10X1 1/2;23.76;unidad;t;13;1;11;5
+11061;11061;61;Espander fisher nylon originals S-8;45.13;unidad;t;13;1;11;10
+11062;11062;62;Conector comprension #7 4/0-3/0 A 4/0-3/0;2327.43;unidad;t;13;1;11;5
+11063;11063;63;Conector comprension #2 1/0-3 2/0-2 A 2-5 1-6;685.84;unidad;t;13;1;11;5
+11064;11064;64;Grapa con clavo acero de 8MM x unidad;11.5;unidad;t;13;1;11;5
+11065;11065;65;Pvc curva conduit tipo A 12MM 1/2 UL GR CAM/CEM;447.57;unidad;t;13;1;11;10
+11066;11066;66;"EMT conector CMTSJ25 de 1""";398.23;Unidad;t;13;1;11;5
 13001;13001;1;Lanco masilla gris para concreto 1/4;4730.09;galon;t;13;1;13;5
 13002;13002;2;TG pasta gypsum galon (masilla);3876.11;galon;t;13;1;13;10
 14001;14001;1;Aguarras fino;1575.22;Galon;t;13;1;14;0

@@ -335,6 +335,7 @@ function save_new_bill() {
         data: JSON.stringify({
             "bill_date": $('.new_bill_date').val(),
             "bill_supplier": $('.new_bill_supplier').val(),
+            "bill_supplier_bill": $('.new_bill_supplier_bill').val(),
             "bill_order": $('.new_bill_order').val(),
             "bill_detail_list": new_bill_detail,
             "bill_subtotal": subtotal,
@@ -395,6 +396,7 @@ function load_bill(id) {
         $('.new_bill_date').val(data.bill_date);
         $('.new_bill_supplier').val(data.bill_supplier).trigger("change");
         $('.new_bill_order').val(data.bill_order).trigger("change");
+        $('.new_bill_supplier_bill').val(data.bill_supplier_bill);
 
         last_bill_detail = data.bill_detail_list;
     }).success(function () {
@@ -420,6 +422,7 @@ function check_data_filled() {
     var date = $('.new_bill_date');
     var supplier = $('.new_bill_supplier');
     var order = $('.new_bill_order');
+    var bill = $('.new_bill_supplier_bill');
 
     var bool = false;
 
@@ -436,6 +439,11 @@ function check_data_filled() {
     if (!order.val()) {
         bool = false;
         alertify.alert('Debe Elegir una Orden de Compra');
+        return bool;
+    }
+    if (!bill.val()) {
+        bool = false;
+        alertify.alert('Debe Ingresar el numero de Factura del Proveedor');
         return bool;
     } else {
         bool = true;
@@ -939,6 +947,7 @@ function save_new_bill() {
         data: JSON.stringify({
             "bill_date": $('.new_bill_date').val(),
             "bill_supplier": $('.new_bill_supplier').val(),
+            "bill_supplier_bill": $('.new_bill_supplier_bill').val(),
             "bill_order": $('.new_bill_order').val(),
             "bill_detail_list": new_bill_detail,
             "bill_subtotal": subtotal,
@@ -998,6 +1007,7 @@ function check_data_filled() {
     var date = $('.new_bill_date');
     var supplier = $('.new_bill_supplier');
     var order = $('.new_bill_order');
+    var bill = $('.new_bill_supplier_bill');
 
     var bool = false;
 
@@ -1014,6 +1024,11 @@ function check_data_filled() {
     if (!order.val()) {
         bool = false;
         alertify.alert('Debe Elegir una Orden de Compra');
+        return bool;
+    }
+    if (!bill.val()) {
+        bool = false;
+        alertify.alert('Debe Ingresar el numero de Factura del Proveedor');
         return bool;
     } else {
         bool = true;
@@ -1211,7 +1226,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<div style=\"padding-top:20px;padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Nueva Factura de Compra:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-3 no-padding-left\"><form><!--fecha y proveedor--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Fecha de la factura:</span></div><div class=\"col-xs-12\"><input type=\"date\" class=\"form-control new_bill_date\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Proveedor:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_bill_supplier\"><option></option></select></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Orden de Compra:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_bill_order\"><option></option></select></div></div></div><!--producto y buscar--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Producuto:</span></div><div class=\"col-xs-12 inner-addon right-addon\"><i class=\"glyphicon glyphicon-barcode\"></i><input type=\"text\" class=\"form-control bill_product_code\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Buscar:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_bill_search\"><option></option></select></div></div></div><div class=\"form-group row table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered\"><tbody><tr><th>Sub-Total:<td class=\"No_Sub_Total price\">0</td></th></tr><tr><th>IV:<td class=\"No_Sub_Iv price\">0</td></th></tr><tr><th>Total:<td class=\"No_Total price\">0</td></th></tr></tbody></table></div></div></form></div><div class=\"col-md-9 no-padding-left\"><form><!--tabla--><div class=\"form-group row table_row product_table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered NO_table\"><thead><tr><th>Códi</th><th>Desc</th><th>Cant</th><th>Unid</th><th>P.Un</th><th>Desc</th><th>IV</th><th>Subt</th><th></th></tr></thead><tbody class=\"table-body\"></tbody></table></div></div><!--confirmar y guardar--><div style=\"padding-right:15px;\" class=\"form-group row\"><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Confirm form-control btn btn-default pull-right\">Confirmar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Edit form-control btn btn-default pull-right\">Editar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Save form-control btn btn-default pull-right\">Guardar</button></div></div></form></div></div>");;return buf.join("");
+buf.push("<div style=\"padding-top:20px;padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Nueva Factura de Compra:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-3 no-padding-left\"><form><!--fecha y proveedor--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Fecha de la factura:</span></div><div class=\"col-xs-12\"><input type=\"date\" class=\"form-control new_bill_date\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Proveedor:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_bill_supplier\"><option></option></select></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Orden de Compra:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_bill_order\"><option></option></select></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span># Factura del Proveedor:</span></div><div class=\"col-xs-12\"><input type=\"text\" class=\"form-control new_bill_supplier_bill\"/></div></div></div><!--producto y buscar--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Producto:</span></div><div class=\"col-xs-12 inner-addon right-addon\"><i class=\"glyphicon glyphicon-barcode\"></i><input type=\"text\" class=\"form-control bill_product_code\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Buscar:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_bill_search\"><option></option></select></div></div></div><div class=\"form-group row table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered\"><tbody><tr><th>Sub-Total:<td class=\"No_Sub_Total price\">0</td></th></tr><tr><th>IV:<td class=\"No_Sub_Iv price\">0</td></th></tr><tr><th>Total:<td class=\"No_Total price\">0</td></th></tr></tbody></table></div></div></form></div><div class=\"col-md-9 no-padding-left\"><form><!--tabla--><div class=\"form-group row table_row product_table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered NO_table\"><thead><tr><th>Códi</th><th>Desc</th><th>Cant</th><th>Unid</th><th>P.Un</th><th>Desc</th><th>IV</th><th>Subt</th><th></th></tr></thead><tbody class=\"table-body\"></tbody></table></div></div><!--confirmar y guardar--><div style=\"padding-right:15px;\" class=\"form-group row\"><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Confirm form-control btn btn-default pull-right\">Confirmar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Edit form-control btn btn-default pull-right\">Editar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Save form-control btn btn-default pull-right\">Guardar</button></div></div></form></div></div>");;return buf.join("");
 };
 },{"jade/runtime":14}],5:[function(require,module,exports){
 

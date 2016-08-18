@@ -12,4 +12,4 @@ class ProjectFilter(django_filters.FilterSet):
 
     class Meta:
         model = Project
-        fields = ('id', 'project_name', 'project_description', 'project_activity', 'project_active')
+        fields = ('id', 'project_name', 'project_description', 'project_client', 'project_activity', 'project_active')

@@ -336,6 +336,7 @@ function save_new_bill(){
         data: JSON.stringify({
             "bill_date": $('.new_bill_date').val(),
             "bill_supplier": $('.new_bill_supplier').val(),
+            "bill_supplier_bill":$('.new_bill_supplier_bill').val(),
             "bill_order": $('.new_bill_order').val(),
             "bill_detail_list": new_bill_detail,
             "bill_subtotal": subtotal,
@@ -403,6 +404,7 @@ function load_bill(id) {
         $('.new_bill_date').val(data.bill_date);
         $('.new_bill_supplier').val(data.bill_supplier).trigger("change");
         $('.new_bill_order').val(data.bill_order).trigger("change");
+        $('.new_bill_supplier_bill').val(data.bill_supplier_bill);
 
 
         last_bill_detail=data.bill_detail_list;
@@ -439,6 +441,7 @@ function check_data_filled(){
     var date = $('.new_bill_date');
     var supplier = $('.new_bill_supplier');
     var order = $('.new_bill_order');
+    var bill = $('.new_bill_supplier_bill');
 
     var bool = false;
 
@@ -457,6 +460,11 @@ function check_data_filled(){
     if(!order.val()){
         bool = false;
         alertify.alert('Debe Elegir una Orden de Compra');
+        return bool
+    }
+    if(!bill.val()){
+        bool = false;
+        alertify.alert('Debe Ingresar el numero de Factura del Proveedor');
         return bool
     }
     else{

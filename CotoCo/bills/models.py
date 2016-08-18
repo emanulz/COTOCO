@@ -11,6 +11,7 @@ class Bill(models.Model):
 
     bill_date = models.DateField(verbose_name='Fecha')
     bill_supplier = models.ForeignKey(Supplier, verbose_name='Proveedor')
+    bill_supplier_bill = models.CharField(max_length=255, blank=True, verbose_name='# Factura Proveedor', default='0')
     bill_order = models.ForeignKey(Order, verbose_name='Orden de compra', default=1)
     bill_detail_list = models.ManyToManyField('BillDetail', verbose_name='Lista de detalles')
     bill_subtotal = models.DecimalField(max_digits=11, decimal_places=2, verbose_name='Subtotal', default=0)

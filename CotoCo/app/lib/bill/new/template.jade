@@ -34,13 +34,18 @@
                     .col-xs-12
                         select.form-control.new_bill_order
                             option
+                .col-xs-6.col-md-12.no-padding-left.bottom_row
+                    .col-xs-12
+                        span # Factura del Proveedor:
+                    .col-xs-12
+                        input(type='text').form-control.new_bill_supplier_bill
 
 
             //producto y buscar
             .form-group.row
                 .col-xs-6.col-md-12.no-padding-left
                     .col-xs-12
-                        span Producuto:
+                        span Producto:
                     .col-xs-12.inner-addon.right-addon
                         i.glyphicon.glyphicon-barcode
                         input.form-control.bill_product_code(type='text')

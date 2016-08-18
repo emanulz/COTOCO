@@ -6,7 +6,7 @@ from django.db import models
 
 class Activity(models.Model):
     activity_name = models.CharField(max_length=255, verbose_name='Nombre')
-    activity_description = models.CharField(max_length=255, verbose_name='Descripción')
+    activity_description = models.CharField(blank=True, max_length=255, verbose_name='Descripción', default='')
 
     def __unicode__(self):
         return '%s' % self.activity_name

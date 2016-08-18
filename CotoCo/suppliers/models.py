@@ -9,9 +9,13 @@ from django.db import models
 class Supplier(models.Model):
 
     supplier_name = models.CharField(max_length=255, verbose_name='Nombre')
-    supplier_phone = models.DecimalField(max_digits=11, decimal_places=0, verbose_name='Número de Teléfono')
-    supplier_address = models.CharField(max_length=255, verbose_name='Dirección')
-    supplier_email = models.EmailField(blank=True, verbose_name='Email')
+    supplier_address = models.CharField(blank=True,max_length=255, verbose_name='Dirección', default='')
+    supplier_phone = models.DecimalField(blank=True,max_digits=15, decimal_places=0, verbose_name='Teléfono Ventas', default=0)
+    supplier_phone2 = models.DecimalField(blank=True,max_digits=15, decimal_places=0, verbose_name='Teléfono Contabilidad', default=0)
+    supplier_phone3 = models.DecimalField(blank=True,max_digits=15, decimal_places=0, verbose_name='Teléfono Administración', default=0)
+    supplier_email = models.EmailField(null=True, verbose_name='Email Ventas')
+    supplier_email2 = models.EmailField(null=True, verbose_name='Email Contabilidad')
+    supplier_email3 = models.EmailField(null=True, verbose_name='Email Administración')
 
     def __unicode__(self):
         return '%s' % self.supplier_name

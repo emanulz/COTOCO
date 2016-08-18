@@ -41,7 +41,7 @@ class ProductDepartment(models.Model):
     class Meta:
         verbose_name = 'Familia'
         verbose_name_plural = 'Familias'
-        ordering = ['productdepartment_code']
+        ordering = ['id']
 
 
 class ProductSubDepartment(models.Model):

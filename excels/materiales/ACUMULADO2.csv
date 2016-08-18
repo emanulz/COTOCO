@@ -1,0 +1,71 @@
+1004;1004;4;Iguana piedra drenaje metro;15000;metro3;t;13;1;1;0
+1005;1005;5;Iguana piedra base entreg camion 4x4 m3;16778.76;metro3;t;13;1;1;0
+1006;1006;6;Agregado lastre de tajo la iguana mt;16000;mtr;t;13;1;1;0
+2003;2003;3;Cemento gris x kilo;176.99;unidad;t;13;1;2;0
+3008;3008;8;Block 12x20x40;330;Unidad;t;13;1;3;0
+4041;4041;41;"MC tubo estructural galvanizado cuad 50x50x1,50 (2""x2""x1,50)";9051.95;Unidad;t;13;1;4;8
+4042;4042;42;Tornillo hexagonal 1/4x1 1/2 GR2;39.82;Unidad;t;13;1;4;5
+4043;4043;43;Tornillo hexagonal 1/4x2 GR2;61.95;Unidad;t;13;1;4;5
+4044;4044;44;Tornillo Gypsum fina 25 mm #6 x1;4.72;Unidad;t;13;1;4;10
+4045;4045;45;"Tornillo Gypsum fina 38mm #6 x 1 1/2""";6.19;Unidad;t;13;1;4;10
+4046;4046;46;"Tornillo Gypsum fina 50mm #6 x 2"" 50mm";7.95;Unidad;t;13;1;4;10
+4047;4047;47;"Tornillo Gypsum fina 65 mm #8 x 2 1/2""";15.04;Unidad;t;13;1;4;10
+4048;4048;48;Tornillo Gypsum fina 75 mm #8 x 3;20.35;Unidad;t;13;1;4;5
+4049;4049;49;"Tornillo Torfix cabeza plana #8 x 3 1/2""";24.78;Unidad;t;13;1;4;5
+4050;4050;50;Tornillo Torfix cabeza plana #12 x 4;30.97;Unidad;t;13;1;4;5
+4051;4051;51;Tornillo Techo punta corriente 1/4 x 3;57.52;Unidad;t;13;1;4;5
+4052;4052;52;Tornillo tirafondo 1/4 x 6;145.74;Unidad;t;13;1;4;0
+4053;4053;53;Tornillo concreto PHILLIPS 1/4 x 2 1/4;163.72;Unidad;t;13;1;4;5
+4054;4054;54;"Tubo Red Galv s/rosca CED 20x12mm (1/2"")";4318.58;Unidad;t;13;1;4;7
+4055;4055;55;Esquinero metal 3,05m (10ft);734.51;Unidad;t;13;1;4;10
+4056;4056;56;"Angular HN 38x38x3,17mm (11/2""x11/2""x1/8"")";6137.17;Unidad;t;13;1;4;7
+4057;4057;57;"MC perfil galva 50x70x1,50x 6mts (2""x3""x1,50)";6380.53;Unidad;t;13;1;4;7
+6001;6001;1;Fibrolit LAM 6mm 1219x2438mm;8238.94;unidad;t;13;1;6;7
+6002;6002;2;TG Furring Channnel 0,36x3,66mm (12ft);756.64;unidad;t;13;1;6;5
+6003;6003;3;TG Lamina gypsum HY Flex 4x8x1/4 flexible;10000;unidad;t;13;1;6;5
+6004;6004;4;"TG Track p/gypsum en 0,70 de 4""x 3,05m 10ft calib 20";2349.56;unidad;t;13;1;6;10
+6005;6005;5;"TG Stud p/gypsum en 0,70 de 4"" x 3,05m 10ft calib 20";2734.51;unidad;t;13;1;6;10
+6006;6006;6;"Lamina de estereofon 75mm 1,22 x 2,44 x 3""";8336.28;unidad;t;13;1;6;7
+8089;8089;89;Lanco cemento pvc Wet Dry 1/4 gl;9331.86;Unidad;t;13;1;8;15
+8090;8090;90;Lanco Silicon Flex blanco;2752.21;Unidad;t;13;1;8;5
+8091;8091;91;Lanco Silicon Flex transparente;2752.21;Unidad;t;13;1;8;5
+8092;8092;92;Xilo acido muriatico galon;3017.7;Unidad;t;13;1;8;10
+11067;11067;67;"DW47451 Disco Diamantado 4 1/2"" Continuo ceramina Porcelanato";5734.51;Unidad;t;13;1;11;5
+11068;11068;68;P24326-35 Empotrable LED 8W 3000K Downlight;32969.03;Unidad;t;13;1;11;18
+11069;11069;69;"PVC curva conduit tipo A 16mm 3/4"" UL GR CAM/CEM";476.05;Unidad;t;13;1;11;15
+11070;11070;70;Metabo disco metal 230x1,9x22,2 Recto A36;2946.9;Unidad;t;13;1;11;10
+11071;11071;71;"DW8310 disco flap 4 1/2"" grano 120";3026.55;Unidad;t;13;1;11;5
+11072;11072;72;"Broca SDS Plus 3/8"" x 6"" DW5427";3646.02;Unidad;t;13;1;11;5
+12001;12001;1;Ecotank Fosa Septica Biologica de 2500 lts;225663.72;unidad;t;13;1;12;10
+12002;12002;2;Ecotank Filtro Biologico Anaerobio 1950 lts;215044.25;unidad;t;13;1;12;10
+12003;12003;3;Ecotank Caja de registro sanitario;12831.86;unidad;t;13;1;12;10
+12004;12004;4;Ecotank Saco de piedra Volcanica;3115.04;unidad;t;13;1;12;10
+12005;12005;5;Ecotank Trampa de grasa 38 lts Residual;36283.19;unidad;t;13;1;12;10
+13003;13003;3;TG pasta p/gypsum cubeta tapa negra ;9075.22;cubeta;t;13;1;13;10
+13004;13004;4;TG pasta p/gypsum cubeta tapa verde;11482.3;cubeta;t;13;1;13;10
+13005;13005;5;Laticrete bondex 254 platino gris;16261.05;unidad;t;13;1;13;5
+13006;13006;6;Mortero Sur repello grueso;5194.69;unidad;t;13;1;13;5
+13007;13007;7;Laticrete Spectra Lock Polvo 122MID black;11880.53;unidad;t;13;1;13;5
+13008;13008;8;Laticrete Spectra Lock Polvo 122MID platinum;11880.53;unidad;t;13;1;13;5
+13009;13009;9;Laticrete Sepectra Lock Liquido CR cubeta;90442.48;cubeta;t;13;1;13;5
+13010;13010;10;Laticrete Porcelana Wall Grout 1603 SILIK 11,3kg;7995.58;unidad;t;13;1;13;10
+13011;13011;11;Laticrete Porcelana Wall Grout 1688 S SHADOW 11,3kg;7995.58;unidad;t;13;1;13;10
+13012;13012;12;Laticrete Porcelana Wall Grout 1634 SANDSTONE 11,3kg;7995.58;unidad;t;13;1;13;10
+13013;13013;13;Laticrete Porcelana Wall Grout 1660 DUSTY GREY 11,3 kg;7300.69;unidad;t;13;1;13;10
+13014;13014;14;Laticrete bondex 254 platino blanco;17020;unidad;t;13;1;13;0
+13015;13015;15;Pedregal bondex porcelanato 20 kg;4424.76;unidad;t;13;1;13;10
+13016;13016;16;TG Masilla rapida en saco 45 min 20 kls;6964.5;unidad;t;13;1;13;10
+14008;14008;8;"Felpa Antigota de 9"" 321/10";2646.62;Unidad;t;13;1;14;5
+14009;14009;9;"Marco c/felpa semiprof 3"" REC0013";1517.7;Unidad;t;13;1;14;5
+14010;14010;10;Sur muro seco gris;4557.52;Unidad;t;13;1;14;7
+14011;14011;11;Fandeli lija pliego agua #100;393.81;Unidad;t;13;1;14;10
+14012;14012;12;Fandeli lija pliego agua #120;353.98;Unidad;t;13;1;14;0
+14013;14013;13;Fandeli lija pliego agua #150;340.71;Unidad;t;13;1;14;10
+14014;14014;14;"Cinta p/pintor azul 1"" x 54,8 mts (masking)";2991.5;Unidad;t;13;1;14;5
+14015;14015;15;"Felpa p/pintar 1/2"" x 9"" GAM YELLOW STRIPE";1553.1;Unidad;t;13;1;14;5
+14016;14016;16;"Marco p/felpa profesional 9"" GAM";1853.98;Unidad;t;13;1;14;10
+14017;14017;17;Scotch Brite morada indust;694.69;Unidad;t;13;1;14;5
+14018;14018;18;"Brocha 4"" GAM Master Eco Macha";1960.75;Unidad;t;13;1;14;10
+16001;16001;1;Lamina de hierro negro 3,17mm 1,22x2,44x1/8;28561.95;unidad;t;13;1;16;7
+16002;16002;2;TG Lamina Mold Tough 1/2 12mmx2,44 Gypsum Verde Resis Moho;4986.73;unidad;t;13;1;16;7
+16003;16003;3;TG Lamina securock Glass 1/2x4x8 p/exterior aprox 30 kls;11429.2;unidad;t;13;1;16;7

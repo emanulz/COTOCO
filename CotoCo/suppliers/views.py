@@ -15,7 +15,8 @@ class SupplierSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Supplier
-        fields = ('id', 'supplier_name', 'supplier_phone', 'supplier_address', 'supplier_email')
+        fields = ('id', 'supplier_name', 'supplier_phone', 'supplier_phone2', 'supplier_phone3', 'supplier_address',
+                  'supplier_email', 'supplier_email2', 'supplier_email3')
 
 
 class SupplierViewSet(viewsets.ModelViewSet):

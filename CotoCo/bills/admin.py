@@ -15,8 +15,8 @@ class BillAdmin(admin.ModelAdmin):
     buttonEdit.short_description = ''
     buttonEdit.allow_tags = True
 
-    list_display = ('id', 'bill_date', 'bill_supplier', 'bill_order', 'bill_subtotal', 'bill_iv', 'bill_total', 'buttonEdit')
-    search_fields = ('id', 'bill_date', 'bill_supplier',)
+    list_display = ('id', 'bill_date', 'bill_supplier', 'bill_supplier_bill', 'bill_order', 'bill_subtotal', 'bill_iv', 'bill_total', 'buttonEdit')
+    search_fields = ('id', 'bill_date', 'bill_supplier', 'bill_supplier_bill', 'bill_order__id')
     filter_horizontal = ('bill_detail_list',)
 
     class Media:
