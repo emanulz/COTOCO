@@ -13,9 +13,9 @@ class Supplier(models.Model):
     supplier_phone = models.DecimalField(blank=True,max_digits=15, decimal_places=0, verbose_name='Teléfono Ventas', default=0)
     supplier_phone2 = models.DecimalField(blank=True,max_digits=15, decimal_places=0, verbose_name='Teléfono Contabilidad', default=0)
     supplier_phone3 = models.DecimalField(blank=True,max_digits=15, decimal_places=0, verbose_name='Teléfono Administración', default=0)
-    supplier_email = models.EmailField(null=True, verbose_name='Email Ventas')
-    supplier_email2 = models.EmailField(null=True, verbose_name='Email Contabilidad')
-    supplier_email3 = models.EmailField(null=True, verbose_name='Email Administración')
+    supplier_email = models.EmailField(blank=True, null=True, verbose_name='Email Ventas')
+    supplier_email2 = models.EmailField(blank=True, null=True, verbose_name='Email Contabilidad')
+    supplier_email3 = models.EmailField(blank=True, null=True, verbose_name='Email Administración')
 
     def __unicode__(self):
         return '%s' % self.supplier_name

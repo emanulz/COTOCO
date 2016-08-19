@@ -105,6 +105,10 @@ function filter_order_by_supplier(supplier){
     $('.new_bill_order').append($('<option>', {
          value: ''
      })).trigger('change');
+    $('.new_bill_order').append($('<option>', {
+            value: '1',
+            text: 'Sin Orden de Compra'
+     })).trigger('change');
 
 
     $.each(AllOrders, function (i) {
