@@ -461,6 +461,18 @@ function main_new_order () {
 
     });
 
+    $('a.popup').live('click', function(){
+		var newwindow=window.open($(this).attr('href'),'','height=200,width=150');
+		if (window.focus) {newwindow.focus()}
+		return false;
+	});
+
+    html.on('click','.refresh_product', function () {
+
+        event.preventDefault();
+        console.log('refresh');
+
+    });
     html.on('change','.no_qty', function () {
 
         event.preventDefault();
