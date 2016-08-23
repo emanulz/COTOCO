@@ -8,6 +8,8 @@
 
     $(document).ready(function($) {
 
+
+
     $.ajaxSetup({
         beforeSend: function(xhr, settings) {
             if(settings.type == "POST"){
@@ -41,6 +43,16 @@
     var consecutive =  $('#id_product_consecutive');
 
     var currentUrl = $(location).attr('href');
+
+    var href = window.location.href;
+
+
+    if (href.indexOf('popup') !== -1 ) {
+
+        btn_save.addClass('pull-left')
+
+    }
+
 
         
 //SELECTORS END
@@ -119,6 +131,7 @@
 
 
     });// USE TAXES TOGGLE ENDS
+
 
 
 

@@ -47,12 +47,12 @@
                 .col-xs-6.col-md-12.no-padding-left
                     .col-xs-12
                         span Producto:
-                            a(href="/admin/products/product/add/?_popup=1").pull-right.add_product_pop.related-widget-wrapper-link.add-related
-                                i.glyphicon.glyphicon-plus-sign
-                            i.glyphicon.glyphicon-refresh.pull-right.refresh_product(style="padding-right:10px")
+                            //a(href="/admin/products/product/add/?_popup=1").pull-right.popup_product.related-widget-wrapper-link.add-related
+                            span.pull-right: i.glyphicon.glyphicon-plus-sign.popup_product.related-widget-wrapper-link.add-related(id="add_id_product")
+                            span.pull-right(style="padding-right:10px;text-aling:center"): i.glyphicon.glyphicon-refresh.refresh_product
                     .col-xs-12.inner-addon.right-addon
                         i.glyphicon.glyphicon-barcode
-                        input.form-control.order_product_code(type='text')
+                        input.form-control.order_product_code(type='text',id="id_product")
                 .col-xs-6.col-md-12.no-padding-left.bottom_row
                     .col-xs-12
                         span Buscar:

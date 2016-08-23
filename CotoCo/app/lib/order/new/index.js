@@ -53,7 +53,6 @@ function new_order() {
 
 function products_to_memory() {
 
-
     $.get('/api/products/', function (data) {
 
         $.each(data, function (i) {
@@ -401,6 +400,24 @@ function check_data_filled(){
 
 }
 
+function PopupCenter(url, title, w, h) {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+    var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+    // Puts focus on the newWindow
+    if (window.focus) {
+        newWindow.focus();
+    }
+}
+
 // MAIN AND DOC READY
 function main_new_order () {
 
@@ -461,16 +478,34 @@ function main_new_order () {
 
     });
 
-    $('a.popup').live('click', function(){
-		var newwindow=window.open($(this).attr('href'),'','height=200,width=150');
-		if (window.focus) {newwindow.focus()}
-		return false;
-	});
+
+    html.on('click','.popup_product', function () {
+
+        event.preventDefault();
+        // var newwindow=window.open('/admin/products/product/add/?_popup=1','','height=700,width=600');
+		PopupCenter('/admin/products/product/add/?popup', 'Agregar Producto', 500, 800)
+
+    });
 
     html.on('click','.refresh_product', function () {
 
-        event.preventDefault();
-        console.log('refresh');
+        search.html('');
+
+        search.append($('<option>', {
+             value: ''
+        })).trigger('change');
+
+        var $icon = $( ".refresh_product");
+        var animateClass = "glyphicon-refresh-animate";
+
+        $icon.addClass( animateClass );
+        // setTimeout is to indicate some async operation
+        window.setTimeout( function() {
+        $icon.removeClass( animateClass );
+        }, 1000 );
+
+        localStorage.Products=null;
+        products_to_memory();
 
     });
     html.on('change','.no_qty', function () {
