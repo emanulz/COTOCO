@@ -131,6 +131,7 @@ function add_product(){
 
         if (products.length){
             var subt = (products[0].product_price*qty)*((100-products[0].product_discount)/100);
+            var pudisc = (products[0].product_price)*((100-products[0].product_discount)/100);
             var iv=0;
 
             if( products[0].product_usetaxes){
@@ -138,7 +139,7 @@ function add_product(){
             }
 
             add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit,
-                        products[0].product_price , subt, products[0].id, products[0].product_discount, iv); //las 0 is disc
+                        products[0].product_price , subt, products[0].id, products[0].product_discount, iv, pudisc); //las 0 is disc
         }
         else{
             //FALTA mensaje de que no existe el producto
@@ -156,7 +157,7 @@ function add_product(){
 
 }
 
-function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv ){
+function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv, pudisc ){
 
     let Btn_Confirm = $('.Btn_Confirm');
 
@@ -172,6 +173,7 @@ function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv ){
             class="form-control ${code}_product_uprice no_uprice"/></td>
             <td style="padding:0; width:7%"><input value="${disc}" type="number" style="width:100%;border:0px" 
             class="form-control ${code}_product_disc no_disc"/></td>
+            <td class="${code}_product_pudisc price" >${pudisc.toFixed(2)}</td>
             <td class="${code}_product_iv" >${iv}%</td>
             <td class="${code}_product_subt price" >${subt.toFixed(2)}</td>
             <td style="text-align: center; padding:0; width:5%" class="inner-addon">
@@ -197,6 +199,7 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
     var new_qty = 0;
     var new_subt = 0;
     var new_disc = 0;
+    var new_pudisc = 0;
 
 
     if (ctrl == 1){//means add already existing product on table
@@ -209,6 +212,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
 
         new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
 
+        new_pudisc = (actual_uprice)*(1-(new_disc/100));
+
     }
 
     if(ctrl == 2){//means update qty
@@ -219,6 +224,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
         new_qty = parseFloat(qty);
 
         new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
+
+        new_pudisc = (actual_uprice)*(1-(new_disc/100));
 
     }
 
@@ -232,6 +239,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
 
         new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
 
+        new_pudisc = (actual_uprice)*(1-(new_disc/100));
+
     }
 
     if(ctrl == 4){//means update discount
@@ -243,6 +252,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
         new_disc =  disc;
 
         new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
+
+        new_pudisc = (actual_uprice)*(1-(new_disc/100));
     }
     //calculate values
 
@@ -250,6 +261,7 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
     //update values
 
     $(`.${code}_product_qty`).val(new_qty);
+    $(`.${code}_product_pudisc`).text(new_pudisc.toFixed(2));
     $(`.${code}_product_subt`).text(new_subt.toFixed(2));
 
     array[row][1] = new_qty;
@@ -395,9 +407,10 @@ function add_loaded_to_table(){
 
         $.get(`/api/order_detail/${last_order_detail[i]}/`,false)
         .success(function (data) {
+            var pudisc = (parseFloat(data.order_detail_price))*((100-data.order_detail_discount)/100);
             add_new_row(data.order_detail_product_code, data.order_detail_description, parseFloat(data.order_detail_amount),
                         data.order_detail_unit, parseFloat(data.order_detail_price), parseFloat(data.order_detail_total),
-                        data.order_detail_product, data.order_detail_discount, data.order_detail_iv)
+                        data.order_detail_product, data.order_detail_discount, data.order_detail_iv, pudisc)
         });
 
     });
@@ -442,6 +455,24 @@ function check_data_filled(){
 
 }
 
+
+function PopupCenter(url, title, w, h) {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+    var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+    // Puts focus on the newWindow
+    if (window.focus) {
+        newWindow.focus();
+    }
+}
 
 // MAIN AND DOC READY
 function main_edit_order () {
@@ -500,6 +531,36 @@ function main_edit_order () {
         if (new_order_array.length==0){
             Btn_Confirm.hide();
         }
+
+    });
+
+    html.on('click','.popup_product', function () {
+
+        event.preventDefault();
+        // var newwindow=window.open('/admin/products/product/add/?_popup=1','','height=700,width=600');
+		PopupCenter('/admin/products/product/add/?popup', 'Agregar Producto', 500, 800)
+
+    });
+
+    html.on('click','.refresh_product', function () {
+
+        search.html('');
+
+        search.append($('<option>', {
+             value: ''
+        })).trigger('change');
+
+        var $icon = $( ".refresh_product");
+        var animateClass = "glyphicon-refresh-animate";
+
+        $icon.addClass( animateClass );
+        // setTimeout is to indicate some async operation
+        window.setTimeout( function() {
+        $icon.removeClass( animateClass );
+        }, 1000 );
+
+        localStorage.Products=null;
+        products_to_memory();
 
     });
 

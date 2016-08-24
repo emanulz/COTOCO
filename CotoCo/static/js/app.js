@@ -1363,13 +1363,14 @@ function add_product() {
 
         if (products.length) {
             var subt = products[0].product_price * qty * ((100 - products[0].product_discount) / 100);
+            var pudisc = products[0].product_price * ((100 - products[0].product_discount) / 100);
             var iv = 0;
 
             if (products[0].product_usetaxes) {
                 iv = products[0].product_taxes;
             }
 
-            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit, products[0].product_price, subt, products[0].id, products[0].product_discount, iv); //las 0 is disc
+            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit, products[0].product_price, subt, products[0].id, products[0].product_discount, iv, pudisc); //las 0 is disc
         } else {
             //FALTA mensaje de que no existe el producto
             alert('NO EXISTE EL PRODUCTO');
@@ -1383,7 +1384,7 @@ function add_product() {
         } //else
 }
 
-function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv) {
+function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv, pudisc) {
 
     let Btn_Confirm = $('.Btn_Confirm');
 
@@ -1399,6 +1400,7 @@ function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv) {
             class="form-control ${ code }_product_uprice no_uprice"/></td>
             <td style="padding:0; width:7%"><input value="${ disc }" type="number" style="width:100%;border:0px" 
             class="form-control ${ code }_product_disc no_disc"/></td>
+            <td class="${ code }_product_pudisc price" >${ pudisc.toFixed(2) }</td>
             <td class="${ code }_product_iv" >${ iv }%</td>
             <td class="${ code }_product_subt price" >${ subt.toFixed(2) }</td>
             <td style="text-align: center; padding:0; width:5%" class="inner-addon">
@@ -1422,6 +1424,7 @@ function row_update(row, code, qty, array, new_price, ctrl, disc) {
     var new_qty = 0;
     var new_subt = 0;
     var new_disc = 0;
+    var new_pudisc = 0;
 
     if (ctrl == 1) {
         //means add already existing product on table
@@ -1433,6 +1436,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc) {
         new_qty = parseFloat(actual_qty) + parseFloat(qty);
 
         new_subt = actual_uprice * new_qty * (1 - new_disc / 100);
+
+        new_pudisc = actual_uprice * (1 - new_disc / 100);
     }
 
     if (ctrl == 2) {
@@ -1444,6 +1449,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc) {
         new_qty = parseFloat(qty);
 
         new_subt = actual_uprice * new_qty * (1 - new_disc / 100);
+
+        new_pudisc = actual_uprice * (1 - new_disc / 100);
     }
 
     if (ctrl == 3) {
@@ -1456,6 +1463,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc) {
         new_disc = array[row][7];
 
         new_subt = actual_uprice * new_qty * (1 - new_disc / 100);
+
+        new_pudisc = actual_uprice * (1 - new_disc / 100);
     }
 
     if (ctrl == 4) {
@@ -1468,12 +1477,15 @@ function row_update(row, code, qty, array, new_price, ctrl, disc) {
         new_disc = disc;
 
         new_subt = actual_uprice * new_qty * (1 - new_disc / 100);
+
+        new_pudisc = actual_uprice * (1 - new_disc / 100);
     }
     //calculate values
 
     //update values
 
     $(`.${ code }_product_qty`).val(new_qty);
+    $(`.${ code }_product_pudisc`).text(new_pudisc.toFixed(2));
     $(`.${ code }_product_subt`).text(new_subt.toFixed(2));
 
     array[row][1] = new_qty;
@@ -1600,7 +1612,8 @@ function add_loaded_to_table() {
     $.each(last_order_detail, function (i) {
 
         $.get(`/api/order_detail/${ last_order_detail[i] }/`, false).success(function (data) {
-            add_new_row(data.order_detail_product_code, data.order_detail_description, parseFloat(data.order_detail_amount), data.order_detail_unit, parseFloat(data.order_detail_price), parseFloat(data.order_detail_total), data.order_detail_product, data.order_detail_discount, data.order_detail_iv);
+            var pudisc = parseFloat(data.order_detail_price) * ((100 - data.order_detail_discount) / 100);
+            add_new_row(data.order_detail_product_code, data.order_detail_description, parseFloat(data.order_detail_amount), data.order_detail_unit, parseFloat(data.order_detail_price), parseFloat(data.order_detail_total), data.order_detail_product, data.order_detail_discount, data.order_detail_iv, pudisc);
         });
     });
 }
@@ -1636,6 +1649,24 @@ function check_data_filled() {
     } else {
         bool = true;
         return bool;
+    }
+}
+
+function PopupCenter(url, title, w, h) {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = width / 2 - w / 2 + dualScreenLeft;
+    var top = height / 2 - h / 2 + dualScreenTop;
+    var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+    // Puts focus on the newWindow
+    if (window.focus) {
+        newWindow.focus();
     }
 }
 
@@ -1695,6 +1726,34 @@ function main_edit_order() {
         if (new_order_array.length == 0) {
             Btn_Confirm.hide();
         }
+    });
+
+    html.on('click', '.popup_product', function () {
+
+        event.preventDefault();
+        // var newwindow=window.open('/admin/products/product/add/?_popup=1','','height=700,width=600');
+        PopupCenter('/admin/products/product/add/?popup', 'Agregar Producto', 500, 800);
+    });
+
+    html.on('click', '.refresh_product', function () {
+
+        search.html('');
+
+        search.append($('<option>', {
+            value: ''
+        })).trigger('change');
+
+        var $icon = $(".refresh_product");
+        var animateClass = "glyphicon-refresh-animate";
+
+        $icon.addClass(animateClass);
+        // setTimeout is to indicate some async operation
+        window.setTimeout(function () {
+            $icon.removeClass(animateClass);
+        }, 1000);
+
+        localStorage.Products = null;
+        products_to_memory();
     });
 
     html.on('change', '.no_qty', function () {
@@ -1956,13 +2015,14 @@ function add_product() {
 
         if (products.length) {
             var subt = products[0].product_price * qty * ((100 - products[0].product_discount) / 100);
+            var pudisc = products[0].product_price * ((100 - products[0].product_discount) / 100);
             var iv = 0;
 
             if (products[0].product_usetaxes) {
                 iv = products[0].product_taxes;
             }
 
-            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit, products[0].product_price, subt, products[0].id, products[0].product_discount, iv); //last 0 is disc
+            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit, products[0].product_price, subt, products[0].id, products[0].product_discount, iv, pudisc); //last 0 is disc
         } else {
             //FALTA mensaje de que no existe el producto
             alert('NO EXISTE EL PRODUCTO');
@@ -1976,7 +2036,7 @@ function add_product() {
         } //else
 }
 
-function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv) {
+function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv, pudisc) {
 
     let Btn_Confirm = $('.Btn_Confirm');
 
@@ -1992,6 +2052,7 @@ function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv) {
             class="form-control ${ code }_product_uprice no_uprice"/></td>
             <td style="padding:0; width:7%"><input value="${ disc }" type="number" style="width:100%;border:0px" 
             class="form-control ${ code }_product_disc no_disc"/></td>
+            <td class="${ code }_product_pudisc price" >${ pudisc.toFixed(2) }</td>
             <td class="${ code }_product_iv" >${ iv }%</td>
             <td class="${ code }_product_subt price" >${ subt.toFixed(2) }</td>
             <td style="text-align: center; padding:0; width:5%" class="inner-addon">
@@ -2015,6 +2076,7 @@ function row_update(row, code, qty, array, new_price, ctrl, disc) {
     var new_qty = 0;
     var new_subt = 0;
     var new_disc = 0;
+    var new_pudisc = 0;
 
     if (ctrl == 1) {
         //means add already existing product on table
@@ -2026,6 +2088,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc) {
         new_qty = parseFloat(actual_qty) + parseFloat(qty);
 
         new_subt = actual_uprice * new_qty * (1 - new_disc / 100);
+
+        new_pudisc = actual_uprice * (1 - new_disc / 100);
     }
 
     if (ctrl == 2) {
@@ -2037,6 +2101,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc) {
         new_qty = parseFloat(qty);
 
         new_subt = actual_uprice * new_qty * (1 - new_disc / 100);
+
+        new_pudisc = actual_uprice * (1 - new_disc / 100);
     }
 
     if (ctrl == 3) {
@@ -2049,6 +2115,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc) {
         new_disc = array[row][7];
 
         new_subt = actual_uprice * new_qty * (1 - new_disc / 100);
+
+        new_pudisc = actual_uprice * (1 - new_disc / 100);
     }
 
     if (ctrl == 4) {
@@ -2061,12 +2129,15 @@ function row_update(row, code, qty, array, new_price, ctrl, disc) {
         new_disc = disc;
 
         new_subt = actual_uprice * new_qty * (1 - new_disc / 100);
+
+        new_pudisc = actual_uprice * (1 - new_disc / 100);
     }
     //calculate values
 
     //update values
 
     $(`.${ code }_product_qty`).val(new_qty);
+    $(`.${ code }_product_pudisc`).text(new_pudisc.toFixed(2));
     $(`.${ code }_product_subt`).text(new_subt.toFixed(2));
 
     array[row][1] = new_qty;
@@ -2308,6 +2379,7 @@ function main_new_order() {
         localStorage.Products = null;
         products_to_memory();
     });
+
     html.on('change', '.no_qty', function () {
 
         event.preventDefault();
@@ -2447,7 +2519,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<div style=\"padding-top:20px;padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Nueva Orden de Compra:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-3 no-padding-left\"><form><!--fecha y proveedor--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Fecha:</span></div><div class=\"col-xs-12\"><input type=\"date\" class=\"form-control new_order_date\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Proveedor:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_supplier\"><option></option></select></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Proyecto:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_project\"><option></option></select></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Actividad:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_activity\"><option></option></select></div></div></div><!--producto y buscar--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Producto:<!--a(href=\"/admin/products/product/add/?_popup=1\").pull-right.popup_product.related-widget-wrapper-link.add-related--><span class=\"pull-right\"><i id=\"add_id_product\" class=\"glyphicon glyphicon-plus-sign popup_product related-widget-wrapper-link add-related\"></i></span><span style=\"padding-right:10px;text-aling:center\" class=\"pull-right\"><i class=\"glyphicon glyphicon-refresh refresh_product\"></i></span></span></div><div class=\"col-xs-12 inner-addon right-addon\"><i class=\"glyphicon glyphicon-barcode\"></i><input type=\"text\" id=\"id_product\" class=\"form-control order_product_code\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Buscar:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_search\"><option></option></select></div></div></div><div class=\"form-group row table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered\"><tbody><tr><th>Sub-Total:<td class=\"No_Sub_Total price\">0</td></th></tr><tr><th>IV:<td class=\"No_Sub_Iv price\">0</td></th></tr><tr><th>Total:<td class=\"No_Total price\">0</td></th></tr></tbody></table></div></div></form></div><div class=\"col-md-9 no-padding-left\"><form><!--tabla--><div class=\"form-group row table_row product_table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered NO_table\"><thead><tr><th>Códi</th><th>Desc</th><th>Cant</th><th>Unid</th><th>P.Un</th><th>Desc</th><th>IV</th><th>Subt</th><th></th></tr></thead><tbody class=\"table-body\"></tbody></table></div></div><!--confirmar y guardar--><div style=\"padding-right:15px;\" class=\"form-group row\"><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Confirm form-control btn btn-default pull-right\">Confirmar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Edit form-control btn btn-default pull-right\">Editar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Save form-control btn btn-default pull-right\">Guardar</button></div></div></form></div></div>");;return buf.join("");
+buf.push("<div style=\"padding-top:20px;padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Nueva Orden de Compra:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-3 no-padding-left\"><form><!--fecha y proveedor--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Fecha:</span></div><div class=\"col-xs-12\"><input type=\"date\" class=\"form-control new_order_date\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Proveedor:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_supplier\"><option></option></select></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Proyecto:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_project\"><option></option></select></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Actividad:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_activity\"><option></option></select></div></div></div><!--producto y buscar--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Producto:<!--a(href=\"/admin/products/product/add/?_popup=1\").pull-right.popup_product.related-widget-wrapper-link.add-related--><span class=\"pull-right\"><i id=\"add_id_product\" class=\"glyphicon glyphicon-plus-sign popup_product related-widget-wrapper-link add-related\"></i></span><span style=\"padding-right:10px;text-aling:center\" class=\"pull-right\"><i class=\"glyphicon glyphicon-refresh refresh_product\"></i></span></span></div><div class=\"col-xs-12 inner-addon right-addon\"><i class=\"glyphicon glyphicon-barcode\"></i><input type=\"text\" id=\"id_product\" class=\"form-control order_product_code\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Buscar:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_search\"><option></option></select></div></div></div><div class=\"form-group row table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered\"><tbody><tr><th>Sub-Total:<td class=\"No_Sub_Total price\">0</td></th></tr><tr><th>IV:<td class=\"No_Sub_Iv price\">0</td></th></tr><tr><th>Total:<td class=\"No_Total price\">0</td></th></tr></tbody></table></div></div></form></div><div class=\"col-md-9 no-padding-left\"><form><!--tabla--><div class=\"form-group row table_row product_table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered NO_table\"><thead><tr><th>Códi</th><th>Desc</th><th>Cant</th><th>Unid</th><th>P.Un</th><th>Desc %</th><th>P.Un(desc)</th><th>IV</th><th>Subt</th><th></th></tr></thead><tbody class=\"table-body\"></tbody></table></div></div><!--confirmar y guardar--><div style=\"padding-right:15px;\" class=\"form-group row\"><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Confirm form-control btn btn-default pull-right\">Confirmar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Edit form-control btn btn-default pull-right\">Editar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Save form-control btn btn-default pull-right\">Guardar</button></div></div></form></div></div>");;return buf.join("");
 };
 },{"jade/runtime":14}],8:[function(require,module,exports){
 var $ = require('jquery');

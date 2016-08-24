@@ -129,6 +129,7 @@ function add_product(){
 
         if (products.length){
             var subt = (products[0].product_price*qty)*((100-products[0].product_discount)/100);
+            var pudisc = (products[0].product_price)*((100-products[0].product_discount)/100);
             var iv=0;
 
             if( products[0].product_usetaxes){
@@ -136,7 +137,7 @@ function add_product(){
             }
 
             add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit,
-                        products[0].product_price , subt, products[0].id, products[0].product_discount, iv); //last 0 is disc
+                        products[0].product_price , subt, products[0].id, products[0].product_discount, iv, pudisc); //last 0 is disc
         }
         else{
             //FALTA mensaje de que no existe el producto
@@ -154,7 +155,7 @@ function add_product(){
 
 }
 
-function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv ){
+function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv, pudisc ){
 
     let Btn_Confirm = $('.Btn_Confirm');
 
@@ -170,6 +171,7 @@ function add_new_row(code, desc, qty, unit, uprice, subt, id, disc, iv ){
             class="form-control ${code}_product_uprice no_uprice"/></td>
             <td style="padding:0; width:7%"><input value="${disc}" type="number" style="width:100%;border:0px" 
             class="form-control ${code}_product_disc no_disc"/></td>
+            <td class="${code}_product_pudisc price" >${pudisc.toFixed(2)}</td>
             <td class="${code}_product_iv" >${iv}%</td>
             <td class="${code}_product_subt price" >${subt.toFixed(2)}</td>
             <td style="text-align: center; padding:0; width:5%" class="inner-addon">
@@ -195,6 +197,7 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
     var new_qty = 0;
     var new_subt = 0;
     var new_disc = 0;
+    var new_pudisc = 0;
 
 
     if (ctrl == 1){//means add already existing product on table
@@ -207,6 +210,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
 
         new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
 
+        new_pudisc = (actual_uprice)*(1-(new_disc/100));
+
     }
 
     if(ctrl == 2){//means update qty
@@ -217,6 +222,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
         new_qty = parseFloat(qty);
 
         new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
+
+        new_pudisc = (actual_uprice)*(1-(new_disc/100));
 
     }
 
@@ -230,6 +237,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
 
         new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
 
+        new_pudisc = (actual_uprice)*(1-(new_disc/100));
+
     }
 
     if(ctrl == 4){//means update discount
@@ -241,6 +250,8 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
         new_disc =  disc;
 
         new_subt = (actual_uprice*new_qty)*(1-(new_disc/100));
+
+        new_pudisc = (actual_uprice)*(1-(new_disc/100));
     }
     //calculate values
 
@@ -248,6 +259,7 @@ function row_update(row, code, qty, array, new_price, ctrl, disc){
     //update values
 
     $(`.${code}_product_qty`).val(new_qty);
+    $(`.${code}_product_pudisc`).text(new_pudisc.toFixed(2));
     $(`.${code}_product_subt`).text(new_subt.toFixed(2));
 
     array[row][1] = new_qty;
@@ -508,6 +520,7 @@ function main_new_order () {
         products_to_memory();
 
     });
+
     html.on('change','.no_qty', function () {
 
         event.preventDefault();
