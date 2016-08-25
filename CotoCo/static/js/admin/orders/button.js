@@ -10,7 +10,7 @@ $( document ).ready(function($){
         event.preventDefault();
         var id=$(this).closest('tr')[0].cells[1].outerText;
 
-        window.open(`/orderpdf/${id}/`)
+        window.open(`/orderpdf2/${id}/`)
 
     });
 
