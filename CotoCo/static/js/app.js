@@ -16,10 +16,11 @@ require('./order/edit/');
 require('./bill/new/');
 require('./bill/edit/');
 require('./report/by_order/');
+require('./request/new/');
 
 page();
 
-},{"./bill/edit/":2,"./bill/new/":3,"./order/edit/":5,"./order/new/":6,"./report/by_order/":8,"PriceFormat":10,"alertify":11,"bootstrap":12,"jquery":15,"page":16,"select2":20}],2:[function(require,module,exports){
+},{"./bill/edit/":2,"./bill/new/":3,"./order/edit/":5,"./order/new/":6,"./report/by_order/":8,"./request/new/":10,"PriceFormat":12,"alertify":13,"bootstrap":14,"jquery":17,"page":18,"select2":22}],2:[function(require,module,exports){
 var $ = require('jquery');
 var page = require('page');
 
@@ -631,7 +632,7 @@ function main_edit_bill() {
 
 $(document).on('ready', function () {});
 
-},{"../new/template.jade":4,"jquery":15,"page":16}],3:[function(require,module,exports){
+},{"../new/template.jade":4,"jquery":17,"page":18}],3:[function(require,module,exports){
 var $ = require('jquery');
 var page = require('page');
 
@@ -1222,7 +1223,7 @@ function main_new_bill() {
 
 $(document).on('ready', function () {});
 
-},{"./template.jade":4,"jquery":15,"page":16}],4:[function(require,module,exports){
+},{"./template.jade":4,"jquery":17,"page":18}],4:[function(require,module,exports){
 var jade = require("jade/runtime");
 
 module.exports = function template(locals) {
@@ -1232,7 +1233,7 @@ var jade_interp;
 
 buf.push("<div style=\"padding-top:20px;padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Nueva Factura de Compra:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-3 no-padding-left\"><form><!--fecha y proveedor--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Fecha de la factura:</span></div><div class=\"col-xs-12\"><input type=\"date\" class=\"form-control new_bill_date\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Proveedor:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_bill_supplier\"><option></option></select></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Orden de Compra:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_bill_order\"><option></option></select></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span># Factura del Proveedor:</span></div><div class=\"col-xs-12\"><input type=\"text\" class=\"form-control new_bill_supplier_bill\"/></div></div></div><!--producto y buscar--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Producto:</span></div><div class=\"col-xs-12 inner-addon right-addon\"><i class=\"glyphicon glyphicon-barcode\"></i><input type=\"text\" class=\"form-control bill_product_code\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Buscar:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_bill_search\"><option></option></select></div></div></div><div class=\"form-group row table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered\"><tbody><tr><th>Sub-Total:<td class=\"No_Sub_Total price\">0</td></th></tr><tr><th>IV:<td class=\"No_Sub_Iv price\">0</td></th></tr><tr><th>Total:<td class=\"No_Total price\">0</td></th></tr></tbody></table></div></div></form></div><div class=\"col-md-9 no-padding-left\"><form><!--tabla--><div class=\"form-group row table_row product_table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered NO_table\"><thead><tr><th>Códi</th><th>Desc</th><th>Cant</th><th>Unid</th><th>P.Un</th><th>Desc</th><th>IV</th><th>Subt</th><th></th></tr></thead><tbody class=\"table-body\"></tbody></table></div></div><!--confirmar y guardar--><div style=\"padding-right:15px;\" class=\"form-group row\"><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Confirm form-control btn btn-default pull-right\">Confirmar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Edit form-control btn btn-default pull-right\">Editar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Save form-control btn btn-default pull-right\">Guardar</button></div></div></form></div></div>");;return buf.join("");
 };
-},{"jade/runtime":14}],5:[function(require,module,exports){
+},{"jade/runtime":16}],5:[function(require,module,exports){
 
 var $ = require('jquery');
 var page = require('page');
@@ -1886,7 +1887,7 @@ function main_edit_order() {
 
 $(document).on('ready', function () {});
 
-},{"../new/template.jade":7,"jquery":15,"page":16}],6:[function(require,module,exports){
+},{"../new/template.jade":7,"jquery":17,"page":18}],6:[function(require,module,exports){
 var $ = require('jquery');
 var page = require('page');
 
@@ -2204,7 +2205,7 @@ function save_new_order() {
         alert("Hubo un problema al crear la orden, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
     }).success(function (data) {
         alert('Orden guardada con exito');
-        window.open(`/orderpdf/${ data.id }/`);
+        window.open(`/orderpdf2/${ data.id }/`);
         window.location.replace("/admin/orders/order/");
     }); //ajax
 }
@@ -2511,7 +2512,7 @@ function main_new_order() {
 
 $(document).on('ready', function () {});
 
-},{"./template.jade":7,"jquery":15,"page":16}],7:[function(require,module,exports){
+},{"./template.jade":7,"jquery":17,"page":18}],7:[function(require,module,exports){
 var jade = require("jade/runtime");
 
 module.exports = function template(locals) {
@@ -2521,7 +2522,7 @@ var jade_interp;
 
 buf.push("<div style=\"padding-top:20px;padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Nueva Orden de Compra:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-3 no-padding-left\"><form><!--fecha y proveedor--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Fecha:</span></div><div class=\"col-xs-12\"><input type=\"date\" class=\"form-control new_order_date\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Proveedor:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_supplier\"><option></option></select></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Proyecto:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_project\"><option></option></select></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Actividad:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_activity\"><option></option></select></div></div></div><!--producto y buscar--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Producto:<!--a(href=\"/admin/products/product/add/?_popup=1\").pull-right.popup_product.related-widget-wrapper-link.add-related--><span class=\"pull-right\"><i id=\"add_id_product\" class=\"glyphicon glyphicon-plus-sign popup_product related-widget-wrapper-link add-related\"></i></span><span style=\"padding-right:10px;text-aling:center\" class=\"pull-right\"><i class=\"glyphicon glyphicon-refresh refresh_product\"></i></span></span></div><div class=\"col-xs-12 inner-addon right-addon\"><i class=\"glyphicon glyphicon-barcode\"></i><input type=\"text\" id=\"id_product\" class=\"form-control order_product_code\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Buscar:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_order_search\"><option></option></select></div></div></div><div class=\"form-group row table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered\"><tbody><tr><th>Sub-Total:<td class=\"No_Sub_Total price\">0</td></th></tr><tr><th>IV:<td class=\"No_Sub_Iv price\">0</td></th></tr><tr><th>Total:<td class=\"No_Total price\">0</td></th></tr></tbody></table></div></div></form></div><div class=\"col-md-9 no-padding-left\"><form><!--tabla--><div class=\"form-group row table_row product_table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered NO_table\"><thead><tr><th>Códi</th><th>Desc</th><th>Cant</th><th>Unid</th><th>P.Un</th><th>Desc %</th><th>P.Un(desc)</th><th>IV</th><th>Subt</th><th></th></tr></thead><tbody class=\"table-body\"></tbody></table></div></div><!--confirmar y guardar--><div style=\"padding-right:15px;\" class=\"form-group row\"><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Confirm form-control btn btn-default pull-right\">Confirmar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Edit form-control btn btn-default pull-right\">Editar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Save form-control btn btn-default pull-right\">Guardar</button></div></div></form></div></div>");;return buf.join("");
 };
-},{"jade/runtime":14}],8:[function(require,module,exports){
+},{"jade/runtime":16}],8:[function(require,module,exports){
 var $ = require('jquery');
 var page = require('page');
 
@@ -2786,7 +2787,7 @@ function main_new_order_report() {
     Btn_Print.hide();
 }
 
-},{"./template.jade":9,"jquery":15,"page":16}],9:[function(require,module,exports){
+},{"./template.jade":9,"jquery":17,"page":18}],9:[function(require,module,exports){
 var jade = require("jade/runtime");
 
 module.exports = function template(locals) {
@@ -2796,7 +2797,480 @@ var jade_interp;
 
 buf.push("<div style=\"padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Reporte por Orden de Compra:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-7 no-padding-left\"><form><!--fecha y proveedor--><div class=\"form-group row\"><div class=\"col-xs-6 col no-padding-left\"><div class=\"col-xs-12\"><span>Fecha:</span></div><div class=\"col-xs-12\"><input type=\"date\" class=\"form-control by_order_date\"/></div></div><div class=\"col-xs-6 col no-padding-left\"><div class=\"col-xs-12\"><span>Proyecto:</span></div><div class=\"col-xs-12\"><select class=\"form-control by_order_project\"><option></option></select></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-6 no-padding-left\"><div class=\"col-xs-12\"><span>Proveedor:</span></div><div class=\"col-xs-12\"><select class=\"form-control by_order_supplier\"><option></option></select></div></div><div class=\"col-xs-6 no-padding-left\"><div class=\"col-xs-12\"><span>Orden de Compra:</span></div><div class=\"col-xs-12\"><select class=\"form-control by_order_order\"><option></option></select></div></div></div><div class=\"form-group row\"><div class=\"col-xs-6 no-padding-left\"><div class=\"col-xs-10\"><button type=\"button\" class=\"Btn_Confirm form-control btn btn-default\">Generar</button><button type=\"button\" class=\"Btn_Print form-control btn btn-default\">Imprimir</button></div></div></div></form></div><div style=\"margin-top:20px\" class=\"col-md-5 no-padding-left\"><form></form><div class=\"form-group row table_row\"><div class=\"col-xs-12\"><span>Totales:</span><table class=\"table table-bordered\"><tbody><tr><th>Total orden:<td class=\"No_Sub_Total price\">0</td></th></tr><tr><th>Total Facturas:<td class=\"No_Sub_Iv price\">0</td></th></tr><tr><th>Diferencia:<td class=\"No_Total price\">0</td></th></tr></tbody></table></div></div></div><div class=\"col-md-12 no-padding-left\"><form><!--tabla--><div class=\"form-group row table_row product_table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered NO_table\"><thead><tr class=\"table-head\"><th>Códi</th><th>Desc</th><th>Cant</th><th>P.Orde</th></tr></thead><tbody class=\"table-body\"></tbody></table></div></div></form></div></div>");;return buf.join("");
 };
-},{"jade/runtime":14}],10:[function(require,module,exports){
+},{"jade/runtime":16}],10:[function(require,module,exports){
+var $ = require('jquery');
+var page = require('page');
+
+var template = require('./template.jade');
+
+//GLOBAL VARS
+var new_request_array = [];
+var new_request_detail = [];
+
+//PAGE NAVIGATION
+page('/admin/requests/request/create/', new_request);
+
+//FUNCTIONS
+function new_request() {
+
+    $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+            if (settings.type == "POST") {
+                xhr.setRequestHeader("X-CSRFToken", $('[name="csrfmiddlewaretoken"]').val());
+            }
+            if (settings.type == "PUT") {
+                xhr.setRequestHeader("X-CSRFToken", $('[name="csrfmiddlewaretoken"]').val());
+            }
+            if (settings.type == "PATCH") {
+                xhr.setRequestHeader("X-CSRFToken", $('[name="csrfmiddlewaretoken"]').val());
+            }
+        }
+    }); //ajax setup
+
+    $('#page-content-wrapper').html(template());
+
+    localStorage.Products = null;
+
+    date_to_today('.new_request_date');
+
+    add_from_API_to_select('projects', 'id', 'project_name', '.new_request_project');
+
+    add_from_API_to_select('activities', 'id', 'activity_name', '.new_request_activity');
+
+    products_to_memory();
+
+    $('li.active').removeClass('active');
+    $('.new_request_li').addClass('active');
+
+    main_new_order();
+}
+
+function products_to_memory() {
+
+    $.get('/api/products/', function (data) {
+
+        $.each(data, function (i) {
+
+            $('.new_order_search').append($('<option>', {
+                value: data[i].product_code,
+                text: data[i].product_description
+            }));
+        });
+
+        localStorage.Products = JSON.stringify(data);
+    });
+} //SAVE PRODUCTS TO LOCAL STORAGE
+
+function add_from_API_to_select(api, id_field, text_field, select_class) {
+    $.get(`/api/${ api }/`, function (data) {
+
+        $.each(data, function (i) {
+
+            $(select_class).append($('<option>', {
+                value: data[i][id_field],
+                text: data[i][text_field]
+            }));
+        });
+    });
+}
+
+function date_to_today(date_field_class) {
+    //date
+    var now = new Date();
+    var day = ("0" + now.getDate()).slice(-2);
+    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+    var year = now.getFullYear();
+    var today = year + "-" + month + "-" + day;
+    $(date_field_class).val(today);
+}
+
+function is_code_on_array(array, code) {
+
+    var control = -1;
+
+    $.each(array, function (i) {
+
+        if (array[i][0] == code) {
+            control = i;
+            return false;
+        }
+    });
+
+    return control;
+}
+
+function add_product() {
+
+    let codeString = $('.request_product_code').val();
+    let products = JSON.parse(localStorage.Products);
+
+    var code = codeString.split('*')[0];
+    var qty = codeString.split('*')[1];
+
+    if (qty === undefined) {
+        qty = 1;
+    }
+
+    var is_on_array = is_code_on_array(new_request_array, code);
+
+    if (is_on_array === -1) {
+        //filter product by code
+        products = $.grep(products, function (element) {
+            return element.product_code == code;
+        });
+
+        if (products.length) {
+
+            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit, products[0].id); //last 0 is disc
+        } else {
+            //FALTA mensaje de que no existe el producto
+            alert('NO EXISTE EL PRODUCTO');
+        }
+    } //if
+
+    else {
+
+            new_request_array = row_update(is_on_array, code, qty, new_request_array, 1);
+        } //else
+}
+
+function add_new_row(code, desc, qty, unit, id) {
+
+    let Btn_Confirm = $('.Btn_Confirm');
+
+    new_request_array.push([code, qty, desc, unit, id]);
+
+    var new_row = `<tr class="${ code }">
+            <td>${ code }</td>
+            <td>${ desc }</td>
+            <td style="padding:0; width:8%"><input type="number" style="width:100%;border:0px" 
+            class="form-control ${ code }_product_qty no_qty"/></td>
+            <td style="width:6%">${ unit }</td>
+            <td style="text-align: center; padding:0; width:5%" class="inner-addon">
+            <i class="fa fa-minus remove_row"></i></td>
+            </tr>`;
+
+    $('.table-body').append(new_row);
+
+    $(`.${ code }_product_qty`).val(qty);
+
+    Btn_Confirm.show();
+}
+
+function row_update(row, code, qty, array, ctrl) {
+
+    var actual_qty = 0;
+    var actual_uprice = 0;
+    var new_qty = 0;
+    var new_subt = 0;
+    var new_disc = 0;
+    var new_pudisc = 0;
+
+    if (ctrl == 1) {
+        //means add already existing product on table
+
+        actual_qty = array[row][1];
+
+        new_qty = parseFloat(actual_qty) + parseFloat(qty);
+    }
+
+    if (ctrl == 2) {
+        //means update qty
+
+        new_qty = parseFloat(qty);
+    }
+
+    //update values
+
+    $(`.${ code }_product_qty`).val(new_qty);
+
+    array[row][1] = new_qty;
+
+    return array;
+}
+
+function save_new_request() {
+
+    save_detail();
+    //new_request_array.push([code, qty, desc, unit, id]);
+    $.ajax({
+        method: "POST",
+        url: "/api/requests/",
+        async: false,
+
+        data: JSON.stringify({
+            "request_date": $('.new_request_date').val(),
+            "request_project": $('.new_request_project').val(),
+            "request_activity": $('.new_request_activity').val(),
+            "request_product_list": new_request_detail
+
+        }), //JSON object
+        contentType: "application/json; charset=utf-8",
+        dataType: "json"
+    }).fail(function (data) {
+        new_request_detail = [];
+        console.log(data.responseText);
+        alert("Hubo un problema al crear el pedido, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+    }).success(function (data) {
+        alert('Pedido guardado con exito');
+        //window.open(`/orderpdf/${data.id}/`);
+        window.location.replace("/admin/orders/order/");
+    }); //ajax
+}
+
+function save_detail() {
+
+    new_request_detail = [];
+    //new_request_array.push([code, qty, desc, unit, id]);
+    $.each(new_request_array, function (i) {
+        $.ajax({
+            method: "POST",
+            url: "/api/request_detail/",
+            async: false,
+
+            data: JSON.stringify({
+                "request_detail_product": new_request_array[i][4],
+                "request_detail_product_code": new_request_array[i][0],
+                "request_detail_description": new_request_array[i][2],
+                "request_detail_unit": new_request_array[i][3],
+                "request_detail_amount": new_request_array[i][1]
+
+            }), //JSON object
+            contentType: "application/json; charset=utf-8",
+            dataType: "json"
+        }).fail(function (data) {
+            console.log(data.responseText);
+            alertify.alert("Hubo un problema al crear el pedido, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+        }).success(function (data) {
+            new_request_detail.push(data.id);
+        }); //ajax
+    });
+}
+
+function check_data_filled() {
+
+    //SELECTORS
+    var date = $('.new_request_date');
+    var project = $('.new_request_project');
+    var activity = $('.new_request_activity');
+    var bool = false;
+
+    if (!date.val()) {
+        bool = false;
+        return bool;
+    }
+
+    if (!project.val()) {
+        bool = false;
+        alertify.alert('Debe Elegir un Proyecto');
+        return bool;
+    }
+    if (!activity.val()) {
+        bool = false;
+        alertify.alert('Debe Elegir una Actividad');
+        return bool;
+    } else {
+        bool = true;
+        return bool;
+    }
+}
+
+function PopupCenter(url, title, w, h) {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = width / 2 - w / 2 + dualScreenLeft;
+    var top = height / 2 - h / 2 + dualScreenTop;
+    var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+    // Puts focus on the newWindow
+    if (window.focus) {
+        newWindow.focus();
+    }
+}
+
+// MAIN AND DOC READY
+function main_new_order() {
+
+    //Selectors
+    var html = $('html');
+
+    var code = $('.request_product_code');
+    var search = $('.new_request_search');
+    var project = $('.new_request_project');
+    var activity = $('.new_request_activity');
+
+    var Btn_Confirm = $('.Btn_Confirm');
+    var Btn_Edit = $('.Btn_Edit');
+    var Btn_Save = $('.Btn_Save');
+
+    new_request_array = [];
+    new_request_detail = [];
+
+    //Browser Events
+
+    code.on('keypress', function (event) {
+
+        if (event.which === 13) {
+            event.preventDefault();
+            add_product();
+            search.val('').trigger('change');
+            code.val('');
+            code.focus();
+        }
+    });
+
+    search.on('select2:select', function (event) {
+        event.preventDefault();
+        code.val(search.val());
+        code.focus();
+    });
+
+    html.on('click', '.remove_row', function () {
+
+        event.preventDefault();
+        var row = $(this).closest("tr");
+        var rowIndex = row.index();
+
+        new_request_array.splice(rowIndex, 1);
+
+        $(this).parent().parent().remove();
+
+        if (new_request_array.length == 0) {
+            Btn_Confirm.hide();
+        }
+    });
+
+    html.on('click', '.popup_product', function () {
+
+        event.preventDefault();
+        // var newwindow=window.open('/admin/products/product/add/?_popup=1','','height=700,width=600');
+        PopupCenter('/admin/products/product/add/?popup', 'Agregar Producto', 500, 800);
+    });
+
+    html.on('click', '.refresh_product', function () {
+
+        search.html('');
+
+        search.append($('<option>', {
+            value: ''
+        })).trigger('change');
+
+        var $icon = $(".refresh_product");
+        var animateClass = "glyphicon-refresh-animate";
+
+        $icon.addClass(animateClass);
+        // setTimeout is to indicate some async operation
+        window.setTimeout(function () {
+            $icon.removeClass(animateClass);
+        }, 1000);
+
+        localStorage.Products = null;
+        products_to_memory();
+    });
+
+    html.on('change', '.no_qty', function () {
+
+        event.preventDefault();
+        let row = $(this).closest("tr");
+        let rowIndex = row.index();
+
+        let code = new_request_array[rowIndex][0];
+        let qty = $(`.${ code }_product_qty`).val();
+
+        row_update(rowIndex, code, qty, new_request_array, 2);
+    });
+
+    //Button Events
+    Btn_Confirm.on('click', function (event) {
+
+        event.preventDefault();
+
+        var bool;
+
+        bool = check_data_filled();
+
+        if (bool == true) {
+
+            $('.main-page-cont').find(':input').prop('disabled', true);
+            $('.remove_row').addClass('unclickable');
+            $('.add_note').addClass('unclickable');
+
+            Btn_Confirm.hide();
+            Btn_Edit.show().prop('disabled', false);
+            Btn_Save.show().prop('disabled', false);
+        }
+    });
+
+    Btn_Edit.on('click', function (event) {
+        event.preventDefault();
+
+        $('.remove_row').removeClass('unclickable');
+        $('.add_note').removeClass('unclickable');
+        $('.main-page-cont').find(':input').prop('disabled', false);
+
+        Btn_Confirm.show();
+        Btn_Edit.hide();
+        Btn_Save.hide();
+    });
+
+    Btn_Save.on('click', function (event) {
+
+        event.preventDefault();
+
+        save_new_request();
+    });
+
+    //Init Items
+
+    search.select2({
+
+        theme: "bootstrap",
+        placeholder: "Busqueda...",
+        width: '100%',
+        allowClear: true,
+        language: "es"
+    });
+
+    project.select2({
+        theme: "bootstrap",
+        placeholder: "Seleccione...",
+        width: '100%',
+        allowClear: true,
+        language: "es"
+    });
+
+    activity.select2({
+        theme: "bootstrap",
+        placeholder: "Seleccione...",
+        width: '100%',
+        allowClear: true,
+        language: "es"
+    });
+
+    //Hide Buttons
+    Btn_Confirm.hide();
+    Btn_Edit.hide();
+    Btn_Save.hide();
+}
+
+$(document).on('ready', function () {});
+
+},{"./template.jade":11,"jquery":17,"page":18}],11:[function(require,module,exports){
+var jade = require("jade/runtime");
+
+module.exports = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+var jade_interp;
+
+buf.push("<div style=\"padding-top:20px;padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Nueva Orden de Pedido:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-3 no-padding-left\"><form><!--fecha y proveedor--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Fecha:</span></div><div class=\"col-xs-12\"><input type=\"date\" class=\"form-control new_request_date\"/></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Proyecto:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_request_project\"><option></option></select></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Actividad:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_request_activity\"><option></option></select></div></div></div><!--producto y buscar--><div class=\"form-group row\"><div class=\"col-xs-6 col-md-12 no-padding-left\"><div class=\"col-xs-12\"><span>Producto:<!--a(href=\"/admin/products/product/add/?_popup=1\").pull-right.popup_product.related-widget-wrapper-link.add-related--><span class=\"pull-right\"><i id=\"add_id_product\" class=\"glyphicon glyphicon-plus-sign popup_product related-widget-wrapper-link add-related\"></i></span><span style=\"padding-right:10px;text-aling:center\" class=\"pull-right\"><i class=\"glyphicon glyphicon-refresh refresh_product\"></i></span></span></div><div class=\"col-xs-12 inner-addon right-addon\"><i class=\"glyphicon glyphicon-barcode\"></i><input type=\"text\" id=\"id_product\" class=\"form-control request_product_code\"/></div></div><div class=\"col-xs-6 col-md-12 no-padding-left bottom_row\"><div class=\"col-xs-12\"><span>Buscar:</span></div><div class=\"col-xs-12\"><select class=\"form-control new_request_search\"><option></option></select></div></div></div></form></div><div class=\"col-md-9 no-padding-left\"><form><!--tabla--><div class=\"form-group row table_row product_table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered NO_table\"><thead><tr><th>Códi</th><th>Desc</th><th>Cant</th><th>Unid</th><th></th></tr></thead><tbody class=\"table-body\"></tbody></table></div></div><!--confirmar y guardar--><div style=\"padding-right:15px;\" class=\"form-group row\"><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Confirm form-control btn btn-default pull-right\">Confirmar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Edit form-control btn btn-default pull-right\">Editar</button></div><div class=\"col-xs-12 no-padding-left\"><button type=\"button\" class=\"BTN_NO Btn_Save form-control btn btn-default pull-right\">Guardar</button></div></div></form></div></div>");;return buf.join("");
+};
+},{"jade/runtime":16}],12:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*
@@ -3076,7 +3550,7 @@ buf.push("<div style=\"padding-left:40px;\" class=\"main-page-cont\"><div class=
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*! alertifyjs - v1.8.0 - Mohammad Younes <Mohammad@alertifyjs.com> (http://alertifyjs.com) */
@@ -3644,7 +4118,7 @@ buf.push("<div style=\"padding-left:40px;\" class=\"main-page-cont\"><div class=
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],12:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
@@ -6016,9 +6490,9 @@ if (typeof jQuery === 'undefined') {
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],13:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 
-},{}],14:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 (function (global){
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.jade = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
@@ -6273,7 +6747,7 @@ exports.DebugItem = function DebugItem(lineno, filename) {
 },{}]},{},[1])(1)
 });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"fs":13}],15:[function(require,module,exports){
+},{"fs":15}],17:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
@@ -17290,7 +17764,7 @@ return jQuery;
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],16:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 (function (process){
   /* globals require, module */
 
@@ -17916,7 +18390,7 @@ return jQuery;
   page.sameOrigin = sameOrigin;
 
 }).call(this,require('_process'))
-},{"_process":19,"path-to-regexp":17}],17:[function(require,module,exports){
+},{"_process":21,"path-to-regexp":19}],19:[function(require,module,exports){
 var isarray = require('isarray')
 
 /**
@@ -18308,12 +18782,12 @@ function pathToRegexp (path, keys, options) {
   return stringToRegexp(path, keys, options)
 }
 
-},{"isarray":18}],18:[function(require,module,exports){
+},{"isarray":20}],20:[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
 
-},{}],19:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -18434,7 +18908,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],20:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*! Select2 4.0.3 | https://github.com/select2/select2/blob/master/LICENSE.md */!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):a("object"==typeof exports?__browserify_shim_require__("jquery"):jQuery)}(function(a){var b=function(){if(a&&a.fn&&a.fn.select2&&a.fn.select2.amd)var b=a.fn.select2.amd;var b;return function(){if(!b||!b.requirejs){b?c=b:b={};var a,c,d;!function(b){function e(a,b){return u.call(a,b)}function f(a,b){var c,d,e,f,g,h,i,j,k,l,m,n=b&&b.split("/"),o=s.map,p=o&&o["*"]||{};if(a&&"."===a.charAt(0))if(b){for(a=a.split("/"),g=a.length-1,s.nodeIdCompat&&w.test(a[g])&&(a[g]=a[g].replace(w,"")),a=n.slice(0,n.length-1).concat(a),k=0;k<a.length;k+=1)if(m=a[k],"."===m)a.splice(k,1),k-=1;else if(".."===m){if(1===k&&(".."===a[2]||".."===a[0]))break;k>0&&(a.splice(k-1,2),k-=2)}a=a.join("/")}else 0===a.indexOf("./")&&(a=a.substring(2));if((n||p)&&o){for(c=a.split("/"),k=c.length;k>0;k-=1){if(d=c.slice(0,k).join("/"),n)for(l=n.length;l>0;l-=1)if(e=o[n.slice(0,l).join("/")],e&&(e=e[d])){f=e,h=k;break}if(f)break;!i&&p&&p[d]&&(i=p[d],j=k)}!f&&i&&(f=i,h=j),f&&(c.splice(0,h,f),a=c.join("/"))}return a}function g(a,c){return function(){var d=v.call(arguments,0);return"string"!=typeof d[0]&&1===d.length&&d.push(null),n.apply(b,d.concat([a,c]))}}function h(a){return function(b){return f(b,a)}}function i(a){return function(b){q[a]=b}}function j(a){if(e(r,a)){var c=r[a];delete r[a],t[a]=!0,m.apply(b,c)}if(!e(q,a)&&!e(t,a))throw new Error("No "+a);return q[a]}function k(a){var b,c=a?a.indexOf("!"):-1;return c>-1&&(b=a.substring(0,c),a=a.substring(c+1,a.length)),[b,a]}function l(a){return function(){return s&&s.config&&s.config[a]||{}}}var m,n,o,p,q={},r={},s={},t={},u=Object.prototype.hasOwnProperty,v=[].slice,w=/\.js$/;o=function(a,b){var c,d=k(a),e=d[0];return a=d[1],e&&(e=f(e,b),c=j(e)),e?a=c&&c.normalize?c.normalize(a,h(b)):f(a,b):(a=f(a,b),d=k(a),e=d[0],a=d[1],e&&(c=j(e))),{f:e?e+"!"+a:a,n:a,pr:e,p:c}},p={require:function(a){return g(a)},exports:function(a){var b=q[a];return"undefined"!=typeof b?b:q[a]={}},module:function(a){return{id:a,uri:"",exports:q[a],config:l(a)}}},m=function(a,c,d,f){var h,k,l,m,n,s,u=[],v=typeof d;if(f=f||a,"undefined"===v||"function"===v){for(c=!c.length&&d.length?["require","exports","module"]:c,n=0;n<c.length;n+=1)if(m=o(c[n],f),k=m.f,"require"===k)u[n]=p.require(a);else if("exports"===k)u[n]=p.exports(a),s=!0;else if("module"===k)h=u[n]=p.module(a);else if(e(q,k)||e(r,k)||e(t,k))u[n]=j(k);else{if(!m.p)throw new Error(a+" missing "+k);m.p.load(m.n,g(f,!0),i(k),{}),u[n]=q[k]}l=d?d.apply(q[a],u):void 0,a&&(h&&h.exports!==b&&h.exports!==q[a]?q[a]=h.exports:l===b&&s||(q[a]=l))}else a&&(q[a]=d)},a=c=n=function(a,c,d,e,f){if("string"==typeof a)return p[a]?p[a](c):j(o(a,c).f);if(!a.splice){if(s=a,s.deps&&n(s.deps,s.callback),!c)return;c.splice?(a=c,c=d,d=null):a=b}return c=c||function(){},"function"==typeof d&&(d=e,e=f),e?m(b,a,c,d):setTimeout(function(){m(b,a,c,d)},4),n},n.config=function(a){return n(a)},a._defined=q,d=function(a,b,c){if("string"!=typeof a)throw new Error("See almond README: incorrect module build, no module name");b.splice||(c=b,b=[]),e(q,a)||e(r,a)||(r[a]=[a,b,c])},d.amd={jQuery:!0}}(),b.requirejs=a,b.require=c,b.define=d}}(),b.define("almond",function(){}),b.define("jquery",[],function(){var b=a||$;return null==b&&console&&console.error&&console.error("Select2: An instance of jQuery or a jQuery-compatible library was not found. Make sure that you are including jQuery before Select2 on your web page."),b}),b.define("select2/utils",["jquery"],function(a){function b(a){var b=a.prototype,c=[];for(var d in b){var e=b[d];"function"==typeof e&&"constructor"!==d&&c.push(d)}return c}var c={};c.Extend=function(a,b){function c(){this.constructor=a}var d={}.hasOwnProperty;for(var e in b)d.call(b,e)&&(a[e]=b[e]);return c.prototype=b.prototype,a.prototype=new c,a.__super__=b.prototype,a},c.Decorate=function(a,c){function d(){var b=Array.prototype.unshift,d=c.prototype.constructor.length,e=a.prototype.constructor;d>0&&(b.call(arguments,a.prototype.constructor),e=c.prototype.constructor),e.apply(this,arguments)}function e(){this.constructor=d}var f=b(c),g=b(a);c.displayName=a.displayName,d.prototype=new e;for(var h=0;h<g.length;h++){var i=g[h];d.prototype[i]=a.prototype[i]}for(var j=(function(a){var b=function(){};a in d.prototype&&(b=d.prototype[a]);var e=c.prototype[a];return function(){var a=Array.prototype.unshift;return a.call(arguments,b),e.apply(this,arguments)}}),k=0;k<f.length;k++){var l=f[k];d.prototype[l]=j(l)}return d};var d=function(){this.listeners={}};return d.prototype.on=function(a,b){this.listeners=this.listeners||{},a in this.listeners?this.listeners[a].push(b):this.listeners[a]=[b]},d.prototype.trigger=function(a){var b=Array.prototype.slice,c=b.call(arguments,1);this.listeners=this.listeners||{},null==c&&(c=[]),0===c.length&&c.push({}),c[0]._type=a,a in this.listeners&&this.invoke(this.listeners[a],b.call(arguments,1)),"*"in this.listeners&&this.invoke(this.listeners["*"],arguments)},d.prototype.invoke=function(a,b){for(var c=0,d=a.length;d>c;c++)a[c].apply(this,b)},c.Observable=d,c.generateChars=function(a){for(var b="",c=0;a>c;c++){var d=Math.floor(36*Math.random());b+=d.toString(36)}return b},c.bind=function(a,b){return function(){a.apply(b,arguments)}},c._convertData=function(a){for(var b in a){var c=b.split("-"),d=a;if(1!==c.length){for(var e=0;e<c.length;e++){var f=c[e];f=f.substring(0,1).toLowerCase()+f.substring(1),f in d||(d[f]={}),e==c.length-1&&(d[f]=a[b]),d=d[f]}delete a[b]}}return a},c.hasScroll=function(b,c){var d=a(c),e=c.style.overflowX,f=c.style.overflowY;return e!==f||"hidden"!==f&&"visible"!==f?"scroll"===e||"scroll"===f?!0:d.innerHeight()<c.scrollHeight||d.innerWidth()<c.scrollWidth:!1},c.escapeMarkup=function(a){var b={"\\":"&#92;","&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","/":"&#47;"};return"string"!=typeof a?a:String(a).replace(/[&<>"'\/\\]/g,function(a){return b[a]})},c.appendMany=function(b,c){if("1.7"===a.fn.jquery.substr(0,3)){var d=a();a.map(c,function(a){d=d.add(a)}),c=d}b.append(c)},c}),b.define("select2/results",["jquery","./utils"],function(a,b){function c(a,b,d){this.$element=a,this.data=d,this.options=b,c.__super__.constructor.call(this)}return b.Extend(c,b.Observable),c.prototype.render=function(){var b=a('<ul class="select2-results__options" role="tree"></ul>');return this.options.get("multiple")&&b.attr("aria-multiselectable","true"),this.$results=b,b},c.prototype.clear=function(){this.$results.empty()},c.prototype.displayMessage=function(b){var c=this.options.get("escapeMarkup");this.clear(),this.hideLoading();var d=a('<li role="treeitem" aria-live="assertive" class="select2-results__option"></li>'),e=this.options.get("translations").get(b.message);d.append(c(e(b.args))),d[0].className+=" select2-results__message",this.$results.append(d)},c.prototype.hideMessages=function(){this.$results.find(".select2-results__message").remove()},c.prototype.append=function(a){this.hideLoading();var b=[];if(null==a.results||0===a.results.length)return void(0===this.$results.children().length&&this.trigger("results:message",{message:"noResults"}));a.results=this.sort(a.results);for(var c=0;c<a.results.length;c++){var d=a.results[c],e=this.option(d);b.push(e)}this.$results.append(b)},c.prototype.position=function(a,b){var c=b.find(".select2-results");c.append(a)},c.prototype.sort=function(a){var b=this.options.get("sorter");return b(a)},c.prototype.highlightFirstItem=function(){var a=this.$results.find(".select2-results__option[aria-selected]"),b=a.filter("[aria-selected=true]");b.length>0?b.first().trigger("mouseenter"):a.first().trigger("mouseenter"),this.ensureHighlightVisible()},c.prototype.setClasses=function(){var b=this;this.data.current(function(c){var d=a.map(c,function(a){return a.id.toString()}),e=b.$results.find(".select2-results__option[aria-selected]");e.each(function(){var b=a(this),c=a.data(this,"data"),e=""+c.id;null!=c.element&&c.element.selected||null==c.element&&a.inArray(e,d)>-1?b.attr("aria-selected","true"):b.attr("aria-selected","false")})})},c.prototype.showLoading=function(a){this.hideLoading();var b=this.options.get("translations").get("searching"),c={disabled:!0,loading:!0,text:b(a)},d=this.option(c);d.className+=" loading-results",this.$results.prepend(d)},c.prototype.hideLoading=function(){this.$results.find(".loading-results").remove()},c.prototype.option=function(b){var c=document.createElement("li");c.className="select2-results__option";var d={role:"treeitem","aria-selected":"false"};b.disabled&&(delete d["aria-selected"],d["aria-disabled"]="true"),null==b.id&&delete d["aria-selected"],null!=b._resultId&&(c.id=b._resultId),b.title&&(c.title=b.title),b.children&&(d.role="group",d["aria-label"]=b.text,delete d["aria-selected"]);for(var e in d){var f=d[e];c.setAttribute(e,f)}if(b.children){var g=a(c),h=document.createElement("strong");h.className="select2-results__group";a(h);this.template(b,h);for(var i=[],j=0;j<b.children.length;j++){var k=b.children[j],l=this.option(k);i.push(l)}var m=a("<ul></ul>",{"class":"select2-results__options select2-results__options--nested"});m.append(i),g.append(h),g.append(m)}else this.template(b,c);return a.data(c,"data",b),c},c.prototype.bind=function(b,c){var d=this,e=b.id+"-results";this.$results.attr("id",e),b.on("results:all",function(a){d.clear(),d.append(a.data),b.isOpen()&&(d.setClasses(),d.highlightFirstItem())}),b.on("results:append",function(a){d.append(a.data),b.isOpen()&&d.setClasses()}),b.on("query",function(a){d.hideMessages(),d.showLoading(a)}),b.on("select",function(){b.isOpen()&&(d.setClasses(),d.highlightFirstItem())}),b.on("unselect",function(){b.isOpen()&&(d.setClasses(),d.highlightFirstItem())}),b.on("open",function(){d.$results.attr("aria-expanded","true"),d.$results.attr("aria-hidden","false"),d.setClasses(),d.ensureHighlightVisible()}),b.on("close",function(){d.$results.attr("aria-expanded","false"),d.$results.attr("aria-hidden","true"),d.$results.removeAttr("aria-activedescendant")}),b.on("results:toggle",function(){var a=d.getHighlightedResults();0!==a.length&&a.trigger("mouseup")}),b.on("results:select",function(){var a=d.getHighlightedResults();if(0!==a.length){var b=a.data("data");"true"==a.attr("aria-selected")?d.trigger("close",{}):d.trigger("select",{data:b})}}),b.on("results:previous",function(){var a=d.getHighlightedResults(),b=d.$results.find("[aria-selected]"),c=b.index(a);if(0!==c){var e=c-1;0===a.length&&(e=0);var f=b.eq(e);f.trigger("mouseenter");var g=d.$results.offset().top,h=f.offset().top,i=d.$results.scrollTop()+(h-g);0===e?d.$results.scrollTop(0):0>h-g&&d.$results.scrollTop(i)}}),b.on("results:next",function(){var a=d.getHighlightedResults(),b=d.$results.find("[aria-selected]"),c=b.index(a),e=c+1;if(!(e>=b.length)){var f=b.eq(e);f.trigger("mouseenter");var g=d.$results.offset().top+d.$results.outerHeight(!1),h=f.offset().top+f.outerHeight(!1),i=d.$results.scrollTop()+h-g;0===e?d.$results.scrollTop(0):h>g&&d.$results.scrollTop(i)}}),b.on("results:focus",function(a){a.element.addClass("select2-results__option--highlighted")}),b.on("results:message",function(a){d.displayMessage(a)}),a.fn.mousewheel&&this.$results.on("mousewheel",function(a){var b=d.$results.scrollTop(),c=d.$results.get(0).scrollHeight-b+a.deltaY,e=a.deltaY>0&&b-a.deltaY<=0,f=a.deltaY<0&&c<=d.$results.height();e?(d.$results.scrollTop(0),a.preventDefault(),a.stopPropagation()):f&&(d.$results.scrollTop(d.$results.get(0).scrollHeight-d.$results.height()),a.preventDefault(),a.stopPropagation())}),this.$results.on("mouseup",".select2-results__option[aria-selected]",function(b){var c=a(this),e=c.data("data");return"true"===c.attr("aria-selected")?void(d.options.get("multiple")?d.trigger("unselect",{originalEvent:b,data:e}):d.trigger("close",{})):void d.trigger("select",{originalEvent:b,data:e})}),this.$results.on("mouseenter",".select2-results__option[aria-selected]",function(b){var c=a(this).data("data");d.getHighlightedResults().removeClass("select2-results__option--highlighted"),d.trigger("results:focus",{data:c,element:a(this)})})},c.prototype.getHighlightedResults=function(){var a=this.$results.find(".select2-results__option--highlighted");return a},c.prototype.destroy=function(){this.$results.remove()},c.prototype.ensureHighlightVisible=function(){var a=this.getHighlightedResults();if(0!==a.length){var b=this.$results.find("[aria-selected]"),c=b.index(a),d=this.$results.offset().top,e=a.offset().top,f=this.$results.scrollTop()+(e-d),g=e-d;f-=2*a.outerHeight(!1),2>=c?this.$results.scrollTop(0):(g>this.$results.outerHeight()||0>g)&&this.$results.scrollTop(f)}},c.prototype.template=function(b,c){var d=this.options.get("templateResult"),e=this.options.get("escapeMarkup"),f=d(b,c);null==f?c.style.display="none":"string"==typeof f?c.innerHTML=e(f):a(c).append(f)},c}),b.define("select2/keys",[],function(){var a={BACKSPACE:8,TAB:9,ENTER:13,SHIFT:16,CTRL:17,ALT:18,ESC:27,SPACE:32,PAGE_UP:33,PAGE_DOWN:34,END:35,HOME:36,LEFT:37,UP:38,RIGHT:39,DOWN:40,DELETE:46};return a}),b.define("select2/selection/base",["jquery","../utils","../keys"],function(a,b,c){function d(a,b){this.$element=a,this.options=b,d.__super__.constructor.call(this)}return b.Extend(d,b.Observable),d.prototype.render=function(){var b=a('<span class="select2-selection" role="combobox"  aria-haspopup="true" aria-expanded="false"></span>');return this._tabindex=0,null!=this.$element.data("old-tabindex")?this._tabindex=this.$element.data("old-tabindex"):null!=this.$element.attr("tabindex")&&(this._tabindex=this.$element.attr("tabindex")),b.attr("title",this.$element.attr("title")),b.attr("tabindex",this._tabindex),this.$selection=b,b},d.prototype.bind=function(a,b){var d=this,e=(a.id+"-container",a.id+"-results");this.container=a,this.$selection.on("focus",function(a){d.trigger("focus",a)}),this.$selection.on("blur",function(a){d._handleBlur(a)}),this.$selection.on("keydown",function(a){d.trigger("keypress",a),a.which===c.SPACE&&a.preventDefault()}),a.on("results:focus",function(a){d.$selection.attr("aria-activedescendant",a.data._resultId)}),a.on("selection:update",function(a){d.update(a.data)}),a.on("open",function(){d.$selection.attr("aria-expanded","true"),d.$selection.attr("aria-owns",e),d._attachCloseHandler(a)}),a.on("close",function(){d.$selection.attr("aria-expanded","false"),d.$selection.removeAttr("aria-activedescendant"),d.$selection.removeAttr("aria-owns"),d.$selection.focus(),d._detachCloseHandler(a)}),a.on("enable",function(){d.$selection.attr("tabindex",d._tabindex)}),a.on("disable",function(){d.$selection.attr("tabindex","-1")})},d.prototype._handleBlur=function(b){var c=this;window.setTimeout(function(){document.activeElement==c.$selection[0]||a.contains(c.$selection[0],document.activeElement)||c.trigger("blur",b)},1)},d.prototype._attachCloseHandler=function(b){a(document.body).on("mousedown.select2."+b.id,function(b){var c=a(b.target),d=c.closest(".select2"),e=a(".select2.select2-container--open");e.each(function(){var b=a(this);if(this!=d[0]){var c=b.data("element");c.select2("close")}})})},d.prototype._detachCloseHandler=function(b){a(document.body).off("mousedown.select2."+b.id)},d.prototype.position=function(a,b){var c=b.find(".selection");c.append(a)},d.prototype.destroy=function(){this._detachCloseHandler(this.container)},d.prototype.update=function(a){throw new Error("The `update` method must be defined in child classes.")},d}),b.define("select2/selection/single",["jquery","./base","../utils","../keys"],function(a,b,c,d){function e(){e.__super__.constructor.apply(this,arguments)}return c.Extend(e,b),e.prototype.render=function(){var a=e.__super__.render.call(this);return a.addClass("select2-selection--single"),a.html('<span class="select2-selection__rendered"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span>'),a},e.prototype.bind=function(a,b){var c=this;e.__super__.bind.apply(this,arguments);var d=a.id+"-container";this.$selection.find(".select2-selection__rendered").attr("id",d),this.$selection.attr("aria-labelledby",d),this.$selection.on("mousedown",function(a){1===a.which&&c.trigger("toggle",{originalEvent:a})}),this.$selection.on("focus",function(a){}),this.$selection.on("blur",function(a){}),a.on("focus",function(b){a.isOpen()||c.$selection.focus()}),a.on("selection:update",function(a){c.update(a.data)})},e.prototype.clear=function(){this.$selection.find(".select2-selection__rendered").empty()},e.prototype.display=function(a,b){var c=this.options.get("templateSelection"),d=this.options.get("escapeMarkup");return d(c(a,b))},e.prototype.selectionContainer=function(){return a("<span></span>")},e.prototype.update=function(a){if(0===a.length)return void this.clear();var b=a[0],c=this.$selection.find(".select2-selection__rendered"),d=this.display(b,c);c.empty().append(d),c.prop("title",b.title||b.text)},e}),b.define("select2/selection/multiple",["jquery","./base","../utils"],function(a,b,c){function d(a,b){d.__super__.constructor.apply(this,arguments)}return c.Extend(d,b),d.prototype.render=function(){var a=d.__super__.render.call(this);return a.addClass("select2-selection--multiple"),a.html('<ul class="select2-selection__rendered"></ul>'),a},d.prototype.bind=function(b,c){var e=this;d.__super__.bind.apply(this,arguments),this.$selection.on("click",function(a){e.trigger("toggle",{originalEvent:a})}),this.$selection.on("click",".select2-selection__choice__remove",function(b){if(!e.options.get("disabled")){var c=a(this),d=c.parent(),f=d.data("data");e.trigger("unselect",{originalEvent:b,data:f})}})},d.prototype.clear=function(){this.$selection.find(".select2-selection__rendered").empty()},d.prototype.display=function(a,b){var c=this.options.get("templateSelection"),d=this.options.get("escapeMarkup");return d(c(a,b))},d.prototype.selectionContainer=function(){var b=a('<li class="select2-selection__choice"><span class="select2-selection__choice__remove" role="presentation">&times;</span></li>');return b},d.prototype.update=function(a){if(this.clear(),0!==a.length){for(var b=[],d=0;d<a.length;d++){var e=a[d],f=this.selectionContainer(),g=this.display(e,f);f.append(g),f.prop("title",e.title||e.text),f.data("data",e),b.push(f)}var h=this.$selection.find(".select2-selection__rendered");c.appendMany(h,b)}},d}),b.define("select2/selection/placeholder",["../utils"],function(a){function b(a,b,c){this.placeholder=this.normalizePlaceholder(c.get("placeholder")),a.call(this,b,c)}return b.prototype.normalizePlaceholder=function(a,b){return"string"==typeof b&&(b={id:"",text:b}),b},b.prototype.createPlaceholder=function(a,b){var c=this.selectionContainer();return c.html(this.display(b)),c.addClass("select2-selection__placeholder").removeClass("select2-selection__choice"),c},b.prototype.update=function(a,b){var c=1==b.length&&b[0].id!=this.placeholder.id,d=b.length>1;if(d||c)return a.call(this,b);this.clear();var e=this.createPlaceholder(this.placeholder);this.$selection.find(".select2-selection__rendered").append(e)},b}),b.define("select2/selection/allowClear",["jquery","../keys"],function(a,b){function c(){}return c.prototype.bind=function(a,b,c){var d=this;a.call(this,b,c),null==this.placeholder&&this.options.get("debug")&&window.console&&console.error&&console.error("Select2: The `allowClear` option should be used in combination with the `placeholder` option."),this.$selection.on("mousedown",".select2-selection__clear",function(a){d._handleClear(a)}),b.on("keypress",function(a){d._handleKeyboardClear(a,b)})},c.prototype._handleClear=function(a,b){if(!this.options.get("disabled")){var c=this.$selection.find(".select2-selection__clear");if(0!==c.length){b.stopPropagation();for(var d=c.data("data"),e=0;e<d.length;e++){var f={data:d[e]};if(this.trigger("unselect",f),f.prevented)return}this.$element.val(this.placeholder.id).trigger("change"),this.trigger("toggle",{})}}},c.prototype._handleKeyboardClear=function(a,c,d){d.isOpen()||(c.which==b.DELETE||c.which==b.BACKSPACE)&&this._handleClear(c)},c.prototype.update=function(b,c){if(b.call(this,c),!(this.$selection.find(".select2-selection__placeholder").length>0||0===c.length)){var d=a('<span class="select2-selection__clear">&times;</span>');d.data("data",c),this.$selection.find(".select2-selection__rendered").prepend(d)}},c}),b.define("select2/selection/search",["jquery","../utils","../keys"],function(a,b,c){function d(a,b,c){a.call(this,b,c)}return d.prototype.render=function(b){var c=a('<li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" /></li>');this.$searchContainer=c,this.$search=c.find("input");var d=b.call(this);return this._transferTabIndex(),d},d.prototype.bind=function(a,b,d){var e=this;a.call(this,b,d),b.on("open",function(){e.$search.trigger("focus")}),b.on("close",function(){e.$search.val(""),e.$search.removeAttr("aria-activedescendant"),e.$search.trigger("focus")}),b.on("enable",function(){e.$search.prop("disabled",!1),e._transferTabIndex()}),b.on("disable",function(){e.$search.prop("disabled",!0)}),b.on("focus",function(a){e.$search.trigger("focus")}),b.on("results:focus",function(a){e.$search.attr("aria-activedescendant",a.id)}),this.$selection.on("focusin",".select2-search--inline",function(a){e.trigger("focus",a)}),this.$selection.on("focusout",".select2-search--inline",function(a){e._handleBlur(a)}),this.$selection.on("keydown",".select2-search--inline",function(a){a.stopPropagation(),e.trigger("keypress",a),e._keyUpPrevented=a.isDefaultPrevented();var b=a.which;if(b===c.BACKSPACE&&""===e.$search.val()){var d=e.$searchContainer.prev(".select2-selection__choice");if(d.length>0){var f=d.data("data");e.searchRemoveChoice(f),a.preventDefault()}}});var f=document.documentMode,g=f&&11>=f;this.$selection.on("input.searchcheck",".select2-search--inline",function(a){return g?void e.$selection.off("input.search input.searchcheck"):void e.$selection.off("keyup.search")}),this.$selection.on("keyup.search input.search",".select2-search--inline",function(a){if(g&&"input"===a.type)return void e.$selection.off("input.search input.searchcheck");var b=a.which;b!=c.SHIFT&&b!=c.CTRL&&b!=c.ALT&&b!=c.TAB&&e.handleSearch(a)})},d.prototype._transferTabIndex=function(a){this.$search.attr("tabindex",this.$selection.attr("tabindex")),this.$selection.attr("tabindex","-1")},d.prototype.createPlaceholder=function(a,b){this.$search.attr("placeholder",b.text)},d.prototype.update=function(a,b){var c=this.$search[0]==document.activeElement;this.$search.attr("placeholder",""),a.call(this,b),this.$selection.find(".select2-selection__rendered").append(this.$searchContainer),this.resizeSearch(),c&&this.$search.focus()},d.prototype.handleSearch=function(){if(this.resizeSearch(),!this._keyUpPrevented){var a=this.$search.val();this.trigger("query",{term:a})}this._keyUpPrevented=!1},d.prototype.searchRemoveChoice=function(a,b){this.trigger("unselect",{data:b}),this.$search.val(b.text),this.handleSearch()},d.prototype.resizeSearch=function(){this.$search.css("width","25px");var a="";if(""!==this.$search.attr("placeholder"))a=this.$selection.find(".select2-selection__rendered").innerWidth();else{var b=this.$search.val().length+1;a=.75*b+"em"}this.$search.css("width",a)},d}),b.define("select2/selection/eventRelay",["jquery"],function(a){function b(){}return b.prototype.bind=function(b,c,d){var e=this,f=["open","opening","close","closing","select","selecting","unselect","unselecting"],g=["opening","closing","selecting","unselecting"];b.call(this,c,d),c.on("*",function(b,c){if(-1!==a.inArray(b,f)){c=c||{};var d=a.Event("select2:"+b,{params:c});e.$element.trigger(d),-1!==a.inArray(b,g)&&(c.prevented=d.isDefaultPrevented())}})},b}),b.define("select2/translation",["jquery","require"],function(a,b){function c(a){this.dict=a||{}}return c.prototype.all=function(){return this.dict},c.prototype.get=function(a){return this.dict[a]},c.prototype.extend=function(b){this.dict=a.extend({},b.all(),this.dict)},c._cache={},c.loadPath=function(a){if(!(a in c._cache)){var d=b(a);c._cache[a]=d}return new c(c._cache[a])},c}),b.define("select2/diacritics",[],function(){var a={"Ⓐ":"A","Ａ":"A","À":"A","Á":"A","Â":"A","Ầ":"A","Ấ":"A","Ẫ":"A","Ẩ":"A","Ã":"A","Ā":"A","Ă":"A","Ằ":"A","Ắ":"A","Ẵ":"A","Ẳ":"A","Ȧ":"A","Ǡ":"A","Ä":"A","Ǟ":"A","Ả":"A","Å":"A","Ǻ":"A","Ǎ":"A","Ȁ":"A","Ȃ":"A","Ạ":"A","Ậ":"A","Ặ":"A","Ḁ":"A","Ą":"A","Ⱥ":"A","Ɐ":"A","Ꜳ":"AA","Æ":"AE","Ǽ":"AE","Ǣ":"AE","Ꜵ":"AO","Ꜷ":"AU","Ꜹ":"AV","Ꜻ":"AV","Ꜽ":"AY","Ⓑ":"B","Ｂ":"B","Ḃ":"B","Ḅ":"B","Ḇ":"B","Ƀ":"B","Ƃ":"B","Ɓ":"B","Ⓒ":"C","Ｃ":"C","Ć":"C","Ĉ":"C","Ċ":"C","Č":"C","Ç":"C","Ḉ":"C","Ƈ":"C","Ȼ":"C","Ꜿ":"C","Ⓓ":"D","Ｄ":"D","Ḋ":"D","Ď":"D","Ḍ":"D","Ḑ":"D","Ḓ":"D","Ḏ":"D","Đ":"D","Ƌ":"D","Ɗ":"D","Ɖ":"D","Ꝺ":"D","Ǳ":"DZ","Ǆ":"DZ","ǲ":"Dz","ǅ":"Dz","Ⓔ":"E","Ｅ":"E","È":"E","É":"E","Ê":"E","Ề":"E","Ế":"E","Ễ":"E","Ể":"E","Ẽ":"E","Ē":"E","Ḕ":"E","Ḗ":"E","Ĕ":"E","Ė":"E","Ë":"E","Ẻ":"E","Ě":"E","Ȅ":"E","Ȇ":"E","Ẹ":"E","Ệ":"E","Ȩ":"E","Ḝ":"E","Ę":"E","Ḙ":"E","Ḛ":"E","Ɛ":"E","Ǝ":"E","Ⓕ":"F","Ｆ":"F","Ḟ":"F","Ƒ":"F","Ꝼ":"F","Ⓖ":"G","Ｇ":"G","Ǵ":"G","Ĝ":"G","Ḡ":"G","Ğ":"G","Ġ":"G","Ǧ":"G","Ģ":"G","Ǥ":"G","Ɠ":"G","Ꞡ":"G","Ᵹ":"G","Ꝿ":"G","Ⓗ":"H","Ｈ":"H","Ĥ":"H","Ḣ":"H","Ḧ":"H","Ȟ":"H","Ḥ":"H","Ḩ":"H","Ḫ":"H","Ħ":"H","Ⱨ":"H","Ⱶ":"H","Ɥ":"H","Ⓘ":"I","Ｉ":"I","Ì":"I","Í":"I","Î":"I","Ĩ":"I","Ī":"I","Ĭ":"I","İ":"I","Ï":"I","Ḯ":"I","Ỉ":"I","Ǐ":"I","Ȉ":"I","Ȋ":"I","Ị":"I","Į":"I","Ḭ":"I","Ɨ":"I","Ⓙ":"J","Ｊ":"J","Ĵ":"J","Ɉ":"J","Ⓚ":"K","Ｋ":"K","Ḱ":"K","Ǩ":"K","Ḳ":"K","Ķ":"K","Ḵ":"K","Ƙ":"K","Ⱪ":"K","Ꝁ":"K","Ꝃ":"K","Ꝅ":"K","Ꞣ":"K","Ⓛ":"L","Ｌ":"L","Ŀ":"L","Ĺ":"L","Ľ":"L","Ḷ":"L","Ḹ":"L","Ļ":"L","Ḽ":"L","Ḻ":"L","Ł":"L","Ƚ":"L","Ɫ":"L","Ⱡ":"L","Ꝉ":"L","Ꝇ":"L","Ꞁ":"L","Ǉ":"LJ","ǈ":"Lj","Ⓜ":"M","Ｍ":"M","Ḿ":"M","Ṁ":"M","Ṃ":"M","Ɱ":"M","Ɯ":"M","Ⓝ":"N","Ｎ":"N","Ǹ":"N","Ń":"N","Ñ":"N","Ṅ":"N","Ň":"N","Ṇ":"N","Ņ":"N","Ṋ":"N","Ṉ":"N","Ƞ":"N","Ɲ":"N","Ꞑ":"N","Ꞥ":"N","Ǌ":"NJ","ǋ":"Nj","Ⓞ":"O","Ｏ":"O","Ò":"O","Ó":"O","Ô":"O","Ồ":"O","Ố":"O","Ỗ":"O","Ổ":"O","Õ":"O","Ṍ":"O","Ȭ":"O","Ṏ":"O","Ō":"O","Ṑ":"O","Ṓ":"O","Ŏ":"O","Ȯ":"O","Ȱ":"O","Ö":"O","Ȫ":"O","Ỏ":"O","Ő":"O","Ǒ":"O","Ȍ":"O","Ȏ":"O","Ơ":"O","Ờ":"O","Ớ":"O","Ỡ":"O","Ở":"O","Ợ":"O","Ọ":"O","Ộ":"O","Ǫ":"O","Ǭ":"O","Ø":"O","Ǿ":"O","Ɔ":"O","Ɵ":"O","Ꝋ":"O","Ꝍ":"O","Ƣ":"OI","Ꝏ":"OO","Ȣ":"OU","Ⓟ":"P","Ｐ":"P","Ṕ":"P","Ṗ":"P","Ƥ":"P","Ᵽ":"P","Ꝑ":"P","Ꝓ":"P","Ꝕ":"P","Ⓠ":"Q","Ｑ":"Q","Ꝗ":"Q","Ꝙ":"Q","Ɋ":"Q","Ⓡ":"R","Ｒ":"R","Ŕ":"R","Ṙ":"R","Ř":"R","Ȑ":"R","Ȓ":"R","Ṛ":"R","Ṝ":"R","Ŗ":"R","Ṟ":"R","Ɍ":"R","Ɽ":"R","Ꝛ":"R","Ꞧ":"R","Ꞃ":"R","Ⓢ":"S","Ｓ":"S","ẞ":"S","Ś":"S","Ṥ":"S","Ŝ":"S","Ṡ":"S","Š":"S","Ṧ":"S","Ṣ":"S","Ṩ":"S","Ș":"S","Ş":"S","Ȿ":"S","Ꞩ":"S","Ꞅ":"S","Ⓣ":"T","Ｔ":"T","Ṫ":"T","Ť":"T","Ṭ":"T","Ț":"T","Ţ":"T","Ṱ":"T","Ṯ":"T","Ŧ":"T","Ƭ":"T","Ʈ":"T","Ⱦ":"T","Ꞇ":"T","Ꜩ":"TZ","Ⓤ":"U","Ｕ":"U","Ù":"U","Ú":"U","Û":"U","Ũ":"U","Ṹ":"U","Ū":"U","Ṻ":"U","Ŭ":"U","Ü":"U","Ǜ":"U","Ǘ":"U","Ǖ":"U","Ǚ":"U","Ủ":"U","Ů":"U","Ű":"U","Ǔ":"U","Ȕ":"U","Ȗ":"U","Ư":"U","Ừ":"U","Ứ":"U","Ữ":"U","Ử":"U","Ự":"U","Ụ":"U","Ṳ":"U","Ų":"U","Ṷ":"U","Ṵ":"U","Ʉ":"U","Ⓥ":"V","Ｖ":"V","Ṽ":"V","Ṿ":"V","Ʋ":"V","Ꝟ":"V","Ʌ":"V","Ꝡ":"VY","Ⓦ":"W","Ｗ":"W","Ẁ":"W","Ẃ":"W","Ŵ":"W","Ẇ":"W","Ẅ":"W","Ẉ":"W","Ⱳ":"W","Ⓧ":"X","Ｘ":"X","Ẋ":"X","Ẍ":"X","Ⓨ":"Y","Ｙ":"Y","Ỳ":"Y","Ý":"Y","Ŷ":"Y","Ỹ":"Y","Ȳ":"Y","Ẏ":"Y","Ÿ":"Y","Ỷ":"Y","Ỵ":"Y","Ƴ":"Y","Ɏ":"Y","Ỿ":"Y","Ⓩ":"Z","Ｚ":"Z","Ź":"Z","Ẑ":"Z","Ż":"Z","Ž":"Z","Ẓ":"Z","Ẕ":"Z","Ƶ":"Z","Ȥ":"Z","Ɀ":"Z","Ⱬ":"Z","Ꝣ":"Z","ⓐ":"a","ａ":"a","ẚ":"a","à":"a","á":"a","â":"a","ầ":"a","ấ":"a","ẫ":"a","ẩ":"a","ã":"a","ā":"a","ă":"a","ằ":"a","ắ":"a","ẵ":"a","ẳ":"a","ȧ":"a","ǡ":"a","ä":"a","ǟ":"a","ả":"a","å":"a","ǻ":"a","ǎ":"a","ȁ":"a","ȃ":"a","ạ":"a","ậ":"a","ặ":"a","ḁ":"a","ą":"a","ⱥ":"a","ɐ":"a","ꜳ":"aa","æ":"ae","ǽ":"ae","ǣ":"ae","ꜵ":"ao","ꜷ":"au","ꜹ":"av","ꜻ":"av","ꜽ":"ay","ⓑ":"b","ｂ":"b","ḃ":"b","ḅ":"b","ḇ":"b","ƀ":"b","ƃ":"b","ɓ":"b","ⓒ":"c","ｃ":"c","ć":"c","ĉ":"c","ċ":"c","č":"c","ç":"c","ḉ":"c","ƈ":"c","ȼ":"c","ꜿ":"c","ↄ":"c","ⓓ":"d","ｄ":"d","ḋ":"d","ď":"d","ḍ":"d","ḑ":"d","ḓ":"d","ḏ":"d","đ":"d","ƌ":"d","ɖ":"d","ɗ":"d","ꝺ":"d","ǳ":"dz","ǆ":"dz","ⓔ":"e","ｅ":"e","è":"e","é":"e","ê":"e","ề":"e","ế":"e","ễ":"e","ể":"e","ẽ":"e","ē":"e","ḕ":"e","ḗ":"e","ĕ":"e","ė":"e","ë":"e","ẻ":"e","ě":"e","ȅ":"e","ȇ":"e","ẹ":"e","ệ":"e","ȩ":"e","ḝ":"e","ę":"e","ḙ":"e","ḛ":"e","ɇ":"e","ɛ":"e","ǝ":"e","ⓕ":"f","ｆ":"f","ḟ":"f","ƒ":"f","ꝼ":"f","ⓖ":"g","ｇ":"g","ǵ":"g","ĝ":"g","ḡ":"g","ğ":"g","ġ":"g","ǧ":"g","ģ":"g","ǥ":"g","ɠ":"g","ꞡ":"g","ᵹ":"g","ꝿ":"g","ⓗ":"h","ｈ":"h","ĥ":"h","ḣ":"h","ḧ":"h","ȟ":"h","ḥ":"h","ḩ":"h","ḫ":"h","ẖ":"h","ħ":"h","ⱨ":"h","ⱶ":"h","ɥ":"h","ƕ":"hv","ⓘ":"i","ｉ":"i","ì":"i","í":"i","î":"i","ĩ":"i","ī":"i","ĭ":"i","ï":"i","ḯ":"i","ỉ":"i","ǐ":"i","ȉ":"i","ȋ":"i","ị":"i","į":"i","ḭ":"i","ɨ":"i","ı":"i","ⓙ":"j","ｊ":"j","ĵ":"j","ǰ":"j","ɉ":"j","ⓚ":"k","ｋ":"k","ḱ":"k","ǩ":"k","ḳ":"k","ķ":"k","ḵ":"k","ƙ":"k","ⱪ":"k","ꝁ":"k","ꝃ":"k","ꝅ":"k","ꞣ":"k","ⓛ":"l","ｌ":"l","ŀ":"l","ĺ":"l","ľ":"l","ḷ":"l","ḹ":"l","ļ":"l","ḽ":"l","ḻ":"l","ſ":"l","ł":"l","ƚ":"l","ɫ":"l","ⱡ":"l","ꝉ":"l","ꞁ":"l","ꝇ":"l","ǉ":"lj","ⓜ":"m","ｍ":"m","ḿ":"m","ṁ":"m","ṃ":"m","ɱ":"m","ɯ":"m","ⓝ":"n","ｎ":"n","ǹ":"n","ń":"n","ñ":"n","ṅ":"n","ň":"n","ṇ":"n","ņ":"n","ṋ":"n","ṉ":"n","ƞ":"n","ɲ":"n","ŉ":"n","ꞑ":"n","ꞥ":"n","ǌ":"nj","ⓞ":"o","ｏ":"o","ò":"o","ó":"o","ô":"o","ồ":"o","ố":"o","ỗ":"o","ổ":"o","õ":"o","ṍ":"o","ȭ":"o","ṏ":"o","ō":"o","ṑ":"o","ṓ":"o","ŏ":"o","ȯ":"o","ȱ":"o","ö":"o","ȫ":"o","ỏ":"o","ő":"o","ǒ":"o","ȍ":"o","ȏ":"o","ơ":"o","ờ":"o","ớ":"o","ỡ":"o","ở":"o","ợ":"o","ọ":"o","ộ":"o","ǫ":"o","ǭ":"o","ø":"o","ǿ":"o","ɔ":"o","ꝋ":"o","ꝍ":"o","ɵ":"o","ƣ":"oi","ȣ":"ou","ꝏ":"oo","ⓟ":"p","ｐ":"p","ṕ":"p","ṗ":"p","ƥ":"p","ᵽ":"p","ꝑ":"p","ꝓ":"p","ꝕ":"p","ⓠ":"q","ｑ":"q","ɋ":"q","ꝗ":"q","ꝙ":"q","ⓡ":"r","ｒ":"r","ŕ":"r","ṙ":"r","ř":"r","ȑ":"r","ȓ":"r","ṛ":"r","ṝ":"r","ŗ":"r","ṟ":"r","ɍ":"r","ɽ":"r","ꝛ":"r","ꞧ":"r","ꞃ":"r","ⓢ":"s","ｓ":"s","ß":"s","ś":"s","ṥ":"s","ŝ":"s","ṡ":"s","š":"s","ṧ":"s","ṣ":"s","ṩ":"s","ș":"s","ş":"s","ȿ":"s","ꞩ":"s","ꞅ":"s","ẛ":"s","ⓣ":"t","ｔ":"t","ṫ":"t","ẗ":"t","ť":"t","ṭ":"t","ț":"t","ţ":"t","ṱ":"t","ṯ":"t","ŧ":"t","ƭ":"t","ʈ":"t","ⱦ":"t","ꞇ":"t","ꜩ":"tz","ⓤ":"u","ｕ":"u","ù":"u","ú":"u","û":"u","ũ":"u","ṹ":"u","ū":"u","ṻ":"u","ŭ":"u","ü":"u","ǜ":"u","ǘ":"u","ǖ":"u","ǚ":"u","ủ":"u","ů":"u","ű":"u","ǔ":"u","ȕ":"u","ȗ":"u","ư":"u","ừ":"u","ứ":"u","ữ":"u","ử":"u","ự":"u","ụ":"u","ṳ":"u","ų":"u","ṷ":"u","ṵ":"u","ʉ":"u","ⓥ":"v","ｖ":"v","ṽ":"v","ṿ":"v","ʋ":"v","ꝟ":"v","ʌ":"v","ꝡ":"vy","ⓦ":"w","ｗ":"w","ẁ":"w","ẃ":"w","ŵ":"w","ẇ":"w","ẅ":"w","ẘ":"w","ẉ":"w","ⱳ":"w","ⓧ":"x","ｘ":"x","ẋ":"x","ẍ":"x","ⓨ":"y","ｙ":"y","ỳ":"y","ý":"y","ŷ":"y","ỹ":"y","ȳ":"y","ẏ":"y","ÿ":"y","ỷ":"y","ẙ":"y","ỵ":"y","ƴ":"y","ɏ":"y","ỿ":"y","ⓩ":"z","ｚ":"z","ź":"z","ẑ":"z","ż":"z","ž":"z","ẓ":"z","ẕ":"z","ƶ":"z","ȥ":"z","ɀ":"z","ⱬ":"z","ꝣ":"z","Ά":"Α","Έ":"Ε","Ή":"Η","Ί":"Ι","Ϊ":"Ι","Ό":"Ο","Ύ":"Υ","Ϋ":"Υ","Ώ":"Ω","ά":"α","έ":"ε","ή":"η","ί":"ι","ϊ":"ι","ΐ":"ι","ό":"ο","ύ":"υ","ϋ":"υ","ΰ":"υ","ω":"ω","ς":"σ"};return a}),b.define("select2/data/base",["../utils"],function(a){function b(a,c){b.__super__.constructor.call(this)}return a.Extend(b,a.Observable),b.prototype.current=function(a){throw new Error("The `current` method must be defined in child classes.")},b.prototype.query=function(a,b){throw new Error("The `query` method must be defined in child classes.")},b.prototype.bind=function(a,b){},b.prototype.destroy=function(){},b.prototype.generateResultId=function(b,c){var d=b.id+"-result-";return d+=a.generateChars(4),d+=null!=c.id?"-"+c.id.toString():"-"+a.generateChars(4)},b}),b.define("select2/data/select",["./base","../utils","jquery"],function(a,b,c){function d(a,b){this.$element=a,this.options=b,d.__super__.constructor.call(this)}return b.Extend(d,a),d.prototype.current=function(a){var b=[],d=this;this.$element.find(":selected").each(function(){var a=c(this),e=d.item(a);b.push(e)}),a(b)},d.prototype.select=function(a){var b=this;if(a.selected=!0,c(a.element).is("option"))return a.element.selected=!0,void this.$element.trigger("change");

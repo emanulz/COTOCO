@@ -1,0 +1,78 @@
+
+.main-page-cont(style="padding-top:20px;padding-left:40px;")
+
+    .col-xs-12.no-padding-left
+        form
+            .form-group.row
+                .col-xs-6
+                    H3.order_header Nueva Orden de Pedido:
+                //.col-xs-6
+                //    ul.object-tools: li: a(href="/admin/bills/bill/").returnlink Volver
+
+    .col-md-3.no-padding-left(style="margin-top:20px")
+        form
+            //fecha y proveedor
+            .form-group.row
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Fecha:
+                    .col-xs-12
+                        input.form-control.new_request_date(type='date',)
+
+            //proyecto y actividad
+            .form-group.row
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Proyecto:
+                    .col-xs-12
+                        select.form-control.new_request_project
+                            option
+
+                .col-xs-6.col-md-12.no-padding-left.bottom_row
+                    .col-xs-12
+                        span Actividad:
+                    .col-xs-12
+                        select.form-control.new_request_activity
+                            option
+
+            //producto y buscar
+            .form-group.row
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Producto:
+                            //a(href="/admin/products/product/add/?_popup=1").pull-right.popup_product.related-widget-wrapper-link.add-related
+                            span.pull-right: i.glyphicon.glyphicon-plus-sign.popup_product.related-widget-wrapper-link.add-related(id="add_id_product")
+                            span.pull-right(style="padding-right:10px;text-aling:center"): i.glyphicon.glyphicon-refresh.refresh_product
+                    .col-xs-12.inner-addon.right-addon
+                        i.glyphicon.glyphicon-barcode
+                        input.form-control.request_product_code(type='text',id="id_product")
+                .col-xs-6.col-md-12.no-padding-left.bottom_row
+                    .col-xs-12
+                        span Buscar:
+                    .col-xs-12
+                        select.form-control.new_request_search
+                            option
+
+    .col-md-9.no-padding-left
+        form
+            //tabla
+            .form-group.row.table_row.product_table_row
+                .col-xs-12
+                    table.table.table-bordered.NO_table
+                        thead: tr
+                            th Códi
+                            th Desc
+                            th Cant
+                            th Unid
+                            th
+                        tbody.table-body
+
+            //confirmar y guardar
+            .form-group.row(style='padding-right:15px;')
+                .col-xs-12.no-padding-left
+                    button(type='button', class='BTN_NO Btn_Confirm').form-control.btn.btn-default.pull-right Confirmar
+                .col-xs-12.no-padding-left
+                    button(type='button', class='BTN_NO Btn_Edit').form-control.btn.btn-default.pull-right Editar
+                .col-xs-12.no-padding-left
+                    button(type='button', class='BTN_NO Btn_Save').form-control.btn.btn-default.pull-right Guardar
+

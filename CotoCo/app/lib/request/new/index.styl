@@ -1,0 +1,83 @@
+.no-padding-left
+  padding-left 0 px
+/* enable absolute positioning */
+
+.inner-addon
+  position: relative;
+
+/* style icon */
+.inner-addon .glyphicon
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+
+.inner-addon .fa
+  position: relative;
+  padding: 10px;
+
+/* align icon */
+.left-addon .glyphicon
+  left:  10px;
+
+.right-addon .glyphicon
+  right: 20px;
+
+/* add padding  */
+.left-addon input
+  padding-left:  30px;
+.right-addon input
+  padding-right: 30px;
+
+.BTN_NO
+  width: 20%;
+
+.Btn_Save
+  margin-top: 15px;
+.table_row
+  padding-right:15px;
+
+.unclickable
+  pointer-events: none;
+
+.glyphicon-refresh-animate {
+   -webkit-animation-name: rotateThis;
+   -webkit-animation-duration: 1s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotateThis {
+ from {
+        -webkit-transform: rotate( 0deg );
+    }
+ to  {
+        -webkit-transform: rotate( 360deg );
+    }
+}
+
+
+//LG
+@media(min-width:1200px)
+  .BTN_NO
+    width: 15%;
+
+//MD
+@media(min-width:992px)
+  .product_table_row
+    margin-top: 40px
+  .bottom_row
+    margin-top: 15px
+
+
+//SM
+//@media(min-width:768px)
+
+//XS
+@media(max-width:767px)
+  .BTN_NO
+    width: 25%;
+
+
+
+
+
