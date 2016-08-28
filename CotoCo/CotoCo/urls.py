@@ -26,6 +26,7 @@ from projects.views import ProjectViewSet
 from suppliers.views import SupplierViewSet
 from frontend.views import LandingView
 from reports.views import ordersbyproject, billsbyproject, byorder
+from requests.views import RequestViewSet, RequestDetailViewSet
 
 from django.conf import settings
 from django.contrib.staticfiles import views
@@ -45,6 +46,8 @@ router.register(r'product_departments', ProductDepartmentViewSet)
 router.register(r'product_sub_departments', ProductSubDepartmentViewSet)
 router.register(r'projects', ProjectViewSet)
 router.register(r'suppliers', SupplierViewSet)
+router.register(r'requests', RequestViewSet)
+router.register(r'request_detail', RequestDetailViewSet)
 
 
 urlpatterns = [
