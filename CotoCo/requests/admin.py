@@ -9,10 +9,10 @@ class OrderAdmin(admin.ModelAdmin):
 
     def buttonPdf(self, obj):
 
-        return '''<a type="button" class="btn btn-admin pdfBtn" role="button" >Ver Orden</a>'''
+        return '''<a type="button" class="btn btn-admin pdfBtn" role="button" >Ver Pedido</a>'''
 
     def buttonEdit(self, obj):
-        return '''<a type="button" class="btn btn-admin editBtn" role="button" href="/admin/orders/order/edit/">Editar</a>'''
+        return '''<a type="button" class="btn btn-admin editBtn" role="button" href="/admin/requests/request/edit/">Editar</a>'''
 
     buttonPdf.short_description = ''
     buttonPdf.allow_tags = True
@@ -26,7 +26,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     class Media:
 
-        js = ("../static/js/admin/orders/button.js",)
+        js = ("../static/js/admin/requests/button.js",)
 
 
 @admin.register(RequestDetail)

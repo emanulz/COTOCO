@@ -49,7 +49,7 @@ function edit_order() {
     products_to_memory();
 
     $('li.active').removeClass('active');
-    $('.edit_order_li').addClass('active');
+    $('.new_order_li').addClass('active');
 
     let id = JSON.parse(localStorage.order_to_edit);
 
@@ -385,7 +385,7 @@ function load_order(id) {
 
         $('.new_order_date').val(data.order_date);
         $('.new_order_supplier').val(data.order_supplier).trigger("change");
-        $('.new_order_project ').val(data.order_project).trigger("change");
+        $('.new_order_project').val(data.order_project).trigger("change");
         $('.new_order_activity').val(data.order_activity).trigger("change");
 
         last_order_detail=data.order_product_list;

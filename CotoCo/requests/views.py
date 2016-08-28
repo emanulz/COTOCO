@@ -20,11 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Create your views here.
 
 
-def orderpdf2(request, pk):
+def requestpdf2(requestobj, pk):
 
-    order = Request.objects.get(pk=pk)
-    details = order.order_product_list.all()
-    return render(request, '../templates/orders/order.jade', {'details': details, 'order': order})
+    request = Request.objects.get(pk=pk)
+    details = request.request_product_list.all()
+    return render(requestobj, '../templates/requests/request.jade', {'details': details, 'request': request})
 
 
 def order2pdf(request, pk):

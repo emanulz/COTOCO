@@ -1,14 +1,16 @@
 var $ = require('jquery');
 var page = require('page');
 
-var template = require('./template.jade');
+var template = require('../new/template.jade');
 
 //GLOBAL VARS
 var new_request_array=[];
 var new_request_detail=[];
+var last_request_detail=[];
+var request_id = 0;
 
 //PAGE NAVIGATION
-page('/admin/requests/request/create/',new_request);
+page('/admin/requests/request/edit/',new_request);
 
 //FUNCTIONS
 function new_request() {
@@ -39,10 +41,18 @@ function new_request() {
 
     products_to_memory();
 
+    let id = JSON.parse(localStorage.request_to_edit);
+
+    request_id=id.id;
+
+    $('.request_header').text( `Editar orden de Pedido # ${request_id}`);
+
     $('li.active').removeClass('active');
     $('.new_request_li').addClass('active');
 
-    main_new_order();
+    main_new_request();
+
+    load_request(id.id);
 
 }
 
@@ -212,8 +222,8 @@ function save_new_request(){
     save_detail();
     //new_request_array.push([code, qty, desc, unit, id]);
     $.ajax({
-        method: "POST",
-        url: "/api/requests/",
+        method: "PUT",
+        url: `/api/requests/${request_id}/`,
         async: false,
 
         data: JSON.stringify({
@@ -230,10 +240,10 @@ function save_new_request(){
         .fail(function(data){
             new_request_detail=[];
             console.log(data.responseText);
-            alert("Hubo un problema al crear el pedido, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+            alert("Hubo un problema al editar el pedido, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
         })
         .success(function(data){
-            alert('Pedido guardado con exito');
+            alert('Pedido Editado con exito');
             //window.open(`/orderpdf/${data.id}/`);
             window.location.replace("/admin/requests/request/");
         });//ajax
@@ -270,6 +280,40 @@ function save_detail(){
             });//ajax
     });
 
+}
+
+function load_request(id) {
+
+
+    $.get(`/api/requests/${id}/`, function (data) {
+
+        $('.new_request_date').val(data.request_date);
+        $('.new_request_project').val(data.request_project).trigger("change");
+        $('.new_request_activity').val(data.request_activity).trigger("change");
+
+        last_request_detail=data.request_product_list;
+
+    }).success(function (){
+        add_loaded_to_table();
+    });
+
+
+
+}
+
+function add_loaded_to_table(){
+
+//todo fix insert order cause by get async
+
+    $.each(last_request_detail, function (i) {
+
+        $.get(`/api/request_detail/${last_request_detail[i]}/`,false)
+        .success(function (data) {
+            add_new_row(data.request_detail_product_code, data.request_detail_description, parseFloat(data.request_detail_amount),
+                        data.request_detail_unit, data.request_detail_product )
+        });
+
+    });
 }
 
 function check_data_filled(){
@@ -322,7 +366,7 @@ function PopupCenter(url, title, w, h) {
 }
 
 // MAIN AND DOC READY
-function main_new_order () {
+function main_new_request () {
 
     //Selectors
     var html = $('html');
