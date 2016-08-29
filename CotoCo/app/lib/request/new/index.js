@@ -52,7 +52,7 @@ function products_to_memory() {
 
         $.each(data, function (i) {
 
-            $('.new_order_search').append($('<option>', {
+            $('.new_request_search').append($('<option>', {
                 value: data[i].product_code,
                 text: data[i].product_description
             }));
