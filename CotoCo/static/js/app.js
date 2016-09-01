@@ -125,10 +125,7 @@ function filter_order_by_supplier(supplier) {
 
     $.each(AllOrders, function (i) {
 
-        console.log(`el supplier de la orden es ${ AllOrders[i].order_supplier } el supplier a comparar es ${ supplier }`);
-
         if (AllOrders[i].order_supplier == supplier) {
-            console.log('ENTRO AL IF');
 
             $('.new_bill_order').append($('<option>', {
                 value: AllOrders[i].id,
@@ -2571,6 +2568,8 @@ function new_order_report() {
 
     add_from_API_to_select('orders', 'id', 'id', '.by_order_order');
 
+    add_from_API_to_select('activities', 'id', 'activity_name', '.by_order_activity');
+
     products_to_memory();
 
     $('li.active').removeClass('active');
@@ -2583,9 +2582,14 @@ function products_to_memory() {
 
     $.get('/api/products/', function (data) {
 
+        $('.by_order_product').append($('<option>', {
+            value: 0,
+            text: "Todos(as)"
+        }));
+
         $.each(data, function (i) {
 
-            $('.new_order_search').append($('<option>', {
+            $('.by_order_product').append($('<option>', {
                 value: data[i].product_code,
                 text: data[i].product_description
             }));
@@ -2600,6 +2604,11 @@ function add_from_API_to_select(api, id_field, text_field, select_class) {
     $.get(`/api/${ api }/`, function (data) {
 
         localStorage[api] = JSON.stringify(data);
+
+        $(select_class).append($('<option>', {
+            value: 0,
+            text: "Todos(as)"
+        }));
 
         $.each(data, function (i) {
 
@@ -2709,6 +2718,11 @@ function filter_order_by_supplier(supplier, project) {
         value: ''
     })).trigger('change');
 
+    $('.by_order_order').append($('<option>', {
+        value: 0,
+        text: "Todos(as)"
+    })).trigger('change');
+
     $.each(AllOrders, function (i) {
 
         if (AllOrders[i].order_supplier == supplier && AllOrders[i].order_project == project) {
@@ -2721,6 +2735,93 @@ function filter_order_by_supplier(supplier, project) {
     });
 }
 
+function check_data_filled() {
+
+    //SELECTORS
+
+    var supplier = $('.by_order_supplier');
+    var project = $('.by_order_project');
+    var activity = $('.by_order_activity');
+
+    var product = $('.by_order_product');
+
+    var type = $('.by_order_type');
+
+    var bool = false;
+
+    if (!project.val()) {
+        bool = false;
+        alertify.alert('Debe Elegir un valor para Proyecto');
+        return bool;
+    }
+    if (!activity.val()) {
+        bool = false;
+        alertify.alert('Debe Elegir un valor para Actividad');
+        return bool;
+    }
+
+    if (!supplier.val()) {
+        bool = false;
+        alertify.alert('Debe Elegir un valor para proveedor');
+        return bool;
+    }
+
+    if (type.val() == 2 || type.val() == 4) {
+
+        if (!product.val()) {
+            bool = false;
+            alertify.alert('Debe Elegir un valor para Producto');
+            return bool;
+        }
+    }
+
+    bool = true;
+    return bool;
+}
+
+function PopupCenter(url, title, w, h, data) {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = width / 2 - w / 2 + dualScreenLeft;
+    var top = height / 2 - h / 2 + dualScreenTop;
+    var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+    newWindow.document.write(data);
+
+    // Puts focus on the newWindow
+    if (window.focus) {
+        newWindow.focus();
+    }
+}
+
+function generate_report() {
+
+    $.ajax({
+        method: "GET",
+        url: "/reports/general/",
+        async: false,
+        data: {
+            type: $('.by_order_type').val(),
+            project: $('.by_order_project').val(),
+            activity: $('.by_order_activity').val(),
+            supplier: $('.by_order_supplier').val(),
+            product: $('.by_order_product').val()
+        }
+    }).fail(function (data) {
+        console.log(data.responseText);
+        alert("Hubo un problema al crear el reporte, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+    }).success(function (data) {
+        // var wind = window.open("", "popupWindow", "width=1000,height=768,scrollbars=yes");
+        // wind.document.write(data);
+
+        PopupCenter('', 'Reporte', 1000, 768, data);
+    }); //ajax
+}
+
 function main_new_order_report() {
 
     //Selectors
@@ -2729,32 +2830,43 @@ function main_new_order_report() {
     var supplier = $('.by_order_supplier');
     var project = $('.by_order_project');
     var order = $('.by_order_order');
+    var activity = $('.by_order_activity');
+    var product = $('.by_order_product');
+    var type = $('.by_order_type');
 
     var Btn_Confirm = $('.Btn_Confirm');
     var Btn_Print = $('.Btn_Print');
 
     //events
 
-    supplier.on('change', function () {
+    type.on('change', function () {
 
-        filter_order_by_supplier(supplier.val(), project.val());
+        if (type.val() == 2 || type.val() == 4) {
+
+            product.prop('disabled', false);
+        } else {
+            product.prop('disabled', true);
+        }
     });
 
     project.on('change', function () {
 
-        filter_order_by_supplier(supplier.val(), project.val());
+        //filter_order_by_supplier(supplier.val(),project.val())
+
     });
 
     Btn_Confirm.on('click', function (event) {
 
         event.preventDefault();
 
-        load_order(order.val());
+        var bool;
 
-        //load_bills(order.val());
+        bool = check_data_filled();
 
-        Btn_Confirm.hide();
-        Btn_Print.show().prop('disabled', false);
+        if (bool == true) {
+
+            generate_report();
+        }
     });
 
     //Init Items
@@ -2783,9 +2895,25 @@ function main_new_order_report() {
         language: "es"
     });
 
+    activity.select2({
+        theme: "bootstrap",
+        placeholder: "Seleccione...",
+        width: '100%',
+        allowClear: true,
+        language: "es"
+    });
+
+    product.select2({
+        theme: "bootstrap",
+        placeholder: "Seleccione...",
+        width: '100%',
+        allowClear: true,
+        language: "es"
+    });
     //Hide Buttons
 
     Btn_Print.hide();
+    product.prop('disabled', true);
 }
 
 },{"./template.jade":9,"jquery":18,"page":19}],9:[function(require,module,exports){
@@ -2796,7 +2924,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<div style=\"padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Reporte por Orden de Compra:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-7 no-padding-left\"><form><!--fecha y proveedor--><div class=\"form-group row\"><div class=\"col-xs-6 col no-padding-left\"><div class=\"col-xs-12\"><span>Fecha:</span></div><div class=\"col-xs-12\"><input type=\"date\" class=\"form-control by_order_date\"/></div></div><div class=\"col-xs-6 col no-padding-left\"><div class=\"col-xs-12\"><span>Proyecto:</span></div><div class=\"col-xs-12\"><select class=\"form-control by_order_project\"><option></option></select></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-6 no-padding-left\"><div class=\"col-xs-12\"><span>Proveedor:</span></div><div class=\"col-xs-12\"><select class=\"form-control by_order_supplier\"><option></option></select></div></div><div class=\"col-xs-6 no-padding-left\"><div class=\"col-xs-12\"><span>Orden de Compra:</span></div><div class=\"col-xs-12\"><select class=\"form-control by_order_order\"><option></option></select></div></div></div><div class=\"form-group row\"><div class=\"col-xs-6 no-padding-left\"><div class=\"col-xs-10\"><button type=\"button\" class=\"Btn_Confirm form-control btn btn-default\">Generar</button><button type=\"button\" class=\"Btn_Print form-control btn btn-default\">Imprimir</button></div></div></div></form></div><div style=\"margin-top:20px\" class=\"col-md-5 no-padding-left\"><form></form><div class=\"form-group row table_row\"><div class=\"col-xs-12\"><span>Totales:</span><table class=\"table table-bordered\"><tbody><tr><th>Total orden:<td class=\"No_Sub_Total price\">0</td></th></tr><tr><th>Total Facturas:<td class=\"No_Sub_Iv price\">0</td></th></tr><tr><th>Diferencia:<td class=\"No_Total price\">0</td></th></tr></tbody></table></div></div></div><div class=\"col-md-12 no-padding-left\"><form><!--tabla--><div class=\"form-group row table_row product_table_row\"><div class=\"col-xs-12\"><table class=\"table table-bordered NO_table\"><thead><tr class=\"table-head\"><th>Códi</th><th>Desc</th><th>Cant</th><th>P.Orde</th></tr></thead><tbody class=\"table-body\"></tbody></table></div></div></form></div></div>");;return buf.join("");
+buf.push("<div style=\"padding-left:40px;\" class=\"main-page-cont\"><div class=\"col-xs-12 no-padding-left\"><form><div class=\"form-group row\"><div class=\"col-xs-6\"><H3 class=\"order_header\">Generar Reportes:</H3></div><!--.col-xs-6--><!--    ul.object-tools: li: a(href=\"/admin/bills/bill/\").returnlink Volver--></div></form></div><div style=\"margin-top:20px\" class=\"col-md-12 no-padding-left\"><form><!--fecha y proyecto--><div class=\"form-group row\"><div class=\"col-xs-4 col no-padding-left\"><div class=\"col-xs-12\"><span>Fecha:</span></div><div class=\"col-xs-12\"><input disabled=\"disabled\" type=\"date\" class=\"form-control by_order_date\"/></div></div><div class=\"col-xs-4 col no-padding-left\"><div class=\"col-xs-12\"><span>Tipo de reporte:</span></div><div class=\"col-xs-12\"><select class=\"form-control by_order_type\"><option value=\"1\">Por Facturas General</option><option value=\"2\">Por Facturas Detallado</option><option value=\"3\">Por Ordenes General</option><option value=\"4\">Por Ordenes Detallado</option></select></div></div></div><!--proyecto y actividad--><div class=\"form-group row\"><div class=\"col-xs-4 col no-padding-left\"><div class=\"col-xs-12\"><span>Proyecto:</span></div><div class=\"col-xs-12\"><select class=\"form-control by_order_project\"><option></option></select></div></div><div class=\"col-xs-4 no-padding-left\"><div class=\"col-xs-12\"><span>Actividad:</span></div><div class=\"col-xs-12\"><select class=\"form-control by_order_activity\"><option></option></select></div></div><div class=\"col-xs-4 no-padding-left\"><div class=\"col-xs-12\"><span>Proveedor:</span></div><div class=\"col-xs-12\"><select class=\"form-control by_order_supplier\"><option></option></select></div></div></div><div class=\"form-group row\"><div class=\"col-xs-4 no-padding-left\"><div class=\"col-xs-12\"><span>Producto:</span></div><div class=\"col-xs-12\"><select class=\"form-control by_order_product\"><option></option></select></div></div><div class=\"col-xs-4 no-padding-left\"><div style=\"margin-top:20px\" class=\"col-xs-8\"><button type=\"button\" class=\"Btn_Confirm form-control btn btn-default\">Generar</button><button type=\"button\" class=\"Btn_Print form-control btn btn-default\">Imprimir</button></div></div></div></form></div></div>");;return buf.join("");
 };
 },{"jade/runtime":17}],10:[function(require,module,exports){
 var $ = require('jquery');

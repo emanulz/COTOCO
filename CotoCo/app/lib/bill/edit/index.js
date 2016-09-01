@@ -109,10 +109,7 @@ function filter_order_by_supplier(supplier){
 
     $.each(AllOrders, function (i) {
 
-        console.log(`el supplier de la orden es ${AllOrders[i].order_supplier} el supplier a comparar es ${supplier}`);
-
         if(AllOrders[i].order_supplier==supplier){
-            console.log('ENTRO AL IF');
 
             $('.new_bill_order').append($('<option>', {
                 value: AllOrders[i].id,

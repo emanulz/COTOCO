@@ -46,6 +46,8 @@ function new_order_report() {
 
     add_from_API_to_select('orders', 'id','id', '.by_order_order');
 
+    add_from_API_to_select('activities', 'id','activity_name', '.by_order_activity');
+
     products_to_memory();
 
     $('li.active').removeClass('active');
@@ -60,9 +62,14 @@ function products_to_memory() {
 
     $.get('/api/products/', function (data) {
 
+        $('.by_order_product').append($('<option>', {
+                value: 0,
+                text: "Todos(as)"
+            }));
+
         $.each(data, function (i) {
 
-            $('.new_order_search').append($('<option>', {
+            $('.by_order_product').append($('<option>', {
                 value: data[i].product_code,
                 text: data[i].product_description
             }));
@@ -79,6 +86,11 @@ function add_from_API_to_select(api, id_field, text_field, select_class) {
     $.get(`/api/${api}/`, function (data) {
 
         localStorage[api]=JSON.stringify(data);
+
+        $(select_class).append($('<option>', {
+                value: 0,
+                text: "Todos(as)"
+            }));
 
         $.each(data, function (i) {
 
@@ -103,7 +115,6 @@ function date_to_today(date_field_class) {
 
 function load_order(id) {
 
-
     $.get(`/api/orders/${id}/`, function (data) {
 
         by_order_detail=data.order_product_list;
@@ -113,7 +124,6 @@ function load_order(id) {
 
         add_loaded_to_table();
     });
-
 
 
 }
@@ -175,8 +185,6 @@ function add_bill_to_table() {
 
 }
 
-
-
 function  add_bill_data_to_table(data){
 
     console.log(data);
@@ -210,7 +218,6 @@ function  add_bill_data_to_table(data){
 
 }
 
-
 function filter_order_by_supplier(supplier, project){
 
 
@@ -222,11 +229,15 @@ function filter_order_by_supplier(supplier, project){
         value: ''
     })).trigger('change');
 
+    $('.by_order_order').append($('<option>', {
+        value: 0,
+        text:"Todos(as)"
+    })).trigger('change');
+
 
     $.each(AllOrders, function (i) {
 
         if(AllOrders[i].order_supplier==supplier && AllOrders[i].order_project==project){
-
 
             $('.by_order_order').append($('<option>', {
                 value: AllOrders[i].id,
@@ -234,6 +245,102 @@ function filter_order_by_supplier(supplier, project){
             })).trigger('change');
         }
     });
+
+}
+
+function check_data_filled(){
+
+    //SELECTORS
+
+    var supplier = $('.by_order_supplier');
+    var project = $('.by_order_project');
+    var activity = $('.by_order_activity');
+
+    var product = $('.by_order_product');
+
+    var type = $('.by_order_type');
+
+
+    var bool = false;
+
+
+    if(!project.val()){
+        bool = false;
+        alertify.alert('Debe Elegir un valor para Proyecto');
+        return bool
+    }
+    if(!activity.val()){
+        bool = false;
+        alertify.alert('Debe Elegir un valor para Actividad');
+        return bool
+    }
+
+    if(!supplier.val()){
+        bool = false;
+        alertify.alert('Debe Elegir un valor para proveedor');
+        return bool
+    }
+
+    if (type.val()==2 || type.val()==4){
+
+        if(!product.val()){
+        bool = false;
+        alertify.alert('Debe Elegir un valor para Producto');
+        return bool
+    }
+
+    }
+
+    bool = true;
+    return bool;
+
+
+}
+
+function PopupCenter(url, title, w, h, data) {
+    // Fixes dual-screen position                         Most browsers      Firefox
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+    var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+    newWindow.document.write(data);
+
+    // Puts focus on the newWindow
+    if (window.focus) {
+        newWindow.focus();
+    }
+}
+
+function generate_report() {
+
+    $.ajax({
+        method: "GET",
+        url: "/reports/general/",
+        async: false,
+        data:({
+            type: $('.by_order_type').val(),
+            project:$('.by_order_project').val(),
+            activity:$('.by_order_activity').val(),
+            supplier:$('.by_order_supplier').val(),
+            product:$('.by_order_product').val()
+        }),
+    })
+        .fail(function(data){
+            console.log(data.responseText);
+            alert("Hubo un problema al crear el reporte, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+        })
+        .success(function(data){
+            // var wind = window.open("", "popupWindow", "width=1000,height=768,scrollbars=yes");
+            // wind.document.write(data);
+
+            PopupCenter('', 'Reporte', 1000, 768, data)
+
+        });//ajax
 
 }
 
@@ -245,6 +352,9 @@ function main_new_order_report() {
     var supplier = $('.by_order_supplier');
     var project = $('.by_order_project');
     var order = $('.by_order_order');
+    var activity = $('.by_order_activity');
+    var product = $('.by_order_product');
+    var type = $('.by_order_type');
 
     var Btn_Confirm = $('.Btn_Confirm');
     var Btn_Print = $('.Btn_Print');
@@ -252,15 +362,22 @@ function main_new_order_report() {
 
     //events
 
-    supplier.on('change', function () {
+    type.on('change', function () {
 
-        filter_order_by_supplier(supplier.val(),project.val())
+        if (type.val()==2 || type.val()==4){
+
+            product.prop('disabled', false)
+
+        }
+        else{
+            product.prop('disabled', true)
+        }
 
     });
 
     project.on('change', function () {
 
-        filter_order_by_supplier(supplier.val(),project.val())
+        //filter_order_by_supplier(supplier.val(),project.val())
 
     });
 
@@ -268,13 +385,15 @@ function main_new_order_report() {
 
         event.preventDefault();
 
-        load_order(order.val());
+        var bool;
 
-        //load_bills(order.val());
+        bool = check_data_filled();
 
-        Btn_Confirm.hide();
-        Btn_Print.show().prop('disabled', false);
+        if (bool == true) {
 
+            generate_report();
+
+        }
 
     });
 
@@ -305,9 +424,25 @@ function main_new_order_report() {
         language: "es"
     });
 
+    activity.select2({
+    theme: "bootstrap",
+    placeholder:"Seleccione...",
+    width: '100%',
+    allowClear: true,
+    language: "es"
+    });
+
+    product.select2({
+    theme: "bootstrap",
+    placeholder:"Seleccione...",
+    width: '100%',
+    allowClear: true,
+    language: "es"
+    });
     //Hide Buttons
 
     Btn_Print.hide();
+    product.prop('disabled', true)
 
 
 }

@@ -1,0 +1,103 @@
+doctype html
+html(lang="en")
+    head
+
+        |{% load humanize %}
+
+        link(rel="stylesheet" href="/static/css/reset.css")
+
+        link(rel="stylesheet" href="/static/css/bootstrapMod.css")
+        link(rel="stylesheet" href="/static/css/orderpdf.css")
+
+    body(style="font-family:helvetica;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            img(src= "/media/img/coto.png" style="width:300px;height:auto;margin-bottom:0px;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            h4(style="text-align: center; vertical-align: middle;font-size:13px") REPORTE DETALLADO POR ORDEN DE COMPRA
+            hr(style="border-top: 1px solid #ccc;")
+
+        .col-xs-6
+            h6 <b>Proyecto:</b> {{project}}
+            h6 <b>Actividad:</b> {{activity}}
+            h6 <b>Producto:</b> {{productd}}
+
+        .col-xs-6
+            h6 <b>Fecha :</b> &nbsp {{date | date:"SHORT_DATE_FORMAT"}}
+            h6 <b>Proveedor:</b> {{supplier}}
+
+        .col-xs-12
+            form.producttable
+                //tabla
+                .form-group.row
+                    .col-xs-12(style="font-size:11px")
+                        table.table.table-bordered
+                            thead: tr
+                                th Orden #
+                                th Proveedor
+                                th Fecha
+                                th Código
+                                th Descripción
+                                th Cant
+                                th P.Unitario
+                                th Desc
+                                th Subtotal
+                                //th Observaciones
+                            tbody
+
+                                |{% for order in orders %}
+                                |{% for detail in order.order_product_list.all %}
+                                |{% if product == '0' %}
+                                tr
+                                    td {{order.id}}
+                                    td {{order.order_supplier}}
+                                    td {{order.order_date | date:"SHORT_DATE_FORMAT"}}
+                                    td {{detail.order_detail_product_code}}
+                                    td {{detail.order_detail_description}}
+                                    td {{detail.order_detail_amount}}
+                                    td ₡ {{detail.order_detail_price | floatformat:"2"|intcomma}}
+                                    td {{detail.order_detail_discount}}
+                                    td ₡ {{detail.order_detail_total | floatformat:"2"|intcomma}}
+                                |{% else %}
+                                |{% if detail.order_detail_product_code == product %}
+                                tr
+                                    td {{order.id}}
+                                    td {{order.order_supplier}}
+                                    td {{order.order_date | date:"SHORT_DATE_FORMAT"}}
+                                    td {{detail.order_detail_product_code}}
+                                    td {{detail.order_detail_description}}
+                                    td {{detail.order_detail_amount}}
+                                    td ₡ {{detail.order_detail_price | floatformat:"2"|intcomma}}
+                                    td {{detail.order_detail_discount}}
+                                    td ₡ {{detail.order_detail_total | floatformat:"2"|intcomma}}
+
+                                |{% endif %}
+                                |{% endif %}
+                                |{% endfor %}
+                                |{% endfor %}
+
+        .col-xs-12
+
+            .col-xs-5.wopadding.pull-right
+
+                .col-xs-12.wopadding.pull-right
+                    hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+                    span.spanbold Totales:
+                    hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+
+                .col-xs-12.wopadding.pull-right
+                    span Unidades Totales:
+                    span.pull-right {{ cantprod }}
+
+                .col-xs-12.wopadding.pull-right
+                    span IV:
+                    span.pull-right ₡ {{iv | floatformat:"2"|intcomma}}
+
+                .col-xs-12.wopadding.pull-right
+                    hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+                    span.spanbold Total:
+                    span.spanbold.pull-right(style='margin-right:0px;') ₡ {{total | floatformat:"2"|intcomma}}
+                    hr(style="border-top: 1px solid #ccc; margin:4px 0;")
