@@ -6,11 +6,13 @@ from django.http import JsonResponse, Http404, HttpResponse
 from django.shortcuts import render
 from orders.models import Order, OrderDetail
 from bills.models import Bill, BillDetail
+from requests.models import Request, RequestDetail
 from projects.models import Project
 from suppliers.models import Supplier
 from products.models import Product
 from activities.models import Activity
 from datetime import date
+from operator import itemgetter
 
 def ordersbyproject(request, project):
 
@@ -97,24 +99,46 @@ def generalreport(request):
         supplierd = "Todos(as)"
         productd = "Todos(as)"
 
+        bills = Bill.objects.all()
+
+        if project != '0':
+            bills = bills.filter(bill_order__order_project=project)
+            projectobj = Project.objects.get(id=project)
+            projectd = '%s - %s' % (projectobj.id, projectobj.project_name)
+
+        if activity != '0':
+            bills = bills.filter(bill_order__order_activity=activity)
+            activityobj = Activity.objects.get(id=activity)
+            activityd = '%s - %s' % (activityobj.id, activityobj.activity_name)
+
+        if supplier != '0':
+            bills = bills.filter(bill_supplier=supplier)
+            supplierobj = Supplier.objects.get(id=supplier)
+            supplierd = '%s ' % supplierobj.supplier_name
+
+        orders = Order.objects.all()
+
+        requests = Request.objects.all()
+
+
+        if project != '0':
+            orders = orders.filter(order_project=project)
+            projectobj = Project.objects.get(id=project)
+            projectd = '%s - %s' % (projectobj.id, projectobj.project_name)
+
+        if activity != '0':
+            orders = orders.filter(order_activity=activity)
+            activityobj = Activity.objects.get(id=activity)
+            activityd = '%s - %s' % (activityobj.id, activityobj.activity_name)
+
+        if supplier != '0':
+            orders = orders.filter(order_supplier=supplier)
+            supplierobj = Supplier.objects.get(id=supplier)
+            supplierd = '%s ' % supplierobj.supplier_name
+
         if type == '1':
 
-            bills = Bill.objects.all()
 
-            if project != '0' :
-                bills = bills.filter(bill_order__order_project=project)
-                projectobj = Project.objects.get(id=project)
-                projectd = '%s - %s' % (projectobj.id, projectobj.project_name)
-
-            if activity != '0':
-                bills = bills.filter(bill_order__order_activity=activity)
-                activityobj = Activity.objects.get(id=activity)
-                activityd = '%s - %s' % (activityobj.id, activityobj.activity_name)
-
-            if supplier != '0':
-                bills = bills.filter(bill_supplier=supplier)
-                supplierobj = Supplier.objects.get(id=supplier)
-                supplierd = '%s ' % supplierobj.supplier_name
 
             ivbill = 0
             totalbill = 0
@@ -130,23 +154,6 @@ def generalreport(request):
                                                                                 'date':today })
 
         if type == '2':
-
-            bills = Bill.objects.all()
-
-            if project != '0' :
-                bills = bills.filter(bill_order__order_project=project)
-                projectobj = Project.objects.get(id=project)
-                projectd = '%s - %s' % (projectobj.id, projectobj.project_name)
-
-            if activity != '0':
-                bills = bills.filter(bill_order__order_activity=activity)
-                activityobj = Activity.objects.get(id=activity)
-                activityd = '%s - %s' % (activityobj.id, activityobj.activity_name)
-
-            if supplier != '0':
-                bills = bills.filter(bill_supplier=supplier)
-                supplierobj = Supplier.objects.get(id=supplier)
-                supplierd = '%s ' % supplierobj.supplier_name
 
             ivbill = 0
             totalbill = 0
@@ -179,25 +186,7 @@ def generalreport(request):
                                                                                 'product':product, 'project':projectd,
                                                                                 'activity':activityd, 'supplier':supplierd,
                                                                                 'productd':productd, 'date':today})
-
         if type == '3':
-
-            orders = Order.objects.all()
-
-            if project != '0':
-                orders = orders.filter(order_project=project)
-                projectobj = Project.objects.get(id=project)
-                projectd = '%s - %s' % (projectobj.id, projectobj.project_name)
-
-            if activity != '0':
-                orders = orders.filter(order_activity=activity)
-                activityobj = Activity.objects.get(id=activity)
-                activityd = '%s - %s' % (activityobj.id, activityobj.activity_name)
-
-            if supplier != '0':
-                orders = orders.filter(order_supplier=supplier)
-                supplierobj = Supplier.objects.get(id=supplier)
-                supplierd = '%s ' % supplierobj.supplier_name
 
             ivorder = 0
             totalorder = 0
@@ -211,24 +200,8 @@ def generalreport(request):
                                                                                'activity': activityd,
                                                                                'supplier': supplierd,
                                                                                'date': today})
+
         if type == '4':
-
-            orders = Order.objects.all()
-
-            if project != '0' :
-                orders = orders.filter(order_project=project)
-                projectobj = Project.objects.get(id=project)
-                projectd = '%s - %s' % (projectobj.id, projectobj.project_name)
-
-            if activity != '0':
-                orders = orders.filter(order_activity=activity)
-                activityobj = Activity.objects.get(id=activity)
-                activityd = '%s - %s' % (activityobj.id, activityobj.activity_name)
-
-            if supplier != '0':
-                orders = orders.filter(order_supplier=supplier)
-                supplierobj = Supplier.objects.get(id=supplier)
-                supplierd = '%s ' % supplierobj.supplier_name
 
             ivorder = 0
             totalorder = 0
@@ -261,6 +234,81 @@ def generalreport(request):
                                                                                 'product':product, 'project':projectd,
                                                                                 'activity':activityd, 'supplier':supplierd,
                                                                                 'productd':productd, 'date':today})
+
+        if type == '5':
+
+            details_array=[]
+
+            for order in orders:
+
+                order_detail = order.order_product_list.all()
+
+                for detail in order_detail:
+
+                    i = 0
+
+                    for list_ in details_array:
+                        if detail.order_detail_product_code in list_:
+                            break
+                        i += 1
+
+                    if len(details_array) == i:
+
+                        details_array.append([detail.order_detail_product_code, detail.order_detail_description, 0,detail.order_detail_amount, 0,0,0,0])
+
+                    else:
+                        details_array[i][3]=details_array[i][3]+detail.order_detail_amount
+
+            for bill in bills:
+
+                bill_detail = bill.bill_detail_list.all()
+
+                for detail in bill_detail:
+
+                    i = 0
+
+                    for list_ in details_array:
+                        if detail.bill_detail_product_code in list_:
+                            break
+                        i += 1
+
+                    if len(details_array) == i:
+
+                        details_array.append([detail.bill_detail_product_code, detail.bill_detail_description, 0,0, detail.bill_detail_amount,0,0,0])
+
+                    else:
+                        details_array[i][4]=details_array[i][4]+detail.bill_detail_amount
+
+            for request in requests:
+
+                request_detail = request.request_product_list.all()
+
+                for detail in request_detail:
+
+                    i = 0
+
+                    for list_ in details_array:
+                        if detail.request_detail_product_code in list_:
+                            break
+                        i += 1
+
+                    if len(details_array) == i:
+
+                        details_array.append([detail.bill_detail_product_code, detail.bill_detail_description, detail.request_detail_amount,0, 0,0,0,0])
+
+                    else:
+                        details_array[i][2]=details_array[i][2]+detail.request_detail_amount
+
+
+            details_array = sorted(details_array, key=itemgetter(0))
+
+            return render(request, '../templates/reports/general_byproduct.jade', {'array': details_array,
+                                                                                'product': product, 'project': projectd,
+                                                                                'activity': activityd,
+                                                                                'supplier': supplierd,
+                                                                                'productd': productd, 'date': today})
+
+
 
     else:
         return False

@@ -185,7 +185,7 @@ function add_bill_to_table() {
 
 }
 
-function  add_bill_data_to_table(data){
+function add_bill_data_to_table(data){
 
     console.log(data);
     $('.table-head').append(`<th>Fact</th>`);
