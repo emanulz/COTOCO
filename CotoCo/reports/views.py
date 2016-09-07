@@ -279,25 +279,25 @@ def generalreport(request):
                     else:
                         details_array[i][4]=details_array[i][4]+detail.bill_detail_amount
 
-            for request in requests:
-
-                request_detail = request.request_product_list.all()
-
-                for detail in request_detail:
-
-                    i = 0
-
-                    for list_ in details_array:
-                        if detail.request_detail_product_code in list_:
-                            break
-                        i += 1
-
-                    if len(details_array) == i:
-
-                        details_array.append([detail.request_detail_product_code, detail.request_detail_description, detail.request_detail_amount,0, 0,0,0,0])
-
-                    else:
-                        details_array[i][2]=details_array[i][2]+detail.request_detail_amount
+            # for request in requests:
+            #
+            #     request_detail = request.request_product_list.all()
+            #
+            #     for detail in request_detail:
+            #
+            #         i = 0
+            #
+            #         for list_ in details_array:
+            #             if detail.request_detail_product_code in list_:
+            #                 break
+            #             i += 1
+            #
+            #         if len(details_array) == i:
+            #
+            #             details_array.append([detail.request_detail_product_code, detail.request_detail_description, detail.request_detail_amount,0, 0,0,0,0])
+            #
+            #         else:
+            #             details_array[i][2]=details_array[i][2]+detail.request_detail_amount
 
 
             details_array = sorted(details_array, key=itemgetter(0))
