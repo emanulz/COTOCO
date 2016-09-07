@@ -16,6 +16,7 @@ from django.template.loader import render_to_string
 class Order(models.Model):
 
     order_date = models.DateField(verbose_name='Fecha')
+    order_deliver_date = models.DateField(verbose_name='Fecha de entrega', null=True, blank=True)
     order_supplier = models.ForeignKey(Supplier, verbose_name='Proveedor')
     order_project = models.ForeignKey(Project, verbose_name='Proyecto')
     order_activity = models.ForeignKey(Activity, verbose_name='Actividad')

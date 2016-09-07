@@ -28,7 +28,7 @@ html(lang="en")
 
         .col-xs-6
             h6 <b>Fecha :</b> &nbsp {{order.order_date | date:"SHORT_DATE_FORMAT"}}
-            h6 <b>Entrega:</b> {{order.order_date | date:"SHORT_DATE_FORMAT"}}
+            h6 <b>Entrega:</b> {{order.order_deliver_date | date:"SHORT_DATE_FORMAT"}}
 
         .col-xs-12
             form.producttable

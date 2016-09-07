@@ -36,6 +36,8 @@ function new_order() {
 
     date_to_today('.new_order_date');
 
+    date_to_today('.new_order_date_delivery');
+
     add_from_API_to_select('suppliers', 'id','supplier_name', '.new_order_supplier');
 
     add_from_API_to_select('projects', 'id','project_name', '.new_order_project');
@@ -313,6 +315,7 @@ function save_new_order(){
 
         data: JSON.stringify({
             "order_date": $('.new_order_date').val(),
+            "order_deliver_date": $('.new_order_date_delivery').val(),
             "order_supplier": $('.new_order_supplier').val(),
             "order_project": $('.new_order_project').val(),
             "order_activity": $('.new_order_activity').val(),

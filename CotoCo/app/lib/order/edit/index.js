@@ -315,6 +315,7 @@ function save_new_order(){
 
         data: JSON.stringify({
             "order_date": $('.new_order_date').val(),
+            "order_deliver_date": $('.new_order_date_delivery').val(),
             "order_supplier": $('.new_order_supplier').val(),
             "order_project": $('.new_order_project').val(),
             "order_activity": $('.new_order_activity').val(),
@@ -384,6 +385,7 @@ function load_order(id) {
     $.get(`/api/orders/${id}/`, function (data) {
 
         $('.new_order_date').val(data.order_date);
+        $('.new_order_date_delivery').val(data.order_deliver_date);
         $('.new_order_supplier').val(data.order_supplier).trigger("change");
         $('.new_order_project').val(data.order_project).trigger("change");
         $('.new_order_activity').val(data.order_activity).trigger("change");
