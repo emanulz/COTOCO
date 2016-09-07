@@ -294,7 +294,7 @@ def generalreport(request):
 
                     if len(details_array) == i:
 
-                        details_array.append([detail.bill_detail_product_code, detail.bill_detail_description, detail.request_detail_amount,0, 0,0,0,0])
+                        details_array.append([detail.request_detail_product_code, detail.request_detail_description, detail.request_detail_amount,0, 0,0,0,0])
 
                     else:
                         details_array[i][2]=details_array[i][2]+detail.request_detail_amount
