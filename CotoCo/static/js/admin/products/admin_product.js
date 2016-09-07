@@ -152,27 +152,81 @@
                     department = data.productdepartment_code;
                 }).success(function () {
 
-                $.get(`/api/product_sub_departments/${subdepartment_field.val()}/`,
+                    $.get(`/api/product_sub_departments/${subdepartment_field.val()}/`,
                     function (data) {
-                        consecutive = consecutive_field.val();
+
+                    }).success(function (data) {
+
                         subdepartment = data.productsubdepartment_code;
-                    }).success(function () {
 
-                    formated = ('000' + consecutive).substr(-3);
-                    console.log(department);
-                    if(department=='0'){
-                        code_field.val(`${subdepartment}${formated}`);
-                    }
-                    else{
-                        code_field.val(`${department}${subdepartment}${formated}`);
-                    }
+                        $.get(`/api/products/?product_subdepartment=${subdepartment_field.val()}`,function (data) {
 
+                        }).success(function (data) {
+
+                            var consecutives=[];
+
+                            $.each(data, function (i) {
+
+                            consecutives.push(data[i].product_consecutive)
+
+                            });
+
+                            consecutives.sort(function(a, b){return b-a});
+
+
+                            consecutive = parseInt(consecutives[0])+1;
+
+                            consecutive_field.val(consecutive);
+
+                            formated = ('000' + consecutive).substr(-3);
+
+                            if(department=='0'){
+                                code_field.val(`${subdepartment}${formated}`);
+                            }
+                            else{
+                                code_field.val(`${department}${subdepartment}${formated}`);
+                            }
+
+                        });
+                        
                 });
             });
         }
         else{
             code_field.val(`0`);
         }
+
+
+    }
+
+    function getConsecutive() {
+
+        var product_subdepartment =  $('#id_product_subdepartment');
+
+        $.get(`/api/products/?product_subdepartment=${product_subdepartment.val()}`,function (data) {
+
+
+        }).success(function (data) {
+
+            var consecutives=[];
+
+            console.log(data);
+
+            $.each(data, function (i) {
+
+                consecutives.push(data[i].product_consecutive)
+
+            });
+
+            consecutives.sort(function(a, b){return b-a});
+
+            console.log(consecutives);
+
+            console.log(parseInt(consecutives[0])+1);
+
+            return(parseInt(consecutives[0])+1);
+
+        });
 
 
     }
