@@ -10,7 +10,7 @@ var last_request_detail=[];
 var request_id = 0;
 
 //PAGE NAVIGATION
-page('/admin/requests/request/edit/',new_request);
+page('/admin/request/edit/',new_request);
 
 //FUNCTIONS
 function new_request() {

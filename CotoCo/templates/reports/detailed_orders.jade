@@ -93,6 +93,10 @@ html(lang="en")
                     span.pull-right {{ cantprod }}
 
                 .col-xs-12.wopadding.pull-right
+                    span Sub-Total:
+                    span.pull-right ₡ {{subtotal | floatformat:"2"|intcomma}}
+
+                .col-xs-12.wopadding.pull-right
                     span IV:
                     span.pull-right ₡ {{iv | floatformat:"2"|intcomma}}
 

@@ -29,7 +29,7 @@ class Bill(models.Model):
 
 class BillDetail(models.Model):
 
-    bill_detail_product = models.ForeignKey(Product, verbose_name='Producto')
+    bill_detail_product = models.PositiveIntegerField(verbose_name='Producto', null=True, blank=True)
     bill_detail_product_code = models.CharField(max_length=255, verbose_name='Código', default='')
     bill_detail_description = models.CharField(max_length=255, verbose_name='Descripción', default='')
     bill_detail_amount = models.DecimalField(max_digits=7, decimal_places=2, verbose_name='Cantidad')

@@ -8,7 +8,7 @@ var new_request_array=[];
 var new_request_detail=[];
 
 //PAGE NAVIGATION
-page('/admin/requests/request/create/',new_request);
+page('/admin/request/create/',new_request);
 
 //FUNCTIONS
 function new_request() {

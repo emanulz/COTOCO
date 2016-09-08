@@ -27,7 +27,7 @@ class Request(models.Model):
 
 class RequestDetail(models.Model):
 
-    request_detail_product = models.ForeignKey(Product, verbose_name='Id Producto')
+    request_detail_product = models.PositiveIntegerField(verbose_name='Id Producto', null=True, blank=True)
     request_detail_product_code = models.CharField(max_length=255, verbose_name='Código', default='')
     request_detail_description = models.CharField(max_length=255, verbose_name='Descripción', default='')
     request_detail_amount = models.DecimalField(max_digits=7, decimal_places=2, verbose_name='Cantidad')

@@ -46,8 +46,8 @@ html(lang="en")
                             tbody
                                 |{% for detail in details %}
                                 tr
-                                    td(style="width:9%") {{detail.request_detail_product.product_code}}
-                                    td {{detail.request_detail_product.product_description}}
+                                    td(style="width:9%") {{detail.request_detail_product_code}}
+                                    td {{detail.request_detail_description}}
                                     td(style="width:9%") {{detail.request_detail_amount}}
                                     td(style="width:5%") {{detail.request_detail_unit}}
 

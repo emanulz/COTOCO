@@ -11,7 +11,7 @@ var subtotal = 0;
 var iv_amount = 0 ;
 
 //PAGE NAVIGATION
-page('/admin/orders/order/create/',new_order);
+page('/admin/order/create/',new_order);
 
 //FUNCTIONS
 function new_order() {

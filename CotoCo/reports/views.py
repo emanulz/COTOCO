@@ -163,12 +163,14 @@ def generalreport(request):
 
                 billdetails = bill.bill_detail_list.all()
 
+                if product == '0':
+                    ivbill = ivbill + bill.bill_iv
+
                 for billdetail in billdetails:
 
                     if product == '0':
 
                         totalbill = totalbill + billdetail.bill_detail_total
-                        ivbill = ivbill + billdetail.bill_detail_iv
                         productsbill = productsbill + billdetail.bill_detail_amount
 
                     else:
@@ -178,10 +180,11 @@ def generalreport(request):
                             productd = '%s - %s' % (product, productobj.product_description)
 
                             totalbill = totalbill + billdetail.bill_detail_total
-                            ivbill = ivbill + billdetail.bill_detail_iv
+                            ivbill = ivbill + ((billdetail.bill_detail_iv/100)*billdetail.bill_detail_total)
                             productsbill = productsbill + billdetail.bill_detail_amount
 
-            return render(request, '../templates/reports/detailed_bills.jade', {'bills': bills, 'total':totalbill,
+            return render(request, '../templates/reports/detailed_bills.jade', {'bills': bills, 'subtotal':totalbill,
+                                                                                'total': totalbill+ivbill,
                                                                                 'iv':ivbill, 'cantprod':productsbill,
                                                                                 'product':product, 'project':projectd,
                                                                                 'activity':activityd, 'supplier':supplierd,
@@ -207,9 +210,13 @@ def generalreport(request):
             totalorder = 0
             productsorder = 0
 
+
             for order in orders:
 
                 orderdetails = order.order_product_list.all()
+
+                if product == '0':
+                    ivorder = ivorder + order.order_iv
 
                 for orderdetail in orderdetails:
 
@@ -226,10 +233,11 @@ def generalreport(request):
                             productd = '%s - %s' % (product, productobj.product_description)
 
                             totalorder = totalorder + orderdetail.order_detail_total
-                            ivorder = ivorder + orderdetail.order_detail_iv
+                            ivorder = ivorder + ((orderdetail.order_detail_iv / 100) * orderdetail.order_detail_total)
                             productsorder = productsorder + orderdetail.order_detail_amount
 
-            return render(request, '../templates/reports/detailed_orders.jade', {'orders': orders, 'total':totalorder,
+            return render(request, '../templates/reports/detailed_orders.jade', {'orders': orders, 'subtotal':totalorder,
+                                                                                'total': totalorder+ivorder,
                                                                                 'iv':ivorder, 'cantprod':productsorder,
                                                                                 'product':product, 'project':projectd,
                                                                                 'activity':activityd, 'supplier':supplierd,
@@ -279,25 +287,25 @@ def generalreport(request):
                     else:
                         details_array[i][4]=details_array[i][4]+detail.bill_detail_amount
 
-            # for request in requests:
-            #
-            #     request_detail = request.request_product_list.all()
-            #
-            #     for detail in request_detail:
-            #
-            #         i = 0
-            #
-            #         for list_ in details_array:
-            #             if detail.request_detail_product_code in list_:
-            #                 break
-            #             i += 1
-            #
-            #         if len(details_array) == i:
-            #
-            #             details_array.append([detail.request_detail_product_code, detail.request_detail_description, detail.request_detail_amount,0, 0,0,0,0])
-            #
-            #         else:
-            #             details_array[i][2]=details_array[i][2]+detail.request_detail_amount
+            for request2 in requests:
+
+                request_detail = request2.request_product_list.all()
+
+                for detail in request_detail:
+
+                    i = 0
+
+                    for list_ in details_array:
+                        if detail.request_detail_product_code in list_:
+                            break
+                        i += 1
+
+                    if len(details_array) == i:
+
+                        details_array.append([detail.request_detail_product_code, detail.request_detail_description, detail.request_detail_amount,0, 0,0,0,0])
+
+                    else:
+                        details_array[i][2]=details_array[i][2]+detail.request_detail_amount
 
 
             details_array = sorted(details_array, key=itemgetter(0))
@@ -307,7 +315,6 @@ def generalreport(request):
                                                                                 'activity': activityd,
                                                                                 'supplier': supplierd,
                                                                                 'productd': productd, 'date': today})
-
 
 
     else:

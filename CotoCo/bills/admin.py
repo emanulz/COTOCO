@@ -10,7 +10,7 @@ from .models import Bill, BillDetail
 class BillAdmin(admin.ModelAdmin):
 
     def buttonEdit(self, obj):
-        return '''<a type="button" class="btn btn-admin editBtn" role="button" href="/admin/bills/bill/edit/">Editar</a>'''
+        return '''<a type="button" class="btn btn-admin editBtn" role="button" href="/admin/bill/edit/">Editar</a>'''
 
     buttonEdit.short_description = ''
     buttonEdit.allow_tags = True

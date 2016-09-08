@@ -15,7 +15,7 @@ var iv_amount = 0 ;
 var order_id = 0;
 
 //PAGE NAVIGATION
-page('/admin/orders/order/edit/', edit_order);
+page('/admin/order/edit/', edit_order);
 
 function edit_order() {
 

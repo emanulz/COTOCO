@@ -37,7 +37,7 @@ var iv_amount = 0;
 var bill_id = 0;
 
 //PAGE NAVIGATION
-page('/admin/bills/bill/edit/', edit_bill);
+page('/admin/bill/edit/', edit_bill);
 
 //FUNCTIONS
 function edit_bill() {
@@ -644,7 +644,7 @@ var subtotal = 0;
 var iv_amount = 0;
 
 //PAGE NAVIGATION
-page('/admin/bills/bill/create/', new_bill);
+page('/admin/bill/create/', new_bill);
 
 //FUNCTIONS
 function new_bill() {
@@ -1249,7 +1249,7 @@ var iv_amount = 0;
 var order_id = 0;
 
 //PAGE NAVIGATION
-page('/admin/orders/order/edit/', edit_order);
+page('/admin/order/edit/', edit_order);
 
 function edit_order() {
 
@@ -1901,7 +1901,7 @@ var subtotal = 0;
 var iv_amount = 0;
 
 //PAGE NAVIGATION
-page('/admin/orders/order/create/', new_order);
+page('/admin/order/create/', new_order);
 
 //FUNCTIONS
 function new_order() {
@@ -2944,7 +2944,7 @@ var last_request_detail = [];
 var request_id = 0;
 
 //PAGE NAVIGATION
-page('/admin/requests/request/edit/', new_request);
+page('/admin/request/edit/', new_request);
 
 //FUNCTIONS
 function new_request() {
@@ -3441,7 +3441,7 @@ var new_request_array = [];
 var new_request_detail = [];
 
 //PAGE NAVIGATION
-page('/admin/requests/request/create/', new_request);
+page('/admin/request/create/', new_request);
 
 //FUNCTIONS
 function new_request() {

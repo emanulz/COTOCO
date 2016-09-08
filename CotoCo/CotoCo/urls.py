@@ -51,6 +51,7 @@ router.register(r'request_detail', RequestDetailViewSet)
 
 
 urlpatterns = [
+
     url(r'^admin/', include(admin.site.urls)),
     url(r'orderpdf/(?P<pk>\d+)/$', order2pdf, name='order2pdf'),
     url(r'orderpdf2/(?P<pk>\d+)/$', orderpdf2, name='orderpdf2'),
@@ -59,9 +60,10 @@ urlpatterns = [
     url(r'reports/billsbyproject/(?P<project>\d+)/$', billsbyproject, name='byproject'),
     url(r'reports/byorder/(?P<order>\d+)/$', byorder, name='byorder'),
     url(r'reports/general/', generalreport, name='general'),
-    url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api/', include(router.urls)),
     url(r'^', LandingView),
+
 ]
 
 if settings.DEBUG:

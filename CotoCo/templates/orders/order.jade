@@ -48,8 +48,8 @@ html(lang="en")
                             tbody
                                 {% for detail in details %}
                                 tr
-                                    td(style="width:9%") {{detail.order_detail_product.product_code}}
-                                    td {{detail.order_detail_product.product_description}}
+                                    td(style="width:9%") {{detail.order_detail_product_code}}
+                                    td {{detail.order_detail_description}}
                                     td(style="width:9%") {{detail.order_detail_amount}}
                                     //td(style="width:5%") {{detail.order_detail_unit}}
                                     td(style="width:14%") ₡ {{detail.order_detail_price | floatformat:"2"|intcomma}}

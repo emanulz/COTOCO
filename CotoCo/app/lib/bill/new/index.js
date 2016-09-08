@@ -12,7 +12,7 @@ var subtotal = 0;
 var iv_amount = 0 ;
 
 //PAGE NAVIGATION
-page('/admin/bills/bill/create/',new_bill);
+page('/admin/bill/create/',new_bill);
 
 
 //FUNCTIONS

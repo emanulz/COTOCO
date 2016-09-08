@@ -14,7 +14,7 @@ var iv_amount = 0 ;
 var bill_id = 0;
 
 //PAGE NAVIGATION
-page('/admin/bills/bill/edit/',edit_bill);
+page('/admin/bill/edit/',edit_bill);
 
 
 //FUNCTIONS
