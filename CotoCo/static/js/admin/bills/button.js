@@ -15,6 +15,14 @@
         //
         // });
 
+        $('html').on('click','.pdfBtn', function (event) {
+        event.preventDefault();
+        var id=$(this).closest('tr')[0].cells[1].outerText;
+
+        window.open(`/billview/?bill=${id}`)
+
+        });
+
         $('html').on('click','.editBtn', function () {
 
             var id=$(this).closest('tr')[0].cells[1].outerText;

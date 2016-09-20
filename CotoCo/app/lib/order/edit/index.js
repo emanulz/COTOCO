@@ -336,7 +336,7 @@ function save_new_order(){
         })
         .success(function(data){
             alert('Orden Actualizada con exito');
-            window.open(`/orderpdf/${data.id}/`);
+            window.open(`/orderpdf2/${data.id}/`);
             window.location.replace("/admin/orders/order/");
         });//ajax
 

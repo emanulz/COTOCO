@@ -262,10 +262,11 @@ def generalreport(request):
 
                     if len(details_array) == i:
 
-                        details_array.append([detail.order_detail_product_code, detail.order_detail_description, 0,detail.order_detail_amount, 0,0,0,0])
+                        details_array.append([detail.order_detail_product_code, detail.order_detail_description, 0,detail.order_detail_amount, 0,0,0,0,[order.id],[],[]])
 
                     else:
                         details_array[i][3]=details_array[i][3]+detail.order_detail_amount
+                        details_array[i][8].append(order.id)
 
             for bill in bills:
 
@@ -282,10 +283,11 @@ def generalreport(request):
 
                     if len(details_array) == i:
 
-                        details_array.append([detail.bill_detail_product_code, detail.bill_detail_description, 0,0, detail.bill_detail_amount,0,0,0])
+                        details_array.append([detail.bill_detail_product_code, detail.bill_detail_description, 0,0, detail.bill_detail_amount,0,0,0,[],[bill.id],[]])
 
                     else:
                         details_array[i][4]=details_array[i][4]+detail.bill_detail_amount
+                        details_array[i][9].append(bill.id)
 
             for request2 in requests:
 
@@ -302,10 +304,11 @@ def generalreport(request):
 
                     if len(details_array) == i:
 
-                        details_array.append([detail.request_detail_product_code, detail.request_detail_description, detail.request_detail_amount,0, 0,0,0,0])
+                        details_array.append([detail.request_detail_product_code, detail.request_detail_description, detail.request_detail_amount,0, 0,0,0,0,[],[],[request2.id]])
 
                     else:
                         details_array[i][2]=details_array[i][2]+detail.request_detail_amount
+                        details_array[i][10].append(request2.id)
 
 
             details_array = sorted(details_array, key=itemgetter(0))

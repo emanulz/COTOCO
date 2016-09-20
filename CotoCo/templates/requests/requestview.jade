@@ -19,15 +19,18 @@ html(lang="en")
 
         .col-xs-12
             hr(style="border-top: 1px solid #ccc;")
-            h4(style="text-align: center; vertical-align: middle;font-size:15px") ORDEN DE PEDIDO DE PRODUCTOS
+            h4(style="text-align: center; vertical-align: middle;font-size:15px") ORDEN DE PEDIDO DE PRODUCTOS # {{request.id}}
             hr(style="border-top: 1px solid #ccc;")
+
         .col-xs-6
+
             h6 <b>Orden de pedido #</b> {{request.id}}
             h6 <b>Proyecto #</b> {{request.request_project.id}} - {{request.request_project.project_name}}
             h6 <b>Actividad:</b> {{request.request_activity.activity_name}}
 
         .col-xs-6
             h6 <b>Fecha :</b> &nbsp {{request.request_date | date:"SHORT_DATE_FORMAT"}}
+
 
         .col-xs-12
             form.producttable
@@ -41,22 +44,17 @@ html(lang="en")
                                 th Cantidad
                                 th Unidad
 
-                                //th Observaciones
                             tbody
-                                |{% for detail in details %}
+
+                                | {% for detail in request.request_product_list.all %}
                                 tr
                                     td {{detail.request_detail_product_code}}
                                     td {{detail.request_detail_description}}
                                     td {{detail.request_detail_amount}}
                                     td {{detail.request_detail_unit}}
-
-                                   // td -
-                                |{% endfor %}
+                                | {% endfor %}
 
         .col-xs-12
             .col-xs-4.wopadding.pull-left
                 hr(style="border-top: 1px solid #000;")
                 span(style="font-weight: bold") Firma Responsable
-
-
-

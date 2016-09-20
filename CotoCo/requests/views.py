@@ -19,6 +19,32 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Create your views here.
 
+def requestlist(request):
+
+    array = request.GET['array']
+    array = array.replace('[', '')
+    array = array.replace(']', '')
+    array = array.replace(' ', '')
+
+    array = array.split(',')
+
+    details = []
+
+    for i in array:
+        request2 = Request.objects.get(pk=i)
+        details.append([i, request2.request_date, request2.request_project.project_name, request2.request_activity.activity_name])
+
+    return render(request, '../templates/requests/requestlist.jade', {'details' : details})
+
+
+def requestview(requestobj):
+
+    requestnum = requestobj.GET['request']
+
+    request = Request.objects.get(pk=requestnum)
+
+    return render(requestobj, '../templates/requests/requestview.jade', {'request' : request})
+
 
 def requestpdf2(requestobj, pk):
 

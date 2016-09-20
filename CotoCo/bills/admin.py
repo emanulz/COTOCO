@@ -9,13 +9,21 @@ from .models import Bill, BillDetail
 @admin.register(Bill)
 class BillAdmin(admin.ModelAdmin):
 
+    def view_btn(self, obj):
+
+        return '''<a type="button" class="btn btn-admin pdfBtn" role="button" >Ver</a>'''
+
     def buttonEdit(self, obj):
+
         return '''<a type="button" class="btn btn-admin editBtn" role="button" href="/admin/bill/edit/">Editar</a>'''
 
-    buttonEdit.short_description = ''
+    buttonEdit.short_description = 'Editar'
     buttonEdit.allow_tags = True
 
-    list_display = ('id', 'bill_date', 'bill_supplier', 'bill_supplier_bill', 'bill_order', 'bill_subtotal', 'bill_iv', 'bill_total', 'buttonEdit')
+    view_btn.short_description = 'Ver'
+    view_btn.allow_tags = True
+
+    list_display = ('id', 'view_btn', 'buttonEdit', 'bill_date', 'bill_supplier', 'bill_supplier_bill', 'bill_order', 'bill_subtotal', 'bill_iv', 'bill_total')
     search_fields = ('id', 'bill_date', 'bill_supplier', 'bill_supplier_bill', 'bill_order__id')
     filter_horizontal = ('bill_detail_list',)
 

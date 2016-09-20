@@ -11,19 +11,19 @@ class OrderAdmin(admin.ModelAdmin):
 
     def buttonPdf(self, obj):
 
-        return '''<a type="button" class="btn btn-admin pdfBtn" role="button" >Ver Orden</a>'''
+        return '''<a type="button" class="btn btn-admin pdfBtn" role="button" >Ver</a>'''
 
     def buttonEdit(self, obj):
         return '''<a type="button" class="btn btn-admin editBtn" role="button" href="/admin/order/edit/">Editar</a>'''
 
-    buttonPdf.short_description = ''
+    buttonPdf.short_description = 'Ver'
     buttonPdf.allow_tags = True
 
-    buttonEdit.short_description = ''
+    buttonEdit.short_description = 'Editar'
     buttonEdit.allow_tags = True
 
-    list_display = ('id', 'order_date', 'order_supplier', 'order_project', 'order_activity', 'order_subtotal',
-                    'order_iv', 'order_total', 'buttonPdf', 'buttonEdit')
+    list_display = ('id', 'buttonPdf', 'buttonEdit', 'order_date', 'order_supplier', 'order_project', 'order_activity',
+                    'order_subtotal', 'order_iv', 'order_total')
     search_fields = ('id', 'order_date', 'order_supplier', 'order_project', 'order_activity')
     filter_horizontal = ('order_product_list',)
 

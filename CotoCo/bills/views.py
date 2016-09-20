@@ -12,6 +12,34 @@ from .filters import BillFilter, BillDetailFilter
 # API
 
 
+def billlist(request):
+
+    array = request.GET['array']
+    array = array.replace('[', '')
+    array = array.replace(']', '')
+    array = array.replace(' ', '')
+
+    array = array.split(',')
+
+    details = []
+
+    for i in array:
+        bill = Bill.objects.get(pk=i)
+        details.append([i, bill.bill_date, bill.bill_supplier.supplier_name, bill.bill_total])
+
+
+    return render(request, '../templates/bills/billlist.jade', {'details' : details})
+
+
+def billview(request):
+
+    billnum = request.GET['bill']
+
+    bill = Bill.objects.get(pk=billnum)
+
+    return render(request, '../templates/bills/billview.jade', {'bill' : bill})
+
+
 class BillSerializer(serializers.ModelSerializer):
 
     class Meta:

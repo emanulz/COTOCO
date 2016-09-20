@@ -20,6 +20,33 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Create your views here.
 
 
+def orderlist(request):
+
+    array = request.GET['array']
+    array = array.replace('[', '')
+    array = array.replace(']', '')
+    array = array.replace(' ', '')
+
+    array = array.split(',')
+
+    details = []
+
+    for i in array:
+        order = Order.objects.get(pk=i)
+        details.append([i, order.order_date, order.order_supplier.supplier_name, order.order_total])
+
+
+    return render(request, '../templates/orders/orderlist.jade', {'details' : details})
+
+
+def orderview(request):
+
+    ordernum = request.GET['order']
+
+    order = Order.objects.get(pk=ordernum)
+
+    return render(request, '../templates/orders/orderview.jade', {'order' : order})
+
 def orderpdf2(request, pk):
 
     order = Order.objects.get(pk=pk)

@@ -1,0 +1,83 @@
+doctype html
+html(lang="en")
+    head
+        title Orden # {{order.id}}
+
+        |{% load humanize %}
+
+        link(rel="stylesheet" href="/static/css/reset.css")
+
+        link(rel="stylesheet" href="/static/css/bootstrapMod.css")
+        link(rel="stylesheet" href="/static/css/orderpdf.css")
+
+
+    body(style="font-family:helvetica;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            img(src= "/media/img/coto.png" style="width:300px;height:auto;margin-bottom:0px;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            h4(style="text-align: center; vertical-align: middle;font-size:15px") ORDEN DE COMPRA # {{order.id}}
+            hr(style="border-top: 1px solid #ccc;")
+
+        .col-xs-6
+            h5 <b>Proyecto:</b> {{order.order_project.project_name}}
+            h5 <b>Actividad:</b> {{order.order_activity.activity_name}}
+            h5 <b>Proveedor:</b> {{order.order_supplier.supplier_name}}
+
+        .col-xs-6
+            h5 <b>Fecha :</b> &nbsp {{order.order_date | date:"SHORT_DATE_FORMAT"}}
+            h5 <b>Fecha de entraga :</b> &nbsp {{order.order_deliver_date | date:"SHORT_DATE_FORMAT"}}
+
+        .col-xs-12
+            form
+                //tabla
+                .form-group.row.table_row.product_table_row
+                    .col-xs-12
+                        table(style='font-size:12px').table.table-bordered.NO_table
+                            thead: tr
+                                th Códi
+                                th Desc
+                                th Cant
+                                th Unid
+                                th P.Un
+                                th Desc %
+                                th IV
+                                th Subt
+                            tbody.table-body
+                                | {% for detail in order.order_product_list.all %}
+                                tr
+                                    td {{detail.order_detail_product_code}}
+                                    td {{detail.order_detail_description}}
+                                    td {{detail.order_detail_amount}}
+                                    td {{detail.order_detail_unit}}
+                                    td ₡ {{detail.order_detail_price | floatformat:"2"|intcomma}}
+                                    td {{detail.order_detail_discount}}
+                                    td {{detail.order_detail_iv}}
+                                    td ₡ {{detail.order_detail_total | floatformat:"2"|intcomma}}
+                                | {% endfor %}
+
+
+        .col-xs-12
+            .col-xs-4.wopadding.pull-left
+                hr(style="border-top: 1px solid #000;")
+                span(style="font-weight: bold") Firma Responsable
+
+            .col-xs-5.wopadding.pull-right
+                .col-xs-12.wopadding.pull-right
+                    span SubTotal:
+                    span.pull-right ₡ {{order.order_subtotal | floatformat:"2"|intcomma}}
+                //.col-xs-12.wopadding.pull-right
+                //    span Descuento:
+                //    span.pull-right ₡0
+                .col-xs-12.wopadding.pull-right
+                    span IV:
+                    span.pull-right ₡ {{order.order_iv | floatformat:"2"|intcomma}}
+
+                .col-xs-12.wopadding.pull-right
+                    hr(style="border-top: 1px solid #ccc;")
+                    span.spanbold Total:
+                    span.spanbold.pull-right(style='margin-right:0px;') ₡ {{order.order_total | floatformat:"2"|intcomma}}
+                    hr(style="border-top: 1px solid #ccc;")

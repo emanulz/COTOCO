@@ -51,9 +51,25 @@ html(lang="en")
                             tr
                                 td {{detail.0}}
                                 td {{detail.1}}
+
+                                | {% if detail.10 %}
+                                td: a(target='_blank')(href='/requestlist/?array={{detail.10}}') {{detail.2}}
+                                | {% else %}
                                 td {{detail.2}}
+                                | {% endif %}
+
+                                | {% if detail.8 %}
+                                td: a(target='_blank')(href='/orderlist/?array={{detail.8}}') {{detail.3}}
+                                | {% else %}
                                 td {{detail.3}}
+                                | {% endif %}
+
+                                |{% if detail.9 %}
+                                td: a(target='_blank')(href='/billlist/?array={{detail.9}}') {{detail.4}}
+                                |{% else %}
                                 td {{detail.4}}
+                                |{% endif %}
+
                                 td {{detail.3|subtract:detail.4}}
                                 td {{detail.6}}
                                 td {{detail.7}}
