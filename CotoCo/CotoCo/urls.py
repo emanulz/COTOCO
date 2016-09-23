@@ -25,6 +25,7 @@ from products.views import ProductViewSet, ProductDepartmentViewSet, ProductSubD
 from projects.views import ProjectViewSet
 from suppliers.views import SupplierViewSet
 from frontend.views import LandingView
+from pays.views import PayViewSet, PayDetailViewSet
 from reports.views import ordersbyproject, billsbyproject, byorder, generalreport
 from requests.views import RequestViewSet, RequestDetailViewSet, requestpdf2, requestlist, requestview
 
@@ -48,6 +49,8 @@ router.register(r'projects', ProjectViewSet)
 router.register(r'suppliers', SupplierViewSet)
 router.register(r'requests', RequestViewSet)
 router.register(r'request_detail', RequestDetailViewSet)
+router.register(r'pays', PayViewSet)
+router.register(r'pays_details', PayDetailViewSet)
 
 
 urlpatterns = [

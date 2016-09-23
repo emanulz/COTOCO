@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'bills.apps.BillsConfig',
     'clients.apps.ClientsConfig',
     'orders.apps.OrdersConfig',
+    'pays.apps.PaysConfig',
     'products.apps.ProductsConfig',
     'projects.apps.ProjectsConfig',
     'requests.apps.RequestsConfig',
