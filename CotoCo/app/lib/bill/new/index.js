@@ -345,7 +345,8 @@ function save_new_bill(){
             "bill_detail_list": new_bill_detail,
             "bill_subtotal": subtotal,
             "bill_iv": iv_amount,
-            "bill_total": total
+            "bill_total": total,
+            "bill_debt": total
 
         }),//JSON object
         contentType:"application/json; charset=utf-8",
