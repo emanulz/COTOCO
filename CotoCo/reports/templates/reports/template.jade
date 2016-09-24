@@ -44,12 +44,6 @@ span Reportes
             .form-group.row
                 .col-xs-4.col.no-padding-left
                     .col-xs-12
-                        span Fecha:
-                    .col-xs-12
-                        input.form-control.by_order_date(disabled=true, type='date',)
-
-                .col-xs-4.col.no-padding-left
-                    .col-xs-12
                         span Tipo de reporte:
                     .col-xs-12
                         select.form-control.by_order_type
@@ -58,10 +52,23 @@ span Reportes
                             option(value=3) Por Ordenes General
                             option(value=4) Por Ordenes Detallado
                             option(value=5) Por Productos Detallado
+                .col-xs-4.col.no-padding-left
+                    .col-xs-12
+                        span Fecha inicial:
+                    .col-xs-12
+                        input.form-control.by_order_date_ini( type='date',)
+                .col-xs-4.col.no-padding-left
+                    .col-xs-12
+                        span Fecha Final:
+                    .col-xs-12
+                        input.form-control.by_order_date_end( type='date',)
+
 
 
             //proyecto y actividad
             .form-group.row
+
+
                 .col-xs-4.col.no-padding-left
                     .col-xs-12
                         span Proyecto:
@@ -75,7 +82,6 @@ span Reportes
                     .col-xs-12
                         select.form-control.by_order_activity
                             option
-
                 .col-xs-4.no-padding-left
                     .col-xs-12
                         span Proveedor:

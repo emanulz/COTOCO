@@ -316,7 +316,10 @@ function generate_report() {
             project:$('.by_order_project').val(),
             activity:$('.by_order_activity').val(),
             supplier:$('.by_order_supplier').val(),
-            product:$('.by_order_product').val()
+            product:$('.by_order_product').val(),
+            date_ini:$('.by_order_date_ini').val(),
+            date_end:$('.by_order_date_end').val()
+
         }),
     })
         .fail(function(data){

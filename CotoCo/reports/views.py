@@ -12,6 +12,7 @@ from suppliers.models import Supplier
 from products.models import Product
 from activities.models import Activity
 from datetime import date
+import datetime
 from operator import itemgetter
 
 def report_create(request):
@@ -96,6 +97,9 @@ def generalreport(request):
         activity = request.GET['activity']
         supplier = request.GET['supplier']
         product = request.GET['product']
+        date_ini = request.GET['date_ini']
+        date_end = request.GET['date_end']
+
         today = date.today()
 
         projectd= "Todos(as)"
@@ -140,8 +144,22 @@ def generalreport(request):
             supplierobj = Supplier.objects.get(id=supplier)
             supplierd = '%s ' % supplierobj.supplier_name
 
-        if type == '1':
 
+        if date_ini and date_end:
+
+            orders=orders.filter(order_date__range=[date_ini, date_end])
+            bills = bills.filter(bill_date__range=[date_ini, date_end])
+            requests = requests.filter(request_date__range=[date_ini, date_end])
+
+            date_ini = datetime.datetime.strptime(date_ini, "%Y-%m-%d").date()
+            date_end = datetime.datetime.strptime(date_end, "%Y-%m-%d").date()
+
+        else:
+            date_ini = '-'
+            date_end = '-'
+
+
+        if type == '1':
 
 
             ivbill = 0
@@ -155,7 +173,8 @@ def generalreport(request):
             return render(request, '../templates/reports/general_bills.jade', {'bills': bills,'total':totalbill,
                                                                                 'iv':ivbill,'project':projectd,
                                                                                 'activity':activityd, 'supplier':supplierd,
-                                                                                'date':today })
+                                                                                'date':today, 'date_ini':date_ini,
+                                                                                'date_end':date_end })
 
         if type == '2':
 
@@ -192,7 +211,8 @@ def generalreport(request):
                                                                                 'iv':ivbill, 'cantprod':productsbill,
                                                                                 'product':product, 'project':projectd,
                                                                                 'activity':activityd, 'supplier':supplierd,
-                                                                                'productd':productd, 'date':today})
+                                                                                'productd':productd, 'date':today,
+                                                                                'date_ini':date_ini, 'date_end':date_end})
         if type == '3':
 
             ivorder = 0
@@ -206,7 +226,8 @@ def generalreport(request):
                                                                                'iv': ivorder, 'project': projectd,
                                                                                'activity': activityd,
                                                                                'supplier': supplierd,
-                                                                               'date': today})
+                                                                               'date': today,'date_ini':date_ini,
+                                                                               'date_end':date_end})
 
         if type == '4':
 
@@ -245,7 +266,8 @@ def generalreport(request):
                                                                                 'iv':ivorder, 'cantprod':productsorder,
                                                                                 'product':product, 'project':projectd,
                                                                                 'activity':activityd, 'supplier':supplierd,
-                                                                                'productd':productd, 'date':today})
+                                                                                'productd':productd, 'date':today,
+                                                                                'date_ini':date_ini, 'date_end':date_end})
 
         if type == '5':
 
@@ -321,7 +343,8 @@ def generalreport(request):
                                                                                 'product': product, 'project': projectd,
                                                                                 'activity': activityd,
                                                                                 'supplier': supplierd,
-                                                                                'productd': productd, 'date': today})
+                                                                                'productd': productd, 'date': today,
+                                                                                'date_ini':date_ini, 'date_end':date_end})
 
 
     else:

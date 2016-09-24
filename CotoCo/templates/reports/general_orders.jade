@@ -21,13 +21,22 @@ html(lang="en")
             h4(style="text-align: center; vertical-align: middle;font-size:13px") REPORTE GENERAL POR ORDEN DE COMPRA
             hr(style="border-top: 1px solid #ccc;")
 
-        .col-xs-6
+        .col-xs-4
+            h6 <b>Fecha:</b> &nbsp {{date | date:"SHORT_DATE_FORMAT"}}
             h6 <b>Proyecto:</b> {{project}}
-            h6 <b>Actividad:</b> {{activity}}
 
-        .col-xs-6
-            h6 <b>Fecha :</b> &nbsp {{date | date:"SHORT_DATE_FORMAT"}}
+        .col-xs-4
+            h6 <b>Actividad:</b> {{activity}}
             h6 <b>Proveedor:</b> {{supplier}}
+
+        .col-xs-4
+            | {% if date_ini = '-' %}
+            h6 <b>Fecha Inicial:</b> {{date_ini}}
+            h6 <b>Fecha Final:</b> {{date_end}}
+            | {% else %}
+            h6 <b>Fecha Inicial:</b> {{date_ini | date:"SHORT_DATE_FORMAT"}}
+            h6 <b>Fecha Final:</b> {{date_end | date:"SHORT_DATE_FORMAT"}}
+            | {% endif %}
 
         .col-xs-12
             form.producttable
