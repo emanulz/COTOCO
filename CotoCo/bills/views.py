@@ -9,7 +9,17 @@ from .filters import BillFilter, BillDetailFilter
 # Create your views here.
 
 
-# API
+def bill_menu(request):
+
+    return render(request, '../templates/bills/menu.jade')
+
+def bill_create(request):
+
+    return render(request, '../templates/bills/create.jade')
+
+def bill_edit(request):
+
+    return render(request, '../templates/bills/edit.jade')
 
 
 def billlist(request):
@@ -39,6 +49,7 @@ def billview(request):
 
     return render(request, '../templates/bills/billview.jade', {'bill' : bill})
 
+# API
 
 class BillSerializer(serializers.ModelSerializer):
 

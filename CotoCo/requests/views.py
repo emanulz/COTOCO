@@ -18,6 +18,17 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Create your views here.
+def request_menu(request):
+
+    return render(request, '../templates/requests/menu.jade')
+
+def request_create(request):
+
+    return render(request, '../templates/requests/create.jade')
+
+def request_edit(request):
+
+    return render(request, '../templates/requests/edit.jade')
 
 def requestlist(request):
 

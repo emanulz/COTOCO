@@ -14,6 +14,10 @@ from activities.models import Activity
 from datetime import date
 from operator import itemgetter
 
+def report_create(request):
+
+    return render(request, '../templates/reports/template.jade')
+
 def ordersbyproject(request, project):
 
     orders = Order.objects.filter(order_project=project)

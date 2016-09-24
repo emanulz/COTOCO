@@ -1,0 +1,115 @@
+|{% extends "layout/base_admin.html" %}
+
+|{% block extrahead %}
+
+|{% endblock %}
+
+|{% block extrajs %}
+
+|{% endblock %}
+
+|{% block breadcrumbs %}
+
+|{% endblock %}
+
+
+|{% block content %}
+|{% csrf_token %}
+.main-page-cont
+
+    .col-xs-12.no-padding-left
+        form
+            .form-group.row
+                .col-xs-6
+                    H3.order_header Nueva Factura de Compra:
+                //.col-xs-6
+                //    ul.object-tools: li: a(href="/admin/bills/bill/").returnlink Volver
+
+    .col-md-3.no-padding-left
+        form
+            //fecha y proveedor
+            .form-group.row
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Fecha de la factura:
+                    .col-xs-12
+                        input.form-control.new_bill_date(type='date',)
+
+                .col-xs-6.col-md-12.no-padding-left.bottom_row
+                    .col-xs-12
+                        span Proveedor:
+                    .col-xs-12
+                        select.form-control.new_bill_supplier
+                            option
+
+            //proyecto y actividad
+            .form-group.row
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Orden de Compra:
+                    .col-xs-12
+                        select.form-control.new_bill_order
+                            option
+                .col-xs-6.col-md-12.no-padding-left.bottom_row
+                    .col-xs-12
+                        span # Factura del Proveedor:
+                    .col-xs-12
+                        input(type='text').form-control.new_bill_supplier_bill
+
+
+            //producto y buscar
+            .form-group.row
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Producto:
+                    .col-xs-12.inner-addon.right-addon
+                        i.glyphicon.glyphicon-barcode
+                        input.form-control.bill_product_code(type='text')
+                .col-xs-6.col-md-12.no-padding-left.bottom_row
+                    .col-xs-12
+                        span Buscar:
+                    .col-xs-12
+                        select.form-control.new_bill_search
+                            option
+            .form-group.row.table_row
+                .col-xs-12
+                    table.table.table-bordered
+                        tbody
+                            tr: th Sub-Total:
+                                td(class='No_Sub_Total price') 0
+                            tr: th IV:
+                                td(class='No_Sub_Iv price') 0
+                            tr: th Total:
+                                td(class='No_Total price') 0
+
+    .col-md-9.no-padding-left
+        form
+            //tabla
+            .form-group.row.table_row.product_table_row(style='margin-top : 20px;')
+                .col-xs-12
+                    table.table.table-bordered.NO_table
+                        thead: tr
+                            th Códi
+                            th Desc
+                            th Cant
+                            th Unid
+                            th P.Un
+                            th Desc
+                            th IV
+                            th Subt
+                            th
+                        tbody.table-body
+
+
+            //confirmar y guardar
+            .form-group.row(style='padding-right:15px;')
+                .col-xs-12.no-padding-left
+                    button(type='button', class='BTN_NO Btn_Confirm').form-control.btn.btn-default.pull-right Confirmar
+                .col-xs-12.no-padding-left
+                    button(type='button', class='BTN_NO Btn_Edit').form-control.btn.btn-default.pull-right Editar
+                .col-xs-12.no-padding-left
+                    button(type='button', class='BTN_NO Btn_Save').form-control.btn.btn-default.pull-right Guardar
+
+|{% endblock %}
+
+

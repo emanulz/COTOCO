@@ -12,7 +12,7 @@ class OrderAdmin(admin.ModelAdmin):
         return '''<a type="button" class="btn btn-admin pdfBtn" role="button" >Ver</a>'''
 
     def buttonEdit(self, obj):
-        return '''<a type="button" class="btn btn-admin editBtn" role="button" href="/admin/request/edit/">Editar</a>'''
+        return '''<a type="button" class="btn btn-admin editBtn" role="button" href="/request/edit/">Editar</a>'''
 
     buttonPdf.short_description = 'Ver'
     buttonPdf.allow_tags = True

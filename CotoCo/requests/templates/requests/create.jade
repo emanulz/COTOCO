@@ -1,0 +1,22 @@
+|{% extends "requests/template.jade" %}
+
+|{% block extrahead %}
+
+link(href='/static/css/app.css', rel='stylesheet')
+
+|{% endblock %}
+
+|{% block extrajs %}
+
+script(src="/static/js/app.js")
+script(src="/static/requests/js/create.js")
+
+|{% endblock %}
+
+|{% block breadcrumbs %}
+<div class="breadcrumbs col-xs-12" style="height: 40px;">
+<a href="/">Inicio</a>
+span &nbsp; &rsaquo; &nbsp;
+<a href="/admin/requests/request">Pedidos</a>
+</div>
+|{% endblock %}

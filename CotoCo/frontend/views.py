@@ -7,7 +7,7 @@ from django.views.generic import TemplateView
 
 def LandingView(request):
 
-    return redirect('/admin/')
+    return render(request, '../templates/layout/landing.jade')
 
 
 class AppView(TemplateView):

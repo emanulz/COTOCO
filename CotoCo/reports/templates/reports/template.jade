@@ -1,0 +1,102 @@
+|{% extends "layout/base_admin.html" %}
+
+|{% block extrahead %}
+
+link(href='/static/css/app.css', rel='stylesheet')
+
+|{% endblock %}
+
+|{% block extrajs %}
+
+script(src="/static/js/app.js")
+script(src="/static/reports/js/index.js")
+
+|{% endblock %}
+
+|{% block breadcrumbs %}
+
+<div class="breadcrumbs col-xs-12" style="height: 40px;">
+<a href="/">Inicio</a>
+span &nbsp; &rsaquo; &nbsp;
+span Reportes
+</div>
+
+
+|{% endblock %}
+
+
+|{% block content %}
+|{% csrf_token %}
+
+.main-page-cont
+
+    .col-xs-12.no-padding-left
+        form
+            .form-group.row
+                .col-xs-6
+                    H3.order_header Generar Reportes:
+                //.col-xs-6
+                //    ul.object-tools: li: a(href="/admin/bills/bill/").returnlink Volver
+
+    .col-md-12.no-padding-left(style="margin-top:20px")
+        form
+            //fecha y proyecto
+            .form-group.row
+                .col-xs-4.col.no-padding-left
+                    .col-xs-12
+                        span Fecha:
+                    .col-xs-12
+                        input.form-control.by_order_date(disabled=true, type='date',)
+
+                .col-xs-4.col.no-padding-left
+                    .col-xs-12
+                        span Tipo de reporte:
+                    .col-xs-12
+                        select.form-control.by_order_type
+                            option(value=1) Por Facturas General
+                            option(value=2) Por Facturas Detallado
+                            option(value=3) Por Ordenes General
+                            option(value=4) Por Ordenes Detallado
+                            option(value=5) Por Productos Detallado
+
+
+            //proyecto y actividad
+            .form-group.row
+                .col-xs-4.col.no-padding-left
+                    .col-xs-12
+                        span Proyecto:
+                    .col-xs-12
+                        select.form-control.by_order_project
+                            option
+
+                .col-xs-4.no-padding-left
+                    .col-xs-12
+                        span Actividad:
+                    .col-xs-12
+                        select.form-control.by_order_activity
+                            option
+
+                .col-xs-4.no-padding-left
+                    .col-xs-12
+                        span Proveedor:
+                    .col-xs-12
+                        select.form-control.by_order_supplier
+                            option
+            .form-group.row
+
+                .col-xs-4.no-padding-left
+                    .col-xs-12
+                        span Producto:
+                    .col-xs-12
+                        select.form-control.by_order_product
+                            option
+
+                .col-xs-4.no-padding-left
+                    .col-xs-8(style="margin-top:20px")
+                        button(type='button', class='Btn_Confirm').form-control.btn.btn-default Generar
+
+
+|{% endblock %}
+
+
+
