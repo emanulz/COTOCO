@@ -195,7 +195,6 @@ $RECYCLE.BIN/
 *.egg-info
 *.pyc
 /*.pyc
-dist/
 build/
 eggs/
 parts/
