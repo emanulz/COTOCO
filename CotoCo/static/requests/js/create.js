@@ -117,7 +117,7 @@ function add_product(){
         }
         else{
             //FALTA mensaje de que no existe el producto
-            alert('NO EXISTE EL PRODUCTO')
+           alertify.alert('Error de código','No existe un producto en el código seleccionado.')
         }
     }//if
 
@@ -218,10 +218,10 @@ function save_new_request(){
         .fail(function(data){
             new_request_detail=[];
             console.log(data.responseText);
-            alert("Hubo un problema al crear el pedido, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+            alertify.alert('Error',"Hubo un problema al crear el pedido, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
         })
         .success(function(data){
-            alert('Pedido guardado con exito');
+            alertify.alert('Completado','Pedido guardado con exito');
             //window.open(`/orderpdf/${data.id}/`);
             window.location.replace("/admin/requests/request/");
         });//ajax
@@ -251,7 +251,7 @@ function save_detail(){
         })
             .fail(function(data){
                 console.log(data.responseText);
-                alertify.alert("Hubo un problema al crear el pedido, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+                alertify.alert('Error',"Hubo un problema al crear el pedido, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
             })
             .success(function(data){
                 new_request_detail.push(data.id);
@@ -276,12 +276,12 @@ function check_data_filled(){
 
     if(!project.val()){
         bool = false;
-        alertify.alert('Debe Elegir un Proyecto');
+        alertify.alert('Error en Proyecto','Debe Elegir un Proyecto');
         return bool
     }
     if(!activity.val()){
         bool = false;
-        alertify.alert('Debe Elegir una Actividad');
+        alertify.alert('Error en Actividad','Debe Elegir una Actividad');
         return bool
     }
     else{

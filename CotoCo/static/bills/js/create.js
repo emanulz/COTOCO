@@ -164,7 +164,7 @@ function add_product(){
         }
         else{
             //FALTA mensaje de que no existe el producto
-            alert('NO EXISTE EL PRODUCTO')
+            alertify.alert('Error de código','No existe un producto con el código indicado.')
         }
     }//if
 
@@ -340,10 +340,10 @@ function save_new_bill(){
     })
         .fail(function(data){
             console.log(data.responseText);
-            alert("Hubo un problema al crear la factura, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+           alertify.alert('Error',"Hubo un problema al crear la factura, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
         })
         .success(function(data){
-            alert('Factura guardada con Exito');
+            alertify.alert('Completado','Factura guardada con Exito');
             window.location.replace("/admin/bills/bill/");
         });//ajax
 
@@ -377,7 +377,7 @@ function save_detail(){
         })
             .fail(function(data){
                 console.log(data.responseText);
-                alert("Hubo un problema al crear la venta, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+                alertify.alert('Error',"Hubo un problema al crear la venta, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
             })
             .success(function(data){
                 console.log(data.id);
@@ -406,17 +406,17 @@ function check_data_filled(){
 
     if(!supplier.val()){
         bool = false;
-        alertify.alert('Debe Elegir un Proveedor');
+        alertify.alert('Error en Proveedor','Debe Elegir un Proveedor');
         return bool
     }
     if(!order.val()){
         bool = false;
-        alertify.alert('Debe Elegir una Orden de Compra');
+        alertify.alert('Error en Orden de Compra','Debe Elegir una Orden de Compra');
         return bool
     }
     if(!bill.val()){
         bool = false;
-        alertify.alert('Debe Ingresar el numero de Factura del Proveedor');
+        alertify.alert('Error en Proveedor','Debe Ingresar el numero de Factura del Proveedor');
         return bool
     }
     else{

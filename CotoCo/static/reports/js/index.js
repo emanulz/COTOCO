@@ -255,18 +255,18 @@ function check_data_filled(){
 
     if(!project.val()){
         bool = false;
-        alertify.alert('Debe Elegir un valor para Proyecto');
+        alertify.alert('Error','Debe Elegir un valor para Proyecto');
         return bool
     }
     if(!activity.val()){
         bool = false;
-        alertify.alert('Debe Elegir un valor para Actividad');
+        alertify.alert('Error','Debe Elegir un valor para Actividad');
         return bool
     }
 
     if(!supplier.val()){
         bool = false;
-        alertify.alert('Debe Elegir un valor para proveedor');
+        alertify.alert('Error','Debe Elegir un valor para proveedor');
         return bool
     }
 
@@ -274,7 +274,7 @@ function check_data_filled(){
 
         if(!product.val()){
         bool = false;
-        alertify.alert('Debe Elegir un valor para Producto');
+        alertify.alert('Error','Debe Elegir un valor para Producto');
         return bool
     }
 
@@ -325,7 +325,7 @@ function generate_report() {
     })
         .fail(function(data){
             console.log(data.responseText);
-            alert("Hubo un problema al crear el reporte, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
+            alertify.alert('Error',"Hubo un problema al crear el reporte, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
         })
         .success(function(data){
             // var wind = window.open("", "popupWindow", "width=1000,height=768,scrollbars=yes");

@@ -132,7 +132,7 @@ function add_product(){
         }
         else{
             //FALTA mensaje de que no existe el producto
-            alert('NO EXISTE EL PRODUCTO')
+            alertify.alert('Error de código','No existe un producto con el código indicado.')
         }
     }//if
 
@@ -320,11 +320,11 @@ function save_new_order(){
         .fail(function(data){
             new_order_detail=[];
             console.log(data.responseText);
-            alert("Hubo un problema al crear la orden, por favor intente de nuevo o contacte a Emanuel al # 83021964 " +
+            alertify.alert('Error',"Hubo un problema al crear la orden, por favor intente de nuevo o contacte a Emanuel al # 83021964 " +
                 "con nua foto de este error " + data.responseText);
         })
         .success(function(data){
-            alert('Orden Actualizada con exito');
+            alertify.alert('Completado','Orden Actualizada con exito');
             window.open(`/orderpdf2/${data.id}/`);
             window.location.replace("/admin/orders/order/");
         });//ajax
@@ -358,7 +358,7 @@ function save_detail(){
         })
             .fail(function(data){
                 console.log(data.responseText);
-                alert("Hubo un problema al guardar los detalles de la orden, por favor intente de nuevo o contacte a " +
+                alertify.alert('Error',"Hubo un problema al guardar los detalles de la orden, por favor intente de nuevo o contacte a " +
                     "Emanuel al # 83021964 con nua foto de este error " + data.responseText);
             })
             .success(function(data){
@@ -412,6 +412,7 @@ function check_data_filled(){
 
     //SELECTORS
     var date = $('.new_order_date');
+    var delivery_date = $('.new_order_date_delivery');
     var supplier = $('.new_order_supplier');
     var project = $('.new_order_project');
     var activity = $('.new_order_activity');
@@ -422,21 +423,25 @@ function check_data_filled(){
         bool = false;
         return bool
     }
-
+    if(!delivery_date.val()){
+        bool = false;
+        alertify.alert('Error en Fecha de entrega','Debe Elegir una Fecha de Entrega');
+        return bool
+    }
 
     if(!supplier.val()){
         bool = false;
-        alertify.alert('Debe Elegir un proveedor');
+        alertify.alert('Error en proveedor','Debe Elegir un proveedor');
         return bool
     }
     if(!project.val()){
         bool = false;
-        alertify.alert('Debe Elegir un Proyecto');
+        alertify.alert('Error en Proyecto','Debe Elegir un Proyecto');
         return bool
     }
     if(!activity.val()){
         bool = false;
-        alertify.alert('Debe Elegir una Actividad');
+       alertify.alert('Error en Actividad','Debe Elegir una Actividad');
         return bool
     }
     else{
