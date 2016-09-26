@@ -19,7 +19,24 @@ script(src="/static/reports/js/index.js")
 <a href="/">Inicio</a>
 span &nbsp; &rsaquo; &nbsp;
 span Reportes
+<div id="user-tools" class="pull-right">
+|{% block welcome-msg %}
+|Bienvenido,
+|<strong>{% firstof user.get_short_name user.get_username %}</strong>.
+|{% endblock %}
+|{% block userlinks %}
+|{% if user.is_active and user.is_staff %}
+|{% url 'django-admindocs-docroot' as docsroot %}
+|{% endif %}
+|{% if user.has_usable_password %}
+<a href="{% url 'admin:password_change' %}">Cambiar Contraseña</a> /
+|{% endif %}
+<a href="{% url 'admin:logout' %}">Cerrar Sesión</a>
+|{% endblock %}
 </div>
+
+</div>
+
 
 
 |{% endblock %}
@@ -38,7 +55,7 @@ span Reportes
                 //.col-xs-6
                 //    ul.object-tools: li: a(href="/admin/bills/bill/").returnlink Volver
 
-    .col-md-12.no-padding-left(style="margin-top:20px")
+    .col-md-12.no-padding-left
         form
             //fecha y proyecto
             .form-group.row

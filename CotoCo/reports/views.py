@@ -15,6 +15,7 @@ from datetime import date
 import datetime
 from operator import itemgetter
 
+@login_required
 def report_create(request):
 
     return render(request, '../templates/reports/template.jade')

@@ -29,11 +29,7 @@
             <span class="button js-toggle-main-menu"><i class="fa fa-bars"></i> <span class="text">Menu</span></span>
         </div>
 
-        <div class="float-right" style="margin:20px 40px 0 0" >
-            <span class="button js-toggle-help-menu "><i class="fa fa-life-ring"></i> <span class="text">Help Center</span></span>
-        </div>
-
-        <a href="/admin/"><img id="logo" src="/media/pos.png" alt="POS"></a>
+        <a href="/admin/"><img id="logo" src="/media/pos.png" alt="POS" style="margin-right: 12%;"></a>
     </div>
 </nav>
 
@@ -44,8 +40,11 @@
 
             {% block breadcrumbs %}
                 <div class="breadcrumbs col-xs-12">
-                <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+
+                <a href="/">{% trans 'Home' %}</a>
+
                 {% if title %} &rsaquo; {{ title }}{% endif %}
+
                 </div>
             {% endblock %}
 
@@ -86,6 +85,7 @@
 </div>
 
 <script src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'js/util/bootstrap.min.js' %}"></script>
 <script src="{% static 'layout/slidebars/dist/slidebars.min.js' %}"></script>
 <script src="{% static 'layout/js/controller.js' %}"></script>
 

@@ -16,3 +16,12 @@ div.breadcrumbs{
     height: 15px;
 }
 
+@media (max-width: 611px) {
+
+  #user-tools{
+    font-size: 9px;
+    Display: none;
+  }
+
+}
+

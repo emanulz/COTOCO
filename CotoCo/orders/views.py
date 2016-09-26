@@ -19,10 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Create your views here.
 
-def order_menu(request):
-
-    return render(request, '../templates/orders/menu.jade')
-
+@login_required
 def order_create(request):
 
     return render(request, '../templates/orders/create.jade')

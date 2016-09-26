@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from rest_framework import serializers, viewsets
 from .models import Bill, BillDetail
@@ -9,10 +10,7 @@ from .filters import BillFilter, BillDetailFilter
 # Create your views here.
 
 
-def bill_menu(request):
-
-    return render(request, '../templates/bills/menu.jade')
-
+@login_required
 def bill_create(request):
 
     return render(request, '../templates/bills/create.jade')

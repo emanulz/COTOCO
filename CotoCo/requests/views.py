@@ -17,11 +17,8 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Create your views here.
-def request_menu(request):
 
-    return render(request, '../templates/requests/menu.jade')
-
+@login_required
 def request_create(request):
 
     return render(request, '../templates/requests/create.jade')
