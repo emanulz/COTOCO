@@ -173,8 +173,12 @@
 
                             consecutives.sort(function(a, b){return b-a});
 
-
-                            consecutive = parseInt(consecutives[0])+1;
+                            if(consecutives[0]){
+                             consecutive = parseInt(consecutives[0])+1;
+                            }
+                            else{
+                              consecutive = 1
+                            }
 
                             consecutive_field.val(consecutive);
 
