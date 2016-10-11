@@ -8,6 +8,7 @@ var total = 0;
 var subtotal = 0;
 var iv_amount = 0 ;
 var order_id = 0;
+var project_id =0;
 
 
 function edit_order() {
@@ -40,16 +41,31 @@ function edit_order() {
 
     products_to_memory();
 
-    let id = JSON.parse(localStorage.order_to_edit);
+    // let id = JSON.parse(localStorage.order_to_edit);
+    var id = getUrlParameter('id');
 
-    order_id=id.id;
-
-    $('.order_header').text( `Editar orden de compra # ${order_id}`);
+    $('.order_header').text( `Editar orden de compra # ${id}`);
 
     main_edit_order();
 
-    load_order(id.id);
+    load_order(id);
+
 }
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
 
 function products_to_memory() {
 
@@ -373,17 +389,25 @@ function load_order(id) {
 
     $.get(`/api/orders/${id}/`, function (data) {
 
-        $('.new_order_date').val(data.order_date);
-        $('.new_order_date_delivery').val(data.order_deliver_date);
-        $('.new_order_supplier').val(data.order_supplier).trigger("change");
-        $('.new_order_project').val(data.order_project).trigger("change");
-        $('.new_order_activity').val(data.order_activity).trigger("change");
-
         last_order_detail=data.order_product_list;
 
+    }).success(function (data){
 
-    }).success(function (){
+
+        project_id = data.order_project;
+
+        $('.new_order_date').val(data.order_date);
+
+        $('.new_order_date_delivery').val(data.order_deliver_date);
+
+        $('.new_order_supplier').val(data.order_supplier).trigger("change");
+
+        $('.new_order_activity').val(data.order_activity).trigger("change");
+
+        $('.project_val').val(project_id).trigger("change");
+
         add_loaded_to_table();
+
     });
 
 
@@ -494,6 +518,8 @@ function main_edit_order () {
     iv_amount = 0 ;
 
     //Browser Events
+
+    $('.load_order').hide();
 
     code.on('keypress', function (event) {
 
@@ -686,14 +712,19 @@ function main_edit_order () {
         language: "es"
     });
 
-
-
     //Hide Buttons
     Btn_Confirm.hide();
     Btn_Edit.hide();
     Btn_Save.hide();
 
-    //$('.new_order_supplier').val('1');
+
+    setTimeout(function(){
+
+        project.val(project_id).trigger("change");
+
+    }, 1000);
+
+
 }
 
 $(document).on('ready', function(){

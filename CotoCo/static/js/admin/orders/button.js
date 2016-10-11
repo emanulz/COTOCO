@@ -18,9 +18,7 @@ $( document ).ready(function($){
 
         var id=$(this).closest('tr')[0].cells[1].outerText;
 
-
-        localStorage.order_to_edit=JSON.stringify({id:id});
-
+        window.open(`/order/edit/?id=${id}`)
 
     });
 

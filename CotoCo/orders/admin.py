@@ -14,7 +14,7 @@ class OrderAdmin(admin.ModelAdmin):
         return '''<a type="button" class="btn btn-admin pdfBtn" role="button" >Ver</a>'''
 
     def buttonEdit(self, obj):
-        return '''<a type="button" class="btn btn-admin editBtn" role="button" href="/order/edit/">Editar</a>'''
+        return '''<a type="button" class="btn btn-admin editBtn" role="button" >Editar</a>'''
 
     def buttonReport(self, obj):
         return '''<a type="button" class="btn btn-admin reportBtn" role="button" >Reporte</a>'''
