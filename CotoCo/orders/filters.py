@@ -12,8 +12,9 @@ class OrderFilter(django_filters.FilterSet):
 
     class Meta:
         model = Order
-        fields = ('id', 'order_date', 'order_deliver_date', 'order_supplier', 'order_project', 'order_activity', 'order_product_list',
-                  'order_subtotal', 'order_iv', 'order_total', 'order_min_date', 'order_max_date')
+        fields = ('id', 'order_date', 'order_deliver_date', 'order_supplier', 'order_project', 'order_activity',
+                  'order_request', 'order_product_list', 'order_subtotal', 'order_iv', 'order_total', 'order_min_date',
+                  'order_max_date')
 
 
 class OrderDetailFilter(django_filters.FilterSet):

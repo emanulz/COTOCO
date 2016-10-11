@@ -6,12 +6,8 @@ from products.models import Product
 from activities.models import Activity
 from suppliers.models import Supplier
 from projects.models import Project
+from requests.models import Request
 # Create your models here.
-
-from django import forms
-from django.utils.safestring import mark_safe
-from django.template.loader import render_to_string
-
 
 class Order(models.Model):
 
@@ -20,6 +16,7 @@ class Order(models.Model):
     order_supplier = models.ForeignKey(Supplier, verbose_name='Proveedor')
     order_project = models.ForeignKey(Project, verbose_name='Proyecto')
     order_activity = models.ForeignKey(Activity, verbose_name='Actividad')
+    order_request = models.ForeignKey(Request, null=True, blank=True, verbose_name='Pedido')
     order_product_list = models.ManyToManyField('OrderDetail', verbose_name='Lista de Detalles')
     order_subtotal = models.DecimalField(max_digits=11, decimal_places=2, verbose_name='Subtotal', default=0)
     order_iv = models.DecimalField(max_digits=11, decimal_places=2, verbose_name='IV Total', default=0)

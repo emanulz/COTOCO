@@ -4,6 +4,8 @@ var new_order_detail=[];
 var total = 0;
 var subtotal = 0;
 var iv_amount = 0 ;
+var request_detail;
+var request_id = null;
 
 //FUNCTIONS
 function new_order() {
@@ -306,6 +308,7 @@ function save_new_order(){
             "order_supplier": $('.new_order_supplier').val(),
             "order_project": $('.new_order_project').val(),
             "order_activity": $('.new_order_activity').val(),
+            "order_request": request_id,
             "order_product_list": new_order_detail,
             "order_subtotal": subtotal,
             "order_iv": iv_amount,
@@ -407,6 +410,91 @@ function check_data_filled(){
 
 }
 
+function load_request(id) {
+
+    request_id = id;
+
+    $.get(`/api/requests/${id}/`, function (data) {
+
+        $('.new_order_project').val(data.request_project).trigger("change");
+        $('.new_order_activity').val(data.request_activity).trigger("change");
+
+        request_detail=data.request_product_list;
+
+    }).success(function (){
+
+        add_loaded_to_table();
+
+        alertify.alert('Cargado', 'Pedido Cargado Correctamente');
+
+        $('.load_order').hide();
+
+
+    }).fail(function (){
+
+        alertify.alert('Error', 'Pedido NO Cargado Correctamente, revise el número de pedido, o contacte a Emanuel al #8302-1964');
+
+    });
+
+}
+
+function add_loaded_to_table(){
+
+//todo fix insert order cause by get async
+
+    $.each(request_detail, function (i) {
+
+        $.get(`/api/request_detail/${request_detail[i]}/`,false)
+
+        .success(function (data) {
+
+            let products=JSON.parse(localStorage.Products);
+
+            let code = data.request_detail_product_code;
+            var qty = parseFloat(data.request_detail_amount);
+
+            if( qty === undefined){
+            qty=1;
+            }
+
+            var is_on_array = is_code_on_array(new_order_array,code);
+
+            if(is_on_array === -1){
+            //filter product by code
+            products = $.grep(products, function(element){
+            return element.product_code == code;
+            });
+
+            if (products.length){
+            var subt = (products[0].product_price*qty)*((100-products[0].product_discount)/100);
+            var pudisc = (products[0].product_price)*((100-products[0].product_discount)/100);
+            var iv=0;
+
+            if( products[0].product_usetaxes){
+                iv=products[0].product_taxes;
+            }
+
+            add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit,
+                        products[0].product_price , subt, products[0].id, products[0].product_discount, iv, pudisc); //last 0 is disc
+            }
+            else{
+            //FALTA mensaje de que no existe el producto
+            alertify.alert('Error','No existe un producto con el código seleccionado.')
+            }
+            }//if
+
+            else{
+
+            new_order_array = row_update(is_on_array, code, qty, new_order_array, 0, 1,0);
+            update_totals();
+
+            }//else
+
+        });
+
+    });
+}
+
 function PopupCenter(url, title, w, h) {
     // Fixes dual-screen position                         Most browsers      Firefox
     var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
@@ -485,6 +573,28 @@ function main_new_order () {
 
     });
 
+    html.on('click','.load_order', function () {
+
+        event.preventDefault();
+        alertify.prompt( 'Cargar Pedido', 'Ingrese el número de Pedido','0', function (evt, value) {
+
+
+            $.get(`/api/orders/?order_request=${value}`, function (data) {
+
+            }).success(function(data){
+
+                if(data.length == 0){
+                    load_request(value);
+                }
+                else{
+                    alertify.alert('Error', `Ya existe la orden #${data[0].id} asociada a ese pedido`)
+                }
+
+            });//ajax
+
+        }, function(){});
+
+    });
 
     html.on('click','.popup_product', function () {
 
