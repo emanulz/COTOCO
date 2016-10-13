@@ -444,6 +444,16 @@ function main_new_pay() {
 
         event.preventDefault();
 
+        pay_details_array=[];
+        total_debt = 0;
+        total_pay = 0;
+
+        $('.total_debt').html(total_debt.toFixed(2));
+
+        update_amounts();
+
+        $(".table-body").html("");
+
         $.get(`/api/bills/?bill_supplier=${supplier.val()}&bill_payed=False`, function (data) {
 
         }).success(function(data){
