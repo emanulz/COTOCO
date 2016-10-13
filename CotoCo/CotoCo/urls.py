@@ -18,7 +18,7 @@ from django.contrib import admin
 from rest_framework import routers
 
 from activities.views import ActivityViewSet
-from bills.views import BillViewSet, BillDetailViewSet, billlist, billview, bill_create, bill_edit
+from bills.views import BillViewSet, BillDetailViewSet, billlist, billview, bill_create, bill_edit, billpaysview
 from clients.views import ClientViewSet
 from orders.views import OrderViewSet, OrderDetailViewSet, order2pdf, orderpdf2, orderlist, orderview, order_create
 from orders.views import order_edit
@@ -26,7 +26,7 @@ from products.views import ProductViewSet, ProductDepartmentViewSet, ProductSubD
 from projects.views import ProjectViewSet
 from suppliers.views import SupplierViewSet
 from frontend.views import LandingView
-from pays.views import PayViewSet, PayDetailViewSet
+from pays.views import PayViewSet, PayDetailViewSet, pay_create, payview
 from reports.views import ordersbyproject, billsbyproject, byorder, generalreport, report_create
 from requests.views import RequestViewSet, RequestDetailViewSet, requestpdf2, requestlist, requestview
 from requests.views import  request_create, request_edit
@@ -72,6 +72,10 @@ urlpatterns = [
     url(r'bill/edit/', bill_edit, name='bill_edit'),
     url(r'billlist/', billlist, name='billlist'),
     url(r'billview/', billview, name='billview'),
+    url(r'billpaysview/', billpaysview, name='billpaysview'),
+
+    url(r'pay/create/', pay_create, name='pay_create'),
+    url(r'payview/(?P<pk>\d+)/$', payview, name='payview'),
 
     url(r'request/create/', request_create, name='request_create'),
     url(r'request/edit/', request_edit, name='request_edit'),

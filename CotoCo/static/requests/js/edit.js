@@ -230,8 +230,7 @@ function save_new_request(){
             alertify.alert('Error',"Hubo un problema al editar el pedido, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
         })
         .success(function(data){
-            alertify.alert('Completado','Pedido Editado con éxito.');
-            //window.open(`/orderpdf/${data.id}/`);
+            window.open(`/requestpdf2/${data.id}/`);
             window.location.replace("/admin/requests/request/");
         });//ajax
 

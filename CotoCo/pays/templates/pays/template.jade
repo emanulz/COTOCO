@@ -1,0 +1,99 @@
+|{% extends "layout/base_admin.html" %}
+
+|{% block extrahead %}
+
+|{% endblock %}
+
+|{% block extrajs %}
+
+|{% endblock %}
+
+|{% block breadcrumbs %}
+
+|{% endblock %}
+
+|{% block content %}
+
+|{% csrf_token %}
+
+.main-page-cont
+
+    .col-xs-12.no-padding-left
+        form
+            .form-group.row
+                .col-xs-6
+                    H3.order_header Nuevo Pago a Proveedor:
+                //.col-xs-6
+                //    ul.object-tools: li: a(href="/admin/bills/bill/").returnlink Volver
+
+
+    .col-md-3.no-padding-left
+        form
+            //fecha y proveedor
+            .form-group.row
+                .col-xs-12.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Fecha:
+                    .col-xs-12
+                        input.form-control.new_pay_date(type='date',)
+
+            .form-group.row
+                .col-xs-12.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Proveedor:
+                    .col-xs-12
+                        select.form-control.new_pay_supplier
+                            option
+
+            .form-group.row
+                .col-xs-12.col-md-12.no-padding-left
+
+                    .col-xs-12
+                        button(type='button', class=' Btn_Select_Supplier').form-control.btn.btn-primary Consultar
+
+            .form-group.row.table_row
+                .col-xs-12
+                    table.table.table-bordered(style='margin-bottom:0')
+                        tbody
+                            tr: th Saldo Anterior:
+                                td(class='total_debt price') 0
+                            tr: th Abono:
+                                td(class='total_pay price') 0
+                            tr: th Saldo:
+                                td(class='total_remain price') 0
+
+            .form-group.row.save_pay
+                .col-xs-12.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Documento #:
+                    .col-xs-12
+                        input( type='text', class='doc_num').form-control
+
+                .col-xs-12.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Detalle:
+                    .col-xs-12
+                        textarea(rows="3", class='pay_detail_text', maxlength="255", style='resize: none' ).form-control
+
+                .col-xs-12.col-md-12.no-padding-left(style='margin-top:10px')
+                    .col-xs-12
+                        button( type='button', class=' Btn_Pay').form-control.btn.btn-success Registrar Pago
+
+    .col-md-9.no-padding-left
+        form
+            //tabla
+            .form-group.row.table_row.product_table_row(style='margin-top : 20px;')
+                .col-xs-12
+                    table.table.table-bordered.NO_table
+                        thead: tr
+                            th Fact #
+                            th Fac Proveedor #
+                            th Total
+                            th Saldo
+                            th Pagar Completa
+                            th Otro
+                            th Monto ₡
+                        tbody.table-body
+
+|{% endblock %}
+

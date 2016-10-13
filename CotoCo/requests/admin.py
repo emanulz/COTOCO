@@ -21,7 +21,7 @@ class OrderAdmin(admin.ModelAdmin):
     buttonEdit.allow_tags = True
 
     list_display = ('id', 'buttonPdf', 'buttonEdit', 'request_date', 'request_project', 'request_activity')
-    search_fields = ('id', 'request_date', 'request_project', 'request_activity')
+    search_fields = ('id', 'request_date', 'request_project__project_name', 'request_activity__activity_name')
     filter_horizontal = ('request_product_list',)
 
     class Media:

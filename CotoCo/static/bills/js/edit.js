@@ -335,7 +335,6 @@ function save_new_bill(){
            alertify.alert('Error',"Hubo un problema al crear la factura, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
         })
         .success(function(data){
-            alertify.alert('Completado','Factura guardada con Exito');
             window.location.replace("/admin/bills/bill/");
         });//ajax
 

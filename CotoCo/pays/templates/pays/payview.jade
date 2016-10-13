@@ -1,0 +1,71 @@
+doctype html
+html(lang="en")
+    head
+        title Pago # {{pay.id}}
+
+        |{% load humanize %}
+
+        link(rel="stylesheet" href="/static/css/reset.css")
+
+        link(rel="stylesheet" href="/static/css/bootstrapMod.css")
+        link(rel="stylesheet" href="/static/css/orderpdf.css")
+
+
+    body(style="font-family:helvetica;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            img(src= "/media/img/coto.png" style="width:300px;height:auto;margin-bottom:0px;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            h4(style="text-align: center; vertical-align: middle;font-size:15px") PAGO A PROVEEDOR # {{pay.id}}
+            hr(style="border-top: 1px solid #ccc;")
+
+        .col-xs-6
+
+            h5 <b>Fecha de Pago:</b> &nbsp {{pay.pay_date | date:"SHORT_DATE_FORMAT"}}
+            h5 <b>Proveedor:</b> {{pay.pay_supplier.supplier_name}}
+
+        .col-xs-6
+            h5 <b>Documento Referencia #:</b> {{pay.pay_document_num}}
+            h5 <b>Detalle:</b> {{pay.pay_notes}}
+
+        .col-xs-12
+            form
+                //tabla
+                .form-group.row.table_row.product_table_row
+                    .col-xs-12
+                        table(style='font-size:12px').table.table-bordered.NO_table
+                            thead: tr
+                                th Factura #
+                                th Factura del Proveedor #
+                                th Total Factura
+                                th Saldo Anterior
+                                th Monto del Pago
+                                th Saldo Posterior
+                            tbody.table-body
+                                | {% for detail in details %}
+                                tr
+                                    td: a(target='_blank')(href='/billview/?bill={{detail.pay_detail_bill}}') {{detail.pay_detail_bill}}
+                                    td {{detail.pay_detail_bill.bill_supplier_bill}}
+                                    td ₡ {{detail.pay_detail_bill.bill_total | floatformat:"2"|intcomma}}
+                                    td ₡ {{detail.pay_detail_last_debt| floatformat:"2"|intcomma}}
+                                    td ₡ {{detail.pay_detail_amount | floatformat:"2"|intcomma}}
+                                    td ₡ {{detail.pay_detail_actual_debt | floatformat:"2"|intcomma}}
+                                | {% endfor %}
+
+        .col-xs-12
+            .col-xs-4.wopadding.pull-left
+                hr(style="border-top: 1px solid #000;")
+                span(style="font-weight: bold") Firma Responsable
+
+            .col-xs-5.wopadding.pull-right
+
+                .col-xs-12.wopadding.pull-right
+                    hr(style="border-top: 1px solid #ccc;")
+                    span.spanbold Total Pago:
+                    span.spanbold.pull-right(style='margin-right:0px;') ₡ {{pay.pay_total | floatformat:"2"|intcomma}}
+                    hr(style="border-top: 1px solid #ccc;")
+
+

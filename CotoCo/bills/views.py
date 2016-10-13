@@ -6,6 +6,7 @@ from django.shortcuts import render
 from rest_framework import serializers, viewsets
 from .models import Bill, BillDetail
 from .filters import BillFilter, BillDetailFilter
+from pays.models import PayDetail
 
 # Create your views here.
 
@@ -46,6 +47,16 @@ def billview(request):
     bill = Bill.objects.get(pk=billnum)
 
     return render(request, '../templates/bills/billview.jade', {'bill' : bill})
+
+def billpaysview(request):
+
+    billnum = request.GET['bill']
+
+    pays = PayDetail.objects.filter(pay_detail_bill=billnum)
+
+    bill = Bill.objects.get(pk=billnum)
+
+    return render(request, '../templates/bills/billpayview.jade', {'bill' : bill, 'pays':pays})
 
 # API
 

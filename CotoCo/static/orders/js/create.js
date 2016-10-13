@@ -324,7 +324,6 @@ function save_new_order(){
             alertify.alert('Error',"Hubo un problema al crear la orden, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
         })
         .success(function(data){
-            alertify.alert('Completado','Orden de compra creada con éxito!');
             window.open(`/orderpdf2/${data.id}/`);
             window.location.replace("/admin/orders/order/");
         });//ajax

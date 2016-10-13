@@ -1,0 +1,71 @@
+doctype html
+html(lang="en")
+    head
+        title Pagos Factura # {{bill.id}}
+
+        |{% load humanize %}
+
+        link(rel="stylesheet" href="/static/css/reset.css")
+
+        link(rel="stylesheet" href="/static/css/bootstrapMod.css")
+        link(rel="stylesheet" href="/static/css/orderpdf.css")
+
+
+    body(style="font-family:helvetica;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            img(src= "/media/img/coto.png" style="width:300px;height:auto;margin-bottom:0px;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            h4(style="text-align: center; vertical-align: middle;font-size:15px") LISTA DE PAGOS FACTURA # {{bill.id}}
+            hr(style="border-top: 1px solid #ccc;")
+
+        .col-xs-6
+
+            h5 <b>Orden de compra #: </b>
+                a(target='_blank')(href='/orderview/?order={{bill.bill_order.id}}') {{bill.bill_order.id}}
+            h5 <b>Proyecto:</b> {{bill.bill_order.order_project.project_name}}
+            h5 <b>Actividad:</b> {{bill.bill_order.order_activity.activity_name}}
+
+        .col-xs-6
+            h5 <b>Fecha :</b> &nbsp {{bill.bill_date | date:"SHORT_DATE_FORMAT"}}
+            h5 <b>Proveedor:</b> {{bill.bill_supplier.supplier_name}}
+            h5 <b>Factura del Proveedor:</b> {{bill.bill_supplier_bill}}
+
+
+        .col-xs-12
+            form
+                //tabla
+                .form-group.row.table_row.product_table_row
+                    .col-xs-12
+                        table(style='font-size:12px; margin-top:20px').table.table-bordered.NO_table
+                            thead: tr
+                                th Pago #
+                                th Fecha
+                                th Documento
+                                th Detalle
+                                th Saldo Anterior
+                                th Abono
+                                th Saldo Posterior
+
+                            tbody.table-body
+                                | {% for pay in pays %}
+                                tr
+                                    td: a(target='_blank')(href='/payview/{{pay.pay_detail_pay}}/') {{pay.pay_detail_pay}}
+                                    td {{pay.pay_detail_pay.pay_date | date:"SHORT_DATE_FORMAT"}}
+                                    td {{pay.pay_detail_pay.pay_document_num}}
+                                    td {{pay.pay_detail_pay.pay_notes}}
+                                    td ₡ {{pay.pay_detail_last_debt | floatformat:"2"|intcomma}}
+                                    td ₡ {{pay.pay_detail_amount | floatformat:"2"|intcomma}}
+                                    td ₡ {{pay.pay_detail_actual_debt | floatformat:"2"|intcomma}}
+                                | {% endfor %}
+
+        .col-xs-12
+            .col-xs-5.wopadding.pull-right
+                .col-xs-12.wopadding.pull-right
+                    hr(style="border-top: 1px solid #ccc;")
+                    span.spanbold Saldo Actual:
+                    span.spanbold.pull-right(style='margin-right:0px;') ₡ {{bill.bill_debt | floatformat:"2"|intcomma}}
+                    hr(style="border-top: 1px solid #ccc;")

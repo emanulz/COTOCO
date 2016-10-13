@@ -340,7 +340,6 @@ function save_new_order(){
                 "con nua foto de este error " + data.responseText);
         })
         .success(function(data){
-            alertify.alert('Completado','Orden Actualizada con exito');
             window.open(`/orderpdf2/${data.id}/`);
             window.location.replace("/admin/orders/order/");
         });//ajax

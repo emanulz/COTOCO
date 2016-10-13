@@ -33,6 +33,16 @@
 
         });
 
+         $('html').on('click','.paysBtn', function () {
+
+            var id=$(this).closest('tr')[0].cells[1].outerText;
+
+            window.open(`/billpaysview/?bill=${id}`)
+
+
+
+        });
+
 
     });
 

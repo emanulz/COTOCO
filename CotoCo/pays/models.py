@@ -10,9 +10,15 @@ from suppliers.models import Supplier
 class Pay(models.Model):
 
     pay_date = models.DateField(verbose_name='Fecha')
-    pay_details = models.ManyToManyField('PayDetail', blank=True, verbose_name='Detalles de Pago')
     pay_supplier = models.ForeignKey(Supplier, null=True, verbose_name='Proveedor')
-    pay_total = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2, verbose_name='Total del Pago')
+    pay_document_num = models.CharField(max_length=100, null=True, verbose_name='Comprobante Número')
+    pay_notes = models.CharField(max_length=255, blank=True, null=True, verbose_name='Notas')
+    pay_total = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2,
+                                    verbose_name='Total del Pago')
+    pay_last_debt = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2,
+                                        verbose_name='Saldo Total Anterior')
+    pay_actual_debt = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2,
+                                          verbose_name='Saldo Total Actual')
 
     def __unicode__(self):
         return '%s' % self.id
@@ -24,9 +30,11 @@ class Pay(models.Model):
 
 class PayDetail(models.Model):
 
-    pay_detail_bill = models.ForeignKey(Bill, verbose_name='Factura')
+    pay_detail_pay = models.ForeignKey('Pay', verbose_name='Pago')
+    pay_detail_bill = models.ForeignKey( Bill, verbose_name='Factura')
+    pay_detail_last_debt = models.DecimalField(max_digits=11, null=True, decimal_places=2, verbose_name='Saldo Anterior')
     pay_detail_amount = models.DecimalField(max_digits=11, null=True, decimal_places=2, verbose_name='Monto')
-    pay_detail_completed = models.BooleanField(default=False, verbose_name='Pago Total?')
+    pay_detail_actual_debt = models.DecimalField(max_digits=11, null=True, decimal_places=2, verbose_name='Saldo Actual')
 
     def __unicode__(self):
         return '%s' % self.id

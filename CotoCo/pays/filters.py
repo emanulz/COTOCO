@@ -8,10 +8,12 @@ class PayFilter(django_filters.FilterSet):
 
        class Meta:
         model = Pay
-        fields = ('id', 'pay_date',  'pay_details', 'pay_supplier', 'pay_total',)
+        fields = ('id', 'pay_date', 'pay_supplier', 'pay_document_num', 'pay_notes', 'pay_total', 'pay_last_debt',
+                  'pay_actual_debt', )
 
 
 class PayDetailFilter(django_filters.FilterSet):
     class Meta:
         model = PayDetail
-        fields = ('id', 'pay_detail_bill',  'pay_detail_amount', 'pay_detail_completed',)
+        fields = ('id', 'pay_detail_pay', 'pay_detail_bill', 'pay_detail_last_debt', 'pay_detail_amount',
+                  'pay_detail_actual_debt',)

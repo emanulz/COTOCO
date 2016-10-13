@@ -29,8 +29,8 @@ class OrderAdmin(admin.ModelAdmin):
     buttonReport.allow_tags = True
 
     list_display = ('id', 'buttonPdf', 'buttonEdit', 'buttonReport', 'order_date', 'order_supplier', 'order_project', 'order_activity',
-                    'order_subtotal', 'order_iv', 'order_total')
-    search_fields = ('id', 'order_date', 'order_supplier', 'order_project', 'order_activity')
+                    'order_total')
+    search_fields = ('id', 'order_date', 'order_supplier__supplier_name', 'order_project__project_name', 'order_activity__activity_name')
     filter_horizontal = ('order_product_list',)
 
     class Media:

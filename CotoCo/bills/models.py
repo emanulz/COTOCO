@@ -19,7 +19,7 @@ class Bill(models.Model):
     bill_total = models.DecimalField(max_digits=11, decimal_places=2, verbose_name='Precio Total')
     bill_payed = models.BooleanField(default=False, verbose_name='Pagada?')
     bill_half_payed = models.BooleanField(default=False, verbose_name='Con Abono?')
-    bill_debt = models.DecimalField(max_digits=11, null=True, decimal_places=2, verbose_name='Saldo de Factura')
+    bill_debt = models.DecimalField(max_digits=11, null=True, blank=True, decimal_places=2, verbose_name='Saldo de Factura')
 
     def __unicode__(self):
         return '%s' % self.id

@@ -17,14 +17,21 @@ class BillAdmin(admin.ModelAdmin):
 
         return '''<a type="button" class="btn btn-admin editBtn" role="button" href="/bill/edit/">Editar</a>'''
 
+    def buttonPays(self, obj):
+
+        return '''<a type="button" class="btn btn-admin paysBtn" role="button" >Pagos</a>'''
+
     buttonEdit.short_description = 'Editar'
     buttonEdit.allow_tags = True
+
+    buttonPays.short_description = 'Ver Pagos'
+    buttonPays.allow_tags = True
 
     view_btn.short_description = 'Ver'
     view_btn.allow_tags = True
 
-    list_display = ('id', 'view_btn', 'buttonEdit', 'bill_date', 'bill_supplier', 'bill_supplier_bill', 'bill_order', 'bill_subtotal', 'bill_iv', 'bill_total')
-    search_fields = ('id', 'bill_date', 'bill_supplier', 'bill_supplier_bill', 'bill_order__id')
+    list_display = ('id', 'view_btn', 'buttonEdit', 'buttonPays', 'bill_date', 'bill_supplier', 'bill_supplier_bill', 'bill_order', 'bill_total')
+    search_fields = ('id', 'bill_date', 'bill_supplier__supplier_name', 'bill_supplier_bill', 'bill_order__id')
     filter_horizontal = ('bill_detail_list',)
 
     class Media:
