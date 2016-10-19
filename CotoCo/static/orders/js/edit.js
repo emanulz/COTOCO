@@ -46,6 +46,8 @@ function edit_order() {
 
     $('.order_header').text( `Editar orden de compra # ${id}`);
 
+    order_id = id;
+
     main_edit_order();
 
     load_order(id);
