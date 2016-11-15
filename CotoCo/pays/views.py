@@ -27,8 +27,8 @@ class PaySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Pay
-        fields = ('id', 'pay_date', 'pay_supplier', 'pay_document_num', 'pay_notes', 'pay_total', 'pay_last_debt',
-                  'pay_actual_debt', )
+        fields = ('id', 'pay_date', 'pay_supplier', 'pay_document_num', 'pay_notes', 'pay_interest', 'pay_total', 'pay_last_debt',
+                  'pay_actual_debt', 'pay_deposit' )
 
 class PayViewSet(viewsets.ModelViewSet):
 
@@ -43,7 +43,7 @@ class PayDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = PayDetail
         fields = ('id', 'pay_detail_pay', 'pay_detail_bill', 'pay_detail_last_debt', 'pay_detail_amount',
-                  'pay_detail_actual_debt',)
+                  'pay_detail_actual_debt', 'pay_detail_interest')
 
 
 class PayDetailViewSet(viewsets.ModelViewSet):

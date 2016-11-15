@@ -24,5 +24,5 @@ class PayAdmin(admin.ModelAdmin):
 @admin.register(PayDetail)
 class PayDetailAdmin(admin.ModelAdmin):
 
-    list_display = ('id', 'pay_detail_pay', 'pay_detail_bill', 'pay_detail_amount', )
-    search_fields = ('id', 'pay_detail_bill__id',  'pay_detail_amount',)
+    list_display = ('id', 'pay_detail_pay', 'pay_detail_bill', 'pay_detail_amount', 'pay_detail_interest' )
+    search_fields = ('id', 'pay_detail_bill__id',  'pay_detail_amount', 'pay_detail_interest')

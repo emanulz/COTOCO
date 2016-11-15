@@ -13,8 +13,12 @@ class Pay(models.Model):
     pay_supplier = models.ForeignKey(Supplier, null=True, verbose_name='Proveedor')
     pay_document_num = models.CharField(max_length=100, null=True, verbose_name='Comprobante Número')
     pay_notes = models.CharField(max_length=255, blank=True, null=True, verbose_name='Notas')
+    pay_interest = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2,
+                                    verbose_name='Total de intereses')
     pay_total = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2,
                                     verbose_name='Total del Pago')
+    pay_deposit = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2,
+                                    verbose_name='Total del Depósito')
     pay_last_debt = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2,
                                         verbose_name='Saldo Total Anterior')
     pay_actual_debt = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2,
@@ -35,6 +39,7 @@ class PayDetail(models.Model):
     pay_detail_last_debt = models.DecimalField(max_digits=11, null=True, decimal_places=2, verbose_name='Saldo Anterior')
     pay_detail_amount = models.DecimalField(max_digits=11, null=True, decimal_places=2, verbose_name='Monto')
     pay_detail_actual_debt = models.DecimalField(max_digits=11, null=True, decimal_places=2, verbose_name='Saldo Actual')
+    pay_detail_interest = models.DecimalField(max_digits=11, null=True, decimal_places=2, verbose_name='Interés')
 
     def __unicode__(self):
         return '%s' % self.id

@@ -61,8 +61,13 @@
                                 td(class='total_pay price') 0
                             tr: th Saldo:
                                 td(class='total_remain price') 0
+                            tr: th Interés:
+                                td(class='interest_amount price') 0
+                            tr: th Depósito:
+                                td(class='deposit_amount price') 0
 
             .form-group.row.save_pay
+
                 .col-xs-12.col-md-12.no-padding-left
                     .col-xs-12
                         span Documento #:
@@ -93,6 +98,7 @@
                             th Pagar Completa
                             th Otro
                             th Monto ₡
+                            th Interés ₡
                         tbody.table-body
 
 |{% endblock %}

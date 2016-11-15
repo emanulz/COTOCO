@@ -44,6 +44,7 @@ html(lang="en")
                                 th Saldo Anterior
                                 th Monto del Pago
                                 th Saldo Posterior
+                                th Interés
                             tbody.table-body
                                 | {% for detail in details %}
                                 tr
@@ -53,6 +54,7 @@ html(lang="en")
                                     td ₡ {{detail.pay_detail_last_debt| floatformat:"2"|intcomma}}
                                     td ₡ {{detail.pay_detail_amount | floatformat:"2"|intcomma}}
                                     td ₡ {{detail.pay_detail_actual_debt | floatformat:"2"|intcomma}}
+                                    td ₡ {{detail.pay_detail_interest | floatformat:"2"|intcomma}}
                                 | {% endfor %}
 
         .col-xs-12
@@ -63,9 +65,14 @@ html(lang="en")
             .col-xs-5.wopadding.pull-right
 
                 .col-xs-12.wopadding.pull-right
+                    span Total Pago:
+                    span.pull-right(style='margin-right:0px;') ₡ {{pay.pay_total | floatformat:"2"|intcomma}}
                     hr(style="border-top: 1px solid #ccc;")
-                    span.spanbold Total Pago:
-                    span.spanbold.pull-right(style='margin-right:0px;') ₡ {{pay.pay_total | floatformat:"2"|intcomma}}
+                    span Total Intereses:
+                    span.pull-right(style='margin-right:0px;') ₡ {{pay.pay_interest | floatformat:"2"|intcomma}}
+                    hr(style="border-top: 1px solid #ccc;")
+                    span.spanbold Total Depósito:
+                    span.spanbold.pull-right(style='margin-right:0px;') ₡ {{pay.pay_deposit | floatformat:"2"|intcomma}}
                     hr(style="border-top: 1px solid #ccc;")
 
 

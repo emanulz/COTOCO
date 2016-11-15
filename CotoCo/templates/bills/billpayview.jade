@@ -48,6 +48,7 @@ html(lang="en")
                                 th Detalle
                                 th Saldo Anterior
                                 th Abono
+                                th Interés
                                 th Saldo Posterior
 
                             tbody.table-body
@@ -59,6 +60,7 @@ html(lang="en")
                                     td {{pay.pay_detail_pay.pay_notes}}
                                     td ₡ {{pay.pay_detail_last_debt | floatformat:"2"|intcomma}}
                                     td ₡ {{pay.pay_detail_amount | floatformat:"2"|intcomma}}
+                                    td ₡ {{pay.pay_detail_interest | floatformat:"2"|intcomma}}
                                     td ₡ {{pay.pay_detail_actual_debt | floatformat:"2"|intcomma}}
                                 | {% endfor %}
 

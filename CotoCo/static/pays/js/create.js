@@ -5,6 +5,7 @@
 var pay_details_array=[];
 var total_debt = 0;
 var total_pay = 0;
+var interest = 0;
 
 function new_pay() {
 
@@ -76,11 +77,12 @@ function fill_table(data) {
         <td style="padding:0; text-align:center"><input type="checkbox" class="complete chkcomp_${data[i].id}"/></td>
         <td style="padding:0; text-align:center"><input type="checkbox" class="incomplete chkincomp_${data[i].id}"/></td>
         <td style="padding:0;"><input disabled type="number" min="0" value="0" style="width:100%;border:0px" class="inc_pay_amount inc_pay_amount_${data[i].id} form-control"/></td>
+        <td style="padding:0; width: 10%"><input disabled type="number" min="0" value="0" style="width:100%;border:0px" class="int_pay_amount int_pay_amount_${data[i].id} form-control"/></td>
         </tr>`;
 
         $('.table-body').append(new_row);
 
-        pay_details_array.push([data[i].id, debt, false, false, 0]);
+        pay_details_array.push([data[i].id, debt, false, false, 0, 0]);
 
         total_debt = total_debt+parseFloat(debt);
 
@@ -113,12 +115,16 @@ function val_changed(bill_id, clicked) {
     var complete_chk = $(`.chkcomp_${bill_id}`);
     var incomplete_chk = $(`.chkincomp_${bill_id}`);
     var amount_input = $(`.inc_pay_amount_${bill_id}`);
+    var interest_input = $(`.int_pay_amount_${bill_id}`);
+
+
+    interest_input.prop('disabled', false);
 
 
     var complete = false;
     var incomplete = false;
 
-    if(clicked != 3) {
+    if(clicked != 3 && clicked != 4) {
 
 
         if (complete_chk.is(":checked")) {
@@ -156,6 +162,7 @@ function val_changed(bill_id, clicked) {
         if (!complete && !incomplete) { // MEANS BOTH UNCHECKED
 
             amount_input.prop('disabled', true);
+            interest_input.prop('disabled', true);
             amount_input.val(0);
             pay_details_array[control][2] = false;
             pay_details_array[control][3] = false;
@@ -213,6 +220,20 @@ function val_changed(bill_id, clicked) {
 
     }
 
+    if(clicked == 4) {//MEANS UPDATE INTEREST VALUE
+
+        if(interest_input.val()){
+
+            pay_details_array[control][5] = parseFloat(interest_input.val());
+
+        }
+        else{
+            pay_details_array[control][5] = 0;
+        }
+
+
+    }
+
     update_amounts();
 
 
@@ -223,7 +244,11 @@ function update_amounts() {
 
     total_pay = 0;
 
+    interest = 0;
+
     $.each(pay_details_array, function(i) {
+
+        interest = interest+parseFloat(pay_details_array[i][5]);
 
         if (pay_details_array[i][2] == true && pay_details_array[i][3] == false ) {
             total_pay = total_pay+parseFloat(pay_details_array[i][1]);
@@ -232,12 +257,17 @@ function update_amounts() {
             total_pay = total_pay+parseFloat(pay_details_array[i][4]);
         }
 
+
     });
 
 
 
-    $('.total_pay').html(total_pay.toFixed(2));
     $('.total_remain').html((total_debt-total_pay).toFixed(2));
+    $('.total_pay').html((total_pay).toFixed(2));
+    $('.interest_amount').html(interest.toFixed(2));
+
+    $('.deposit_amount').html((total_pay+interest).toFixed(2));
+
 
 
 
@@ -276,7 +306,8 @@ function previous_checks() {
         return false
     }
 
-    alertify.confirm('Confirmar', `Desea registrar el pago al proveedor ${supplier.text()} por un monto de ₡ ${total_pay.toFixed(2)}`, function () {
+    alertify.confirm('Confirmar', `Desea registrar el depósito al proveedor ${supplier.text()} por un monto de ₡ ${(total_pay+interest).toFixed(2)}`, function () {
+
 
         save_pay();
 
@@ -297,9 +328,11 @@ function save_pay() {
             "pay_supplier": $('.new_pay_supplier').val(),
             "pay_document_num": $('.doc_num').val(),
             "pay_notes": $('.pay_detail_text').val(),
+            "pay_interest": interest,
             "pay_total": total_pay,
             "pay_last_debt": total_debt,
-            "pay_actual_debt": parseFloat(total_debt-total_pay)
+            "pay_actual_debt": parseFloat(total_debt-total_pay),
+            "pay_deposit": parseFloat(total_pay+interest)
 
         }),//JSON object
         contentType:"application/json; charset=utf-8",
@@ -336,7 +369,8 @@ function save_details(pay_id) {
             "pay_detail_bill": pay_details_array[i][0],
             "pay_detail_last_debt": pay_details_array[i][1],
             "pay_detail_amount": parseFloat(pay_details_array[i][1]),
-            "pay_detail_actual_debt": 0
+            "pay_detail_actual_debt": 0,
+            "pay_detail_interest": parseFloat(pay_details_array[i][5])
 
             }),//JSON object
             contentType:"application/json; charset=utf-8",
@@ -388,7 +422,8 @@ function save_details(pay_id) {
             "pay_detail_bill": pay_details_array[i][0],
             "pay_detail_last_debt": parseFloat(pay_details_array[i][1]),
             "pay_detail_amount": parseFloat(pay_details_array[i][4]),
-            "pay_detail_actual_debt": parseFloat(pay_details_array[i][1])-parseFloat(pay_details_array[i][4])
+            "pay_detail_actual_debt": parseFloat(pay_details_array[i][1])-parseFloat(pay_details_array[i][4]),
+            "pay_detail_interest": parseFloat(pay_details_array[i][5])
 
             }),//JSON object
             contentType:"application/json; charset=utf-8",
@@ -509,6 +544,16 @@ function main_new_pay() {
         val_changed(bill_id, 3);
 
     });
+
+     $(document).on('change','.int_pay_amount', function () {
+
+        var row=$(this).closest("tr");
+
+        var bill_id = row.attr('class');
+
+        val_changed(bill_id, 4);
+
+     });
 
 
     supplier.select2({
