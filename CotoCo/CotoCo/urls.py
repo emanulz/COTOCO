@@ -18,7 +18,8 @@ from django.contrib import admin
 from rest_framework import routers
 
 from activities.views import ActivityViewSet
-from bills.views import BillViewSet, BillDetailViewSet, billlist, billview, bill_create, bill_edit, billpaysview
+from bills.views import BillViewSet, BillDetailViewSet, billlist, billview, bill_create, bill_edit, billpaysview, \
+     bill_debt_report
 from clients.views import ClientViewSet
 from orders.views import OrderViewSet, OrderDetailViewSet, order2pdf, orderpdf2, orderlist, orderview, order_create
 from orders.views import order_edit
@@ -73,9 +74,11 @@ urlpatterns = [
     url(r'billlist/', billlist, name='billlist'),
     url(r'billview/', billview, name='billview'),
     url(r'billpaysview/', billpaysview, name='billpaysview'),
+    url(r'billdebts/(?P<pk>\d+)/$', bill_debt_report, name='bill_debt_report'),
 
     url(r'pay/create/', pay_create, name='pay_create'),
     url(r'payview/(?P<pk>\d+)/$', payview, name='payview'),
+
 
     url(r'request/create/', request_create, name='request_create'),
     url(r'request/edit/', request_edit, name='request_edit'),

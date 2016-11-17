@@ -7,6 +7,8 @@ from rest_framework import serializers, viewsets
 from .models import Bill, BillDetail
 from .filters import BillFilter, BillDetailFilter
 from pays.models import PayDetail
+from suppliers.models import Supplier
+from datetime import date
 
 # Create your views here.
 
@@ -16,10 +18,30 @@ def bill_create(request):
 
     return render(request, '../templates/bills/create.jade')
 
+@login_required
 def bill_edit(request):
 
     return render(request, '../templates/bills/edit.jade')
 
+@login_required
+def bill_debt_report(request, pk):
+
+    today = date.today()
+    supplier = Supplier.objects.get(pk=pk)
+    bills = Bill.objects.filter(bill_supplier=pk, bill_payed=False)
+
+    debt = 0
+
+    for bill in bills:
+
+        if bill.bill_debt:
+            debt = debt + bill.bill_debt
+        else:
+            debt = debt + bill.bill_total
+
+
+    return render(request, '../templates/bills/debtReport.jade', {'supplier':supplier, 'bills':bills, 'debt':debt,
+                                                                  'today':today})
 
 def billlist(request):
 

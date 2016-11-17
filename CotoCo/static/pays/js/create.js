@@ -473,6 +473,7 @@ function main_new_pay() {
     var supplier = $('.new_pay_supplier');
     var Btn_Select_Supplier = $('.Btn_Select_Supplier');
     var Btn_Pay_btn = $('.Btn_Pay');
+    var html = $('html');
 
 
     Btn_Select_Supplier.on('click', function(event){
@@ -552,6 +553,19 @@ function main_new_pay() {
         var bill_id = row.attr('class');
 
         val_changed(bill_id, 4);
+
+     });
+
+     html.on('click','.view_report', function () {
+
+         event.preventDefault();
+
+         var supplierId = $('.new_pay_supplier').val();
+
+
+         if(supplierId){
+            window.open(`/billdebts/${supplierId}/`, '_blank');
+         }
 
      });
 
