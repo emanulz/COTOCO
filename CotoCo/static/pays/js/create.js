@@ -556,7 +556,7 @@ function main_new_pay() {
 
      });
 
-     html.on('click','.view_report', function () {
+     html.on('click','.view_debt_report', function () {
 
          event.preventDefault();
 
@@ -565,6 +565,19 @@ function main_new_pay() {
 
          if(supplierId){
             window.open(`/billdebts/${supplierId}/`, '_blank');
+         }
+
+     });
+
+    html.on('click','.view_pays_report', function () {
+
+         event.preventDefault();
+
+         var supplierId = $('.new_pay_supplier').val();
+
+
+         if(supplierId){
+            window.open(`/payreport/${supplierId}/`, '_blank');
          }
 
      });

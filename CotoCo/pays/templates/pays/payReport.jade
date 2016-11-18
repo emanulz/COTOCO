@@ -1,0 +1,87 @@
+doctype html
+html(lang="en")
+    head
+
+        |{% load humanize %}
+
+        link(rel="stylesheet" href="/static/css/reset.css")
+
+        link(rel="stylesheet" href="/static/css/bootstrapMod.css")
+        link(rel="stylesheet" href="/static/css/orderpdf.css")
+
+
+    body(style="font-family:helvetica;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            img(src= "/media/img/coto.png" style="width:300px;height:auto;margin-bottom:0px;")
+
+        .col-xs-12
+            hr(style="border-top: 1px solid #ccc;")
+            h4(style="text-align: center; vertical-align: middle;font-size:13px") REPORTE PAGOS POR PROVEEDOR
+            hr(style="border-top: 1px solid #ccc;")
+
+        .col-xs-4
+            h6 <b>Fecha:</b> &nbsp {{today | date:"SHORT_DATE_FORMAT"}}
+            h6 <b>Proveedor:</b> {{supplier.supplier_name}}
+
+        .col-xs-12
+            form.producttable
+                //tabla
+                .form-group.row
+                    .col-xs-12(style="font-size:11px")
+                        table.table.table-bordered
+                            thead: tr
+                                th Pago #
+                                th Fecha
+                                th Documento
+                                th Detalle
+                                th Total
+                                th Interés
+                                th Depósito
+
+                                //th Observaciones
+                            tbody
+                            |{% for pay in pays %}
+                            tr
+                                td {{pay.id}}
+                                td {{pay.pay_date | date:"SHORT_DATE_FORMAT"}}
+                                td {{pay.pay_document}}
+                                td {{pay.pay_detail}}
+                                td ₡ {{pay.pay_total | floatformat:"2"|intcomma}}
+
+                                | {% if pay.pay_interest %}
+                                td ₡ {{pay.pay_interest | floatformat:"2"|intcomma}}
+                                | {% else %}
+                                td ₡ 0.00
+                                | {% endif %}
+
+                                | {% if pay.pay_deposit %}
+                                td ₡ {{pay.pay_deposit | floatformat:"2"|intcomma}}
+                                | {% else %}
+                                td ₡ {{pay.pay_total | floatformat:"2"|intcomma}}
+                                | {% endif %}
+
+                            |{% endfor %}
+        .col-xs-12
+
+            .col-xs-5.wopadding.pull-right
+
+                .col-xs-12.wopadding.pull-right
+                    hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+                    span.spanbold Totales:
+                    hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+
+                .col-xs-12.wopadding.pull-right
+                    span Pagos Totales:
+                    span.pull-right ₡ {{total | floatformat:"2"|intcomma}}
+
+                .col-xs-12.wopadding.pull-right
+                    span Intereses Total:
+                    span.pull-right ₡ {{interest | floatformat:"2"|intcomma}}
+
+                .col-xs-12.wopadding.pull-right
+                    hr(style="border-top: 1px solid #ccc; margin:4px 0;")
+                    span.spanbold Depósitos Totales:
+                    span.spanbold.pull-right(style='margin-right:0px;') ₡ {{deposit | floatformat:"2"|intcomma}}
+                    hr(style="border-top: 1px solid #ccc; margin:4px 0;")

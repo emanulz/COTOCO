@@ -27,7 +27,7 @@ from products.views import ProductViewSet, ProductDepartmentViewSet, ProductSubD
 from projects.views import ProjectViewSet
 from suppliers.views import SupplierViewSet
 from frontend.views import LandingView
-from pays.views import PayViewSet, PayDetailViewSet, pay_create, payview
+from pays.views import PayViewSet, PayDetailViewSet, pay_create, payview, pay_report
 from reports.views import ordersbyproject, billsbyproject, byorder, generalreport, report_create
 from requests.views import RequestViewSet, RequestDetailViewSet, requestpdf2, requestlist, requestview
 from requests.views import  request_create, request_edit
@@ -78,7 +78,7 @@ urlpatterns = [
 
     url(r'pay/create/', pay_create, name='pay_create'),
     url(r'payview/(?P<pk>\d+)/$', payview, name='payview'),
-
+    url(r'payreport/(?P<pk>\d+)/$', pay_report, name='pay_report'),
 
     url(r'request/create/', request_create, name='request_create'),
     url(r'request/edit/', request_edit, name='request_edit'),

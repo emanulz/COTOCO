@@ -7,6 +7,8 @@ from rest_framework import serializers, viewsets
 from .models import Pay, PayDetail
 
 from .filters import PayFilter, PayDetailFilter
+from suppliers.models import Supplier
+from datetime import date
 
 # Create your views here.
 
@@ -22,6 +24,34 @@ def payview(request, pk):
     details = PayDetail.objects.filter(pay_detail_pay=pk)
 
     return render(request, '../templates/pays/payview.jade', {'pay' : pay, 'details': details})
+
+
+@login_required
+def pay_report(request, pk):
+
+    today = date.today()
+    supplier = Supplier.objects.get(pk=pk)
+    pays = Pay.objects.filter(pay_supplier=pk)
+
+    total = 0
+    deposit = 0
+    interest = 0
+
+    for pay in pays:
+
+        total = total + pay.pay_total
+
+        if pay.pay_deposit:
+            deposit = deposit + pay.pay_deposit
+        else:
+            deposit = deposit + pay.pay_total
+
+        if pay.pay_interest:
+            interest = interest + pay.pay_interest
+
+
+    return render(request, '../templates/pays/payReport.jade', {'supplier':supplier, 'pays':pays, 'total':total,
+                                                                'today':today, 'deposit':deposit, 'interest':interest})
 
 
 class PaySerializer(serializers.ModelSerializer):
