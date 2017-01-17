@@ -25,17 +25,17 @@
                 //.col-xs-6
                 //    ul.object-tools: li: a(href="/admin/bills/bill/").returnlink Volver
 
-    .col-md-6.no-padding-left
+    .col-md-3.no-padding-left
         form
             //fecha y proveedor
             .form-group.row
-                .col-xs-6.col-md-6.no-padding-left
+                .col-xs-6.col-md-12.no-padding-left
                     .col-xs-12
                         span Fecha de la factura:
                     .col-xs-12
                         input.form-control.new_bill_date(type='date',)
 
-                .col-xs-6.col-md-6.no-padding-left
+                .col-xs-6.col-md-12.no-padding-left.bottom_row
                     .col-xs-12
                         span Proveedor:
                     .col-xs-12
@@ -44,21 +44,32 @@
 
             //proyecto y actividad
             .form-group.row
-                .col-xs-6.col-md-6.no-padding-left
+                .col-xs-6.col-md-12.no-padding-left
                     .col-xs-12
                         span Orden de Compra:
                     .col-xs-12
                         select.form-control.new_bill_order
                             option
-                .col-xs-6.col-md-6.no-padding-left
+                .col-xs-6.col-md-12.no-padding-left.bottom_row
                     .col-xs-12
                         span # Factura del Proveedor:
                     .col-xs-12
                         input(type='text').form-control.new_bill_supplier_bill
+            //producto y buscar
+            .form-group.row
+                .col-xs-6.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Producto:
+                    .col-xs-12.inner-addon.right-addon
+                        i.glyphicon.glyphicon-barcode
+                        input.form-control.bill_product_code(type='text')
+                .col-xs-6.col-md-12.no-padding-left.bottom_row
+                    .col-xs-12
+                        span Buscar:
+                    .col-xs-12
+                        select.form-control.new_bill_search
+                            option
 
-            
-    .col-md-6.no-padding-left
-        form
             .form-group.row.table_row
                 .col-xs-12
                     table.table.table-bordered
@@ -70,22 +81,9 @@
                             tr: th Total:
                                 td(class='No_Total price') 0
                                 
-            //producto y buscar        
-            .form-group.row
-                .col-xs-6.col-md-6.no-padding-left
-                    .col-xs-12
-                        span Producto:
-                    .col-xs-12.inner-addon.right-addon
-                        i.glyphicon.glyphicon-barcode
-                        input.form-control.bill_product_code(type='text')
-                .col-xs-6.col-md-6.no-padding-left
-                    .col-xs-12
-                        span Buscar:
-                    .col-xs-12
-                        select.form-control.new_bill_search
-                            option
 
-    .col-md-12.no-padding-left
+
+    .col-md-9.no-padding-left
         form
             //tabla
             .form-group.row.table_row.product_table_row(style='margin-top : 20px;')

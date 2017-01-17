@@ -23,6 +23,10 @@ class Pay(models.Model):
                                         verbose_name='Saldo Total Anterior')
     pay_actual_debt = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2,
                                           verbose_name='Saldo Total Actual')
+    pay_exchange_rate = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2,
+                                          verbose_name='Tipo de Cambio', default=0)
+    pay_dollars = models.DecimalField(max_digits=11, blank=True, null=True, decimal_places=2,
+                                            verbose_name='Monto en Dolares', default=0)
 
     def __unicode__(self):
         return '%s' % self.id

@@ -52,7 +52,12 @@
 
                     .col-xs-12
                         button(type='button', class=' Btn_Select_Supplier').form-control.btn.btn-primary Consultar
+            .form-group.row
+                .col-xs-12.col-md-12.no-padding-left
 
+                    .col-xs-12
+                        span Tipo de Cambio:
+                        input(type='number').form-control.exchange_rate
             .form-group.row.table_row
                 .col-xs-12
                     table.table.table-bordered(style='margin-bottom:0')
@@ -67,6 +72,8 @@
                                 td(class='interest_amount price') 0
                             tr: th Depósito:
                                 td(class='deposit_amount price') 0
+                            tr: th Dólares:
+                                td(class='deposit_dollars_amount priceD') 0
 
             .form-group.row.save_pay
 

@@ -6,6 +6,8 @@ var pay_details_array=[];
 var total_debt = 0;
 var total_pay = 0;
 var interest = 0;
+var exchangeRate = 0;
+var total_pay_dollars = 0;
 
 function new_pay() {
 
@@ -246,6 +248,9 @@ function update_amounts() {
 
     interest = 0;
 
+    total_pay_dollars = 0;
+
+
     $.each(pay_details_array, function(i) {
 
         interest = interest+parseFloat(pay_details_array[i][5]);
@@ -269,10 +274,26 @@ function update_amounts() {
     $('.deposit_amount').html((total_pay+interest).toFixed(2));
 
 
+    if (exchangeRate==0){
+        $('.deposit_dollars_amount').html('0,00');
+        total_pay_dollars = 0;
+    }
+    else{
+
+        total_pay_dollars = ((total_pay+interest)/exchangeRate).toFixed(2);
+        $('.deposit_dollars_amount').html(total_pay_dollars);
+
+    }
 
 
     $('.price').priceFormat({
         prefix: '₡ ',
+        centsSeparator: ',',
+        thousandsSeparator: '.'
+    });
+
+    $('.priceD').priceFormat({
+        prefix: '$ ',
         centsSeparator: ',',
         thousandsSeparator: '.'
     });
@@ -332,7 +353,9 @@ function save_pay() {
             "pay_total": total_pay,
             "pay_last_debt": total_debt,
             "pay_actual_debt": parseFloat(total_debt-total_pay),
-            "pay_deposit": parseFloat(total_pay+interest)
+            "pay_deposit": parseFloat(total_pay+interest),
+            "pay_exchange_rate": parseFloat(exchangeRate),
+            "pay_dollars": parseFloat(total_pay_dollars)
 
         }),//JSON object
         contentType:"application/json; charset=utf-8",
@@ -462,7 +485,7 @@ function save_details(pay_id) {
     });
 
     alertify.alert('COMPLETADO',`Pago # ${pay_id} Guardado con éxito, y montos actualizados correctamente.` , function(){
-        //window.open(`/orderpdf2/${data.id}/`);
+        window.open(`/payview/${pay_id}/`);
         window.location.replace("/admin/pays/pay/");
     });
 
@@ -523,6 +546,22 @@ function main_new_pay() {
         var bill_id = row.attr('class');
 
         val_changed(bill_id, 1);
+
+    });
+
+    $(document).on('change', '.exchange_rate', function() {
+
+        var exchange =$('.exchange_rate').val();
+
+        if(exchange){
+            exchangeRate = exchange;
+        }
+        else{
+            exchangeRate = 0;
+        }
+
+        update_amounts();
+
 
     });
 

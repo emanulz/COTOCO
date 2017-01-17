@@ -74,5 +74,11 @@ html(lang="en")
                     span.spanbold Total Depósito:
                     span.spanbold.pull-right(style='margin-right:0px;') ₡ {{pay.pay_deposit | floatformat:"2"|intcomma}}
                     hr(style="border-top: 1px solid #ccc;")
+                    span Tipo de cambio:
+                    span.pull-right(style='margin-right:0px;') ₡ {{pay.pay_exchange_rate | floatformat:"2"|intcomma}}
+                    hr(style="border-top: 1px solid #ccc;")
+                    span.spanbold Total en Dólares:
+                    span.spanbold.pull-right(style='margin-right:0px;') ₡ {{pay.pay_dollars | floatformat:"2"|intcomma}}
+                    hr(style="border-top: 1px solid #ccc;")
 
 
