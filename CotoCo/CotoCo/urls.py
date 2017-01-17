@@ -23,6 +23,7 @@ from bills.views import BillViewSet, BillDetailViewSet, billlist, billview, bill
 from clients.views import ClientViewSet
 from orders.views import OrderViewSet, OrderDetailViewSet, order2pdf, orderpdf2, orderlist, orderview, order_create
 from orders.views import order_edit
+from expenses.views import expenses_create, expenses_edit, ExpenseViewSet, expensepdf2
 from products.views import ProductViewSet, ProductDepartmentViewSet, ProductSubDepartmentViewSet
 from projects.views import ProjectViewSet
 from suppliers.views import SupplierViewSet
@@ -45,6 +46,7 @@ router.register(r'clients', ClientViewSet)
 router.register(r'order_detail', OrderDetailViewSet)
 router.register(r'orders', OrderViewSet)
 router.register(r'order_detail', OrderDetailViewSet)
+router.register(r'expenses', ExpenseViewSet)
 router.register(r'products', ProductViewSet)
 router.register(r'product_departments', ProductDepartmentViewSet)
 router.register(r'product_sub_departments', ProductSubDepartmentViewSet)
@@ -68,6 +70,10 @@ urlpatterns = [
 
     url(r'order/create/', order_create, name='order_create'),
     url(r'order/edit/', order_edit, name='order_edit'),
+    url(r'expensepdf2/(?P<pk>\d+)/$', expensepdf2, name='expensepdf2'),
+
+    url(r'expenses/create/', expenses_create, name='expenses_create'),
+    url(r'expenses/edit/', expenses_edit, name='expenses_edit'),
 
     url(r'bill/create/', bill_create, name='bill_create'),
     url(r'bill/edit/', bill_edit, name='bill_edit'),

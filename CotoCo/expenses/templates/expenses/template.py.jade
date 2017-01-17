@@ -1,0 +1,101 @@
+|{% extends "layout/base_admin.html" %}
+
+|{% block extrahead %}
+
+|{% endblock %}
+
+|{% block extrajs %}
+
+|{% endblock %}
+
+|{% block breadcrumbs %}
+
+|{% endblock %}
+
+
+|{% block content %}
+|{% csrf_token %}
+.main-page-cont
+
+    .col-xs-12.no-padding-left
+        form
+            .form-group.row
+                .col-xs-12
+                    H3.expense_header Nuevo Gasto General:
+                //.col-xs-6
+                //    ul.object-tools: li: a(href="/admin/bills/bill/").returnlink Volver
+
+    .col-md-6.no-padding-left
+        form
+            //fecha y proveedor
+            .form-group.row
+                .col-xs-12.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Fecha:
+                    .col-xs-12
+                        input.form-control.new_order_date(type='date',)
+
+                .col-xs-12.col-md-12.no-padding-left.bottom_row
+                    .col-xs-12
+                        span Fecha De Factura:
+                    .col-xs-12
+                        input.form-control.new_order_date_delivery(type='date',)
+
+            .form-group.row
+                .col-xs-12.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Proveedor:
+                    .col-xs-12
+                        select.form-control.new_order_supplier
+                            option
+
+            //proyecto y actividad
+            .form-group.row
+                .col-xs-12.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Proyecto:
+                    .col-xs-12
+                        select.form-control.new_order_project.project_val
+                            option
+
+                .col-xs-12.col-md-12.no-padding-left.bottom_row
+                    .col-xs-12
+                        span Actividad:
+                    .col-xs-12
+                        select.form-control.new_order_activity
+                            option
+
+
+    .col-md-6.no-padding-left
+        form
+            //tabla
+            .form-group.row
+                .col-xs-12.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Detalle:
+                    .col-xs-12
+                        textarea.form-control.expense_detail(style="resize:none", maxlength="255", rows="2")
+            .form-group.row
+                .col-xs-12.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Documento:
+                    .col-xs-12
+                        input.form-control.expense_document(type='text',)
+            .form-group.row
+                .col-xs-12.col-md-12.no-padding-left
+                    .col-xs-12
+                        span Monto ₡:
+                    .col-xs-12
+                        input.form-control.expense_amount(type='number',)
+
+
+            //confirmar y guardar
+            .form-group.row(style='padding-right:15px;')
+                .col-xs-12.no-padding-left
+                    button(type='button', class='BTN_NO Btn_Confirm').form-control.btn.btn-default.pull-right Confirmar
+                .col-xs-12.no-padding-left
+                    button(type='button', class='BTN_NO Btn_Edit').form-control.btn.btn-default.pull-right Editar
+                .col-xs-12.no-padding-left
+                    button(type='button', class='BTN_NO Btn_Save').form-control.btn.btn-default.pull-right Guardar
+
+|{% endblock %}
