@@ -348,6 +348,8 @@ function main_new_order_report() {
     var activity = $('.by_order_activity');
     var product = $('.by_order_product');
     var type = $('.by_order_type');
+    var dateIni = $('.by_order_date_ini');
+    var dateEnd = $('.by_order_date_end');
 
     var Btn_Confirm = $('.Btn_Confirm');
     var Btn_Print = $('.Btn_Print');
@@ -364,6 +366,17 @@ function main_new_order_report() {
         }
         else{
             product.prop('disabled', true)
+        }
+
+        if (type.val()==6){
+
+            dateIni.prop('disabled', true)
+            dateEnd.prop('disabled', true)
+
+        }
+        else{
+            dateIni.prop('disabled', false)
+            dateEnd.prop('disabled', false)
         }
 
     });
@@ -445,5 +458,3 @@ $(document).on('ready', function(){
    new_order_report();
 
 });
-
-

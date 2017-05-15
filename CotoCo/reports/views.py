@@ -20,6 +20,7 @@ def report_create(request):
 
     return render(request, '../templates/reports/template.jade')
 
+
 def ordersbyproject(request, project):
 
     orders = Order.objects.filter(order_project=project)
@@ -103,7 +104,7 @@ def generalreport(request):
 
         today = date.today()
 
-        projectd= "Todos(as)"
+        projectd = "Todos(as)"
         activityd = "Todos(as)"
         supplierd = "Todos(as)"
         productd = "Todos(as)"
@@ -347,6 +348,56 @@ def generalreport(request):
                                                                                 'productd': productd, 'date': today,
                                                                                 'date_ini':date_ini, 'date_end':date_end})
 
+        if type == '6':
+
+            bills = bills.filter(bill_payed=False)
+
+            totalbill = 0
+
+            for bill in bills:
+
+                if not bill.bill_debt:
+
+                    totalbill = totalbill + bill.bill_total
+
+                else:
+
+                    totalbill = totalbill + bill.bill_debt
+
+            print totalbill
+
+            return render(request, '../templates/reports/general_debts.jade', {'bills': bills,
+                                                                               'project': projectd,
+                                                                               'activity': activityd,
+                                                                               'supplier': supplierd,
+                                                                               'date': today, 'total': totalbill})
+
+        if type == '7':
+
+            bills = bills.filter(bill_payed=True) | bills.filter(bill_half_payed=True)
+
+            totalbill = 0
+
+            for bill in bills:
+
+                if bill.bill_payed:
+
+                    totalbill = totalbill + bill.bill_total
+
+                else:
+
+                    totalbill = totalbill + bill.bill_total - bill.bill_debt
+
+            print totalbill
+
+            return render(request, '../templates/reports/general_payed.jade', {'bills': bills,
+                                                                               'project': projectd,
+                                                                               'activity': activityd,
+                                                                               'supplier': supplierd,
+                                                                               'date': today,
+                                                                               'date_ini': date_ini,
+                                                                               'date_end': date_end,
+                                                                               'total': totalbill})
 
     else:
         return False
