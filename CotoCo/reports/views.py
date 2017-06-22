@@ -399,5 +399,70 @@ def generalreport(request):
                                                                                'date_end': date_end,
                                                                                'total': totalbill})
 
+        if type == '8':
+
+            arr = []
+
+            for order in orders:
+
+                order_detail = order.order_product_list.all()
+
+                for detail in order_detail:
+
+                    i = 0
+
+                    if len(arr) > 0:
+                        for element in arr:
+                            if detail.order_detail_product_code == element['code']:
+                                break
+                            i += 1
+
+                    if len(arr) == i:
+
+                        arr.append({'code': detail.order_detail_product_code,
+                                    'description': detail.order_detail_description,
+                                    'unit': detail.order_detail_unit,
+                                    'ordered': detail.order_detail_amount,
+                                    'billed': 0})
+
+                    else:
+                        arr[i]['ordered'] = arr[i]['ordered'] + detail.order_detail_amount
+
+            for bill in bills:
+
+                bill_detail = bill.bill_detail_list.all()
+
+                for detail in bill_detail:
+
+                    i = 0
+
+                    if len(arr) > 0:
+
+                        for element in arr:
+                            if detail.bill_detail_product_code == element['code']:
+                                break
+                            i += 1
+
+                    if len(arr) == i:
+
+                        arr.append({'code': detail.bill_detail_product_code,
+                                    'description': detail.bill_detail_description,
+                                    'unit': detail.bill_detail_unit,
+                                    'ordered': 0,
+                                    'billed': detail.bill_detail_amount})
+
+                    else:
+                        arr[i]['billed'] = arr[i]['billed'] + detail.bill_detail_amount
+
+            arr = sorted(arr, key=itemgetter('code'))
+
+            return render(request, '../templates/reports/adrian.jade', {'objects': arr,
+                                                                        'project': projectd,
+                                                                        'activity': activityd,
+                                                                        'supplier': supplierd,
+                                                                        'date': today,
+                                                                        'date_ini': date_ini,
+                                                                        'date_end': date_end})
+
     else:
         return False
