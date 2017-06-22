@@ -270,7 +270,7 @@ function check_data_filled(){
         return bool
     }
 
-    if (type.val()==2 || type.val()==4){
+    if (type.val()==2 || type.val()==4 || type.val()==8){
 
         if(!product.val()){
         bool = false;
@@ -359,7 +359,7 @@ function main_new_order_report() {
 
     type.on('change', function () {
 
-        if (type.val()==2 || type.val()==4){
+        if (type.val()==2 || type.val()==4 || type.val()==8){
 
             product.prop('disabled', false)
 
