@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'CotoCo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':  'cotoco',
+        'NAME': 'cotoco',
         'USER': 'emanuelziga',
         'PASSWORD': 'emma101421',
         'HOST': '127.0.0.1',

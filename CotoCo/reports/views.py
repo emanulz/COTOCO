@@ -15,6 +15,7 @@ from datetime import date
 import datetime
 from operator import itemgetter
 
+
 @login_required
 def report_create(request):
 
@@ -215,6 +216,7 @@ def generalreport(request):
                                                                                 'activity':activityd, 'supplier':supplierd,
                                                                                 'productd':productd, 'date':today,
                                                                                 'date_ini':date_ini, 'date_end':date_end})
+
         if type == '3':
 
             ivorder = 0
@@ -463,6 +465,50 @@ def generalreport(request):
                                                                         'date': today,
                                                                         'date_ini': date_ini,
                                                                         'date_end': date_end})
+
+        if type == '9':
+
+            ivbill = 0
+            totalbill = 0
+
+            activities9 = Activity.objects.all()
+            bills9 = bills
+
+            billsByActivity = []
+
+            for bill in bills:
+
+                totalbill = totalbill + bill.bill_total
+                ivbill = ivbill + bill.bill_iv
+
+            for activity9 in activities9:
+
+                bills92 = bills9.filter(bill_order__order_activity=activity9)
+
+                ivbill9 = 0
+                totalbill9 = 0
+
+                for bill in bills92:
+
+                    totalbill9 = totalbill9 + bill.bill_total
+                    ivbill9 = ivbill9 + bill.bill_iv
+
+                if bills92:
+                    billsByActivity.append({'bills': bills92, 'total': totalbill9, 'totalIv': ivbill9,
+                                            'activity': activity9})
+
+            print(billsByActivity)
+
+            return render(request, '../templates/reports/general_bills_category.jade', {'bills': billsByActivity,
+                                                                                        'total': totalbill,
+                                                                                        'iv': ivbill,
+                                                                                        'project': projectd,
+                                                                                        'activity': activityd,
+                                                                                        'supplier': supplierd,
+                                                                                        'date': today,
+                                                                                        'date_ini': date_ini,
+                                                                                        'date_end': date_end})
+
 
     else:
         return False
