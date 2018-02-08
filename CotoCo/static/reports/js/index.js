@@ -379,6 +379,7 @@ function main_new_order_report() {
             dateEnd.prop('disabled', false)
         }
 
+
     });
 
     project.on('change', function () {

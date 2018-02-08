@@ -509,6 +509,48 @@ def generalreport(request):
                                                                                         'date_ini': date_ini,
                                                                                         'date_end': date_end})
 
+        if type == '10':
+
+            ivbill = 0
+            totalbill = 0
+            
+            activities10 = Activity.objects.all()
+            bills10 = bills
+
+            billsByActivity = []
+
+            for bill in bills:
+
+                totalbill = totalbill + bill.bill_total
+                ivbill = ivbill + bill.bill_iv
+
+            for activity10 in activities10:
+
+                bills102 = bills10.filter(bill_order__order_activity=activity10)
+
+                ivbill10 = 0
+                totalbill10 = 0
+
+                for bill in bills102:
+
+                    totalbill10 = totalbill10 + bill.bill_total
+                    ivbill10 = ivbill10 + bill.bill_iv
+
+                if bills102:
+                    billsByActivity.append({'bills': bills102, 'total': totalbill10, 'totalIv': ivbill10,
+                                            'activity': activity10})
+
+            print(billsByActivity)
+
+            return render(request, '../templates/reports/general_activities.jade', {'bills': billsByActivity,
+                                                                                    'total': totalbill,
+                                                                                    'iv': ivbill,
+                                                                                    'project': projectd,
+                                                                                    'activity': activityd,
+                                                                                    'supplier': supplierd,
+                                                                                    'date': today,
+                                                                                    'date_ini': date_ini,
+                                                                                    'date_end': date_end})
 
     else:
         return False
