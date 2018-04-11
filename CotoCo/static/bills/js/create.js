@@ -5,6 +5,8 @@ var new_bill_detail=[];
 var total = 0;
 var subtotal = 0;
 var iv_amount = 0 ;
+var order_detail;
+var order_id = null;
 
 
 //FUNCTIONS
@@ -425,6 +427,91 @@ function check_data_filled(){
 
 }
 
+function load_order(id) {
+
+    request_id = id;
+
+    $.get(`/api/orders/${id}/`, function (data) {
+
+        $('.new_bill_supplier').val(data.order_supplier).trigger("change");
+        $('.new_bill_order').val(data.id).trigger("change");
+
+        order_detail=data.order_product_list;
+
+    }).success(function (){
+
+        add_loaded_to_table();
+
+        alertify.alert('Cargado', 'Orden Cargada Correctamente');
+
+        $('.load_order').hide();
+
+
+    }).fail(function (){
+
+        alertify.alert('Error', 'Orden NO Cargada Correctamente, revise el número de pedido, o contacte a Emanuel al #8302-1964');
+
+    });
+
+}
+
+function add_loaded_to_table(){
+
+    //todo fix insert order cause by get async
+    
+        $.each(order_detail, function (i) {
+    
+            $.get(`/api/order_detail/${order_detail[i]}/`,false)
+    
+            .success(function (data) {
+    
+                let products=JSON.parse(localStorage.Products);
+    
+                let code = data.order_detail_product_code;
+                var qty = parseFloat(data.order_detail_amount);
+    
+                if( qty === undefined){
+                qty=1;
+                }
+    
+                var is_on_array = is_code_on_array(new_bill_array,code);
+    
+                if(is_on_array === -1){
+                //filter product by code
+                products = $.grep(products, function(element){
+                return element.product_code == code;
+                });
+    
+                if (products.length){
+                var subt = (products[0].product_price*qty)*((100-products[0].product_discount)/100);
+                var pudisc = (products[0].product_price)*((100-products[0].product_discount)/100);
+                var iv=0;
+    
+                if( products[0].product_usetaxes){
+                    iv=products[0].product_taxes;
+                }
+    
+                add_new_row(products[0].product_code, products[0].product_description, qty, products[0].product_unit,
+                            products[0].product_price , subt, products[0].id, products[0].product_discount, iv, pudisc); //last 0 is disc
+                }
+                else{
+                //FALTA mensaje de que no existe el producto
+                alertify.alert('Error','No existe un producto con el código seleccionado.')
+                }
+                }//if
+    
+                else{
+    
+                new_order_array = row_update(is_on_array, code, qty, new_bill_array, 0, 1,0);
+                update_totals();
+    
+                }//else
+    
+            });
+    
+        });
+    }
+    
 // MAIN AND DOC READY
 function main_new_bill () {
 
@@ -577,6 +664,29 @@ function main_new_bill () {
         event.preventDefault();
 
         save_new_bill();
+    });
+
+    html.on('click','.load_order', function () {
+
+        event.preventDefault();
+        alertify.prompt( 'Cargar Orden de compra', 'Ingrese el número de Orden','0', function (evt, value) {
+
+
+            $.get(`/api/bills/?bill_order=${value}`, function (data) {
+
+            }).success(function(data){
+
+                if(data.length == 0){
+                    load_order(value);
+                }
+                else{
+                    alertify.alert('Error', `Ya existe la factura #${data[0].id} asociada a esa orden de compra.`)
+                }
+
+            });//ajax
+
+        }, function(){});
+
     });
 
 
