@@ -36,7 +36,7 @@ function new_order_report() {
 
     add_from_API_to_select('suppliers', 'id','supplier_name', '.by_order_supplier');
 
-    add_from_API_to_select('orders', 'id','id', '.by_order_order');
+    // add_from_API_to_select('orders', 'id','id', '.by_order_order');
 
     add_from_API_to_select('activities', 'id','activity_name', '.by_order_activity');
 
