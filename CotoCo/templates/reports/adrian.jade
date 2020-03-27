@@ -65,7 +65,7 @@ html(lang="en")
                                 td -
                                 td {{object.ordered}}
                                 td {{object.billed}}
-                                td -
+                                td {{object.ordered | subtract:object.billed | floatformat:"2"|intcomma}}
                                 td -
                                 td -
                                 
