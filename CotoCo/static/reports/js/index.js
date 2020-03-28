@@ -286,6 +286,54 @@ function check_data_filled(){
 
 }
 
+function check_data_filled_excel(){
+
+    //SELECTORS
+
+    var supplier = $('.by_order_supplier');
+    var project = $('.by_order_project');
+    var activity = $('.by_order_activity');
+
+    var product = $('.by_order_product');
+
+    var type = $('.by_order_type');
+
+
+    var bool = false;
+    // The only report availabe is 8 at the moment
+    if (type.val() != 8) {
+        return false
+    }
+
+    if(!project.val()){
+        bool = false;
+        return bool
+    }
+    if(!activity.val()){
+        bool = false;
+        return bool
+    }
+
+    if(!supplier.val()){
+        bool = false;
+        return bool
+    }
+
+    if (type.val()==2 || type.val()==4 || type.val()==8){
+
+        if(!product.val()){
+        bool = false;
+        return bool
+    }
+
+    }
+
+    bool = true;
+    return bool;
+
+
+}
+
 function PopupCenter(url, title, w, h, data) {
     // // Fixes dual-screen position                         Most browsers      Firefox
     // var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
@@ -311,7 +359,7 @@ function generate_report() {
     $.ajax({
         method: "GET",
         url: "/reports/general/",
-        async: false,
+        async: true,
         data:({
             type: $('.by_order_type').val(),
             project:$('.by_order_project').val(),
@@ -319,8 +367,8 @@ function generate_report() {
             supplier:$('.by_order_supplier').val(),
             product:$('.by_order_product').val(),
             date_ini:$('.by_order_date_ini').val(),
-            date_end:$('.by_order_date_end').val()
-
+            date_end:$('.by_order_date_end').val(),
+            to_excel:'false'
         }),
     })
         .fail(function(data){
@@ -328,12 +376,33 @@ function generate_report() {
             alertify.alert('Error',"Hubo un problema al crear el reporte, por favor intente de nuevo o contacte a Emanuel al # 83021964 " + data.responseText);
         })
         .success(function(data){
-            // var wind = window.open("", "popupWindow", "width=1000,height=768,scrollbars=yes");
-            // wind.document.write(data);
-
             PopupCenter('', 'Reporte', 1000, 768, data)
-
         });//ajax
+
+}
+
+function set_download_excel_URL () {
+
+    var type =  $('.by_order_type').val()
+    var project = $('.by_order_project').val()
+    var activity = $('.by_order_activity').val()
+    var supplier = $('.by_order_supplier').val()
+    var product = $('.by_order_product').val()
+    var date_ini = $('.by_order_date_ini').val()
+    var date_end = $('.by_order_date_end').val()
+
+    var href = '/reports/general/?type=' + type + '&project=' + project + '&activity=' + activity + '&supplier=' + supplier + '&product=' + product + '&date_ini=' + date_ini + '&date_end=' + date_end + '&to_excel=true'
+    
+    $('.excel_file_download_link').attr("href", href)
+
+    var dataOK = check_data_filled_excel();
+    console.log('DATA OK', dataOK)
+    
+    if(dataOK) {
+        $('.excel_file_download_link').addClass( "active" )
+    } else {
+        $('.excel_file_download_link').removeClass( "active" )
+    }
 
 }
 
@@ -379,14 +448,36 @@ function main_new_order_report() {
             dateEnd.prop('disabled', false)
         }
 
+        set_download_excel_URL ()
+
 
     });
 
     project.on('change', function () {
-
         //filter_order_by_supplier(supplier.val(),project.val())
-
+        set_download_excel_URL ()
     });
+
+    dateIni.on('change', function () {
+        set_download_excel_URL ()
+    });
+
+    dateEnd.on('change', function () {
+        set_download_excel_URL ()
+    });
+
+    activity.on('change', function () {
+        set_download_excel_URL ()
+    });
+
+    supplier.on('change', function () {
+        set_download_excel_URL ()
+    });
+
+    product.on('change', function () {
+        set_download_excel_URL ()
+    });
+
 
     Btn_Confirm.on('click', function(event){
 

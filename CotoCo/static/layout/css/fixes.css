@@ -25,3 +25,6 @@ div.breadcrumbs{
 
 }
 
+.excel_file_download_link { pointer-events: none; }
+
+.excel_file_download_link.active { pointer-events: auto; }

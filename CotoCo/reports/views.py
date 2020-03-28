@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from openpyxl import Workbook
+from tempfile import NamedTemporaryFile
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, Http404, HttpResponse
 from django.shortcuts import render
@@ -91,458 +93,464 @@ def byorder(request, order):
                                                                            'ivbill':ivbill, 'subtotalbill':subtotalbill,
                                                                        'totalbill':totalbill, 'difference':difference})
 
+def generate_xlsx(report_name, objects, project, activity, supplier, date, date_ini, date_end ):
+
+    # response = HttpResponse(content_type='application/ms-excel')
+    # response['Content-Disposition'] = 'attachment; filename="users.xls"'
+
+    # wb = xlwt.Workbook(encoding='utf-8')
+    # ws = wb.add_sheet('Reporte')
+
+    # header_font = xlwt.XFStyle()
+    # header_font.font.bold = True
+
+    # ws.write(0, 0, report_name, header_font)
+
+    # wb.save(response)
+
+    wb = Workbook()
+    current_row = 1
+    current_col = 1
+    wb._active_sheet_index = 0
+    #get the first sheet, created per default
+    ws = wb.active
+    #change the title of the sheet
+    ws.title = "Catálogo de Clientes"
+
+    ws.cell(row=current_row, column=current_col, value=report_name)
+
+    return wb
+
+
 def generalreport(request):
 
-    if request.is_ajax():
+    # if request.is_ajax():
+    print('request--->>', request)
+    type = request.GET['type']
+    project = request.GET['project']
+    activity = request.GET['activity']
+    supplier = request.GET['supplier']
+    product = request.GET['product']
+    date_ini = request.GET['date_ini']
+    date_end = request.GET['date_end']
+    to_excel = request.GET['to_excel']
 
-        type = request.GET['type']
-        project = request.GET['project']
-        activity = request.GET['activity']
-        supplier = request.GET['supplier']
-        product = request.GET['product']
-        date_ini = request.GET['date_ini']
-        date_end = request.GET['date_end']
+    today = date.today()
 
-        today = date.today()
+    projectd = "Todos(as)"
+    activityd = "Todos(as)"
+    supplierd = "Todos(as)"
+    productd = "Todos(as)"
 
-        projectd = "Todos(as)"
-        activityd = "Todos(as)"
-        supplierd = "Todos(as)"
-        productd = "Todos(as)"
+    bills = Bill.objects.all()
 
-        bills = Bill.objects.all()
+    if project != '0':
+        bills = bills.filter(bill_order__order_project=project)
+        projectobj = Project.objects.get(id=project)
+        projectd = '%s - %s' % (projectobj.id, projectobj.project_name)
 
-        if project != '0':
-            bills = bills.filter(bill_order__order_project=project)
-            projectobj = Project.objects.get(id=project)
-            projectd = '%s - %s' % (projectobj.id, projectobj.project_name)
+    if activity != '0':
+        bills = bills.filter(bill_order__order_activity=activity)
+        activityobj = Activity.objects.get(id=activity)
+        activityd = '%s - %s' % (activityobj.id, activityobj.activity_name)
 
-        if activity != '0':
-            bills = bills.filter(bill_order__order_activity=activity)
-            activityobj = Activity.objects.get(id=activity)
-            activityd = '%s - %s' % (activityobj.id, activityobj.activity_name)
+    if supplier != '0':
+        bills = bills.filter(bill_supplier=supplier)
+        supplierobj = Supplier.objects.get(id=supplier)
+        supplierd = '%s ' % supplierobj.supplier_name
 
-        if supplier != '0':
-            bills = bills.filter(bill_supplier=supplier)
-            supplierobj = Supplier.objects.get(id=supplier)
-            supplierd = '%s ' % supplierobj.supplier_name
+    orders = Order.objects.all()
 
-        orders = Order.objects.all()
-
-        requests = Request.objects.all()
-
-
-        if project != '0':
-            orders = orders.filter(order_project=project)
-            projectobj = Project.objects.get(id=project)
-            projectd = '%s - %s' % (projectobj.id, projectobj.project_name)
-
-        if activity != '0':
-            orders = orders.filter(order_activity=activity)
-            activityobj = Activity.objects.get(id=activity)
-            activityd = '%s - %s' % (activityobj.id, activityobj.activity_name)
-
-        if supplier != '0':
-            orders = orders.filter(order_supplier=supplier)
-            supplierobj = Supplier.objects.get(id=supplier)
-            supplierd = '%s ' % supplierobj.supplier_name
+    requests = Request.objects.all()
 
 
-        if date_ini and date_end:
+    if project != '0':
+        orders = orders.filter(order_project=project)
+        projectobj = Project.objects.get(id=project)
+        projectd = '%s - %s' % (projectobj.id, projectobj.project_name)
 
-            orders=orders.filter(order_date__range=[date_ini, date_end])
-            bills = bills.filter(bill_date__range=[date_ini, date_end])
-            requests = requests.filter(request_date__range=[date_ini, date_end])
+    if activity != '0':
+        orders = orders.filter(order_activity=activity)
+        activityobj = Activity.objects.get(id=activity)
+        activityd = '%s - %s' % (activityobj.id, activityobj.activity_name)
 
-            date_ini = datetime.datetime.strptime(date_ini, "%Y-%m-%d").date()
-            date_end = datetime.datetime.strptime(date_end, "%Y-%m-%d").date()
-
-        else:
-            date_ini = '-'
-            date_end = '-'
-
-
-        if type == '1':
+    if supplier != '0':
+        orders = orders.filter(order_supplier=supplier)
+        supplierobj = Supplier.objects.get(id=supplier)
+        supplierd = '%s ' % supplierobj.supplier_name
 
 
-            ivbill = 0
-            totalbill = 0
+    if date_ini and date_end:
 
-            for bill in bills:
+        orders=orders.filter(order_date__range=[date_ini, date_end])
+        bills = bills.filter(bill_date__range=[date_ini, date_end])
+        requests = requests.filter(request_date__range=[date_ini, date_end])
 
-                totalbill = totalbill + bill.bill_total
+        date_ini = datetime.datetime.strptime(date_ini, "%Y-%m-%d").date()
+        date_end = datetime.datetime.strptime(date_end, "%Y-%m-%d").date()
+
+    else:
+        date_ini = '-'
+        date_end = '-'
+
+
+    if type == '1':
+
+
+        ivbill = 0
+        totalbill = 0
+
+        for bill in bills:
+
+            totalbill = totalbill + bill.bill_total
+            ivbill = ivbill + bill.bill_iv
+
+        return render(request, '../templates/reports/general_bills.jade', {'bills': bills,'total':totalbill,
+                                                                            'iv':ivbill,'project':projectd,
+                                                                            'activity':activityd, 'supplier':supplierd,
+                                                                            'date':today, 'date_ini':date_ini,
+                                                                            'date_end':date_end })
+
+    if type == '2':
+
+        ivbill = 0
+        totalbill = 0
+        productsbill = 0
+
+        for bill in bills:
+
+            billdetails = bill.bill_detail_list.all()
+
+            if product == '0':
                 ivbill = ivbill + bill.bill_iv
 
-            return render(request, '../templates/reports/general_bills.jade', {'bills': bills,'total':totalbill,
-                                                                                'iv':ivbill,'project':projectd,
-                                                                                'activity':activityd, 'supplier':supplierd,
-                                                                                'date':today, 'date_ini':date_ini,
-                                                                                'date_end':date_end })
-
-        if type == '2':
-
-            ivbill = 0
-            totalbill = 0
-            productsbill = 0
-
-            for bill in bills:
-
-                billdetails = bill.bill_detail_list.all()
+            for billdetail in billdetails:
 
                 if product == '0':
-                    ivbill = ivbill + bill.bill_iv
 
-                for billdetail in billdetails:
+                    totalbill = totalbill + billdetail.bill_detail_total
+                    productsbill = productsbill + billdetail.bill_detail_amount
 
-                    if product == '0':
+                else:
+                    if billdetail.bill_detail_product_code == product:
+
+                        productobj = Product.objects.get(product_code=product)
+                        productd = '%s - %s' % (product, productobj.product_description)
 
                         totalbill = totalbill + billdetail.bill_detail_total
+                        ivbill = ivbill + ((billdetail.bill_detail_iv/100)*billdetail.bill_detail_total)
                         productsbill = productsbill + billdetail.bill_detail_amount
 
-                    else:
-                        if billdetail.bill_detail_product_code == product:
+        return render(request, '../templates/reports/detailed_bills.jade', {'bills': bills, 'subtotal':totalbill,
+                                                                            'total': totalbill+ivbill,
+                                                                            'iv':ivbill, 'cantprod':productsbill,
+                                                                            'product':product, 'project':projectd,
+                                                                            'activity':activityd, 'supplier':supplierd,
+                                                                            'productd':productd, 'date':today,
+                                                                            'date_ini':date_ini, 'date_end':date_end})
 
-                            productobj = Product.objects.get(product_code=product)
-                            productd = '%s - %s' % (product, productobj.product_description)
+    if type == '3':
 
-                            totalbill = totalbill + billdetail.bill_detail_total
-                            ivbill = ivbill + ((billdetail.bill_detail_iv/100)*billdetail.bill_detail_total)
-                            productsbill = productsbill + billdetail.bill_detail_amount
+        ivorder = 0
+        totalorder = 0
 
-            return render(request, '../templates/reports/detailed_bills.jade', {'bills': bills, 'subtotal':totalbill,
-                                                                                'total': totalbill+ivbill,
-                                                                                'iv':ivbill, 'cantprod':productsbill,
-                                                                                'product':product, 'project':projectd,
-                                                                                'activity':activityd, 'supplier':supplierd,
-                                                                                'productd':productd, 'date':today,
-                                                                                'date_ini':date_ini, 'date_end':date_end})
+        for order in orders:
+            totalorder = totalorder + order.order_total
+            ivorder = ivorder + order.order_iv
 
-        if type == '3':
+        return render(request, '../templates/reports/general_orders.jade', {'orders': orders, 'total': totalorder,
+                                                                            'iv': ivorder, 'project': projectd,
+                                                                            'activity': activityd,
+                                                                            'supplier': supplierd,
+                                                                            'date': today,'date_ini':date_ini,
+                                                                            'date_end':date_end})
 
-            ivorder = 0
-            totalorder = 0
+    if type == '4':
 
-            for order in orders:
-                totalorder = totalorder + order.order_total
+        ivorder = 0
+        totalorder = 0
+        productsorder = 0
+
+
+        for order in orders:
+
+            orderdetails = order.order_product_list.all()
+
+            if product == '0':
                 ivorder = ivorder + order.order_iv
 
-            return render(request, '../templates/reports/general_orders.jade', {'orders': orders, 'total': totalorder,
-                                                                               'iv': ivorder, 'project': projectd,
-                                                                               'activity': activityd,
-                                                                               'supplier': supplierd,
-                                                                               'date': today,'date_ini':date_ini,
-                                                                               'date_end':date_end})
-
-        if type == '4':
-
-            ivorder = 0
-            totalorder = 0
-            productsorder = 0
-
-
-            for order in orders:
-
-                orderdetails = order.order_product_list.all()
+            for orderdetail in orderdetails:
 
                 if product == '0':
-                    ivorder = ivorder + order.order_iv
 
-                for orderdetail in orderdetails:
+                    totalorder = totalorder + orderdetail.order_detail_total
+                    ivorder = ivorder + orderdetail.order_detail_iv
+                    productsorder = productsorder + orderdetail.order_detail_amount
 
-                    if product == '0':
+                else:
+                    if orderdetail.order_detail_product_code == product:
+
+                        productobj = Product.objects.get(product_code=product)
+                        productd = '%s - %s' % (product, productobj.product_description)
 
                         totalorder = totalorder + orderdetail.order_detail_total
-                        ivorder = ivorder + orderdetail.order_detail_iv
+                        ivorder = ivorder + ((orderdetail.order_detail_iv / 100) * orderdetail.order_detail_total)
                         productsorder = productsorder + orderdetail.order_detail_amount
 
-                    else:
-                        if orderdetail.order_detail_product_code == product:
+        return render(request, '../templates/reports/detailed_orders.jade', {'orders': orders, 'subtotal':totalorder,
+                                                                            'total': totalorder+ivorder,
+                                                                            'iv':ivorder, 'cantprod':productsorder,
+                                                                            'product':product, 'project':projectd,
+                                                                            'activity':activityd, 'supplier':supplierd,
+                                                                            'productd':productd, 'date':today,
+                                                                            'date_ini':date_ini, 'date_end':date_end})
 
-                            productobj = Product.objects.get(product_code=product)
-                            productd = '%s - %s' % (product, productobj.product_description)
+    if type == '5':
 
-                            totalorder = totalorder + orderdetail.order_detail_total
-                            ivorder = ivorder + ((orderdetail.order_detail_iv / 100) * orderdetail.order_detail_total)
-                            productsorder = productsorder + orderdetail.order_detail_amount
+        details_array=[]
 
-            return render(request, '../templates/reports/detailed_orders.jade', {'orders': orders, 'subtotal':totalorder,
-                                                                                'total': totalorder+ivorder,
-                                                                                'iv':ivorder, 'cantprod':productsorder,
-                                                                                'product':product, 'project':projectd,
-                                                                                'activity':activityd, 'supplier':supplierd,
-                                                                                'productd':productd, 'date':today,
-                                                                                'date_ini':date_ini, 'date_end':date_end})
+        for order in orders:
 
-        if type == '5':
+            order_detail = order.order_product_list.all()
 
-            details_array=[]
+            for detail in order_detail:
 
-            for order in orders:
+                i = 0
 
-                order_detail = order.order_product_list.all()
+                for list_ in details_array:
+                    if detail.order_detail_product_code in list_:
+                        break
+                    i += 1
 
-                for detail in order_detail:
+                if len(details_array) == i:
 
-                    i = 0
-
-                    for list_ in details_array:
-                        if detail.order_detail_product_code in list_:
-                            break
-                        i += 1
-
-                    if len(details_array) == i:
-
-                        details_array.append([detail.order_detail_product_code, detail.order_detail_description, 0,detail.order_detail_amount, 0,0,0,0,[order.id],[],[]])
-
-                    else:
-                        details_array[i][3]=details_array[i][3]+detail.order_detail_amount
-                        details_array[i][8].append(order.id)
-
-            for bill in bills:
-
-                bill_detail = bill.bill_detail_list.all()
-
-                for detail in bill_detail:
-
-                    i = 0
-
-                    for list_ in details_array:
-                        if detail.bill_detail_product_code in list_:
-                            break
-                        i += 1
-
-                    if len(details_array) == i:
-
-                        details_array.append([detail.bill_detail_product_code, detail.bill_detail_description, 0,0, detail.bill_detail_amount,0,0,0,[],[bill.id],[]])
-
-                    else:
-                        details_array[i][4]=details_array[i][4]+detail.bill_detail_amount
-                        details_array[i][9].append(bill.id)
-
-            for request2 in requests:
-
-                request_detail = request2.request_product_list.all()
-
-                for detail in request_detail:
-
-                    i = 0
-
-                    for list_ in details_array:
-                        if detail.request_detail_product_code in list_:
-                            break
-                        i += 1
-
-                    if len(details_array) == i:
-
-                        details_array.append([detail.request_detail_product_code, detail.request_detail_description, detail.request_detail_amount,0, 0,0,0,0,[],[],[request2.id]])
-
-                    else:
-                        details_array[i][2]=details_array[i][2]+detail.request_detail_amount
-                        details_array[i][10].append(request2.id)
-
-
-            details_array = sorted(details_array, key=itemgetter(0))
-
-            return render(request, '../templates/reports/general_byproduct.jade', {'array': details_array,
-                                                                                'product': product, 'project': projectd,
-                                                                                'activity': activityd,
-                                                                                'supplier': supplierd,
-                                                                                'productd': productd, 'date': today,
-                                                                                'date_ini':date_ini, 'date_end':date_end})
-
-        if type == '6':
-
-            bills = bills.filter(bill_payed=False)
-
-            totalbill = 0
-
-            for bill in bills:
-
-                if not bill.bill_debt:
-
-                    totalbill = totalbill + bill.bill_total
+                    details_array.append([detail.order_detail_product_code, detail.order_detail_description, 0,detail.order_detail_amount, 0,0,0,0,[order.id],[],[]])
 
                 else:
+                    details_array[i][3]=details_array[i][3]+detail.order_detail_amount
+                    details_array[i][8].append(order.id)
 
-                    totalbill = totalbill + bill.bill_debt
+        for bill in bills:
 
-            print totalbill
+            bill_detail = bill.bill_detail_list.all()
 
-            return render(request, '../templates/reports/general_debts.jade', {'bills': bills,
-                                                                               'project': projectd,
-                                                                               'activity': activityd,
-                                                                               'supplier': supplierd,
-                                                                               'date': today, 'total': totalbill})
+            for detail in bill_detail:
 
-        if type == '7':
+                i = 0
 
-            bills = bills.filter(bill_payed=True) | bills.filter(bill_half_payed=True)
+                for list_ in details_array:
+                    if detail.bill_detail_product_code in list_:
+                        break
+                    i += 1
 
-            totalbill = 0
+                if len(details_array) == i:
 
-            for bill in bills:
-
-                if bill.bill_payed:
-
-                    totalbill = totalbill + bill.bill_total
+                    details_array.append([detail.bill_detail_product_code, detail.bill_detail_description, 0,0, detail.bill_detail_amount,0,0,0,[],[bill.id],[]])
 
                 else:
+                    details_array[i][4]=details_array[i][4]+detail.bill_detail_amount
+                    details_array[i][9].append(bill.id)
 
-                    totalbill = totalbill + bill.bill_total - bill.bill_debt
+        for request2 in requests:
 
-            print totalbill
+            request_detail = request2.request_product_list.all()
 
-            return render(request, '../templates/reports/general_payed.jade', {'bills': bills,
-                                                                               'project': projectd,
-                                                                               'activity': activityd,
-                                                                               'supplier': supplierd,
-                                                                               'date': today,
-                                                                               'date_ini': date_ini,
-                                                                               'date_end': date_end,
-                                                                               'total': totalbill})
+            for detail in request_detail:
 
-        if type == '8':
+                i = 0
 
-            arr = []
+                for list_ in details_array:
+                    if detail.request_detail_product_code in list_:
+                        break
+                    i += 1
 
-            for order in orders:
+                if len(details_array) == i:
 
-                order_detail = order.order_product_list.all()
+                    details_array.append([detail.request_detail_product_code, detail.request_detail_description, detail.request_detail_amount,0, 0,0,0,0,[],[],[request2.id]])
 
-                for detail in order_detail:
+                else:
+                    details_array[i][2]=details_array[i][2]+detail.request_detail_amount
+                    details_array[i][10].append(request2.id)
 
-                    i = 0
 
-                    if len(arr) > 0:
-                        for element in arr:
-                            if detail.order_detail_product_code == element['code']:
-                                break
-                            i += 1
+        details_array = sorted(details_array, key=itemgetter(0))
 
-                    if len(arr) == i:
+        return render(request, '../templates/reports/general_byproduct.jade', {'array': details_array,
+                                                                            'product': product, 'project': projectd,
+                                                                            'activity': activityd,
+                                                                            'supplier': supplierd,
+                                                                            'productd': productd, 'date': today,
+                                                                            'date_ini':date_ini, 'date_end':date_end})
 
-                        arr.append({'code': detail.order_detail_product_code,
-                                    'description': detail.order_detail_description,
-                                    'unit': detail.order_detail_unit,
-                                    'ordered': detail.order_detail_amount,
-                                    'billed': 0})
+    if type == '6':
 
-                    else:
-                        arr[i]['ordered'] = arr[i]['ordered'] + detail.order_detail_amount
+        bills = bills.filter(bill_payed=False)
 
-            for bill in bills:
+        totalbill = 0
 
-                bill_detail = bill.bill_detail_list.all()
+        for bill in bills:
 
-                for detail in bill_detail:
-
-                    i = 0
-
-                    if len(arr) > 0:
-
-                        for element in arr:
-                            if detail.bill_detail_product_code == element['code']:
-                                break
-                            i += 1
-
-                    if len(arr) == i:
-
-                        arr.append({'code': detail.bill_detail_product_code,
-                                    'description': detail.bill_detail_description,
-                                    'unit': detail.bill_detail_unit,
-                                    'ordered': 0,
-                                    'billed': detail.bill_detail_amount})
-
-                    else:
-                        arr[i]['billed'] = arr[i]['billed'] + detail.bill_detail_amount
-
-            arr = sorted(arr, key=itemgetter('code'))
-
-            return render(request, '../templates/reports/adrian.jade', {'objects': arr,
-                                                                        'project': projectd,
-                                                                        'activity': activityd,
-                                                                        'supplier': supplierd,
-                                                                        'date': today,
-                                                                        'date_ini': date_ini,
-                                                                        'date_end': date_end})
-
-        if type == '9':
-
-            ivbill = 0
-            totalbill = 0
-
-            activities9 = Activity.objects.all()
-            bills9 = bills
-
-            billsByActivity = []
-
-            for bill in bills:
+            if not bill.bill_debt:
 
                 totalbill = totalbill + bill.bill_total
-                ivbill = ivbill + bill.bill_iv
 
-            for activity9 in activities9:
+            else:
 
-                bills92 = bills9.filter(bill_order__order_activity=activity9)
+                totalbill = totalbill + bill.bill_debt
 
-                ivbill9 = 0
-                totalbill9 = 0
+        print totalbill
 
-                for bill in bills92:
+        return render(request, '../templates/reports/general_debts.jade', {'bills': bills,
+                                                                            'project': projectd,
+                                                                            'activity': activityd,
+                                                                            'supplier': supplierd,
+                                                                            'date': today, 'total': totalbill})
 
-                    totalbill9 = totalbill9 + bill.bill_total
-                    ivbill9 = ivbill9 + bill.bill_iv
+    if type == '7':
 
-                if bills92:
-                    billsByActivity.append({'bills': bills92, 'total': totalbill9, 'totalIv': ivbill9,
-                                            'activity': activity9})
+        bills = bills.filter(bill_payed=True) | bills.filter(bill_half_payed=True)
 
-            print(billsByActivity)
+        totalbill = 0
 
-            return render(request, '../templates/reports/general_bills_category.jade', {'bills': billsByActivity,
-                                                                                        'total': totalbill,
-                                                                                        'iv': ivbill,
-                                                                                        'project': projectd,
-                                                                                        'activity': activityd,
-                                                                                        'supplier': supplierd,
-                                                                                        'date': today,
-                                                                                        'date_ini': date_ini,
-                                                                                        'date_end': date_end})
+        for bill in bills:
 
-        if type == '10':
-
-            ivbill = 0
-            totalbill = 0
-            
-            activities10 = Activity.objects.all()
-            bills10 = bills
-
-            billsByActivity = []
-
-            for bill in bills:
+            if bill.bill_payed:
 
                 totalbill = totalbill + bill.bill_total
-                ivbill = ivbill + bill.bill_iv
 
-            for activity10 in activities10:
+            else:
 
-                bills102 = bills10.filter(bill_order__order_activity=activity10)
+                totalbill = totalbill + bill.bill_total - bill.bill_debt
 
-                ivbill10 = 0
-                totalbill10 = 0
+        print totalbill
 
-                for bill in bills102:
+        return render(request, '../templates/reports/general_payed.jade', {'bills': bills,
+                                                                            'project': projectd,
+                                                                            'activity': activityd,
+                                                                            'supplier': supplierd,
+                                                                            'date': today,
+                                                                            'date_ini': date_ini,
+                                                                            'date_end': date_end,
+                                                                            'total': totalbill})
 
-                    totalbill10 = totalbill10 + bill.bill_total
-                    ivbill10 = ivbill10 + bill.bill_iv
+    if type == '8':
 
-                if bills102:
-                    billsByActivity.append({'bills': bills102, 'total': totalbill10, 'totalIv': ivbill10,
-                                            'activity': activity10})
+        arr = []
 
-            print(billsByActivity)
+        for order in orders:
 
-            return render(request, '../templates/reports/general_activities.jade', {'bills': billsByActivity,
+            order_detail = order.order_product_list.all()
+
+            for detail in order_detail:
+
+                i = 0
+
+                if len(arr) > 0:
+                    for element in arr:
+                        if detail.order_detail_product_code == element['code']:
+                            break
+                        i += 1
+
+                if len(arr) == i:
+
+                    arr.append({'code': detail.order_detail_product_code,
+                                'description': detail.order_detail_description,
+                                'unit': detail.order_detail_unit,
+                                'ordered': detail.order_detail_amount,
+                                'billed': 0})
+
+                else:
+                    arr[i]['ordered'] = arr[i]['ordered'] + detail.order_detail_amount
+
+        for bill in bills:
+
+            bill_detail = bill.bill_detail_list.all()
+
+            for detail in bill_detail:
+
+                i = 0
+
+                if len(arr) > 0:
+
+                    for element in arr:
+                        if detail.bill_detail_product_code == element['code']:
+                            break
+                        i += 1
+
+                if len(arr) == i:
+
+                    arr.append({'code': detail.bill_detail_product_code,
+                                'description': detail.bill_detail_description,
+                                'unit': detail.bill_detail_unit,
+                                'ordered': 0,
+                                'billed': detail.bill_detail_amount})
+
+                else:
+                    arr[i]['billed'] = arr[i]['billed'] + detail.bill_detail_amount
+
+        arr = sorted(arr, key=itemgetter('code'))
+
+        if to_excel == 'true':
+            report = generate_xlsx('REPORTE DE RESUMEN DE MATERIALES', arr, projectd, activityd, supplierd, today, date_ini, date_end)
+
+        with NamedTemporaryFile() as temporary_file:
+            report.save(temporary_file.name)
+            temporary_file.seek(0)
+            response = HttpResponse(temporary_file.read(), content_type='application/ms-excel')
+            response['Content-Disposition'] = 'attachment; filename="course.xlsx"'
+            return response
+
+            # now = datetime.datetime.now()
+            # report_name = "Resumen {}-{}-{}.xlsx".format(now.year, now.month, now.day)
+            # response = HttpResponse(content_type='application/ms-excel')
+            # response['Content-Disposition'] = 'attachement; filename="{}"'.format(report_name)
+
+            # # report.save(response)
+            # response.content = save_virtual_workbook(report)
+            # return response
+
+        return render(request, '../templates/reports/adrian.jade', {'objects': arr,
+                                                                    'project': projectd,
+                                                                    'activity': activityd,
+                                                                    'supplier': supplierd,
+                                                                    'date': today,
+                                                                    'date_ini': date_ini,
+                                                                    'date_end': date_end})
+
+    if type == '9':
+
+        ivbill = 0
+        totalbill = 0
+
+        activities9 = Activity.objects.all()
+        bills9 = bills
+
+        billsByActivity = []
+
+        for bill in bills:
+
+            totalbill = totalbill + bill.bill_total
+            ivbill = ivbill + bill.bill_iv
+
+        for activity9 in activities9:
+
+            bills92 = bills9.filter(bill_order__order_activity=activity9)
+
+            ivbill9 = 0
+            totalbill9 = 0
+
+            for bill in bills92:
+
+                totalbill9 = totalbill9 + bill.bill_total
+                ivbill9 = ivbill9 + bill.bill_iv
+
+            if bills92:
+                billsByActivity.append({'bills': bills92, 'total': totalbill9, 'totalIv': ivbill9,
+                                        'activity': activity9})
+
+        print(billsByActivity)
+
+        return render(request, '../templates/reports/general_bills_category.jade', {'bills': billsByActivity,
                                                                                     'total': totalbill,
                                                                                     'iv': ivbill,
                                                                                     'project': projectd,
@@ -552,5 +560,48 @@ def generalreport(request):
                                                                                     'date_ini': date_ini,
                                                                                     'date_end': date_end})
 
-    else:
-        return False
+    if type == '10':
+
+        ivbill = 0
+        totalbill = 0
+        
+        activities10 = Activity.objects.all()
+        bills10 = bills
+
+        billsByActivity = []
+
+        for bill in bills:
+
+            totalbill = totalbill + bill.bill_total
+            ivbill = ivbill + bill.bill_iv
+
+        for activity10 in activities10:
+
+            bills102 = bills10.filter(bill_order__order_activity=activity10)
+
+            ivbill10 = 0
+            totalbill10 = 0
+
+            for bill in bills102:
+
+                totalbill10 = totalbill10 + bill.bill_total
+                ivbill10 = ivbill10 + bill.bill_iv
+
+            if bills102:
+                billsByActivity.append({'bills': bills102, 'total': totalbill10, 'totalIv': ivbill10,
+                                        'activity': activity10})
+
+        print(billsByActivity)
+
+        return render(request, '../templates/reports/general_activities.jade', {'bills': billsByActivity,
+                                                                                'total': totalbill,
+                                                                                'iv': ivbill,
+                                                                                'project': projectd,
+                                                                                'activity': activityd,
+                                                                                'supplier': supplierd,
+                                                                                'date': today,
+                                                                                'date_ini': date_ini,
+                                                                                'date_end': date_end})
+
+    # else:
+    #     return False
