@@ -95,19 +95,6 @@ def byorder(request, order):
 
 def generate_xlsx(report_name, objects, project, activity, supplier, date, date_ini, date_end ):
 
-    # response = HttpResponse(content_type='application/ms-excel')
-    # response['Content-Disposition'] = 'attachment; filename="users.xls"'
-
-    # wb = xlwt.Workbook(encoding='utf-8')
-    # ws = wb.add_sheet('Reporte')
-
-    # header_font = xlwt.XFStyle()
-    # header_font.font.bold = True
-
-    # ws.write(0, 0, report_name, header_font)
-
-    # wb.save(response)
-
     wb = Workbook()
     current_row = 1
     current_col = 1
@@ -115,9 +102,67 @@ def generate_xlsx(report_name, objects, project, activity, supplier, date, date_
     #get the first sheet, created per default
     ws = wb.active
     #change the title of the sheet
-    ws.title = "Catálogo de Clientes"
+    ws.title = 'Reporte'
 
-    ws.cell(row=current_row, column=current_col, value=report_name)
+    ws.cell(row=current_row, column=1, value='COTO COMPANY')
+
+    current_row += 2
+
+    ws.cell(row=current_row, column=1, value='REPORTE:')
+    ws.cell(row=current_row, column=2, value=report_name)
+    current_row += 1
+
+    ws.cell(row=current_row, column=1, value='FECHA:')
+    ws.cell(row=current_row, column=2, value=date)
+    current_row += 1
+
+    ws.cell(row=current_row, column=1, value='PROYECTO:')
+    ws.cell(row=current_row, column=2, value=project)
+    current_row += 1
+
+    ws.cell(row=current_row, column=1, value='ACTIVIDAD:')
+    ws.cell(row=current_row, column=2, value=activity)
+    current_row += 1
+
+    ws.cell(row=current_row, column=1, value='PROVEEDOR:')
+    ws.cell(row=current_row, column=2, value=supplier)
+    current_row += 1
+
+    ws.cell(row=current_row, column=1, value='FECHA INICIAL:')
+    ws.cell(row=current_row, column=2, value=date_ini)
+    current_row += 1
+
+    ws.cell(row=current_row, column=1, value='FECHA FINAL:')
+    ws.cell(row=current_row, column=2, value=date_end)
+    current_row += 2
+
+    # Header row
+
+    ws.cell(row=current_row, column=1, value='Código')
+    ws.cell(row=current_row, column=2, value='Descripción')
+    ws.cell(row=current_row, column=3, value='Unidad')
+    ws.cell(row=current_row, column=4, value='Presupuestado')
+    ws.cell(row=current_row, column=5, value='Ordenado')
+    ws.cell(row=current_row, column=6, value='Facturado')
+    ws.cell(row=current_row, column=7, value='En Tránsito')
+    ws.cell(row=current_row, column=8, value='Requisado')
+    ws.cell(row=current_row, column=9, value='Inventario')
+
+    current_row += 1
+
+    for item in objects:
+        ws.cell(row=current_row, column=1, value=item['code'])
+        ws.cell(row=current_row, column=2, value=item['description'])
+        ws.cell(row=current_row, column=3, value=item['unit'])
+        ws.cell(row=current_row, column=4, value='-')
+        ws.cell(row=current_row, column=5, value=item['ordered'])
+        ws.cell(row=current_row, column=6, value=item['billed'])
+        ws.cell(row=current_row, column=7, value=item['ordered'] - item['billed'])
+        ws.cell(row=current_row, column=8, value='-')
+        ws.cell(row=current_row, column=9, value='-')
+        current_row += 1
+
+   
 
     return wb
 
@@ -125,7 +170,7 @@ def generate_xlsx(report_name, objects, project, activity, supplier, date, date_
 def generalreport(request):
 
     # if request.is_ajax():
-    print('request--->>', request)
+
     type = request.GET['type']
     project = request.GET['project']
     activity = request.GET['activity']
@@ -488,26 +533,30 @@ def generalreport(request):
                 else:
                     arr[i]['billed'] = arr[i]['billed'] + detail.bill_detail_amount
 
-        arr = sorted(arr, key=itemgetter('code'))
+        arr = sorted(arr, key=itemgetter('description'))
 
         if to_excel == 'true':
-            report = generate_xlsx('REPORTE DE RESUMEN DE MATERIALES', arr, projectd, activityd, supplierd, today, date_ini, date_end)
-
-        with NamedTemporaryFile() as temporary_file:
-            report.save(temporary_file.name)
-            temporary_file.seek(0)
-            response = HttpResponse(temporary_file.read(), content_type='application/ms-excel')
-            response['Content-Disposition'] = 'attachment; filename="course.xlsx"'
-            return response
-
             # now = datetime.datetime.now()
-            # report_name = "Resumen {}-{}-{}.xlsx".format(now.year, now.month, now.day)
-            # response = HttpResponse(content_type='application/ms-excel')
-            # response['Content-Disposition'] = 'attachement; filename="{}"'.format(report_name)
+            
+            # report = generate_xlsx('REPORTE DE RESUMEN DE MATERIALES', arr, projectd, activityd, supplierd, today, date_ini, date_end)
+            
+            # file_name = "Reporte Resumen de Materiales {}-{}-{}".format(now.year, now.month, now.day)
 
-            # # report.save(response)
-            # response.content = save_virtual_workbook(report)
+            # response = HttpResponse(content_type='application/ms-excel')
+            # response['Content-Disposition'] = 'attachement; filename="{}"'.format(file_name)
+
+            # report.save(response)
             # return response
+
+            with NamedTemporaryFile() as temporary_file:
+                now = datetime.datetime.now()
+                report = generate_xlsx('REPORTE DE RESUMEN DE MATERIALES', arr, projectd, activityd, supplierd, today, date_ini, date_end)
+                file_name = "Reporte Resumen de Materiales {}-{}-{}".format(now.year, now.month, now.day)
+                report.save(temporary_file.name)
+                temporary_file.seek(0)
+                response = HttpResponse(temporary_file.read(), content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+                response['Content-Disposition'] = 'attachment; filename="{}.xlsx"'.format(file_name)
+                return response
 
         return render(request, '../templates/reports/adrian.jade', {'objects': arr,
                                                                     'project': projectd,
