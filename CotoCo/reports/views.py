@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from openpyxl import Workbook
+from openpyxl.styles import Border, Side, PatternFill, Font, GradientFill, Alignment, NamedStyle
 from tempfile import NamedTemporaryFile
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, Http404, HttpResponse
@@ -102,38 +103,56 @@ def generate_xlsx(report_name, objects, project, activity, supplier, date, date_
     #get the first sheet, created per default
     ws = wb.active
     #change the title of the sheet
+
+    # create named styles
+    black_bg_white_font = NamedStyle(name="black_bg_white_font")
+    black_bg_white_font.font = Font(bold=True, color='FFFFFFFF')
+    black_bg_white_font.fill = PatternFill("solid", fgColor="FF000000")
+
     ws.title = 'Reporte'
-
-    ws.cell(row=current_row, column=1, value='COTO COMPANY')
-
+    ws.merge_cells('A1:I1')
+    title_cell = ws.cell(row=current_row, column=1, value='COTO COMPANY')
+    title_cell.style = black_bg_white_font
+    title_cell.alignment = Alignment(horizontal="center", vertical="center")
+    
     current_row += 2
 
-    ws.cell(row=current_row, column=1, value='REPORTE:')
+    current_cell = ws.cell(row=current_row, column=1, value='REPORTE:')
+    current_cell.style = black_bg_white_font
     ws.cell(row=current_row, column=2, value=report_name)
     current_row += 1
 
-    ws.cell(row=current_row, column=1, value='FECHA:')
-    ws.cell(row=current_row, column=2, value=date)
+    current_cell = ws.cell(row=current_row, column=1, value='FECHA:')
+    current_cell.style = black_bg_white_font
+    current_cell = ws.cell(row=current_row, column=2, value=date)
+    current_cell.alignment = Alignment(horizontal="left")
     current_row += 1
 
-    ws.cell(row=current_row, column=1, value='PROYECTO:')
+    current_cell = ws.cell(row=current_row, column=1, value='PROYECTO:')
+    current_cell.style = black_bg_white_font
     ws.cell(row=current_row, column=2, value=project)
     current_row += 1
 
-    ws.cell(row=current_row, column=1, value='ACTIVIDAD:')
+    current_cell = ws.cell(row=current_row, column=1, value='ACTIVIDAD:')
+    current_cell.style = black_bg_white_font
     ws.cell(row=current_row, column=2, value=activity)
     current_row += 1
 
-    ws.cell(row=current_row, column=1, value='PROVEEDOR:')
+    current_cell = ws.cell(row=current_row, column=1, value='PROVEEDOR:')
+    current_cell.style = black_bg_white_font
     ws.cell(row=current_row, column=2, value=supplier)
     current_row += 1
 
-    ws.cell(row=current_row, column=1, value='FECHA INICIAL:')
-    ws.cell(row=current_row, column=2, value=date_ini)
+    current_cell = ws.cell(row=current_row, column=1, value='FECHA INICIAL:')
+    current_cell.style = black_bg_white_font
+    current_cell = ws.cell(row=current_row, column=2, value=date_ini)
+    current_cell.alignment = Alignment(horizontal="left")
     current_row += 1
 
-    ws.cell(row=current_row, column=1, value='FECHA FINAL:')
-    ws.cell(row=current_row, column=2, value=date_end)
+    current_cell = ws.cell(row=current_row, column=1, value='FECHA FINAL:')
+    current_cell.style = black_bg_white_font
+    current_cell = ws.cell(row=current_row, column=2, value=date_end)
+    current_cell.alignment = Alignment(horizontal="left")
     current_row += 2
 
     # Header row
@@ -144,7 +163,7 @@ def generate_xlsx(report_name, objects, project, activity, supplier, date, date_
     ws.cell(row=current_row, column=4, value='Presupuestado')
     ws.cell(row=current_row, column=5, value='Ordenado')
     ws.cell(row=current_row, column=6, value='Facturado')
-    ws.cell(row=current_row, column=7, value='En Tránsito')
+    ws.cell(row=current_row, column=7, value='En_Tránsito')
     ws.cell(row=current_row, column=8, value='Requisado')
     ws.cell(row=current_row, column=9, value='Inventario')
 
@@ -162,8 +181,19 @@ def generate_xlsx(report_name, objects, project, activity, supplier, date, date_
         ws.cell(row=current_row, column=9, value='-')
         current_row += 1
 
-   
 
+    for col in ws.columns:
+        max_length = 0
+        column = col[0].column # Get the column name
+        for cell in col:
+            try: # Necessary to avoid error on empty cells
+                if len(str(cell.value)) > max_length:
+                    max_length = len(cell.value)
+            except:
+                pass
+        adjusted_width = (max_length + 2) * 1.2
+        ws.column_dimensions[column].width = adjusted_width
+    ws.column_dimensions['G'].width = 15
     return wb
 
 
